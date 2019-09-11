@@ -18,5 +18,16 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MUXSDKImaListener/Classes/**/*"
+  "source_files": "MUXSDKImaListener/Classes/**/*",
+  "dependencies": {
+    "Mux-Stats-AVPlayer": [
+      "~> 0.1.5"
+    ],
+    "Mux-Stats-Core": [
+      "~>2.0.0"
+    ],
+    "GoogleAds-IMA-iOS-SDK": [
+      "~> 3.9"
+    ]
+  }
 }
