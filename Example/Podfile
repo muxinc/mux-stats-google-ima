@@ -1,0 +1,7 @@
+use_frameworks!
+target 'MUXSDKImaListener_Tests' do
+  pod 'MUXSDKImaListener', :path => '../'
+  
+  pod 'Specta'
+    pod 'Expecta'
+end
