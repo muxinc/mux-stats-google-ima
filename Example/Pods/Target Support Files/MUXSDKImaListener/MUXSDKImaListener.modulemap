@@ -1,0 +1,6 @@
+framework module MUXSDKImaListener {
+  umbrella header "MUXSDKImaListener-umbrella.h"
+
+  export *
+  module * { export * }
+}
