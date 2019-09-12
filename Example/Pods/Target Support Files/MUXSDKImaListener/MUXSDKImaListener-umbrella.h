@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "MUXSDKImaListener.h"
+#import "MuxImaListener.h"
 
 FOUNDATION_EXPORT double MUXSDKImaListenerVersionNumber;
 FOUNDATION_EXPORT const unsigned char MUXSDKImaListenerVersionString[];
