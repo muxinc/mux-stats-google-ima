@@ -16,13 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @class MUXSDKPlayerBinding;
 
 @interface MuxImaListener : NSObject {
-    @public MUXSDKPlayerBinding *playerBinding;
+    @public MUXSDKPlayerBinding *_playerBinding;
 }
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
-- (void)dispatchEvent:(NSString *)event;
-//- (void)dispatchError:(NSString *)message;
-//- (void)onContentPauseOrResume :(bool)isPause;
+- (void)dispatchEvent:(IMAAdEvent *)event;
+- (void)dispatchError:(NSString *)message;
+- (void)onContentPauseOrResume :(bool)isPause;
 
 @end
 
