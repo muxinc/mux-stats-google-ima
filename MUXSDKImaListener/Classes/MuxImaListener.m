@@ -29,7 +29,7 @@
     event.viewData = viewData;
 }
 
-- (void) dispatchEvent:(IMAAdEvent *)event {
+- (MUXSDKPlaybackEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
     MUXSDKPlaybackEvent *playbackEvent;
     switch(event.type) {
         case kIMAAdEvent_LOADED:
@@ -69,6 +69,9 @@
     if (playbackEvent != nil) {
         [self setupAdViewData:playbackEvent withAd:event.ad];
         [_playerBinding dispatchAdEvent:playbackEvent];
+        return playbackEvent;
+    } else {
+        return nil;
     }
 }
 

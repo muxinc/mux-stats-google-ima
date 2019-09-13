@@ -8,26 +8,14 @@
 
 // https://github.com/Specta/Specta
 
-#import "MuxImaListener.h"
-//@import MUXSDKImaListener;
+//#import "MuxImaListener.h"
+@import MUXSDKImaListener;
 //@import MUXSDKStats;
 
-//@interface MuxMockAVPlayerViewController : AVPlayerViewController
-//@end
-//
-//@implementation MuxMockAVPlayerViewController
-//- (id)init {
-//    if (self = [super init]) {
-//        self.player = [[AVPlayer alloc] init];
-//    }
-//    return self;
-//}
-//@end
-//
-@interface MuxMockAVPlayerLayer : AVPlayerLayer
+@interface MuxMockAVPlayerViewController : AVPlayerViewController
 @end
 
-@implementation MuxMockAVPlayerLayer
+@implementation MuxMockAVPlayerViewController
 - (id)init {
     if (self = [super init]) {
         self.player = [[AVPlayer alloc] init];
@@ -35,18 +23,22 @@
     return self;
 }
 @end
-//
-//@interface MuxMockImaAdEvent : IMAAdEvent
-//@end
-//
-//@implementation MuxMockImaAdEvent
-//- (id)init {
-////    if (self = [super init]) {
-//////        self.player = [[AVPlayer alloc] init];
-////    }
-//    return self;
-//}
-//@end
+
+@interface MuxMockImaAdEvent : IMAAdEvent {
+    enum IMAAdEventType type;
+}
+    @property (nonatomic) enum IMAAdEventType type;
+@end
+
+@implementation MuxMockImaAdEvent
+
+@synthesize type;
+
+- (id)initWithType:(NSInteger)_type {
+    type = _type;
+    return self;
+}
+@end
 
 SpecBegin(InitialSpecs)
 
@@ -54,9 +46,16 @@ describe(@"MuxImaListener", ^{
     __block MUXSDKPlayerBinding *playerBinding = nil;
     beforeEach(^{
         NSString *name = @"Test Player Name";
-        NSString *software = @"AVPlayerLayer";
-        MuxMockAVPlayerLayer *playerLayer = [[MuxMockAVPlayerLayer alloc] init];
-        playerBinding = [[MUXSDKAVPlayerLayerBinding alloc] initWithName:name software:software andView:playerLayer];
+        MUXSDKCustomerPlayerData *playerData = [[MUXSDKCustomerPlayerData alloc] initWithPropertyKey:@"YOUR_ENVIRONMENT_KEY"];
+        MUXSDKCustomerVideoData *videoData = [MUXSDKCustomerVideoData new];
+        videoData.videoTitle = @"Big Buck Bunny";
+        videoData.videoId = @"bigbuckbunny";
+        videoData.videoSeries = @"animation";
+        MuxMockAVPlayerViewController *avPlayerController = [[MuxMockAVPlayerViewController alloc] init];
+        playerBinding = [MUXSDKStats monitorAVPlayerViewController:avPlayerController
+                                                   withPlayerName:name
+                                                       playerData:playerData
+                                                        videoData:videoData];
     });
 
     describe(@"initWithPlayerBinding", ^{
@@ -66,50 +65,66 @@ describe(@"MuxImaListener", ^{
         });
     });
 
-//    describe(@"dispatchEvent", ^{
-//        it(@"should dispatch an event", ^{
-//            IMAAdEvent *adEvent = [[MuxMockImaAdEvent alloc] init];
-//            MuxImaListener *imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding];
-//            [imaListener dispatchEvent:adEvent];
-//        });
-//    });
+    describe(@"dispatchEvent", ^{
+        __block MuxImaListener *imaListener = nil;
+        beforeEach(^{
+            imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding];
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_LOADED", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_LOADED];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdPlayEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_STARTED", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_STARTED];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdPlayingEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_FIRST_QUARTILE", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_FIRST_QUARTILE];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdFirstQuartileEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_MIDPOINT", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_MIDPOINT];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdMidpointEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_THIRD_QUARTILE", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_THIRD_QUARTILE];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdThirdQuartileEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_SKIPPED", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_SKIPPED];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdEndedEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_COMPLETE", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_COMPLETE];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdEndedEvent class]);
+        });
+
+        it(@"should dispatch the correct event for kIMAAdEvent_PAUSE", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_PAUSE];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdPauseEvent class]);
+        });
+
+        it(@"should not dispatch an event for kIMAAdEvent_TAPPED", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_TAPPED];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beNil();
+        });
+    });
 });
 
-//SpecBegin(InitialSpecs)
-//
-//describe(@"these will fail", ^{
-//
-//    it(@"can do maths", ^{
-//        expect(1).to.equal(2);
-//    });
-//
-//    it(@"can read", ^{
-//        expect(@"number").to.equal(@"string");
-//    });
-//
-//    it(@"will wait for 10 seconds and fail", ^{
-//        waitUntil(^(DoneCallback done) {
-//
-//        });
-//    });
-//});
-//
-//describe(@"these will pass", ^{
-//
-//    it(@"can do maths", ^{
-//        expect(1).beLessThan(23);
-//    });
-//
-//    it(@"can read", ^{
-//        expect(@"team").toNot.contain(@"I");
-//    });
-//
-//    it(@"will wait and succeed", ^{
-//        waitUntil(^(DoneCallback done) {
-//            done();
-//        });
-//    });
-//});
-
 SpecEnd
-

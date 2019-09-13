@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
-- (void)dispatchEvent:(IMAAdEvent *)event;
+- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEvent *)event;
 - (void)dispatchError:(NSString *)message;
 - (void)onContentPauseOrResume :(bool)isPause;
 
