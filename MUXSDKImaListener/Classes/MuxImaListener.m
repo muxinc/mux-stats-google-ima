@@ -67,7 +67,6 @@
             break;
     }
     if (playbackEvent != nil) {
-        NSLog(@"debug sending dispatchEvent %@", playbackEvent.getType);
         [self setupAdViewData:playbackEvent withAd:event.ad];
         [_playerBinding dispatchAdEvent:playbackEvent];
     }

@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = "GoogleAds-IMA-iOS-SDK";
+			productName = "GoogleAds-IMA-iOS-SDK";
 		};
 		78D7420028AA6BE7CBA9A3DC7529E196 /* Mux-Stats-Core */ = {
 			isa = PBXAggregateTarget;
@@ -24,6 +25,7 @@
 			dependencies = (
 			);
 			name = "Mux-Stats-Core";
+			productName = "Mux-Stats-Core";
 		};
 		8A628F9FECD1E366F0AF90449C4E8B0A /* Mux-Stats-AVPlayer */ = {
 			isa = PBXAggregateTarget;
@@ -34,6 +36,7 @@
 				E7D87F6C378CF0A6620D7938838D0DA9 /* PBXTargetDependency */,
 			);
 			name = "Mux-Stats-AVPlayer";
+			productName = "Mux-Stats-AVPlayer";
 		};
 /* End PBXAggregateTarget section */
 
@@ -74,7 +77,6 @@
 		3B9C2FE88A3D20C456F62F59C7362B1B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033A36A29482FD32230FE0CA177F9BD3 /* Foundation.framework */; };
 		3C5E21003A743A7AE12E2ED6A68791C9 /* SPTExampleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CC81D42549ABCBAEACDED13FE899C53E /* SPTExampleGroup.m */; };
 		3C82710DF39F627A44AE7067B65F92C7 /* EXPMatchers+raise.h in Headers */ = {isa = PBXBuildFile; fileRef = 336B0036CABC46A018ECA9B8AA516D4B /* EXPMatchers+raise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D5DE0CFAAFF4D08A12C4B7F75163C4C /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CB1FF432CDE2BF1A226815005A4BD9 /* ReplaceMe.m */; };
 		3DB6607AA00EDF662D4328EA4F9C44EC /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6528CD41E137B87873D5208D3F451EE4 /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		416D3BE841B08CED03D16649957ECB10 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 5853855CC0115EC2260B482E17F8E0FF /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41B490A5CB6565458F1F507A8AD0FB45 /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 576314E83FD95D68FEA62A0804E3C84B /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -234,12 +236,12 @@
 		036DE9A14170220918878ACD56ECD947 /* XCTest+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTest+Private.h"; path = "Specta/Specta/XCTest+Private.h"; sourceTree = "<group>"; };
 		0487E46C65EB717CEB49217FEF7003E0 /* MUXSDKImaListener.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MUXSDKImaListener.modulemap; sourceTree = "<group>"; };
 		088CA64B204AC71C07FB4B8D1F795ABA /* Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Expecta.h; path = Expecta/Expecta.h; sourceTree = "<group>"; };
-		08F7F0770B4878B9883B87DCD8569CB4 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Expecta.framework; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08F7F0770B4878B9883B87DCD8569CB4 /* Expecta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Expecta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2D96C671C8B059091712197AF58BF0 /* EXPMatchers+beIdenticalTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beIdenticalTo.m"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.m"; sourceTree = "<group>"; };
 		1152FA80F65BE55EB01F4F08E68A0712 /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
 		116AD902C9D392D1812F6933EAE79882 /* MUXSDKImaListener.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MUXSDKImaListener.xcconfig; sourceTree = "<group>"; };
 		1590B0FB10B51FBA6C57921880CF384A /* SPTSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = Specta/Specta/SPTSpec.h; sourceTree = "<group>"; };
-		15B13B063AA97C48C9010C298AECBDDA /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Specta.framework; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B13B063AA97C48C9010C298AECBDDA /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C125CD550EB1D2974F91EA8A41A183 /* MUXSDKStats.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MUXSDKStats.framework; path = Frameworks/iOS/fat/MUXSDKStats.framework; sourceTree = "<group>"; };
 		19330F882B84CB434C911DA508B14DDF /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
 		1AC7E00FED3C0CCE69DBE46FCE9B871D /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
@@ -270,8 +272,7 @@
 		38D9FD7CC42612E0D70DCDF58B13F7B6 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
 		3E1CD9051496B40D2E64B7859FC42E07 /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInstanceOf.h"; path = "Expecta/Matchers/EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
 		43AC5804D3F42935314E96C08D827790 /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+postNotification.m"; path = "Expecta/Matchers/EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
-		44CB1FF432CDE2BF1A226815005A4BD9 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = MUXSDKImaListener/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		47213F3BF309E9113F60DF427EBC8E94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		47213F3BF309E9113F60DF427EBC8E94 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4903CE000EF06018D5F5D7D175D194A4 /* EXPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDefines.h; path = Expecta/EXPDefines.h; sourceTree = "<group>"; };
 		4AA10495540519A115A544AD074E3C39 /* Specta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Specta-Info.plist"; sourceTree = "<group>"; };
 		4B90553F5109E1CB9C1F78F0A68CD427 /* SPTExcludeGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExcludeGlobalBeforeAfterEach.h; path = Specta/Specta/SPTExcludeGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
@@ -291,14 +292,14 @@
 		6823C74BDF79EC60B30567F70B05AFC7 /* EXPMatchers+contain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+contain.m"; path = "Expecta/Matchers/EXPMatchers+contain.m"; sourceTree = "<group>"; };
 		6AD99EBCFC42A3831201514C168FEE64 /* Specta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Specta-dummy.m"; sourceTree = "<group>"; };
 		6FC2EAE68070A7D27427FC7F59D77E52 /* GoogleAds-IMA-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
-		708AEEC377297002CC2493E3AC46948F /* Pods_MUXSDKImaListener_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MUXSDKImaListener_Tests.framework; path = "Pods-MUXSDKImaListener_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		708AEEC377297002CC2493E3AC46948F /* Pods_MUXSDKImaListener_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MUXSDKImaListener_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B369269886422978FB20A659ACE8C5 /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
-		76BF6D0FB2D9417434A061FB21E1E2C7 /* MUXSDKImaListener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MUXSDKImaListener.framework; path = MUXSDKImaListener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76BF6D0FB2D9417434A061FB21E1E2C7 /* MUXSDKImaListener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MUXSDKImaListener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0FEDC48951AA0501A3FA0520178135 /* SpectaUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaUtility.m; path = Specta/Specta/SpectaUtility.m; sourceTree = "<group>"; };
 		7B2E56D45C4185DE3B5C02AEB0954872 /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
 		7C3B55771ED859AF2A9C5568FCDA14B7 /* EXPFloatTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPFloatTuple.m; path = Expecta/EXPFloatTuple.m; sourceTree = "<group>"; };
 		886F38E75B45DF7BEE355B759B8DEA5F /* MUXSDKImaListener-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MUXSDKImaListener-umbrella.h"; sourceTree = "<group>"; };
-		88A75C5B4DE4661ECA09B71748F478C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		88A75C5B4DE4661ECA09B71748F478C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8931F56E38F0F99292F986805BD92361 /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
 		897BDC564C25A1DB748EA68CF4DD9160 /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSupersetOf.h"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
 		8B67687E50B39DD152B1FB9173EFAA96 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
@@ -314,7 +315,7 @@
 		999255E0C5390CBF4DF3273E7418AA41 /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
 		99FCDA221093AFF265009D4CA1142C55 /* EXPMatcherHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPMatcherHelpers.m; path = Expecta/Matchers/EXPMatcherHelpers.m; sourceTree = "<group>"; };
 		9D669138F83C4DD3ACBCB4B4373EDEB2 /* EXPMatchers+beInTheRangeOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beInTheRangeOf.m"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1FFB5986EBDDE8AC368A2CB4102A759 /* Expecta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Expecta-Info.plist"; sourceTree = "<group>"; };
 		A2910C4EB44F1F051E1921DC1221DB6D /* EXPMatchers+beLessThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beLessThan.m"; path = "Expecta/Matchers/EXPMatchers+beLessThan.m"; sourceTree = "<group>"; };
 		A4031A44EAA264CDE05A5BF5050EDFF1 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
@@ -356,7 +357,7 @@
 		EBBD7D85C7A83C6A05B740219A2EB731 /* EXPMatchers+beSubclassOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSubclassOf.m"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.m"; sourceTree = "<group>"; };
 		EC45C0CD75EE3C19C3E9AE2DF004270E /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
 		EE513AAEBC1F3312487F9A99BA2B616B /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beCloseTo.h"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
-		F00BA95FF8F5569DBA9A5DF2C20DDB4E /* MUXSDKImaListener.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MUXSDKImaListener.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F00BA95FF8F5569DBA9A5DF2C20DDB4E /* MUXSDKImaListener.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MUXSDKImaListener.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F09F5C446ED1C9EBAEAE2120B4C69055 /* EXPMatchers+haveCountOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+haveCountOf.m"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.m"; sourceTree = "<group>"; };
 		F0D73FE836CE037B318AE1A87CFA1F61 /* Mux-Stats-Core.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Core.xcconfig"; sourceTree = "<group>"; };
 		F0F57F7FFAC95572004FBF4DC709D492 /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
@@ -433,7 +434,6 @@
 				76BBB6D175A0E1BF2E9AE853BD335119 /* Frameworks */,
 				5118A3B9706E7518F5DA4D8864F4C4A2 /* Support Files */,
 			);
-			name = "Mux-Stats-AVPlayer";
 			path = "Mux-Stats-AVPlayer";
 			sourceTree = "<group>";
 		};
@@ -515,7 +515,6 @@
 				DE0A33FC9AFC0F410DBB98B9AA3D32EA /* NSValue+Expecta.m */,
 				1C7DCC39F269D0B65F123875B670C012 /* Support Files */,
 			);
-			name = Expecta;
 			path = Expecta;
 			sourceTree = "<group>";
 		};
@@ -555,7 +554,6 @@
 				C1AC2E841EBD160A47F2F31B3460E415 /* Frameworks */,
 				DB73DED850F11159C3589319BDA08215 /* Support Files */,
 			);
-			name = "GoogleAds-IMA-iOS-SDK";
 			path = "GoogleAds-IMA-iOS-SDK";
 			sourceTree = "<group>";
 		};
@@ -654,7 +652,6 @@
 				FF2DE88C6EA8E1A1EED8C0D7E4F6F534 /* XCTestCase+Specta.m */,
 				0622849DFBE713CEE3928A51C440FA8C /* Support Files */,
 			);
-			name = Specta;
 			path = Specta;
 			sourceTree = "<group>";
 		};
@@ -703,7 +700,6 @@
 				4BB6C65DC23C8BC05C5D6C69E0A0FBB9 /* Frameworks */,
 				9EF21F54DCB22EAA8E86F7C94792BFC3 /* Support Files */,
 			);
-			name = "Mux-Stats-Core";
 			path = "Mux-Stats-Core";
 			sourceTree = "<group>";
 		};
@@ -712,7 +708,6 @@
 			children = (
 				504166592412020999ACA89D43B40CAB /* MuxImaListener.h */,
 				C28A6E5CEFC0EF8E107A33639A85CEBF /* MuxImaListener.m */,
-				44CB1FF432CDE2BF1A226815005A4BD9 /* ReplaceMe.m */,
 				C627B2615D7B07CDCEDC0EFB23B112F0 /* Pod */,
 				66F6D06AB7076E870A130FFE63C04285 /* Support Files */,
 			);
@@ -1064,7 +1059,6 @@
 			files = (
 				727485D2B7E23BEBD66265D28A6469A7 /* MuxImaListener.m in Sources */,
 				8DA233CC4C4F4C471F7486FE1DFD9BAE /* MUXSDKImaListener-dummy.m in Sources */,
-				3D5DE0CFAAFF4D08A12C4B7F75163C4C /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1455,8 +1449,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
