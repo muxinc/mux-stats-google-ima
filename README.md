@@ -31,6 +31,7 @@ pod 'Mux-Stats-Google-IMA'
 * git tag vX.X.X (example: git tag v0.3.0)
 * git push --tags
 * attach the .zip folder to the Release in github
+* pod trunk push Mux-Stats-Google-IMA.podspec --allow-warnings
 
 ## Author
 
