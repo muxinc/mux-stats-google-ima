@@ -9,7 +9,7 @@
 // https://github.com/Specta/Specta
 
 //#import "MuxImaListener.h"
-@import MUXSDKImaListener;
+@import Mux_Stats_Google_IMA;
 //@import MUXSDKStats;
 
 @interface MuxMockAVPlayerViewController : AVPlayerViewController
