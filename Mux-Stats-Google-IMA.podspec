@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = 'Mux-Stats-Google-IMA is for tracking performance analytics and QoS monitoring for video with mux.com.'
 
   s.description      = <<-DESC
-    The Mux stats Google IMA is designed to be used with Mux-Stats-AVPlayer and GoogleAds-IMA-iOS-SDK to track performance analytics and QoS monitoring for video.
+    The Mux Stats Google IMA is designed to be used with Mux-Stats-AVPlayer and GoogleAds-IMA-iOS-SDK to track performance analytics and QoS monitoring for video.
                        DESC
 
   s.homepage         = 'https://mux.com'
