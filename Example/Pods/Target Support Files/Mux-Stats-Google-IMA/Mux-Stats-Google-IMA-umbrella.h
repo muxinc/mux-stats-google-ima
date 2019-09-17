@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "MUXSDKImaListener.h"
+#import "MuxImaListener.h"
 
-FOUNDATION_EXPORT double MUXSDKImaListenerVersionNumber;
-FOUNDATION_EXPORT const unsigned char MUXSDKImaListenerVersionString[];
+FOUNDATION_EXPORT double Mux_Stats_Google_IMAVersionNumber;
+FOUNDATION_EXPORT const unsigned char Mux_Stats_Google_IMAVersionString[];
 

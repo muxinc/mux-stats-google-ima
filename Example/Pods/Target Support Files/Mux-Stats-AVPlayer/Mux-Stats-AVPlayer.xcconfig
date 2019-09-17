@@ -1,5 +1,5 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/Mux-Stats-AVPlayer
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Mux-Stats-AVPlayer/Frameworks/iOS/fat"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Mux-Stats-AVPlayer/Frameworks/iOS/fat" "${PODS_ROOT}/Mux-Stats-Core/Frameworks/iOS/fat"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -framework "AVFoundation" -framework "AVKit"
 PODS_BUILD_DIR = ${BUILD_DIR}

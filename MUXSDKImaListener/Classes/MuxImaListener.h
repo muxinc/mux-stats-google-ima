@@ -10,18 +10,19 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @import MuxCore;
+@import MUXSDKStats;
 @import GoogleInteractiveMediaAds;
 
 @class MUXSDKPlayerBinding;
 
 @interface MuxImaListener : NSObject {
-    MUXSDKPlayerBinding *_playerBinding;
+    @private MUXSDKPlayerBinding *_playerBinding;
 }
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
-//- (void)dispatchEvent:(IMAAdEvent *)event;
-//- (void)dispatchError:(NSString *)message;
-//- (void)onContentPauseOrResume :(bool)isPause;
+- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEvent *)event;
+- (void)dispatchError:(NSString *)message;
+- (void)onContentPauseOrResume :(bool)isPause;
 
 @end
 
