@@ -1,8 +1,6 @@
 use_frameworks!
 target 'MUXSDKImaListener_Tests' do
-  pod 'MUXSDKImaListener', :path => '../'
-  # do this for now to over-ride the podspec dependency until this is published
-  pod 'Mux-Stats-AVPlayer', :git => 'https://github.com/muxinc/mux-stats-sdk-avplayer', :branch => 'dj/extract-ima-listener'
+  pod 'Mux-Stats-Google-IMA', :path => '../'
   
   pod 'Specta'
     pod 'Expecta'

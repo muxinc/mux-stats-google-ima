@@ -1,4 +1,4 @@
-CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/MUXSDKImaListener
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/Mux-Stats-Google-IMA
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GoogleAds-IMA-iOS-SDK" "${PODS_ROOT}/Mux-Stats-AVPlayer/Frameworks/iOS/fat" "${PODS_ROOT}/Mux-Stats-Core/Frameworks/iOS/fat"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -weak_framework "WebKit"

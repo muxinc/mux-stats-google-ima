@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MUXSDKImaListener/Classes/**/*'
 
-  s.dependency 'Mux-Stats-AVPlayer', '~> 0.1.5'
-  s.dependency 'Mux-Stats-Core', '~>2.0.0'
-  s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
+  s.dependency 'Mux-Stats-AVPlayer', '~> 0.1.6-beta.0'
+  s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.7'
 end

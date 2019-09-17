@@ -1,0 +1,6 @@
+framework module Mux_Stats_Google_IMA {
+  umbrella header "Mux-Stats-Google-IMA-umbrella.h"
+
+  export *
+  module * { export * }
+}
