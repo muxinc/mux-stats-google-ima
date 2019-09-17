@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Mux' => 'ios-sdk@mux.com' }
   s.source           = { :git => 'https://github.com/muxinc/mux-sdk-ima-listener.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MUXSDKImaListener/Classes/**/*'
 
