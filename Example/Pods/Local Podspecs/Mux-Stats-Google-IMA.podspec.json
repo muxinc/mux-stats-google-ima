@@ -1,8 +1,8 @@
 {
   "name": "Mux-Stats-Google-IMA",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "summary": "Mux-Stats-Google-IMA is for tracking performance analytics and QoS monitoring for video with mux.com.",
-  "description": "The Mux stats Google IMA is designed to be used with Mux-Stats-AVPlayer and GoogleAds-IMA-iOS-SDK to track performance analytics and QoS monitoring for video.",
+  "description": "The Mux Stats Google IMA is designed to be used with Mux-Stats-AVPlayer and GoogleAds-IMA-iOS-SDK to track performance analytics and QoS monitoring for video.",
   "homepage": "https://mux.com",
   "social_media_url": "https://twitter.com/muxhq",
   "license": {
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/muxinc/mux-sdk-ima-listener.git",
-    "tag": "v0.1.0"
+    "tag": "v0.3.0"
   },
   "platforms": {
     "ios": "9.0"
