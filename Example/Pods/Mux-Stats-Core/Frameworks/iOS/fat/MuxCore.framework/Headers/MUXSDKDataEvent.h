@@ -9,15 +9,15 @@
 #import "MUXSDKCustomerVideoData.h"
 #import "MUXSDKCustomerPlayerData.h"
 
-extern NSString *const MUXSDKDataEventType;
+extern NSString * _Nonnull const MUXSDKDataEventType;
 
 @interface MUXSDKDataEvent : MUXSDKBaseEvent <MUXSDKEventTyping>
 
-@property (nonatomic, retain) MUXSDKViewerData *viewerData;
-@property (nonatomic, retain) MUXSDKEnvironmentData *environmentData;
-@property (nonatomic, retain) MUXSDKVideoData *videoData;
-@property (nonatomic, retain) MUXSDKCustomerVideoData *customerVideoData;
-@property (nonatomic, retain) MUXSDKCustomerPlayerData *customerPlayerData;
+@property (nonatomic, retain) MUXSDKViewerData * _Nullable viewerData;
+@property (nonatomic, retain) MUXSDKEnvironmentData * _Nullable environmentData;
+@property (nonatomic, retain) MUXSDKVideoData * _Nullable videoData;
+@property (nonatomic, retain) MUXSDKCustomerVideoData * _Nullable customerVideoData;
+@property (nonatomic, retain) MUXSDKCustomerPlayerData * _Nullable customerPlayerData;
 @property BOOL videoChange;
 
 @end

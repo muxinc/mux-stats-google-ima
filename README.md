@@ -1,4 +1,9 @@
-# MUXSDKImaListener
+-[![CI Status](https://img.shields.io/travis/muxinc/mux-stats-google-ima.svg?style=flat)](https://travis-ci.org/muxinc/mux-stats-google-ima)
+-[![Version](https://img.shields.io/cocoapods/v/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
+-[![License](https://img.shields.io/cocoapods/l/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
+-[![Platform](https://img.shields.io/cocoapods/p/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
+
+# Mux-Stats-Google-IMA
 
 This pod was created with `pod lib create`
 

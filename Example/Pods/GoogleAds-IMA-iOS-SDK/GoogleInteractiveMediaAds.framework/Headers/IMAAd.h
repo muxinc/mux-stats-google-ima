@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 
 #import "IMAAdPodInfo.h"
+#import "IMACompanionAd.h"
 #import "IMAUniversalAdID.h"
 
 /**
@@ -37,6 +38,9 @@
  *  The source ad server information included in the ad response.
  */
 @property(nonatomic, copy, readonly) NSString *adSystem;
+
+/** The companion ads specified in the VAST response when using DAI. Empty for client-side ads. */
+@property(nonatomic, copy, readonly) NSArray<IMACompanionAd *> *companionAds;
 
 /**
  *  Content type of the currently selected creative. For linear creatives
