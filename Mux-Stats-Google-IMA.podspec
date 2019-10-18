@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mux-Stats-Google-IMA'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'Mux-Stats-Google-IMA is for tracking performance analytics and QoS monitoring for video with mux.com.'
 
   s.description      = <<-DESC
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MUXSDKImaListener/Classes/**/*'
 
-  s.dependency 'Mux-Stats-AVPlayer', '~> 1.0.0'
+  s.dependency 'Mux-Stats-AVPlayer', '~> 1.0'
   s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
 end
