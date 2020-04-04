@@ -22,9 +22,14 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/muxinc/mux-stats-google-ima.git', :tag => "v#{s.version}" }
 
   s.ios.deployment_target = '9.0'
+  s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'MUXSDKImaListener/Classes/**/*'
 
-  s.dependency 'Mux-Stats-AVPlayer', '~> 1.1'
-  s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
+  s.ios.dependency 'Mux-Stats-AVPlayer', '~> 1.1'
+  s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
+  s.ios.source_files = 'MUXSDKImaListener/Classes/**/*'
+
+  s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 1.1'
+  s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.2'
+  s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
 end
