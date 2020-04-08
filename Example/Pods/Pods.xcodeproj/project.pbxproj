@@ -1401,11 +1401,10 @@
 			};
 			name = Release;
 		};
-		79B6D020CF63EF1619DD421C7E2B5225 /* Release */ = {
+		8EB6265CF67AB3D8D35792467F62BD4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F789FC76B55A781929E2589A26582439 /* Mux-Stats-Google-IMA.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1418,7 +1417,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
 				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
@@ -1557,11 +1556,23 @@
 			};
 			name = Release;
 		};
-		C278009987291F5A934C6FF726DCB3B3 /* Debug */ = {
+		F28D65C174D3E63DD8AF02EB8BB2FBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ECF0E7F64320533856663A0718C04B2 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7BBE3B1D8A776469D636C16AF769E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 550040A37A34703848D3EAA3E05CBBFB /* Mux-Stats-Google-IMA.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1574,7 +1585,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
 				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
@@ -1589,27 +1600,14 @@
 			};
 			name = Debug;
 		};
-		F28D65C174D3E63DD8AF02EB8BB2FBDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ECF0E7F64320533856663A0718C04B2 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0E8EC02EB229FF26F65E724B179E6E5D /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C278009987291F5A934C6FF726DCB3B3 /* Debug */,
-				79B6D020CF63EF1619DD421C7E2B5225 /* Release */,
+				F7BBE3B1D8A776469D636C16AF769E59 /* Debug */,
+				8EB6265CF67AB3D8D35792467F62BD4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
