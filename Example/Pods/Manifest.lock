@@ -33,7 +33,7 @@ SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 0e37ab83b22075ad631a70dcba9528cb246c92bf
   Mux-Stats-AVPlayer: f8dc4d3192cb0b498fec3fcaff34fa0b652883f8
   Mux-Stats-Core: 60c405b93a9610c9c90e3cee812e225bb050ca3a
-  Mux-Stats-Google-IMA: 225344ba73bd8e4332ed749ee1fdece56cd87577
+  Mux-Stats-Google-IMA: c8720c9ad3cfd17fc6bf4fdb9c71f15ac922c188
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: 95e48c48a4efb20f1822c750f01f9c105d46475a

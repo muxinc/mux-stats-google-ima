@@ -17,8 +17,8 @@
     "tag": "v0.5.0"
   },
   "platforms": {
-    "ios": "9.0",
-    "tvos": "9.0"
+    "ios": "10.0",
+    "tvos": "10.0"
   },
   "ios": {
     "dependencies": {
