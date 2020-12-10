@@ -32,6 +32,7 @@ framework module GoogleInteractiveMediaAds {
   header "IMACompanionAdSlot.h"
   header "IMAContentPlayhead.h"
   header "IMACuepoint.h"
+  header "IMAFriendlyObstruction.h"
   header "IMALiveStreamRequest.h"
   header "IMAPictureInPictureProxy.h"
   header "IMASettings.h"

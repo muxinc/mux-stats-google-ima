@@ -37,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char GoogleInteractiveMediaAdsVersionString[];
 #import <GoogleInteractiveMediaAds/IMACompanionAdSlot.h>
 #import <GoogleInteractiveMediaAds/IMAContentPlayhead.h>
 #import <GoogleInteractiveMediaAds/IMACuepoint.h>
+#import <GoogleInteractiveMediaAds/IMAFriendlyObstruction.h>
 #import <GoogleInteractiveMediaAds/IMALiveStreamRequest.h>
 #import <GoogleInteractiveMediaAds/IMAPictureInPictureProxy.h>
 #import <GoogleInteractiveMediaAds/IMASettings.h>

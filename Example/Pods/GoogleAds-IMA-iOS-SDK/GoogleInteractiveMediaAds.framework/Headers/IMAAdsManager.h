@@ -46,77 +46,77 @@
 #pragma mark IMAAdsManagerDelegate
 
 /**
- *  A callback protocol for IMAAdsManager.
+ * A callback protocol for IMAAdsManager.
  */
 @protocol IMAAdsManagerDelegate
 
 /**
- *  Called when there is an IMAAdEvent.
+ * Called when there is an IMAAdEvent.
  *
- *  @param adsManager the IMAAdsManager receiving the event
- *  @param event      the IMAAdEvent received
+ * @param adsManager the IMAAdsManager receiving the event
+ * @param event      the IMAAdEvent received
  */
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event;
 
 /**
- *  Called when there was an error playing the ad.
- *  Log the error and resume playing content.
+ * Called when there was an error playing the ad.
+ * Log the error and resume playing content.
  *
- *  @param adsManager the IMAAdsManager that errored
- *  @param error      the IMAAdError received
+ * @param adsManager the IMAAdsManager that errored
+ * @param error      the IMAAdError received
  */
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdError:(IMAAdError *)error;
 
 /**
- *  Called when an ad is ready to play.
- *  The implementing code should pause the content playback and prepare the UI
- *  for ad playback.
+ * Called when an ad is ready to play.
+ * The implementing code should pause the content playback and prepare the UI
+ * for ad playback.
  *
- *  @param adsManager the IMAAdsManager requesting content pause
+ * @param adsManager the IMAAdsManager requesting content pause
  */
 - (void)adsManagerDidRequestContentPause:(IMAAdsManager *)adsManager;
 
 /**
- *  Called when an ad has finished or an error occurred during the playback.
- *  The implementing code should resume the content playback.
+ * Called when an ad has finished or an error occurred during the playback.
+ * The implementing code should resume the content playback.
  *
- *  @param adsManager the IMAAdsManager requesting content resume
+ * @param adsManager the IMAAdsManager requesting content resume
  */
 - (void)adsManagerDidRequestContentResume:(IMAAdsManager *)adsManager;
 
 @optional
 
 /**
- *  Called every 200ms to provide time updates for the current ad.
+ * Called every 200ms to provide time updates for the current ad.
  *
- *  @param adsManager the IMAAdsManager tracking ad playback
- *  @param mediaTime  the current media time in seconds
- *  @param totalTime  the total media length in seconds
+ * @param adsManager the IMAAdsManager tracking ad playback
+ * @param mediaTime  the current media time in seconds
+ * @param totalTime  the total media length in seconds
  */
 - (void)adsManager:(IMAAdsManager *)adsManager
     adDidProgressToTime:(NSTimeInterval)mediaTime
               totalTime:(NSTimeInterval)totalTime;
 
 /**
- *  Called when the current ad is sufficiently buffered and playback is likely
- *  to keep up.
+ * Called when the current ad is sufficiently buffered and playback is likely
+ * to keep up.
  *
- *  @param adsManager the IMAAdsManager with ad playback ready
+ * @param adsManager the IMAAdsManager with ad playback ready
  */
 - (void)adsManagerAdPlaybackReady:(IMAAdsManager *)adsManager;
 
 /**
- *  Called when the current ad media buffer is empty and playback did stall.
+ * Called when the current ad media buffer is empty and playback did stall.
  *
- *  @param adsManager the IMAAdsManager tracking the stalled ad
+ * @param adsManager the IMAAdsManager tracking the stalled ad
  */
 - (void)adsManagerAdDidStartBuffering:(IMAAdsManager *)adsManager;
 
 /**
- *  Called as the current ad media buffers.
+ * Called as the current ad media buffers.
  *
- *  @param adsManager the IMAAdsManager tracking the ad's media buffer
- *  @param mediaTime  the current buffered media time in seconds
+ * @param adsManager the IMAAdsManager tracking the ad's media buffer
+ * @param mediaTime  the current buffered media time in seconds
  */
 - (void)adsManager:(IMAAdsManager *)adsManager adDidBufferToMediaTime:(NSTimeInterval)mediaTime;
 
@@ -125,38 +125,38 @@
 #pragma mark - IMAAdsManager
 
 /**
- *  The IMAAdsManager class is responsible for playing ads.
+ * The IMAAdsManager class is responsible for playing ads.
  */
 @interface IMAAdsManager : NSObject
 
 /**
- *  The IMAAdsManagerDelegate to notify with events during ad playback.
+ * The IMAAdsManagerDelegate to notify with events during ad playback.
  */
 @property(nonatomic, weak) NSObject<IMAAdsManagerDelegate> *delegate;
 
 /**
- *  List of content time offsets at which ad breaks are scheduled.
- *  Array of NSNumber double values in seconds.
- *  Empty NSArray for single ads or if no ad breaks are scheduled.
+ * List of content time offsets at which ad breaks are scheduled.
+ * Array of NSNumber double values in seconds.
+ * Empty NSArray for single ads or if no ad breaks are scheduled.
  */
 @property(nonatomic, copy, readonly) NSArray *adCuePoints;
 
 /**
- *  Groups various properties about the linear ad playback.
+ * Groups various properties about the linear ad playback.
  */
 @property(nonatomic, strong, readonly) id<IMAAdPlaybackInfo> adPlaybackInfo;
 
 /**
- *  Set and get the volume for the current ad. From 0 (muted) to 1 (loudest). This volume is
- *  relative to device volume, not absolute. Default value is 1.
+ * Set and get the volume for the current ad. From 0 (muted) to 1 (loudest). This volume is
+ * relative to device volume, not absolute. Default value is 1.
  */
 @property(nonatomic, assign) float volume;
 
 /**
- *  Initializes and loads the ad.
+ * Initializes and loads the ad.
  *
- *  @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
- *                              Use nil to default to standard rendering.
+ * @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
+ *                             Use nil to default to standard rendering.
  */
 - (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
 
@@ -166,40 +166,40 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- *  Starts advertisement playback.
+ * Starts advertisement playback.
  */
 - (void)start;
 
 /**
- *  Pauses advertisement.
+ * Pauses advertisement.
  */
 - (void)pause;
 
 /**
- *  Resumes the advertisement.
+ * Resumes the advertisement.
  */
 - (void)resume;
 
 /**
- *  Skips the advertisement if the ad is skippable and the skip offset has been reached.
+ * Skips the advertisement if the ad is skippable and the skip offset has been reached.
  */
 - (void)skip;
 
 /**
- *  Performs a clickthrough on the advertisement if the UI was successfully disabled via
- *  AdsRenderingSettings.disableUi.
- *  :nodoc:
+ * Performs a clickthrough on the advertisement if the UI was successfully disabled via
+ * AdsRenderingSettings.disableUi.
+ * :nodoc:
  */
 - (void)clicked;
 
 /**
- *  Causes the ads manager to stop the ad and clean its internal state.
+ * Causes the ads manager to stop the ad and clean its internal state.
  */
 - (void)destroy;
 
 /**
- *  If an ad break is currently playing, discard it and resume content.
- *  Otherwise, ignore the next scheduled ad break.
+ * If an ad break is currently playing, discard it and resume content.
+ * Otherwise, ignore the next scheduled ad break.
  */
 - (void)discardAdBreak;
 
