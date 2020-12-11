@@ -19,6 +19,6 @@
  * Obtain an instance from <code>IMAAd.companionAds</code>.
  * :nodoc:
  */
-- (nullable instancetype)init NS_UNAVAILABLE;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 @end

@@ -39,103 +39,115 @@
 #pragma mark IMAStreamManagerDelegate
 
 /**
- *  A callback protocol for IMAStreamManager.
+ * A callback protocol for IMAStreamManager.
  */
 @protocol IMAStreamManagerDelegate
 
 /**
- *  Called when there is an IMAAdEvent.
+ * Called when there is an IMAAdEvent.
  *
- *  @param streamManager the IMAStreamManager receiving the event
- *  @param event         the IMAAdEvent received
+ * @param streamManager the IMAStreamManager receiving the event
+ * @param event         the IMAAdEvent received
  */
 - (void)streamManager:(IMAStreamManager *)streamManager didReceiveAdEvent:(IMAAdEvent *)event;
 
 /**
- *  Called when there is an IMAAdEvent.
+ * Called when there is an IMAAdEvent.
  *
- *  @param streamManager the IMAStreamManager receiving the error
- *  @param error         the IMAAdError received
+ * @param streamManager the IMAStreamManager receiving the error
+ * @param error         the IMAAdError received
  */
 - (void)streamManager:(IMAStreamManager *)streamManager didReceiveAdError:(IMAAdError *)error;
 
 @optional
 
 /**
- *  Called when the ad is playing to give updates about ad progress.
+ * Called when the ad is playing to give updates about ad progress.
  *
- *  @param streamManager    the IMAStreamManager tracking ad playback
- *  @param time             the current ad playback time in seconds
- *  @param adDuration       the total duration of the current ad in seconds
- *  @param adPosition       the ad position of the current ad in the current ad break
- *  @param totalAds         the total number of ads in the current ad break
- *  @param adBreakDuration  the total duration of the current ad break in seconds
+ * @param streamManager    the IMAStreamManager tracking ad playback
+ * @param time             the current ad playback time in seconds
+ * @param adDuration       the total duration of the current ad in seconds
+ * @param adPosition       the ad position of the current ad in the current ad break
+ * @param totalAds         the total number of ads in the current ad break
+ * @param adBreakDuration  the total duration of the current ad break in seconds
+ * @param adPeriodDuration the total duration of the current ad period in seconds. This includes ads
+ * duration plus slate.
  */
 - (void)streamManager:(IMAStreamManager *)streamManager
-  adDidProgressToTime:(NSTimeInterval)time
-           adDuration:(NSTimeInterval)adDuration
-           adPosition:(NSInteger)adPosition
-             totalAds:(NSInteger)totalAds
-      adBreakDuration:(NSTimeInterval)adBreakDuration;
+    adDidProgressToTime:(NSTimeInterval)time
+             adDuration:(NSTimeInterval)adDuration
+             adPosition:(NSInteger)adPosition
+               totalAds:(NSInteger)totalAds
+        adBreakDuration:(NSTimeInterval)adBreakDuration
+       adPeriodDuration:(NSTimeInterval)adPeriodDuration;
 
 @end
 
 #pragma mark - IMAStreamManager
 
 /**
- *  The IMAStreamManager class is responsible for playing streams.
+ * The IMAStreamManager class is responsible for playing streams.
  */
 @interface IMAStreamManager : NSObject
 
 /**
- *  The IMAStreamManagerDelegate to notify with events during stream playback.
+ * The IMAStreamManagerDelegate to notify with events during stream playback.
  */
 @property(nonatomic, weak) NSObject<IMAStreamManagerDelegate> *delegate;
 
 /**
- *  Identifier used during dynamic ad insertion to uniquely identify a stream. This can be used in
- *  the Stream Activity Monitor Debug Console to debug the stream session.
+ * Identifier used during dynamic ad insertion to uniquely identify a stream. This can be used in
+ * the Stream Activity Monitor Debug Console to debug the stream session.
  */
 @property(nonatomic, copy, readonly) NSString *streamId;
 
 /**
- *  Initializes and loads the stream.
+ * Initializes and loads the stream.
  *
- *  @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
- *                              Use nil to default to standard rendering.
+ * @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
+ *                             Use nil to default to standard rendering.
  */
 - (void)initializeWithAdsRenderingSettings:(IMAAdsRenderingSettings *)adsRenderingSettings;
 
 /**
- *  Returns the stream time with ads for a given content time. Returns the given content time
- *  for live streams.
+ * Returns the stream time with ads for a given content time. Returns the given content time
+ * for live streams.
  *
- *  @param contentTime   the content time without any ads (in seconds)
+ * @param contentTime   the content time without any ads (in seconds)
  *
- *  @return the stream time that corresponds with the given content time once ads are inserted
+ * @return the stream time that corresponds with the given content time once ads are inserted
  */
 - (NSTimeInterval)streamTimeForContentTime:(NSTimeInterval)contentTime;
 
 /**
- *  Returns the content time without ads for a given stream time. Returns the given stream time
- *  for live streams.
+ * Returns the content time without ads for a given stream time. Returns the given stream time
+ * for live streams.
  *
- *  @param streamTime   the stream time with inserted ads (in seconds)
+ * @param streamTime   the stream time with inserted ads (in seconds)
  *
- *  @return the content time that corresponds with the given stream time once ads are removed
+ * @return the content time that corresponds with the given stream time once ads are removed
  */
 - (NSTimeInterval)contentTimeForStreamTime:(NSTimeInterval)streamTime;
 
 /**
- *  Returns the previous cuepoint for the given stream time. Retuns nil if no such cuepoint exists.
- *  This is used to implement features like snap back, and called when the publisher detects that
- *  the user seeked in order to force the user to watch an ad break they may have skipped over.
+ * Returns the previous cuepoint for the given stream time. Returns nil if no such cuepoint exists.
+ * This is used to implement features like snap back, and called when the publisher detects that
+ * the user seeked in order to force the user to watch an ad break they may have skipped over.
  *
- *  @param streamTime   the stream time that the was seeked to.
+ * @param streamTime   the stream time that the was seeked to.
  *
- *  @return the previous IMACuepoint for the given stream time.
+ * @return the previous IMACuepoint for the given stream time.
  */
 - (IMACuepoint *)previousCuepointForStreamTime:(NSTimeInterval)streamTime;
+
+/**
+ * Replaces all of the ad tag parameters used for upcoming ad requests for a
+ * live stream.
+ * Note that this call is a no-op for VOD streams.
+ *
+ * @param adTagParameters   the new ad tag parameters for the current stream.
+ */
+- (void)replaceAdTagParameters:(NSDictionary<NSString *, NSString *> *)adTagParameters;
 
 /**
  * :nodoc:
@@ -143,7 +155,7 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- *  Cleans the stream manager's internal state for proper deallocation.
+ * Cleans the stream manager's internal state for proper deallocation.
  */
 - (void)destroy;
 

@@ -11,18 +11,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  Simple data object containing universal ad ID information.
+ * Simple data object containing universal ad ID information.
  */
 @interface IMAUniversalAdID : NSObject
 
 /**
- *  The universal ad ID value. This will be "unknown" if it isn't defined by the ad.
+ * The universal ad ID value. This will be "unknown" if it isn't defined by the ad.
  */
 @property(nonatomic, copy, readonly) NSString *adIDValue;
 
 /**
- *  The universal ad ID registry with which the value is registerd. This will be "unknown"
- *  if it isn't defined by the ad.
+ * The universal ad ID registry with which the value is registerd. This will be "unknown"
+ * if it isn't defined by the ad.
  */
 @property(nonatomic, copy, readonly) NSString *adIDRegistry;
 

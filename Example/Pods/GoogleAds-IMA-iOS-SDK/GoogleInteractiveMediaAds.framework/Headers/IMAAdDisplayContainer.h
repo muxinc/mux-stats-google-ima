@@ -9,63 +9,89 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+@class IMACompanionAdSlot;
+@class IMAFriendlyObstruction;
+
 /**
- *  The IMAAdDisplayContainer is responsible for managing the ad container view
- *  and companion ad slots used for ad playback.
+ * The IMAAdDisplayContainer is responsible for managing the ad container view and companion ad
+ * slots used for ad playback.
  */
 @interface IMAAdDisplayContainer : NSObject
 
 /**
- *  View containing the video display and ad related UI. This view must be present in the view
- *  hierarchy in order to make ad or stream requests.
+ * View containing the video display and ad related UI. This view must be present in the view
+ * hierarchy in order to make ad or stream requests.
  */
-@property(nonatomic, strong, readonly) UIView *adContainer;
+@property(nonatomic, readonly) UIView *adContainer;
 
 /**
- *  List of companion ad slots. Can be nil or empty.
+ * View controller containing the ad container. Used to present ad UI in child view controllers. It
+ * must be non-nil in order to make ad or stream requests, and it must be in the view hierarchy
+ * before ad playback.
  */
-@property(nonatomic, copy, readonly) NSArray *companionSlots;
+@property(nonatomic, weak, nullable) UIViewController *adContainerViewController;
+
+/** The environment to focus on during an ad break. Nil if there is not currently an ad break. */
+@property(nonatomic, readonly, nullable) id<UIFocusEnvironment> focusEnvironment;
+
+/** List of companion ad slots. Can be nil or empty. */
+@property(nonatomic, readonly, nullable) NSArray<IMACompanionAdSlot *> *companionSlots;
 
 /**
- *  Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI without any
- *  companion slots.
+ * Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI without any
+ * companion slots.
  *
- *  @param adContainer    the UIView where the ad will be rendered. Fills the view's bounds.
+ * @param adContainer The view where the ad will be rendered. Fills the view's bounds.
+ * @param adContainerViewController The view controller containing the ad container. If not provided
+ *     here, must be set on the property before making an ads or stream request.
  *
- *  @return the IMAAdDisplayContainer instance
- */
-- (instancetype)initWithAdContainer:(UIView *)adContainer;
-
-/**
- *  Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI.
- *
- *  @param adContainer    the UIView where the ad will be rendered. Fills the view's bounds.
- *  @param companionSlots the array of IMACompanionAdSlots. Can be nil or empty.
- *
- *  @return the IMAAdDisplayContainer instance
+ * @return A new IMAAdDisplayContainer instance
  */
 - (instancetype)initWithAdContainer:(UIView *)adContainer
-                     companionSlots:(NSArray *)companionSlots;
+                     viewController:(nullable UIViewController *)adContainerViewController;
 
 /**
- * :nodoc:
+ * Initializes IMAAdDisplayContainer for rendering the ad and displaying the ad UI.
+ *
+ * @param adContainer    The view where the ad will be rendered. Fills the view's bounds.
+ * @param adContainerViewController The view controller containing the ad container. If not provided
+ *     here, must be set on the property before making an ads or stream request.
+ * @param companionSlots The array of IMACompanionAdSlots. Can be nil or empty.
+ *
+ * @return A new IMAAdDisplayContainer instance
  */
+- (instancetype)initWithAdContainer:(UIView *)adContainer
+                     viewController:(nullable UIViewController *)adContainerViewController
+                     companionSlots:(nullable NSArray<IMACompanionAdSlot *> *)companionSlots;
+
+/** :nodoc: */
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- *  Registers your application's video playback controls that will overlay this container. Multiple
- *  controls may be registered with this method.
- *  WARNING: It is critical that this UI obscure as little ad space as possible so that viewabilty
- *  measurement isn't impacted.
+ * Registers a view that overlays or obstructs this container as "friendly" for viewability
+ * measurement purposes.
  *
- *  @param videoControlsOverlay Small or mostly transparent video controls presented over the
- *      container.
+ * See <a
+ * href="https://developers.google.com/interactive-media-ads/docs/sdks/ios/omsdk">Open Measurement
+ * in the IMA SDK</a> for guidance on what is and what is not allowed to be registered.
+ *
+ * @param friendlyObstruction An obstruction to be marked as "friendly" until unregistered.
  */
-- (void)registerVideoControlsOverlay:(UIView *)videoControlsOverlay;
+- (void)registerFriendlyObstruction:(IMAFriendlyObstruction *)friendlyObstruction;
 
-/**
- *  Unregisters all previously registered video controls overlays.
- */
-- (void)unregisterAllVideoControlsOverlays;
+/** Unregisters all previously registered friendly obstructions. */
+- (void)unregisterAllFriendlyObstructions;
+
+/** :nodoc: */
+- (void)registerVideoControlsOverlay:(UIView *)videoControlsOverlay
+    DEPRECATED_MSG_ATTRIBUTE("Use registerFriendlyObstruction: instead.");
+
+/** :nodoc: */
+- (void)unregisterAllVideoControlsOverlays DEPRECATED_MSG_ATTRIBUTE(
+    "Use unregisterAllFriendlyObstructions: instead.");
 
 @end
+
+NS_ASSUME_NONNULL_END

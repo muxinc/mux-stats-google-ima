@@ -9,13 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#if TARGET_OS_IOS
 @import MuxCore;
 @import MUXSDKStats;
-#else
-@import MuxCoreTv;
-@import MUXSDKStatsTv;
-#endif
 @import GoogleInteractiveMediaAds;
 
 @class MUXSDKPlayerBinding;
