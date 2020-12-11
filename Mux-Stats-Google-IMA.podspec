@@ -21,15 +21,25 @@ Pod::Spec.new do |s|
   s.author           = { 'Mux' => 'ios-sdk@mux.com' }
   s.source           = { :git => 'https://github.com/muxinc/mux-stats-google-ima.git', :tag => "v#{s.version}" }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
 
 
   s.ios.dependency 'Mux-Stats-AVPlayer', '~> 2.0'
-  s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.9'
+  s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.13'
   s.ios.source_files = 'MUXSDKImaListener/Classes/**/*'
 
   s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 2.0'
-  s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.2'
+  s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.3'
   s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
+
+
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
+  }
 end

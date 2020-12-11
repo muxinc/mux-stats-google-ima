@@ -1276,6 +1276,37 @@
 			};
 			name = Debug;
 		};
+		4B1ADC2A6A6D43BCEC89640C03DDAE12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550040A37A34703848D3EAA3E05CBBFB /* Mux-Stats-Google-IMA.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
+				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
+				PRODUCT_NAME = Mux_Stats_Google_IMA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		526B5736D5A7FB0737C494F8F968E2B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2ECF0E7F64320533856663A0718C04B2 /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
@@ -1430,36 +1461,6 @@
 			};
 			name = Release;
 		};
-		83799E1EEC70170FB5FDC65632655345 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 550040A37A34703848D3EAA3E05CBBFB /* Mux-Stats-Google-IMA.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A18C38DD7F8CBCA7D1C646922E05E563 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C9F2002A0507C9B7DB55105ED3E4511 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */;
@@ -1500,37 +1501,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		C0CEF4311C36E5FB3D3CA18295F08081 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F789FC76B55A781929E2589A26582439 /* Mux-Stats-Google-IMA.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		D1756B51E63992AD20C80BAE3CE73F65 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1643,6 +1613,38 @@
 			};
 			name = Debug;
 		};
+		FBBD38351E9BC87CA7044D14F366B941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F789FC76B55A781929E2589A26582439 /* Mux-Stats-Google-IMA.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA/Mux-Stats-Google-IMA.modulemap";
+				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
+				PRODUCT_NAME = Mux_Stats_Google_IMA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1703,8 +1705,8 @@
 		E43F918737021A36BDD7A367ECF1E211 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83799E1EEC70170FB5FDC65632655345 /* Debug */,
-				C0CEF4311C36E5FB3D3CA18295F08081 /* Release */,
+				4B1ADC2A6A6D43BCEC89640C03DDAE12 /* Debug */,
+				FBBD38351E9BC87CA7044D14F366B941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
