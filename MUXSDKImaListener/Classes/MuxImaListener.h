@@ -17,12 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MuxImaListener : NSObject {
     @private MUXSDKPlayerBinding *_playerBinding;
+    @private BOOL _isPictureInPicture;
 }
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
 - (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEvent *)event;
 - (void)dispatchError:(NSString *)message;
-- (void)onContentPauseOrResume :(bool)isPause;
+- (void)onContentPauseOrResume:(bool)isPause;
+- (void)setPictureInPicture:(BOOL)isPictureInPicture;
 
 @end
 

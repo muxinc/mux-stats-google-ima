@@ -14,6 +14,7 @@
 
     if (self) {
         _playerBinding = binding;
+        _isPictureInPicture = NO;
     }
     return(self);
 }
@@ -84,17 +85,29 @@
 - (void)onContentPauseOrResume :(bool)isPause {
     MUXSDKPlaybackEvent *playbackEvent;
     if (isPause) {
+        if (_isPictureInPicture) {
+            [_playerBinding setAdPlaying:YES];
+        }
+        
         playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         playbackEvent = [MUXSDKAdRequestEvent new];
     } else {
+        if (_isPictureInPicture) {
+            [_playerBinding setAdPlaying:NO];
+        }
+        
         playbackEvent = [MUXSDKAdBreakEndEvent new];
     }
     if (playbackEvent != nil) {
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent:playbackEvent];
     }
+}
+
+- (void)setPictureInPicture:(BOOL)isPictureInPicture {
+    _isPictureInPicture = isPictureInPicture;
 }
 
 @end
