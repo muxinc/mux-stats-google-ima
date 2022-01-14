@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '10.0'
 
 
-  s.ios.dependency 'Mux-Stats-AVPlayer', '~> 2.9'
+  s.ios.dependency 'Mux-Stats-AVPlayer', '~> 2.10'
   s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.13'
   s.ios.source_files = 'MUXSDKImaListener/Classes/**/*'
 
-  s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 2.9'
+  s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 2.10'
   s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.3'
   s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
 
