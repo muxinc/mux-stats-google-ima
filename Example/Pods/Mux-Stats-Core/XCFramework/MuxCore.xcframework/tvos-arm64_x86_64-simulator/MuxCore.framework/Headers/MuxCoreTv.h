@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for MuxCoreTv.
 FOUNDATION_EXPORT double MuxCoreTvVersionNumber;
@@ -15,6 +15,7 @@ FOUNDATION_EXPORT const unsigned char MuxCoreTvVersionString[];
 #import "MUXSDKCustomerViewData.h"
 #import "MUXSDKCustomerPlayerData.h"
 #import "MUXSDKCustomerVideoData.h"
+#import "MUXSDKCustomerViewerData.h"
 #import "MUXSDKEnvironmentData.h"
 #import "MUXSDKPlayerData.h"
 #import "MUXSDKVideoData.h"
@@ -51,3 +52,5 @@ FOUNDATION_EXPORT const unsigned char MuxCoreTvVersionString[];
 #import "MUXSDKAdResponseEvent.h"
 #import "MUXSDKOrientationChangeEvent.h"
 #import "MUXSDKRenditionChangeEvent.h"
+#import "MUXSDKCustomerData.h"
+#import "MUXSDKCustomData.h"

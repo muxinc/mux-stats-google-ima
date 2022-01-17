@@ -13,13 +13,11 @@
 #import "MUXSDKVideoData.h"
 #import "MUXSDKQueryData.h"
 #import "MUXSDKBandwidthMetricData.h"
+#import "MUXSDKCustomData.h"
 
 extern NSString * _Nonnull const MUXSDKTrackableEventType;
 
-@interface MUXSDKTrackableEvent : MUXSDKBaseEvent <MUXSDKEventTyping> {
-    @private
-    MUXSDKQueryData* query;
-}
+@interface MUXSDKTrackableEvent : MUXSDKBaseEvent <MUXSDKEventTyping>
 
 - (_Nullable id)initWithType:(NSString * _Nullable)type;
 - (_Nullable id)initWithType:(NSString * _Nullable)type requiredProperties:(NSSet *_Nullable) requiredProperties;
@@ -37,6 +35,7 @@ extern NSString * _Nonnull const MUXSDKTrackableEventType;
 @property (nonatomic, retain, nullable) MUXSDKEnvironmentData *environmentData;
 @property (nonatomic, retain, nullable) MUXSDKViewerData *viewerData;
 @property (nonatomic, retain, nullable) MUXSDKBandwidthMetricData *bandwidthMetricData;
+@property (nonatomic, retain, nullable) MUXSDKCustomData *customData;
 
 @end
 
