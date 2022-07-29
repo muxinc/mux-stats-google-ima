@@ -4,12 +4,14 @@
 #import "MUXSDKQueryData.h"
 #import "MUXSDKViewDeviceOrientationData.h"
 #import <Foundation/Foundation.h>
+#import "MUXSDKViewDeviceOrientationData.h"
+#import "MUXSDKUpsertable.h"
 
 extern NSString * _Nonnull VIEW_SEQUENCE_NUMBER;
 extern NSString * _Nonnull VIEW_ID;
 extern NSString * _Nonnull VIEWER_TIME;
 
-@interface MUXSDKViewData : MUXSDKQueryData
+@interface MUXSDKViewData : MUXSDKQueryData<MUXSDKUpsertable>
 
 @property (nullable) NSNumber *viewAdBreakCount;
 @property (nullable) NSNumber *viewAdCompleteCount;
@@ -63,6 +65,7 @@ extern NSString * _Nonnull VIEWER_TIME;
 @property (nullable) NSString *viewPrerollAdAssetDomain;
 @property (nonatomic, nullable) MUXSDKViewDeviceOrientationData *viewDeviceOrientationData;
 @property (nullable) NSNumber *viewMaxPlayheadPosition;
+@property (nullable) NSString *internalViewSessionId;
 @end
 
 #endif
