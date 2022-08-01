@@ -32,14 +32,4 @@ Pod::Spec.new do |s|
   s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 2.10'
   s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.3'
   s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
-
-
-  s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-  }
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-  }
 end
