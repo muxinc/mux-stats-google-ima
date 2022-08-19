@@ -30,7 +30,7 @@ pod 'Mux-Stats-Google-IMA'
 
 * Update Mux-Stats-Google-IMA.podspec
 * cd Example/ and run `pod install` (this will install the updated version into the example app)
-* run `carthage build --no-skip-current` (brew install carthage if you haven't already)
+* run `carthage build --no-skip-current --use-xcframeworks` (brew install carthage if you haven't already)
 * run `carthage archive Mux_Stats_Google_IMA` - this will build a .zip folder
 * commit your changes
 * git tag vX.X.X (example: git tag v0.3.0)
