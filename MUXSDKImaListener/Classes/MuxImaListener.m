@@ -18,6 +18,10 @@
 
     if (self) {
         _playerBinding = binding;
+        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsNone) {
+            _isPictureInPicture = NO;
+            _usesServerSideAdInsertion = NO;
+        }
         if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
             _isPictureInPicture = YES;
         }
@@ -102,17 +106,25 @@
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         playbackEvent = [MUXSDKAdRequestEvent new];
-    } else {
-        if (_isPictureInPicture) {
-            [_playerBinding setAdPlaying:NO];
-        }
-        
-        playbackEvent = [MUXSDKAdBreakEndEvent new];
+        [self setupAdViewDataAndDispatchEvent: playbackEvent];
+        return;
     }
-    if (playbackEvent != nil) {
-        [self setupAdViewData:playbackEvent withAd:nil];
-        [_playerBinding dispatchAdEvent:playbackEvent];
+    
+    if (_isPictureInPicture) {
+        [_playerBinding setAdPlaying:NO];
     }
+    
+    playbackEvent = [MUXSDKAdBreakEndEvent new];
+    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+    if (_usesServerSideAdInsertion) {
+        [_playerBinding dispatchPlay];
+        [_playerBinding dispatchPlaying];
+    }
+}
+
+- (void) setupAdViewDataAndDispatchEvent:(MUXSDKPlaybackEvent *) event {
+    [self setupAdViewData:event withAd:nil];
+    [_playerBinding dispatchAdEvent:event];
 }
 
 - (void)setPictureInPicture:(BOOL)isPictureInPicture {
