@@ -10,11 +10,20 @@
 @implementation MuxImaListener
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
+    return [self initWithPlayerBinding:binding options:MuxImaListenerOptionsNone];
+}
+
+- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding options:(MuxImaListenerOptions) options {
     self = [super init];
 
     if (self) {
         _playerBinding = binding;
-        _isPictureInPicture = NO;
+        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
+            _isPictureInPicture = YES;
+        }
+        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsServerSideAdInsertion) {
+            _usesServerSideAdInsertion = YES;
+        }
     }
     return(self);
 }
