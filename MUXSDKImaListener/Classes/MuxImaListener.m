@@ -25,7 +25,7 @@
         if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
             _isPictureInPicture = YES;
         }
-        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsServerSideAdInsertion) {
+        if ((options & MuxImaListenerOptionsServerSideAdInsertion) == MuxImaListenerOptionsServerSideAdInsertion) {
             _usesServerSideAdInsertion = YES;
         }
     }
