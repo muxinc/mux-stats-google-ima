@@ -62,6 +62,14 @@ describe(@"MuxImaListener", ^{
             expect(imaListener).toNot.beNil();
         });
     });
+    
+    describe(@"initWithPlayerBindingWithOptions", ^{
+        it(@"should initialize an object", ^{
+            MuxImaListenerOptions options = MuxImaListenerOptionsPictureInPicture | MuxImaListenerOptionsServerSideAdInsertion;
+            MuxImaListener *imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding options:options];
+            expect(imaListener).toNot.beNil();
+        });
+    });
 
     describe(@"dispatchEvent", ^{
         __block MuxImaListener *imaListener = nil;
