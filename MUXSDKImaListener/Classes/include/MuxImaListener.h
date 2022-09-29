@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
     MuxImaListenerOptionsNone                    = 0,
     MuxImaListenerOptionsPictureInPicture        = 1 << 0,
-    MuxImaListenerOptionsServerSideAdInsertion   = 1 << 1,
+    //MuxImaListenerOptionsServerSideAdInsertion   = 1 << 1,
 };
 
 @interface MuxImaListener : NSObject {
@@ -33,6 +33,8 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 - (void)dispatchError:(NSString *)message;
 - (void)onContentPauseOrResume:(bool)isPause;
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
+- (void)clientAdRequest:(IMAAdsRequest *)request;
+- (void)daiAdRequest:(IMAStreamRequest *)request;
 
 @end
 
