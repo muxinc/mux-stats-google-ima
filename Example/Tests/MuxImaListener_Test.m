@@ -65,7 +65,7 @@ describe(@"MuxImaListener", ^{
     
     describe(@"initWithPlayerBindingWithOptions", ^{
         it(@"should initialize an object", ^{
-            MuxImaListenerOptions options = MuxImaListenerOptionsPictureInPicture | MuxImaListenerOptionsServerSideAdInsertion;
+            MuxImaListenerOptions options = MuxImaListenerOptionsPictureInPicture;
             MuxImaListener *imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding options:options];
             expect(imaListener).toNot.beNil();
         });
