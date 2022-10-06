@@ -2,9 +2,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "MUXSDKImaListener",
+    name: "Mux_Stats_Google_IMA",
     products: [
-        .library(name: "Mux_Stats_Google_IMA", targets: ["MUXSDKImaListener"]),
+        .library(name: "Mux_Stats_Google_IMA", targets: ["Mux_Stats_Google_IMA"]),
     ],
     dependencies: [
         .package(
@@ -15,7 +15,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MUXSDKImaListener",
+            name: "Mux_Stats_Google_IMA",
             dependencies: ["MUXSDKStats"],
             path: "MUXSDKImaListener/Classes"
         ),
