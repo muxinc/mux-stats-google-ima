@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "MUXSDKImaListener",
     products: [
-        .library(name: "MUXSDKImaListener", targets: ["MUXSDKImaListener"]),
+        .library(name: "Mux_Stats_Google_IMA", targets: ["MUXSDKImaListener"]),
     ],
     dependencies: [
         .package(
