@@ -16,6 +16,8 @@ let package = Package(
     targets: [
         .target(
             name: "MUXSDKImaListener",
-            dependencies: ["MUXSDKStats"]),
+            dependencies: ["MUXSDKStats"],
+            path: "MUXSDKImaListener/Classes"
+        ),
     ]
 )
