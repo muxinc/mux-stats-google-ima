@@ -16,7 +16,7 @@ let package = Package(
     targets: [
         .target(
             name: "Mux_Stats_Google_IMA",
-            dependencies: ["MUXSDKStats"],
+            dependencies: ["MUXSDKStats", "GoogleInteractiveMediaAds"],
             path: "MUXSDKImaListener/Classes"
         ),
         .binaryTarget(
