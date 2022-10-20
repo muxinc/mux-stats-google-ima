@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.16'
   s.ios.source_files = 'MUXSDKImaListener/Classes/**/*'
 
-  s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 2.10'
+  s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 3.0'
   s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.6'
   s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
 
