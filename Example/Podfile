@@ -1,6 +1,10 @@
 use_frameworks!
+
+platform :ios, '12.0'
+
 target 'MUXSDKImaListener_Tests' do
   pod 'Mux-Stats-Google-IMA', :path => '../'
+  pod 'Mux-Stats-AVPlayer', :path => '../../mux-stats-sdk-avplayer'
   
   pod 'Specta'
     pod 'Expecta'
