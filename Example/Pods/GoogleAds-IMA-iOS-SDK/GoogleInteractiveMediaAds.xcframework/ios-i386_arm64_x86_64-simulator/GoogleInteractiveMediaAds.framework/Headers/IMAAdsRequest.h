@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class IMAAVPlayerContentPlayhead;
 @class IMAAVPlayerVideoDisplay;
 @class IMAPictureInPictureProxy;
+@class IMASecureSignals;
 @protocol IMAContentPlayhead;
 
 /**
@@ -31,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Specifies a VAST, VMAP, or ad rules response to be used instead of making a
- * request via an ad tag URL. This can be useful for debugging and other situations
+ * request through an ad tag URL. This can be useful for debugging and other situations
  * in which an ad response is already available.
  */
 @property(nonatomic, copy, readonly, nullable) NSString *adsResponse;
@@ -84,6 +85,14 @@ NS_ASSUME_NONNULL_BEGIN
  * optional.
  */
 @property(nonatomic, copy, nullable) NSString *contentTitle;
+
+/**
+ * Specifies the Secure Signal with custom data for this ads request. Secure Signal with custom
+ * data is an encrypted blob containing signals collected by the publisher and previously agreed
+ * upon by the publisher and bidder. The Secure Signal with custom data can be cleared out by
+ * passing null to this function.
+ */
+@property(nonatomic, nullable) IMASecureSignals *secureSignals;
 
 /**
  * Specifies the universal link to the content's screen. If provided, this parameter is passed to

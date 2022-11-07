@@ -3,10 +3,11 @@
 
 #import "MUXSDKQueryData.h"
 #import <Foundation/Foundation.h>
+#import "MUXSDKUpsertable.h"
 
 extern NSString * _Nonnull VIDEO_ID;
 
-@interface MUXSDKCustomerVideoData : MUXSDKQueryData
+@interface MUXSDKCustomerVideoData : MUXSDKQueryData<MUXSDKUpsertable>
 
 @property (nullable) NSString *videoCdn;
 @property (nullable) NSString *videoContentType;
@@ -22,6 +23,7 @@ extern NSString * _Nonnull VIDEO_ID;
 @property (nullable) NSString *videoVariantId;
 @property (nullable) NSString *videoVariantName;
 @property (nullable) NSString *videoSourceUrl;
+@property (nullable) NSString *videoExperiments;
 
 @end
 

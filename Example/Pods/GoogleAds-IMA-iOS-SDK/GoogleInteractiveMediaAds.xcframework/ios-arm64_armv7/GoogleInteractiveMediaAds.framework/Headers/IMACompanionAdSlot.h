@@ -83,8 +83,8 @@ extern const NSInteger kIMAFluidSize;
  * Initializes an instance of a IMACompanionAdSlot with design ad width and height.
  *
  * @param view   the UIView that will contain the companion ad
- * @param width  the desired width of the ad
- * @param height the desired height of the ad
+ * @param width  the chosen width of the ad
+ * @param height the chosen height of the ad
  *
  * @return the IMACompanionAdSlot instance
  */
