@@ -10,7 +10,7 @@ let package = Package(
         .package(
             name: "MUXSDKStats",
             url: "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
-            from: "2.13.0"
+            from: "3.0.0"
         ),
     ],
     targets: [
