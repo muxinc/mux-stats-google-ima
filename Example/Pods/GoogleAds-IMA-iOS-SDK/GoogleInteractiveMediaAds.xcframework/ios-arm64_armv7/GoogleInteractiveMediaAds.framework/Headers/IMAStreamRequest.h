@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class IMAAdDisplayContainer;
+@class IMASecureSignals;
 @protocol IMAVideoDisplay;
 
 /**
@@ -75,6 +76,21 @@ NS_ASSUME_NONNULL_BEGIN
  * documentation</a> for more information.
  */
 @property(nonatomic, copy, nullable) NSURL *contentURL;
+
+/**
+ * Enables the addition of a nonce to the request. This is needed to transmit monetization signals
+ * to Google servers when ads are requested server side from a non Google server. Defaults to false.
+ * :nodoc:
+ */
+@property(nonatomic, assign) BOOL enableNonce;
+
+/**
+ * Specifies the Secure Signal with custom data for this stream request. Secure Signal with custom
+ * data is an encrypted blob containing signals collected by the publisher and previously agreed
+ * upon by the publisher and bidder. The Secure Signal with custom data can be cleared out by
+ * passing null to this function.
+ */
+@property(nonatomic, nullable) IMASecureSignals *secureSignals;
 
 /**
  * :nodoc:
