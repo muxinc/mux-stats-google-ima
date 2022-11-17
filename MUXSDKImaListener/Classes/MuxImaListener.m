@@ -98,7 +98,6 @@
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:YES];
         }
-     
         MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
@@ -108,7 +107,6 @@
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:NO];
         }
-        
         playbackEvent = [MUXSDKAdBreakEndEvent new];
         [self setupAdViewDataAndDispatchEvent: playbackEvent];
         if (_usesServerSideAdInsertion) {
