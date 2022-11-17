@@ -98,19 +98,23 @@
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:YES];
         }
+     
+        MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
+        [self setupAdViewData:playbackEvent withAd:nil];
+        [_playerBinding dispatchAdEvent: playbackEvent];
         
         return;
-    }
-    
-    if (_isPictureInPicture) {
-        [_playerBinding setAdPlaying:NO];
-    }
-    
-    playbackEvent = [MUXSDKAdBreakEndEvent new];
-    [self setupAdViewDataAndDispatchEvent: playbackEvent];
-    if (_usesServerSideAdInsertion) {
-        [_playerBinding dispatchPlay];
-        [_playerBinding dispatchPlaying];
+    } else {
+        if (_isPictureInPicture) {
+            [_playerBinding setAdPlaying:NO];
+        }
+        
+        playbackEvent = [MUXSDKAdBreakEndEvent new];
+        [self setupAdViewDataAndDispatchEvent: playbackEvent];
+        if (_usesServerSideAdInsertion) {
+            [_playerBinding dispatchPlay];
+            [_playerBinding dispatchPlaying];
+        }
     }
 }
 
@@ -122,21 +126,17 @@
 - (void)clientAdRequest:(IMAAdsRequest *)request {
     _usesServerSideAdInsertion = NO;
     
-    [self beginAdView];
+    [self dispatchAdRequest];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
     _usesServerSideAdInsertion = YES;
     
-    [self beginAdView];
+    [self dispatchAdRequest];
 }
 
-- (void)beginAdView {
-    MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
-    [self setupAdViewData:playbackEvent withAd:nil];
-    [_playerBinding dispatchAdEvent: playbackEvent];
-    
-    playbackEvent = [MUXSDKAdRequestEvent new];
+- (void)dispatchAdRequest {
+    MUXSDKPlaybackEvent* playbackEvent = [MUXSDKAdRequestEvent new];
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
