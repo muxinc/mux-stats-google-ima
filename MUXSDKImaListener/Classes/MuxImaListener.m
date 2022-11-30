@@ -20,11 +20,11 @@
         _playerBinding = binding;
         if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsNone) {
             _isPictureInPicture = NO;
-            _usesServerSideAdInsertion = NO;
         }
         if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
             _isPictureInPicture = YES;
         }
+        _usesServerSideAdInsertion = NO;
     }
     return(self);
 }
