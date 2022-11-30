@@ -25,6 +25,7 @@
             _isPictureInPicture = YES;
         }
         _usesServerSideAdInsertion = NO;
+        _adRequestReported = NO;
     }
     return(self);
 }
@@ -98,6 +99,10 @@
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:YES];
         }
+        if (!_adRequestReported) {
+            // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
+            [self dispatchAdRequest];
+        }
         MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
@@ -123,12 +128,14 @@
 
 - (void)clientAdRequest:(IMAAdsRequest *)request {
     _usesServerSideAdInsertion = NO;
+    _adRequestReported = YES;
     
     [self dispatchAdRequest];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
     _usesServerSideAdInsertion = YES;
+    _adRequestReported = YES;
     
     [self dispatchAdRequest];
 }

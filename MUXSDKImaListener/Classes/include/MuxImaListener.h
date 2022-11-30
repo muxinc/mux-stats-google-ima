@@ -24,6 +24,7 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
     @private MUXSDKPlayerBinding *_playerBinding;
     @private BOOL _isPictureInPicture;
     @private BOOL _usesServerSideAdInsertion;
+    @private BOOL _adRequestReported;
 }
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
