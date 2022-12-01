@@ -11,7 +11,7 @@ import XCTest
 final class DemoAppUITests: XCTestCase {
     
     // Set this key to your environment key to have the tests generate data on your dashboard
-    let UI_TEST_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"//"tr4q3qahs0gflm8b1c75h49ln";
+    let UI_TEST_ENV_KEY = "tr4q3qahs0gflm8b1c75h49ln";
     
     override func setUpWithError() throws {
         continueAfterFailure = false
