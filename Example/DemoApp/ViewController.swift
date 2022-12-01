@@ -38,9 +38,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         NotificationCenter.default.removeObserver(self)
     }
     
-    /*
-     TODO: STEP SEVEN OF THE SAMPLE APP
-     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
