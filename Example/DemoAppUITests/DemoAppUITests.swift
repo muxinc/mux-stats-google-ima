@@ -31,7 +31,6 @@ final class DemoAppUITests: XCTestCase {
         }
         
         let playerViewElement = app.otherElements["AVPlayerView"]
-        // TODO: This also pauses the video on iOS 16. Is that fine?
         playerViewElement.tap()
         
         let skipForwardButton = app.buttons["Skip Forward"]
