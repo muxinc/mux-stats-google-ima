@@ -13,7 +13,6 @@
 		351790AF293822A100ABBCC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790AE293822A100ABBCC9 /* ViewController.swift */; };
 		351790B4293822A200ABBCC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351790B3293822A200ABBCC9 /* Assets.xcassets */; };
 		351790B7293822A200ABBCC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351790B5293822A200ABBCC9 /* LaunchScreen.storyboard */; };
-		351790C2293822A200ABBCC9 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790C1293822A200ABBCC9 /* DemoAppTests.swift */; };
 		351790CC293822A200ABBCC9 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790CB293822A200ABBCC9 /* DemoAppUITests.swift */; };
 		351790CE293822A200ABBCC9 /* DemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790CD293822A200ABBCC9 /* DemoAppUITestsLaunchTests.swift */; };
 		351790D92939012600ABBCC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351790D82939012600ABBCC9 /* Main.storyboard */; };
@@ -52,7 +51,6 @@
 		351790B6293822A200ABBCC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351790B8293822A200ABBCC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		351790BD293822A200ABBCC9 /* DemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		351790C1293822A200ABBCC9 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		351790C7293822A200ABBCC9 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		351790CB293822A200ABBCC9 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		351790CD293822A200ABBCC9 /* DemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -127,14 +125,6 @@
 			path = DemoApp;
 			sourceTree = "<group>";
 		};
-		351790C0293822A200ABBCC9 /* DemoAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				351790C1293822A200ABBCC9 /* DemoAppTests.swift */,
-			);
-			path = DemoAppTests;
-			sourceTree = "<group>";
-		};
 		351790CA293822A200ABBCC9 /* DemoAppUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +140,6 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F5B5195388D20070C39A /* Tests */,
 				351790A9293822A100ABBCC9 /* DemoApp */,
-				351790C0293822A200ABBCC9 /* DemoAppTests */,
 				351790CA293822A200ABBCC9 /* DemoAppUITests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -500,7 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				351790C2293822A200ABBCC9 /* DemoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
