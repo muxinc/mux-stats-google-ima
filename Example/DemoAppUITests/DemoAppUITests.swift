@@ -11,27 +11,10 @@ import XCTest
 final class DemoAppUITests: XCTestCase {
     
     // Set this key to your environment key to have the tests generate data on your dashboard
-    let UI_TEST_ENV_KEY = "tr4q3qahs0gflm8b1c75h49ln";
+    let UI_TEST_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"//"tr4q3qahs0gflm8b1c75h49ln";
     
     override func setUpWithError() throws {
         continueAfterFailure = false
-    }
-    
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-        
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
     
     func testImaSdk() throws {

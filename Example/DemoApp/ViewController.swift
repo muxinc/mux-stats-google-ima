@@ -16,7 +16,7 @@ import GoogleInteractiveMediaAds
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
-    private let MUX_DATA_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"
+    private let MUX_DATA_ENV_KEY = "YOUR KEY HERE"
     
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
@@ -36,12 +36,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private var playerBinding: MUXSDKPlayerBinding?
     
     
-    required init?(coder: NSCoder) {
-        
-        
-        super.init(coder: coder)
-    }
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
         
@@ -53,6 +47,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        self.view.accessibilityIdentifier = "AVPlayerView"
         
         setUpContentPlayer(mediaUrl: VOD_TEST_URL)
         setUpAdsLoader()
