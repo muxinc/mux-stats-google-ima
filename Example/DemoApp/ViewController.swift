@@ -16,6 +16,8 @@ import GoogleInteractiveMediaAds
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
+    private let MUX_DATA_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda" // TODO: YOUR KEY HERE
+    
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
     private let VOD_TEST_URL_STEVE  = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
@@ -36,8 +38,11 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+        
+        if(playerBinding != nil) {
+            playerBinding?.detachAVPlayer()
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +61,9 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         let player = AVPlayer(url: contentURL)
         playerViewController = AVPlayerViewController()
         playerViewController.player = player
+        
+        setUpMux(player: player)
+        
         self.player = player
         
         // Set up your content playhead and contentComplete callback.
@@ -67,6 +75,18 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             object: player.currentItem);
         
         showContentPlayer()
+    }
+    
+    func setUpMux(player: AVPlayer) {
+        let customerPlayerData = MUXSDKCustomerPlayerData(environmentKey: MUX_DATA_ENV_KEY)
+        let customerVideoData = MUXSDKCustomerVideoData()
+        customerVideoData.videoTitle = "Mux Data IMA SDK Test"
+        guard let customerData = MUXSDKCustomerData(customerPlayerData: customerPlayerData, videoData: customerVideoData, viewData: nil, customData: nil) else {
+            NSLog("Customer Data didn't initialize?")
+            return
+        }
+        
+        playerBinding = MUXSDKStats.monitorAVPlayerViewController(playerViewController, withPlayerName: DEMO_PLAYER_NAME, customerData: customerData)
     }
     
     func setUpAdsLoader() {
