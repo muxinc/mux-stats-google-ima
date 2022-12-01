@@ -13,7 +13,7 @@ import Mux_Stats_Google_IMA
 import MUXSDKStats
 import GoogleInteractiveMediaAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     private var playerViewController: AVPlayerViewController!
     
     // IMA Ads SDK
-    private var adsLoader: IMAAdsLoader?
-    private var adsManager: IMAAdsManager?
+    private var adsLoader: IMAAdsLoader!
+    private var adsManager: IMAAdsManager!
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     
     // Mux SDK
@@ -46,15 +46,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
         
-        setUpContentPlayer()
+        setUpContentPlayer(mediaUrl: VOD_TEST_URL)
         setUpAdsLoader()
     }
     
-    func setUpContentPlayer() {
+    func setUpContentPlayer(mediaUrl: String) {
         // Load AVPlayer with path to your content.
-        let url = VOD_TEST_URL
-        guard let contentURL = URL(string: url) else {
-            NSLog("!!! Bad Content URL %s", url)
+        guard let contentURL = URL(string: mediaUrl) else {
+            NSLog("!!! Bad Content URL %s", mediaUrl)
             return
         }
         let player = AVPlayer(url: contentURL)
@@ -75,6 +74,7 @@ class ViewController: UIViewController {
     
     func setUpAdsLoader() {
         adsLoader = IMAAdsLoader(settings: nil)
+        adsLoader.delegate = self
     }
     
     func requestAds() {
@@ -95,12 +95,10 @@ class ViewController: UIViewController {
         adsLoader.requestAds(with: request)
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         requestAds()
     }
-    
     
     func showContentPlayer() {
         self.addChild(playerViewController)
@@ -116,8 +114,50 @@ class ViewController: UIViewController {
         playerViewController.removeFromParent()
     }
     
+    // MARK: - IMAAdsLoaderDelegate
+    
+    func adsLoader(_ loader: IMAAdsLoader, adsLoadedWith adsLoadedData: IMAAdsLoadedData) {
+        adsManager = adsLoadedData.adsManager
+        adsManager.delegate = self
+        adsManager.initialize(with: nil)
+    }
+    
+    func adsLoader(_ loader: IMAAdsLoader, failedWith adErrorData: IMAAdLoadingErrorData) {
+        print("Error loading ads: " + (adErrorData.adError.message ?? "nil"))
+        showContentPlayer()
+        playerViewController.player?.play()
+    }
+    
     @objc func contentDidFinishPlaying(_ notification: Notification) {
         adsLoader?.contentComplete()
+    }
+    
+    // MARK: - IMAAdsManagerDelegate
+    
+    func adsManager(_ adsManager: IMAAdsManager, didReceive event: IMAAdEvent) {
+        // Play each ad once it has been loaded
+        if event.type == IMAAdEventType.LOADED {
+            adsManager.start()
+        }
+    }
+    
+    func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
+        // Fall back to playing content
+        print("AdsManager error: " + (error.message ?? "nil"))
+        showContentPlayer()
+        playerViewController.player?.play()
+    }
+    
+    func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager) {
+        // Pause the content for the SDK to play ads.
+        playerViewController.player?.pause()
+        hideContentPlayer()
+    }
+    
+    func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager) {
+        // Resume the content since the SDK is done playing ads (at least for now).
+        showContentPlayer()
+        playerViewController.player?.play()
     }
     
 }
