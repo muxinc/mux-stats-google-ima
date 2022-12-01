@@ -78,15 +78,15 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     }
     
     func setUpMux(player: AVPlayer) {
+        // Basic Data
         let customerPlayerData = MUXSDKCustomerPlayerData(environmentKey: MUX_DATA_ENV_KEY)
         let customerVideoData = MUXSDKCustomerVideoData()
         customerVideoData.videoTitle = "Mux Data IMA SDK Test"
-        guard let customerData = MUXSDKCustomerData(customerPlayerData: customerPlayerData, videoData: customerVideoData, viewData: nil, customData: nil) else {
-            NSLog("Customer Data didn't initialize?")
-            return
-        }
+        let customerData = MUXSDKCustomerData(customerPlayerData: customerPlayerData, videoData: customerVideoData, viewData: nil, customData: nil)!
+        let playerBinding = MUXSDKStats.monitorAVPlayerViewController(playerViewController, withPlayerName: DEMO_PLAYER_NAME, customerData: customerData)!
         
-        playerBinding = MUXSDKStats.monitorAVPlayerViewController(playerViewController, withPlayerName: DEMO_PLAYER_NAME, customerData: customerData)
+        // IMA Ads
+        imaListener = MuxImaListener(playerBinding: playerBinding)
     }
     
     func setUpAdsLoader() {
@@ -109,6 +109,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             contentPlayhead: contentPlayhead,
             userContext: nil)
         
+        imaListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
     }
     
@@ -152,6 +153,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     // MARK: - IMAAdsManagerDelegate
     
     func adsManager(_ adsManager: IMAAdsManager, didReceive event: IMAAdEvent) {
+        imaListener?.dispatchEvent(event)
+        
         // Play each ad once it has been loaded
         if event.type == IMAAdEventType.LOADED {
             adsManager.start()
@@ -161,6 +164,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
         // Fall back to playing content
         print("AdsManager error: " + (error.message ?? "nil"))
+        imaListener?.dispatchError(error.message ?? "nil")
         showContentPlayer()
         playerViewController.player?.play()
     }
@@ -168,12 +172,14 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager) {
         // Pause the content for the SDK to play ads.
         playerViewController.player?.pause()
+        imaListener?.onContentPauseOrResume(true)
         hideContentPlayer()
     }
     
     func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager) {
         // Resume the content since the SDK is done playing ads (at least for now).
         showContentPlayer()
+        imaListener?.onContentPauseOrResume(false)
         playerViewController.player?.play()
     }
     
