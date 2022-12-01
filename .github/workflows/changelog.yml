@@ -6,13 +6,13 @@ on:
       - opened
       - reopened
       - ready_for_review
-    branches:
-      - releases/*
+  # Also only if the branch is 'releases/v**' but you can't specify multiple event filters
 
 jobs:
   changelog:
     name: Release Notes
     runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'releases/v')
 
     steps:
       - uses: daytime-em/changelog-on-pr@v1
