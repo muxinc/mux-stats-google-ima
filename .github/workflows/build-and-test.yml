@@ -17,4 +17,4 @@ jobs:
           echo "Creating symlink of the iOS 14.1 runtime..."
           sudo ln -s /Applications/Xcode_12.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 14.1.simruntime
       - name: Run tests
-        run: "run-tests.sh"
+        run: "./run-tests.sh"
