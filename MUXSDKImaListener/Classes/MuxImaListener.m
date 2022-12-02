@@ -10,11 +10,22 @@
 @implementation MuxImaListener
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
+    return [self initWithPlayerBinding:binding options:MuxImaListenerOptionsNone];
+}
+
+- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding options:(MuxImaListenerOptions) options {
     self = [super init];
 
     if (self) {
         _playerBinding = binding;
-        _isPictureInPicture = NO;
+        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsNone) {
+            _isPictureInPicture = NO;
+        }
+        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
+            _isPictureInPicture = YES;
+        }
+        _usesServerSideAdInsertion = NO;
+        _adRequestReported = NO;
     }
     return(self);
 }
@@ -82,28 +93,56 @@
     [_playerBinding dispatchAdEvent:playbackEvent];
 }
 
-- (void)onContentPauseOrResume :(bool)isPause {
+- (void)onContentPauseOrResume:(bool)isPause {
     MUXSDKPlaybackEvent *playbackEvent;
     if (isPause) {
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:YES];
         }
-        
-        playbackEvent = [MUXSDKAdBreakStartEvent new];
+        if (!_adRequestReported) {
+            // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
+            [self dispatchAdRequest];
+        }
+        MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
-        playbackEvent = [MUXSDKAdRequestEvent new];
+        
+        return;
     } else {
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:NO];
         }
-        
         playbackEvent = [MUXSDKAdBreakEndEvent new];
+        [self setupAdViewDataAndDispatchEvent: playbackEvent];
+        if (_usesServerSideAdInsertion) {
+            [_playerBinding dispatchPlay];
+            [_playerBinding dispatchPlaying];
+        }
     }
-    if (playbackEvent != nil) {
-        [self setupAdViewData:playbackEvent withAd:nil];
-        [_playerBinding dispatchAdEvent:playbackEvent];
-    }
+}
+
+- (void) setupAdViewDataAndDispatchEvent:(MUXSDKPlaybackEvent *) event {
+    [self setupAdViewData:event withAd:nil];
+    [_playerBinding dispatchAdEvent:event];
+}
+
+- (void)clientAdRequest:(IMAAdsRequest *)request {
+    _usesServerSideAdInsertion = NO;
+    _adRequestReported = YES;
+    
+    [self dispatchAdRequest];
+}
+
+- (void)daiAdRequest:(IMAStreamRequest *)request {
+    _usesServerSideAdInsertion = YES;
+    _adRequestReported = YES;
+    
+    [self dispatchAdRequest];
+}
+
+- (void)dispatchAdRequest {
+    MUXSDKPlaybackEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
 - (void)setPictureInPicture:(BOOL)isPictureInPicture {

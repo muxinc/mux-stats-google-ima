@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  tests:
+    name: Test the SDK with a Demo App
+    runs-on: macos-12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Link to older simulator(s)
+        run: |
+          echo "Creating Runtimes folder if needed..."
+          sudo mkdir -p /Library/Developer/CoreSimulator/Profiles/Runtimes
+          echo "Creating symlink of the iOS 14.1 runtime..."
+          sudo ln -s /Applications/Xcode_12.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 14.1.simruntime
+      - name: Run tests
+        run: "./run-tests.sh"
