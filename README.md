@@ -27,16 +27,19 @@ pod 'Mux-Stats-Google-IMA'
 ```
 
 ## Releasing a new version
+#### From a branch called releases/v[new version number]
 
 * Update Mux-Stats-Google-IMA.podspec
 * cd Example/ and run `pod install` (this will install the updated version into the example app)
 * run `carthage build --no-skip-current --use-xcframeworks` (brew install carthage if you haven't already)
 * run `carthage archive Mux_Stats_Google_IMA` - this will build a .zip folder
-* commit your changes
-* git tag vX.X.X (example: git tag v0.3.0)
-* git push --tags
-* attach the .zip folder to the Release in github
-* pod trunk push Mux-Stats-Google-IMA.podspec --allow-warnings
+* commit your changes & push to remote
+* create a PR against master for your `releaes/v*` branch
+* merge PR after release notes pop in (check them for spelling/grammar/tone)
+* wait for PR comment to appear with a link to a draft release
+* attach the `Mux_Stats_Google_IMA.framework.zip` file to that release
+* Create the release
+* from Updated `master`: `pod trunk push Mux-Stats-Google-IMA.podspec --allow-warnings`
 
 ## Author
 
