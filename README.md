@@ -1,4 +1,4 @@
-[![CI Status](https://img.shields.io/travis/muxinc/mux-stats-google-ima.svg?style=flat)](https://travis-ci.org/muxinc/mux-stats-google-ima)
+[![CI Status](https://img.shields.io/travis/muxinc/mux-stats-google-ima.svg?style=flat)](https://github.com/muxinc/mux-stats-google-ima/actions/workflows/build-and-test/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
 [![License](https://img.shields.io/cocoapods/l/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
 [![Platform](https://img.shields.io/cocoapods/p/Mux-Stats-Google-IMA.svg?style=flat)](https://cocoapods.org/pods/Mux-Stats-Google-IMA)
