@@ -143,9 +143,7 @@
     _usesServerSideAdInsertion = YES;
     _adRequestReported = YES;
     
-    // NOTE: Collecting ad tag url for DAI ads is not supported.
-    // However, content url will be filled if provided by the caller
-    [self dispatchAdRequestForAdTag:nil];
+    [self dispatchAdRequestWithoutMetadata];
 }
 
 - (void)dispatchAdRequestWithoutMetadata {
