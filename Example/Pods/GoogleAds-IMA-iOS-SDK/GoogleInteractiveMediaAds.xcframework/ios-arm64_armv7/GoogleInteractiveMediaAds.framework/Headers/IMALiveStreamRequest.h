@@ -6,8 +6,8 @@
 //
 //
 
-#import "IMAStreamRequest.h"
 #import "IMAPictureInPictureProxy.h"
+#import "IMAStreamRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,12 +36,14 @@ NS_ASSUME_NONNULL_BEGIN
  * @param assetKey           the stream assetKey
  * @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad UI
  * @param videoDisplay       the IMAVideoDisplay for playing the stream
+ * @param userContext The user context for tracking requests (optional)
  *
  * @return the IMALiveStreamRequest instance
  */
 - (instancetype)initWithAssetKey:(NSString *)assetKey
               adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
-                    videoDisplay:(id<IMAVideoDisplay>)videoDisplay;
+                    videoDisplay:(id<IMAVideoDisplay>)videoDisplay
+                     userContext:(nullable id)userContext;
 
 /**
  * Initializes a live stream request instance with the given assetKey. Uses the given ad display
@@ -51,13 +53,15 @@ NS_ASSUME_NONNULL_BEGIN
  * @param adDisplayContainer    the IMAAdDisplayContainer for rendering the ad UI
  * @param videoDisplay          the IMAVideoDisplay for playing the stream
  * @param pictureInPictureProxy the IMAPictureInPictureProxy for tracking PIP events
+ * @param userContext The user context for tracking requests (optional)
  *
  * @return the IMALiveStreamRequest instance
  */
 - (instancetype)initWithAssetKey:(NSString *)assetKey
               adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                     videoDisplay:(id<IMAVideoDisplay>)videoDisplay
-           pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy;
+           pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy
+                     userContext:(nullable id)userContext;
 
 /**
  * :nodoc:

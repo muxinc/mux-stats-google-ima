@@ -17,16 +17,16 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "MuxCore.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "maccatalyst"
-    ;;
-  "MuxCore.xcframework/tvos-arm64")
-    echo ""
-    ;;
   "MuxCore.xcframework/tvos-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "MuxCore.xcframework/ios-arm64_x86_64-maccatalyst")
+    echo "maccatalyst"
+    ;;
   "MuxCore.xcframework/ios-arm64")
+    echo ""
+    ;;
+  "MuxCore.xcframework/tvos-arm64")
     echo ""
     ;;
   "MuxCore.xcframework/ios-arm64_x86_64-simulator")
@@ -38,16 +38,16 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
-  "MuxCore.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "arm64 x86_64"
-    ;;
-  "MuxCore.xcframework/tvos-arm64")
-    echo "arm64"
-    ;;
   "MuxCore.xcframework/tvos-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
+  "MuxCore.xcframework/ios-arm64_x86_64-maccatalyst")
+    echo "arm64 x86_64"
+    ;;
   "MuxCore.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
+  "MuxCore.xcframework/tvos-arm64")
     echo "arm64"
     ;;
   "MuxCore.xcframework/ios-arm64_x86_64-simulator")
@@ -135,5 +135,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/Mux-Stats-Core/XCFramework/MuxCore.xcframework" "Mux-Stats-Core" "framework" "ios-arm64_x86_64-maccatalyst" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/../../../mux-stats-sdk-objc/stats-sdk-objc/XCFramework/MuxCore.xcframework" "Mux-Stats-Core" "framework" "ios-arm64_x86_64-maccatalyst" "ios-arm64" "ios-arm64_x86_64-simulator"
 

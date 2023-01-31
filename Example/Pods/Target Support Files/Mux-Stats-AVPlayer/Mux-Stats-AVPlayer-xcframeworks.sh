@@ -17,14 +17,14 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "MUXSDKStats.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "maccatalyst"
-    ;;
   "MUXSDKStats.xcframework/tvos-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   "MUXSDKStats.xcframework/tvos-arm64")
     echo ""
+    ;;
+  "MUXSDKStats.xcframework/ios-arm64_x86_64-maccatalyst")
+    echo "maccatalyst"
     ;;
   "MUXSDKStats.xcframework/ios-arm64")
     echo ""
@@ -38,14 +38,14 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
-  "MUXSDKStats.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "arm64 x86_64"
-    ;;
   "MUXSDKStats.xcframework/tvos-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   "MUXSDKStats.xcframework/tvos-arm64")
     echo "arm64"
+    ;;
+  "MUXSDKStats.xcframework/ios-arm64_x86_64-maccatalyst")
+    echo "arm64 x86_64"
     ;;
   "MUXSDKStats.xcframework/ios-arm64")
     echo "arm64"

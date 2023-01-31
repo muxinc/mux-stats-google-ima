@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/MUXSDKBandwidthMetricData.h</key>
 		<data>
-		idrjJePh4+OZByfgysIg0bvK4z4=
+		bW8ciee9L1KvyTayzIUOll131hk=
 		</data>
 		<key>Headers/MUXSDKBaseEvent.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Headers/MUXSDKCustomData.h</key>
 		<data>
-		Q+kKD0lmSKET4LgK909BRiXnd00=
+		HxwFa38215uc4f+LqyhAm2nJU28=
 		</data>
 		<key>Headers/MUXSDKCustomerData.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/MUXSDKErrorEvent.h</key>
 		<data>
-		g5lUVJ9G2QUbxfMDxSJeTQlGxTA=
+		8lDc1YnmQXAjFrmH3Atg9koGF2I=
 		</data>
 		<key>Headers/MUXSDKEventHandling.h</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Headers/MUXSDKPlayerData.h</key>
 		<data>
-		TF0qF3W3GB3+w09E6ir6isFTcCI=
+		RSeNZRwdHuJzjXJA/ZSYJiepTXA=
 		</data>
 		<key>Headers/MUXSDKPlayerReadyEvent.h</key>
 		<data>
@@ -182,11 +182,11 @@
 		</data>
 		<key>Headers/MUXSDKVideoData.h</key>
 		<data>
-		MGkW0g6ISLQi0VOJm9OuOhJHXKQ=
+		EBEU80NOJJ5+En1vk1JkuG/kdAY=
 		</data>
 		<key>Headers/MUXSDKViewData.h</key>
 		<data>
-		JjoKKIlaLMVr5QJ1YhhwzIeHrGU=
+		ep7YRgbwtSJkHn2JxkwnN3roQJM=
 		</data>
 		<key>Headers/MUXSDKViewDeviceOrientationData.h</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IT/ft2ICs6vX60/sgZ86VIlxiMY=
+		9Bw+xTnQHOlK5ALe4tmNpwftcfM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -307,7 +307,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kYgDY8A4OKNSLftn5kvFlUFCYxIXcbQpYUBGu+DcLHw=
+			eygtIRdYQttnmQNesiRjwLXL/snhpfwxk386IWoBq9s=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKBaseEvent.h</key>
@@ -328,7 +328,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qm4bV0/DsJvqteVdyIUrQl+amFT1LAjyRXeU2AqWtus=
+			qnLpREXrMLxMKhK67PGoZgLBJxnWxkZxDl8eDUDsagg=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKCustomerData.h</key>
@@ -398,7 +398,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pJjEsU75WnR8iM84vCBeGma/hHxvgUmDnTkNdpwZ56w=
+			/Y1DADpOekleP97/QtnRxWSPq29Nj1B1371euXzNCzE=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKEventHandling.h</key>
@@ -454,7 +454,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wdf1K7oENoDnEtizwmMweh99052yhVFWJjkm9RQwDm0=
+			V3u2q2oeznmZfwQc513bsHjdWh3UX3dX/FO6SV8zF9U=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKPlayerReadyEvent.h</key>
@@ -531,14 +531,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			taAQTYEUrB3sE4e3xIqD6IYXvGOarbM2/izKK9r/61E=
+			ucJEEsiS/MykR5gL7XI2x9HLmLkQFD7VgeLytuR0SaM=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKViewData.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jbm75B5oE36oTl9NpQFhZNKC9m/qUmAW+j3+QC6k6Zo=
+			P5EKs8yk6V2JjxtOXEJe+7So9dHyoQcRPl2Hm0skMRA=
 			</data>
 		</dict>
 		<key>Headers/MUXSDKViewDeviceOrientationData.h</key>

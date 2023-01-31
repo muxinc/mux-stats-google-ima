@@ -39,13 +39,15 @@ NS_ASSUME_NONNULL_BEGIN
  * @param videoID            the video identifier for this stream
  * @param adDisplayContainer the IMAAdDisplayContainer for rendering the ad UI
  * @param videoDisplay       the IMAVideoDisplay for playing the stream
+ * @param userContext The user context for tracking requests (optional)
  *
  * @return the IMAVODStreamRequest instance
  */
 - (instancetype)initWithContentSourceID:(NSString *)contentSourceID
                                 videoID:(NSString *)videoID
                      adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
-                           videoDisplay:(id<IMAVideoDisplay>)videoDisplay;
+                           videoDisplay:(id<IMAVideoDisplay>)videoDisplay
+                            userContext:(nullable id)userContext;
 
 /**
  * Initializes a stream request instance with the given content source ID and video ID.
@@ -57,6 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param adDisplayContainer    the IMAAdDisplayContainer for rendering the ad UI
  * @param videoDisplay          the IMAVideoDisplay for playing the stream
  * @param pictureInPictureProxy the IMAPictureInPictureProxy for tracking PIP events
+ * @param userContext The user context for tracking requests (optional)
  *
  * @return the IMAVODStreamRequest instance
  */
@@ -64,7 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
                                 videoID:(NSString *)videoID
                      adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                            videoDisplay:(id<IMAVideoDisplay>)videoDisplay
-                  pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy;
+                  pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy
+                            userContext:(nullable id)userContext;
 
 /**
  * :nodoc:
