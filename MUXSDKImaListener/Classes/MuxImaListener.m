@@ -30,19 +30,25 @@
     return(self);
 }
 
-- (void) setupAdViewData:(MUXSDKPlaybackEvent *)event withAd:(IMAAd *)ad {
+- (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
     MUXSDKViewData *viewData = [MUXSDKViewData new];
+    MUXSDKAdData *adData = [MUXSDKAdData new];
     if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
         if (ad != nil) {
             viewData.viewPrerollAdId = ad.adId;
             viewData.viewPrerollCreativeId = ad.creativeID;
+            
+            adData.adId = ad.adId;
+            adData.adCreativeId = ad.creativeID;
+            // universalAdIdValue is deprecated, but used for parity with web&android
+            adData.adUniversalId = ad.universalAdIdValue;
         }
     }
     event.viewData = viewData;
 }
 
-- (MUXSDKPlaybackEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
-    MUXSDKPlaybackEvent *playbackEvent;
+- (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
+    MUXSDKAdEvent *playbackEvent;
     switch(event.type) {
         case kIMAAdEvent_LOADED:
             playbackEvent = [MUXSDKAdResponseEvent new];
@@ -88,13 +94,13 @@
 }
 
 - (void)dispatchError:(NSString *)message {
-    MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdErrorEvent new];
+    MUXSDKAdEvent *playbackEvent = [MUXSDKAdErrorEvent new];
     [self setupAdViewData:playbackEvent withAd:nil];
     [_playerBinding dispatchAdEvent:playbackEvent];
 }
 
 - (void)onContentPauseOrResume:(bool)isPause {
-    MUXSDKPlaybackEvent *playbackEvent;
+    MUXSDKAdEvent *playbackEvent;
     if (isPause) {
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:YES];
@@ -103,7 +109,7 @@
             // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
             [self dispatchAdRequest];
         }
-        MUXSDKPlaybackEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
+        MUXSDKAdEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         
@@ -121,7 +127,7 @@
     }
 }
 
-- (void) setupAdViewDataAndDispatchEvent:(MUXSDKPlaybackEvent *) event {
+- (void)setupAdViewDataAndDispatchEvent:(MUXSDKAdEvent *) event {
     [self setupAdViewData:event withAd:nil];
     [_playerBinding dispatchAdEvent:event];
 }
@@ -130,18 +136,27 @@
     _usesServerSideAdInsertion = NO;
     _adRequestReported = YES;
     
-    [self dispatchAdRequest];
+    [self dispatchAdRequestForAdTag:request.adTagUrl withContentUrl:[request.contentURL absoluteString]];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
     _usesServerSideAdInsertion = YES;
     _adRequestReported = YES;
     
-    [self dispatchAdRequest];
+    // NOTE: Collecting ad tag url for DAI ads is not supported.
+    // However, content url will be filled if provided by the caller
+    [self dispatchAdRequestForAdTag:nil withContentUrl:[request.contentURL absoluteString]];
 }
 
 - (void)dispatchAdRequest {
-    MUXSDKPlaybackEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    
+    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+}
+
+- (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl withContentUrl:(NSString *_Nullable)contentUrl {
+    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
