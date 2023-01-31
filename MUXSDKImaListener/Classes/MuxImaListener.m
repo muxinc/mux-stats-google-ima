@@ -107,7 +107,7 @@
         }
         if (!_adRequestReported) {
             // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
-            [self dispatchAdRequest];
+            [self dispatchAdRequestWithoutMetadata];
         }
         MUXSDKAdEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
         [self setupAdViewData:playbackEvent withAd:nil];
@@ -136,7 +136,7 @@
     _usesServerSideAdInsertion = NO;
     _adRequestReported = YES;
     
-    [self dispatchAdRequestForAdTag:request.adTagUrl withContentUrl:[request.contentURL absoluteString]];
+    [self dispatchAdRequestForAdTag:request.adTagUrl];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
@@ -145,17 +145,20 @@
     
     // NOTE: Collecting ad tag url for DAI ads is not supported.
     // However, content url will be filled if provided by the caller
-    [self dispatchAdRequestForAdTag:nil withContentUrl:[request.contentURL absoluteString]];
+    [self dispatchAdRequestForAdTag:nil];
 }
 
-- (void)dispatchAdRequest {
+- (void)dispatchAdRequestWithoutMetadata {
     MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
-    
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
-- (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl withContentUrl:(NSString *_Nullable)contentUrl {
+- (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl {
     MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    MUXSDKAdData* adData = [MUXSDKAdData new];
+    if(adTagUrl) {
+        adData.adTagUrl = adTagUrl;
+    }
     
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
