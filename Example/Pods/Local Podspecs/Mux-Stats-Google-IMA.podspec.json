@@ -23,7 +23,7 @@
   "ios": {
     "dependencies": {
       "Mux-Stats-AVPlayer": [
-        "~> 3.1"
+        "~> 3.2"
       ],
       "GoogleAds-IMA-iOS-SDK": [
         "~> 3.16"
@@ -34,7 +34,7 @@
   "tvos": {
     "dependencies": {
       "Mux-Stats-AVPlayer": [
-        "~> 3.0"
+        "~> 3.2"
       ],
       "GoogleAds-IMA-tvOS-SDK": [
         "~> 4.6"
