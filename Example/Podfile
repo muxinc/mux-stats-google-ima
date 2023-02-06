@@ -8,7 +8,6 @@ end
 
 target 'MUXSDKImaListener_Tests' do
   pod 'Mux-Stats-Google-IMA', :path => '../'
-  pod 'Mux-Stats-Core', :path => '/Users/edixon/repos/mux-stats-sdk-objc/stats-sdk-objc'
   pod 'Specta'
     pod 'Expecta'
 end
