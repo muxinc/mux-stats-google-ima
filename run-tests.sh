@@ -30,7 +30,7 @@ xcodebuild -workspace MUXSDKImaListener.xcworkspace \
            -scheme "DemoApp" \
            -destination 'platform=iOS Simulator,name=iPhone 15,OS=16.2' \
            test \
-           | xcbeautify
+           #| xcbeautify
 
 popd
 
