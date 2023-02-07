@@ -20,7 +20,7 @@ variant_for_slice()
   "GoogleInteractiveMediaAds.xcframework/ios-arm64_armv7")
     echo ""
     ;;
-  "GoogleInteractiveMediaAds.xcframework/ios-i386_arm64_x86_64-simulator")
+  "GoogleInteractiveMediaAds.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   esac
@@ -32,8 +32,8 @@ archs_for_slice()
   "GoogleInteractiveMediaAds.xcframework/ios-arm64_armv7")
     echo "arm64 armv7"
     ;;
-  "GoogleInteractiveMediaAds.xcframework/ios-i386_arm64_x86_64-simulator")
-    echo "arm64 i386 x86_64"
+  "GoogleInteractiveMediaAds.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   esac
 }
@@ -117,5 +117,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.xcframework" "GoogleAds-IMA-iOS-SDK" "framework" "ios-arm64_armv7" "ios-i386_arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.xcframework" "GoogleAds-IMA-iOS-SDK" "framework" "ios-arm64_armv7" "ios-arm64_x86_64-simulator"
 

@@ -90,7 +90,12 @@ NS_ASSUME_NONNULL_BEGIN
  * upon by the publisher and bidder. The Secure Signal with custom data can be cleared out by
  * passing null to this function.
  */
-@property(nonatomic, nullable) IMASecureSignals *secureSignals;
+@property(nonatomic, strong, nullable) IMASecureSignals *secureSignals;
+
+/**
+ * The user context.
+ */
+@property(nonatomic, readonly, nullable) id userContext;
 
 /**
  * :nodoc:
