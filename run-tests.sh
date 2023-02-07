@@ -18,6 +18,7 @@ xcodebuild -workspace MUXSDKImaListener.xcworkspace \
            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
            test \
            | xcbeautify
+xcrun -v simctl shutdown all # The simulator seems to crash without this
 xcodebuild -workspace MUXSDKImaListener.xcworkspace \
            -scheme "DemoApp" \
            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
