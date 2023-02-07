@@ -18,3 +18,10 @@ jobs:
           sudo ln -s /Applications/Xcode_12.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 14.1.simruntime
       - name: Run tests
         run: "./run-tests.sh"
+      - name: Upload Test Reports
+        if: always()
+         uses: actions/upload-artifact@v3
+         with:
+           name: test-results
+           path: Users/runner/Library/Developer/Xcode/DerivedData/MUXSDKImaListener-*/
+
