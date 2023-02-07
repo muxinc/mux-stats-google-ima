@@ -6,10 +6,10 @@ on:
 jobs:
   tests:
     name: Test the SDK with a Demo App
-    runs-on: macos-12
+    runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Link to older simulator(s)
         run: |
           echo "Creating Runtimes folder if needed..."
@@ -18,3 +18,4 @@ jobs:
           sudo ln -s /Applications/Xcode_12.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 14.1.simruntime
       - name: Run tests
         run: "./run-tests.sh"
+
