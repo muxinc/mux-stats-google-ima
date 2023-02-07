@@ -28,7 +28,7 @@ xcodebuild -workspace MUXSDKImaListener.xcworkspace \
 
 xcodebuild -workspace MUXSDKImaListener.xcworkspace \
            -scheme "DemoApp" \
-           -destination 'platform=iOS Simulator,name=iPhone 15,OS=16.2' \
+           -destination 'platform=iOS Simulator,name=iPhone 13,OS=16.2' \
            test \
            #| xcbeautify
 
