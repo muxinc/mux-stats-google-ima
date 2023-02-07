@@ -22,5 +22,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          path: Users/runner/Library/Developer/Xcode/DerivedData/MUXSDKImaListener-*/
+          path: Users/runner/Library/Developer/Xcode/DerivedData/**
 
