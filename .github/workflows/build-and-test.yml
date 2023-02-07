@@ -20,8 +20,7 @@ jobs:
         run: "./run-tests.sh"
       - name: Upload Test Reports
         if: always()
-         uses: actions/upload-artifact@v3
-         with:
-           name: test-results
-           path: Users/runner/Library/Developer/Xcode/DerivedData/MUXSDKImaListener-*/
+        uses: actions/upload-artifact@v3
+        with:
+          path: Users/runner/Library/Developer/Xcode/DerivedData/MUXSDKImaListener-*/
 
