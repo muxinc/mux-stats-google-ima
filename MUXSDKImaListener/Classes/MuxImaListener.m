@@ -42,6 +42,7 @@
             adData.adCreativeId = ad.creativeID;
             // universalAdIdValue is deprecated, but used for parity with web&android
             adData.adUniversalId = ad.universalAdIdValue;
+            event.adData = adData;
         }
     }
     event.viewData = viewData;
