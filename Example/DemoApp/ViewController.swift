@@ -49,6 +49,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         
         setUpContentPlayer(mediaUrl: VOD_TEST_URL_STEVE)
         setUpAdsLoader()
+        player?.play()
     }
     
     func setUpContentPlayer(mediaUrl: String) {

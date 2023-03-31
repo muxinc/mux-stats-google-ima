@@ -1485,6 +1485,21 @@
 			};
 			name = Debug;
 		};
+		3039D03C463AA400425BB823C67FEDB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B93D89E5A9DE2266676F3FAFB551F8 /* Mux-Stats-Core.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		3113CDB50CA0B9CD7F9E5E95411FCDDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E31059842AEB80621D0D511486C206D6 /* Mux-Stats-Google-IMA.release.xcconfig */;
@@ -1515,6 +1530,22 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		36DA7175A3B0EF99321B1BAF70716268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D74069D658CA2AD0B73FB0643FCF921A /* Mux-Stats-Core.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1873,35 +1904,6 @@
 			};
 			name = Debug;
 		};
-		F1C3334C839ECF9354769D1C5FB796EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D74069D658CA2AD0B73FB0643FCF921A /* Mux-Stats-Core.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FC93FE2C495E4590B00AC2049C831AEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3B93D89E5A9DE2266676F3FAFB551F8 /* Mux-Stats-Core.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1980,8 +1982,8 @@
 		FEFA7AC4231F09664F69FCF24C427586 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC93FE2C495E4590B00AC2049C831AEA /* Debug */,
-				F1C3334C839ECF9354769D1C5FB796EF /* Release */,
+				3039D03C463AA400425BB823C67FEDB9 /* Debug */,
+				36DA7175A3B0EF99321B1BAF70716268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
