@@ -1,13 +1,18 @@
 use_frameworks!
 
-platform :ios, '12.0'
-
 target 'DemoApp' do
+  platform :ios, '12.0'
+  pod 'Mux-Stats-Google-IMA', :path => '../'
+end
+
+target 'MUXSDKIMATVOSExample' do
+  platform :tvos, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
 end
 
 target 'MUXSDKImaListener_Tests' do
+  platform :ios, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
   pod 'Specta'
-    pod 'Expecta'
+  pod 'Expecta'
 end

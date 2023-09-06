@@ -41,7 +41,7 @@ install_framework()
 
   if [ -L "${source}" ]; then
     echo "Symlinked..."
-    source="$(readlink "${source}")"
+    source="$(readlink -f "${source}")"
   fi
 
   if [ -d "${source}/${BCSYMBOLMAP_DIR}" ]; then
@@ -176,7 +176,7 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA/Mux_Stats_Google_IMA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-iOS/Mux_Stats_Google_IMA.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Specta/Specta.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework"
@@ -184,7 +184,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-Core/MuxCore.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA/Mux_Stats_Google_IMA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-iOS/Mux_Stats_Google_IMA.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Specta/Specta.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework"
