@@ -32,7 +32,7 @@ final class DemoAppUITests: XCTestCase {
             for: [waitForLaunchAndPreroll],
             timeout: 15.0
         )
-        if(launchAndPrerollResult != XCTWaiter.Result.timedOut) {
+        if (launchAndPrerollResult != XCTWaiter.Result.timedOut) {
             XCTFail("interrupted while playing")
         }
         
