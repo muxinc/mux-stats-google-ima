@@ -17,15 +17,21 @@ final class DemoAppUITests: XCTestCase {
         continueAfterFailure = false
     }
     
-    func testImaSdk() throws {
+    func testAdPlayback() throws {
         let app = XCUIApplication()
         app.launchEnvironment = [
             "ENV_KEY": UI_TEST_ENV_KEY
         ]
         app.launch()
-        
-        let waitForLaunchAndPreroll = XCTestExpectation(description: "Wait for launch (~5 sec) and preroll (10 sec)")
-        let launchAndPrerollResult = XCTWaiter.wait(for: [waitForLaunchAndPreroll], timeout: 15.0)
+
+        // TODO: Check if a preroll ad is actually present
+        let waitForLaunchAndPreroll = XCTestExpectation(
+            description: "Wait for launch (~5 sec) and preroll (10 sec)"
+        )
+        let launchAndPrerollResult = XCTWaiter.wait(
+            for: [waitForLaunchAndPreroll],
+            timeout: 15.0
+        )
         if(launchAndPrerollResult != XCTWaiter.Result.timedOut) {
             XCTFail("interrupted while playing")
         }
@@ -35,13 +41,17 @@ final class DemoAppUITests: XCTestCase {
         
         let skipForwardButton = app.buttons["Skip Forward"]
         skipForwardButton.tap()
-        let waitForMidroll = XCTWaiter.wait(for: [XCTestExpectation(description: "Wait for Midroll (30s)")], timeout: 30.0)
-        if(waitForMidroll != XCTWaiter.Result.timedOut) {
+
+        // TODO: Check if a midroll ad is actually present
+        let midrollExpectation = XCTestExpectation(
+            description: "Wait for Midroll (40s)"
+        )
+        let waitForMidroll = XCTWaiter.wait(
+            for: [midrollExpectation],
+            timeout: 40.0
+        )
+        if (waitForMidroll != XCTWaiter.Result.timedOut) {
             XCTFail("interrupted while waiting for midroll")
-        }
-        let waitForALittleMore = XCTWaiter.wait(for: [XCTestExpectation(description: "Wait 10 more seconds")], timeout: 10.0)
-        if(waitForALittleMore != XCTWaiter.Result.timedOut) {
-            XCTFail("play interrupted")
         }
     }
 }
