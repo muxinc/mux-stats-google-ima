@@ -41,11 +41,5 @@
       ]
     },
     "source_files": "MUXSDKImaListener/Classes/**/*"
-  },
-  "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=appletvsimulator*]": "arm64"
-  },
-  "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=appletvsimulator*]": "arm64"
   }
 }
