@@ -15,12 +15,9 @@ brew install xcbeautify
 
 echo "▸ Using Xcode Version: ${XCODE_VERSION}"
 
-echo "▸ Resetting Simulators"
-
-xcrun -v simctl shutdown all
-xcrun -v simctl erase all
-
 pushd Example
+
+echo "▸ Reinstalling Local Cocoapod"
 
 pod deintegrate && pod install
 
@@ -29,7 +26,7 @@ echo "▸ Executing Tests"
 xcodebuild -workspace ${WORKSPACE_PATH} \
            -scheme "${SCHEME}" \
            -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4' \
-           test \
+           clean test \
            | xcbeautify
 
 popd
