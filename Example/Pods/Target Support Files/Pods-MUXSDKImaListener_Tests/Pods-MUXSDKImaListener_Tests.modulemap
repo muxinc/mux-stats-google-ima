@@ -1,6 +1,0 @@
-framework module Pods_MUXSDKImaListener_Tests {
-  umbrella header "Pods-MUXSDKImaListener_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

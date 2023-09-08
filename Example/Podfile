@@ -10,7 +10,7 @@ target 'MUXSDKIMATVOSExample' do
   pod 'Mux-Stats-Google-IMA', :path => '../'
 end
 
-target 'MUXSDKImaListener_Tests' do
+target 'DemoAppTests' do
   platform :ios, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
   pod 'Specta'
