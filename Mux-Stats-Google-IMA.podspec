@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mux-Stats-Google-IMA'
-  s.version          = '0.10.1'
+  s.version          = '0.11.0'
   s.summary          = 'Mux-Stats-Google-IMA is for tracking performance analytics and QoS monitoring for video with mux.com.'
 
   s.description      = <<-DESC
