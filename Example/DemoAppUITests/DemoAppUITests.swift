@@ -12,17 +12,27 @@ final class DemoAppUITests: XCTestCase {
     
     // Set this key to your environment key to have the tests generate data on your dashboard
     let UI_TEST_ENV_KEY = "tr4q3qahs0gflm8b1c75h49ln";
-    
+
+    var launchedApplication: XCUIApplication?
+
     override func setUpWithError() throws {
         continueAfterFailure = false
-    }
-    
-    func testAdPlayback() throws {
+
         let app = XCUIApplication()
         app.launchEnvironment = [
             "ENV_KEY": UI_TEST_ENV_KEY
         ]
         app.launch()
+
+        launchedApplication = app
+    }
+    
+    func testAdPlayback() throws {
+
+        guard let launchedApplication else {
+            XCTFail("Failed to launch application")
+            return
+        }
 
         // TODO: Check if a preroll ad is actually present
         let waitForLaunchAndPreroll = XCTestExpectation(
@@ -36,10 +46,10 @@ final class DemoAppUITests: XCTestCase {
             XCTFail("interrupted while playing")
         }
         
-        let playerViewElement = app.otherElements["AVPlayerView"]
+        let playerViewElement = launchedApplication.otherElements["AVPlayerView"]
         playerViewElement.tap()
         
-        let skipForwardButton = app.buttons["Skip Forward"]
+        let skipForwardButton = launchedApplication.buttons["Skip Forward"]
         skipForwardButton.tap()
 
         // TODO: Check if a midroll ad is actually present
