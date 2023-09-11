@@ -15,6 +15,11 @@ brew install xcbeautify
 
 echo "▸ Using Xcode Version: ${XCODE_VERSION}"
 
+echo "▸ Shutdown and reset the simulator"
+
+xcrun -v simctl shutdown all
+xcrun -v simctl erase all
+
 pushd Example
 
 echo "▸ Reinstalling Local Cocoapod"
