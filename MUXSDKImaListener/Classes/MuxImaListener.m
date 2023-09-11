@@ -17,6 +17,7 @@
     self = [super init];
 
     if (self) {
+        NSLog(@"this is a change");
         _playerBinding = binding;
         if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsNone) {
             _isPictureInPicture = NO;
