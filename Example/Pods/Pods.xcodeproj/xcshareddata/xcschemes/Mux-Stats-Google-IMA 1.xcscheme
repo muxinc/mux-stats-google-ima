@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3B1CCC34C9408E694F9538659E347B13"
+               BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
                BuildableName = "Mux_Stats_Google_IMA.framework"
-               BlueprintName = "Mux-Stats-Google-IMA"
+               BlueprintName = "Mux-Stats-Google-IMA-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3B1CCC34C9408E694F9538659E347B13"
+            BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
             BuildableName = "Mux_Stats_Google_IMA.framework"
-            BlueprintName = "Mux-Stats-Google-IMA"
+            BlueprintName = "Mux-Stats-Google-IMA-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

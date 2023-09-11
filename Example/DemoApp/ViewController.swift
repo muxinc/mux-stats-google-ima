@@ -49,6 +49,11 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         
         setUpContentPlayer(mediaUrl: VOD_TEST_URL_STEVE)
         setUpAdsLoader()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        requestAds()
         player?.play()
     }
     
@@ -113,11 +118,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         
         imaListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated);
-        requestAds()
     }
     
     func showContentPlayer() {

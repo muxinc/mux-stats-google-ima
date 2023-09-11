@@ -29,13 +29,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "351790C6293822A200ABBCC9"
                BuildableName = "DemoAppUITests.xctest"
                BlueprintName = "DemoAppUITests"
+               ReferencedContainer = "container:MUXSDKImaListener.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "351790BC293822A200ABBCC9"
+               BuildableName = "DemoAppTests.xctest"
+               BlueprintName = "DemoAppTests"
                ReferencedContainer = "container:MUXSDKImaListener.xcodeproj">
             </BuildableReference>
          </TestableReference>

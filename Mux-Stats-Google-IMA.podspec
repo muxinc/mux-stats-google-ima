@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint MUXSDKImaListener.podspec' to ensure this is a
+# Be sure to run `pod lib lint Mux-Stats-Google-IMA.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Mux-Stats-Google-IMA'
-  s.version          = '0.10.1'
+  s.version          = '0.11.0'
   s.summary          = 'Mux-Stats-Google-IMA is for tracking performance analytics and QoS monitoring for video with mux.com.'
 
   s.description      = <<-DESC
@@ -32,12 +32,5 @@ Pod::Spec.new do |s|
   s.tvos.dependency 'Mux-Stats-AVPlayer', '~> 3.2'
   s.tvos.dependency 'GoogleAds-IMA-tvOS-SDK', '~> 4.6'
   s.tvos.source_files = 'MUXSDKImaListener/Classes/**/*'
-
-   s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-  }
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64'
-  }
 
 end

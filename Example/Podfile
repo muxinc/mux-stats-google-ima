@@ -1,13 +1,28 @@
 use_frameworks!
 
-platform :ios, '12.0'
-
 target 'DemoApp' do
+  platform :ios, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
 end
 
-target 'MUXSDKImaListener_Tests' do
+target 'MUXSDKIMATVOSExample' do
+  platform :tvos, '12.0'
+  pod 'Mux-Stats-Google-IMA', :path => '../'
+end
+
+target 'DemoAppTests' do
+  platform :ios, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
   pod 'Specta'
-    pod 'Expecta'
+  pod 'Expecta'
+end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+               end
+          end
+   end
 end

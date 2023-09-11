@@ -12,36 +12,97 @@ final class DemoAppUITests: XCTestCase {
     
     // Set this key to your environment key to have the tests generate data on your dashboard
     let UI_TEST_ENV_KEY = "tr4q3qahs0gflm8b1c75h49ln";
-    
+
+    var launchedApplication: XCUIApplication?
+
     override func setUpWithError() throws {
         continueAfterFailure = false
-    }
-    
-    func testImaSdk() throws {
+
         let app = XCUIApplication()
         app.launchEnvironment = [
             "ENV_KEY": UI_TEST_ENV_KEY
         ]
+        app.activate()
         app.launch()
-        
-        let waitForLaunchAndPreroll = XCTestExpectation(description: "Wait for launch (~5 sec) and preroll (10 sec)")
-        let launchAndPrerollResult = XCTWaiter.wait(for: [waitForLaunchAndPreroll], timeout: 15.0)
-        if(launchAndPrerollResult != XCTWaiter.Result.timedOut) {
+
+        launchedApplication = app
+    }
+    
+    func testAdPlayback() throws {
+
+        guard let launchedApplication else {
+            XCTFail("Failed to launch application")
+            return
+        }
+
+        let launchWaitResult = launchedApplication.wait(
+            for: XCUIApplication.State.runningForeground,
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            launchWaitResult,
+            "Application is not running in foreground and cannot receive tap events."
+        )
+
+        // TODO: Check if a preroll ad is actually present
+        let waitForLaunchAndPreroll = XCTestExpectation(
+            description: "Wait for launch (~5 sec) and preroll (10 sec)"
+        )
+        let launchAndPrerollResult = XCTWaiter.wait(
+            for: [waitForLaunchAndPreroll],
+            timeout: 15.0
+        )
+        if (launchAndPrerollResult != XCTWaiter.Result.timedOut) {
             XCTFail("interrupted while playing")
         }
         
-        let playerViewElement = app.otherElements["AVPlayerView"]
+        let playerViewElement = launchedApplication.otherElements["AVPlayerView"]
+
+        let playerViewElementExistenceResult = playerViewElement.waitForExistence(
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            playerViewElementExistenceResult,
+            "AVPlayerView never came into existence."
+        )
+
+        XCTAssertTrue(
+            playerViewElement.isHittable,
+            "AVPlayerView cannot be clicked, tapped, or pressed. It is either offscreen, covered by another element or is not present in view hierarchy"
+        )
+
         playerViewElement.tap()
-        
-        let skipForwardButton = app.buttons["Skip Forward"]
+
+        let skipForwardButton = launchedApplication.buttons["Skip Forward"]
+
+        let skipForwardButtonExistenceResult = skipForwardButton.waitForExistence(
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            skipForwardButtonExistenceResult,
+            "Skip forward button never came into existence"
+        )
+
+        XCTAssertTrue(
+            skipForwardButton.isHittable,
+            "AVPlayer skip forward button cannot be clicked, tapped, or pressed. It is either offscreen, covered by another element or is not present in view hierarchy"
+        )
+
         skipForwardButton.tap()
-        let waitForMidroll = XCTWaiter.wait(for: [XCTestExpectation(description: "Wait for Midroll (30s)")], timeout: 30.0)
-        if(waitForMidroll != XCTWaiter.Result.timedOut) {
+
+        // TODO: Check if a midroll ad is actually present
+        let midrollExpectation = XCTestExpectation(
+            description: "Wait for Midroll (40s)"
+        )
+        let waitForMidroll = XCTWaiter.wait(
+            for: [midrollExpectation],
+            timeout: 40.0
+        )
+        if (waitForMidroll != XCTWaiter.Result.timedOut) {
             XCTFail("interrupted while waiting for midroll")
-        }
-        let waitForALittleMore = XCTWaiter.wait(for: [XCTestExpectation(description: "Wait 10 more seconds")], timeout: 10.0)
-        if(waitForALittleMore != XCTWaiter.Result.timedOut) {
-            XCTFail("play interrupted")
         }
     }
 }

@@ -1,28 +1,37 @@
 #!/bin/bash
+
+readonly XCODE_VERSION=$(xcodebuild -version | grep Xcode | cut -d " " -f2)
+
+readonly SCHEME=DemoApp
+
+readonly TOP_DIR=$(pwd)
+
+readonly WORKSPACE_NAME=MUXSDKImaListener
+readonly WORKSPACE_PATH=${TOP_DIR}/Example/${WORKSPACE_NAME}.xcworkspace
+
 set -euo pipefail
 
 brew install xcbeautify
 
-# reset simulators
+echo "▸ Using Xcode Version: ${XCODE_VERSION}"
+
+echo "▸ Shutdown and reset the simulator"
+
 xcrun -v simctl shutdown all
 xcrun -v simctl erase all
 
-echo "test xcode version"
-xcodebuild -version
-
 pushd Example
-#pod deintegrate && pod update
 
-xcodebuild -workspace MUXSDKImaListener.xcworkspace \
-           -scheme "MUXSDKImaListener-Example" \
-           -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
-           test \
-           | xcbeautify
+echo "▸ Reinstalling Local Cocoapod"
 
-xcodebuild -workspace MUXSDKImaListener.xcworkspace \
-           -scheme "DemoApp" \
-           -destination 'platform=iOS Simulator,name=iPhone 13,OS=16.2' \
-           test \
+pod deintegrate && pod install
+
+echo "▸ Executing Tests"
+
+xcodebuild -workspace ${WORKSPACE_PATH} \
+           -scheme "${SCHEME}" \
+           -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4' \
+           clean test \
            | xcbeautify
 
 popd
