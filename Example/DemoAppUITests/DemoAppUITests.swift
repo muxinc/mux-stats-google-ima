@@ -22,6 +22,7 @@ final class DemoAppUITests: XCTestCase {
         app.launchEnvironment = [
             "ENV_KEY": UI_TEST_ENV_KEY
         ]
+        app.activate()
         app.launch()
 
         launchedApplication = app
@@ -33,6 +34,16 @@ final class DemoAppUITests: XCTestCase {
             XCTFail("Failed to launch application")
             return
         }
+
+        let launchWaitResult = launchedApplication.wait(
+            for: XCUIApplication.State.runningForeground,
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            launchWaitResult,
+            "Application is not running in foreground and cannot receive tap events."
+        )
 
         // TODO: Check if a preroll ad is actually present
         let waitForLaunchAndPreroll = XCTestExpectation(
@@ -47,9 +58,39 @@ final class DemoAppUITests: XCTestCase {
         }
         
         let playerViewElement = launchedApplication.otherElements["AVPlayerView"]
+
+        let playerViewElementExistenceResult = playerViewElement.waitForExistence(
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            playerViewElementExistenceResult,
+            "AVPlayerView never came into existence."
+        )
+
+        XCTAssertTrue(
+            playerViewElement.isHittable,
+            "AVPlayerView cannot be clicked, tapped, or pressed. It is either offscreen, covered by another element or is not present in view hierarchy"
+        )
+
         playerViewElement.tap()
-        
+
         let skipForwardButton = launchedApplication.buttons["Skip Forward"]
+
+        let skipForwardButtonExistenceResult = skipForwardButton.waitForExistence(
+            timeout: 10.0
+        )
+
+        XCTAssertTrue(
+            skipForwardButtonExistenceResult,
+            "Skip forward button never came into existence"
+        )
+
+        XCTAssertTrue(
+            skipForwardButton.isHittable,
+            "AVPlayer skip forward button cannot be clicked, tapped, or pressed. It is either offscreen, covered by another element or is not present in view hierarchy"
+        )
+
         skipForwardButton.tap()
 
         // TODO: Check if a midroll ad is actually present
