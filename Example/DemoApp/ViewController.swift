@@ -11,7 +11,7 @@ import AVKit
 import AVFoundation
 import Mux_Stats_Google_IMA
 import MUXSDKStats
-import GoogleInteractiveMediaAds
+import GoogleInteractiveMediaAds_tvOS
 
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     

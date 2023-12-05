@@ -4,7 +4,7 @@
 //
 
 import AVFoundation
-import GoogleInteractiveMediaAds
+import GoogleInteractiveMediaAds_tvOS
 import Mux_Stats_Google_IMA
 import UIKit
 
