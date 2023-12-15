@@ -33,8 +33,7 @@
 - (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
     MUXSDKViewData *viewData = [MUXSDKViewData new];
     MUXSDKAdData *adData = [MUXSDKAdData new];
-    if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
-        if (ad != nil) {
+    if (ad != nil) {
             viewData.viewPrerollAdId = ad.adId;
             viewData.viewPrerollCreativeId = ad.creativeID;
             
@@ -43,7 +42,6 @@
             // universalAdIdValue is deprecated, but used for parity with web&android
             adData.adUniversalId = ad.universalAdIdValue;
             event.adData = adData;
-        }
     }
     event.viewData = viewData;
 }
