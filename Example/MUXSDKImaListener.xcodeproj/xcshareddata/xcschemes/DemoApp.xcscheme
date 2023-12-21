@@ -48,6 +48,17 @@
                ReferencedContainer = "container:MUXSDKImaListener.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1951C7A62B33897F0024E5DC"
+               BuildableName = "MuxStatsGoogleIMAPlugin-tvOSTests.xctest"
+               BlueprintName = "MuxStatsGoogleIMAPlugin-tvOSTests"
+               ReferencedContainer = "container:MUXSDKImaListener.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -9,11 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@import MuxCore;
-@import MUXSDKStats;
-@import GoogleInteractiveMediaAds;
-
 @class MUXSDKPlayerBinding;
+@class MUXSDKPlaybackEvent;
+
+@class IMAAdEvent;
+@class IMAAdsRequest;
+@class IMAStreamRequest;
 
 typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
     MuxImaListenerOptionsNone                    = 0,

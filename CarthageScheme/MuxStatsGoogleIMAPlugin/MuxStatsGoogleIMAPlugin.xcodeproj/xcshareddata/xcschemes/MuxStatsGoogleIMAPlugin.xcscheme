@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1410"
-   version = "1.3">
+   LastUpgradeVersion = "1510"
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
-               BuildableName = "Mux_Stats_Google_IMA.framework"
-               BlueprintName = "Mux-Stats-Google-IMA-iOS"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "1951C7DA2B34CD130024E5DC"
+               BuildableName = "MuxStatsGoogleIMAPlugin.framework"
+               BlueprintName = "MuxStatsGoogleIMAPlugin"
+               ReferencedContainer = "container:MuxStatsGoogleIMAPlugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,8 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1951C7E12B34CD140024E5DC"
+               BuildableName = "MuxStatsGoogleIMAPluginTests.xctest"
+               BlueprintName = "MuxStatsGoogleIMAPluginTests"
+               ReferencedContainer = "container:MuxStatsGoogleIMAPlugin.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,10 +62,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
-            BuildableName = "Mux_Stats_Google_IMA.framework"
-            BlueprintName = "Mux-Stats-Google-IMA-iOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "1951C7DA2B34CD130024E5DC"
+            BuildableName = "MuxStatsGoogleIMAPlugin.framework"
+            BlueprintName = "MuxStatsGoogleIMAPlugin"
+            ReferencedContainer = "container:MuxStatsGoogleIMAPlugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

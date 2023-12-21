@@ -8,7 +8,18 @@
 
 // https://github.com/Specta/Specta
 
-@import Mux_Stats_Google_IMA;
+#import <AVKit/AVKit.h>
+
+#if TARGET_OS_TV
+#import <MuxCore/MuxCoreTv.h>
+#else
+#import <MuxCore/MuxCore.h>
+#endif
+
+#import <MUXSDKStats/MUXSDKStats.h>
+
+#import "MuxImaListener.h"
+#import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
 
 @interface MuxMockAVPlayerViewController : AVPlayerViewController
 @end
