@@ -4,11 +4,19 @@ on:
   push:
 
 jobs:
+  run-sdk-unit-tests:
+    name: Test SDK example applications on iOS and tvOS
+    runs-on: macos-13
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run SDK unit tests
+        run: "./scripts/run-sdk-unit-tests.sh"
   test-example-applications:
     name: Test SDK example applications on iOS and tvOS
     runs-on: macos-13
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run tests
+      - name: Run SDK example applications
         run: "./scripts/run-tests.sh"
