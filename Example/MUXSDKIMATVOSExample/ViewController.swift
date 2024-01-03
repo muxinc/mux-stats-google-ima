@@ -4,6 +4,7 @@
 //
 
 import AVFoundation
+import MUXSDKStats
 import GoogleInteractiveMediaAds
 import Mux_Stats_Google_IMA
 import UIKit
