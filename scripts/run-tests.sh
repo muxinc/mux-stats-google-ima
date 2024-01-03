@@ -21,7 +21,7 @@ echo "▸ Running DemoApp tests"
 xcodebuild clean test \
     -scheme DemoApp \
     -workspace Example/MUXSDKImaListener.xcworkspace \
-    -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15' | xcbeautify
+    -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 14' | xcbeautify
 
 echo "▸ Running MUXSDKIMATVOSExample tests"
 
