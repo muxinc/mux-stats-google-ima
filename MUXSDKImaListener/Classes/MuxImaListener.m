@@ -61,45 +61,6 @@
     event.viewData = viewData;
 }
 
-- (nullable NSArray<MUXSDKAdEvent *> *)computeAdEventsFromIMAAdEvent:(IMAAdEvent *)adEvent {
-    NSMutableArray<MUXSDKAdEvent *> *adEvents = [NSMutableArray array];
-
-    switch (adEvent.type) {
-        case kIMAAdEvent_LOADED:
-            [adEvents addObject:[[MUXSDKAdResponseEvent alloc] init]];
-            break;
-        case kIMAAdEvent_STARTED:
-            [adEvents addObject:[[MUXSDKAdPlayingEvent alloc] init]];
-            break;
-        case kIMAAdEvent_FIRST_QUARTILE:
-            [adEvents addObject:[[MUXSDKAdFirstQuartileEvent alloc] init]];
-            break;
-        case kIMAAdEvent_MIDPOINT:
-            [adEvents addObject:[[MUXSDKAdMidpointEvent alloc] init]];
-            break;
-        case kIMAAdEvent_THIRD_QUARTILE:
-            [adEvents addObject:[[MUXSDKAdThirdQuartileEvent alloc] init]];
-            break;
-        case kIMAAdEvent_SKIPPED:
-            [adEvents addObject:[[MUXSDKAdEndedEvent alloc] init]];
-            break;
-        case kIMAAdEvent_COMPLETE:
-            [adEvents addObject:[[MUXSDKAdEndedEvent alloc] init]];
-            break;
-        case kIMAAdEvent_PAUSE:
-            [adEvents addObject:[[MUXSDKAdPauseEvent alloc] init]];
-            break;
-        case kIMAAdEvent_RESUME:
-            [adEvents addObject:[[MUXSDKAdPlayEvent alloc] init]];
-            [adEvents addObject:[[MUXSDKAdPlayingEvent alloc] init]];
-            break;
-        default:
-            break;
-    }
-
-    return adEvents;
-}
-
 - (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
     MUXSDKAdEvent *playbackEvent;
     switch(event.type) {
