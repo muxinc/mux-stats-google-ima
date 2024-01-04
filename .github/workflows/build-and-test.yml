@@ -5,7 +5,7 @@ on:
 
 jobs:
   run-sdk-unit-tests:
-    name: Test SDK example applications on iOS and tvOS
+    name: Run SDK Unit Tests
     runs-on: macos-13
     steps:
       - name: Checkout
@@ -13,7 +13,7 @@ jobs:
       - name: Run SDK unit tests
         run: "./scripts/run-sdk-unit-tests.sh"
   test-example-applications:
-    name: Test SDK example applications on iOS and tvOS
+    name: Build and Test Example iOS and tvOS Applications 
     runs-on: macos-13
     steps:
       - name: Checkout
