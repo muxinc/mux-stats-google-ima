@@ -14,6 +14,7 @@ set -euo pipefail
 echo "▸ Selecting Xcode 15.1"
 sudo xcode-select -s /Applications/Xcode_15.1.app
 
+echo "▸ Installing xcbeautify"
 brew install xcbeautify
 
 if ! command -v xcbeautify &> /dev/null
@@ -39,7 +40,7 @@ echo "▸ Executing Tests"
 
 xcodebuild -workspace ${WORKSPACE_PATH} \
            -scheme "${SCHEME}" \
-           -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4' \
+           -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.2' \
            clean test \
            | xcbeautify
 
