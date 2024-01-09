@@ -1,0 +1,6 @@
+framework module MUXSDKStatsGoogleIMAPlugin {
+    umbrella header "MUXSDKStatsGoogleIMAPlugin.h"
+    
+    export *
+    module * { export * }
+}

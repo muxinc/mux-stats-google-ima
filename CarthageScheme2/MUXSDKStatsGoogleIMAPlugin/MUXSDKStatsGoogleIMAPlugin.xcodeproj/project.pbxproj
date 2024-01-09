@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19A7C8932B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A7C88A2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */; };
+		19A7C8982B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7C8972B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.m */; };
+		19A7C8992B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A7C88D2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A7C8AF2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A7C8A72B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */; };
+		19A7C8B42B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7C8B32B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.m */; };
+		19A7C8B52B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A7C8A92B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD35FAE30A6630B285A1136 /* Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D7CC8413E7E9B389CC459 /* Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework */; };
+		CEE6C8A13D845798202A43AA /* Pods_MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C709CB397D0B796B02E7119 /* Pods_MUXSDKStatsGoogleIMAPlugin.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19A7C8942B4CBB2600B0AF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19A7C8812B4CBB2500B0AF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19A7C8892B4CBB2500B0AF18;
+			remoteInfo = MUXSDKStatsGoogleIMAPlugin;
+		};
+		19A7C8B02B4CBB7000B0AF18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19A7C8812B4CBB2500B0AF18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19A7C8A62B4CBB6F00B0AF18;
+			remoteInfo = MUXSDKStatsGoogleIMAPluginTVOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19A7C88A2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MUXSDKStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A7C88D2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUXSDKStatsGoogleIMAPlugin.h; sourceTree = "<group>"; };
+		19A7C8922B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MUXSDKStatsGoogleIMAPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A7C8972B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUXSDKStatsGoogleIMAPluginTests.m; sourceTree = "<group>"; };
+		19A7C8A72B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MUXSDKStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A7C8A92B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUXSDKStatsGoogleIMAPluginTVOS.h; sourceTree = "<group>"; };
+		19A7C8AE2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MUXSDKStatsGoogleIMAPluginTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A7C8B32B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUXSDKStatsGoogleIMAPluginTVOSTests.m; sourceTree = "<group>"; };
+		6C709CB397D0B796B02E7119 /* Pods_MUXSDKStatsGoogleIMAPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MUXSDKStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DEFA2F748EAB73A3CC9722 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUXSDKStatsGoogleIMAPluginTVOS.release.xcconfig"; path = "Target Support Files/Pods-MUXSDKStatsGoogleIMAPluginTVOS/Pods-MUXSDKStatsGoogleIMAPluginTVOS.release.xcconfig"; sourceTree = "<group>"; };
+		81416B5704178F74CB4E0888 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUXSDKStatsGoogleIMAPluginTVOS.debug.xcconfig"; path = "Target Support Files/Pods-MUXSDKStatsGoogleIMAPluginTVOS/Pods-MUXSDKStatsGoogleIMAPluginTVOS.debug.xcconfig"; sourceTree = "<group>"; };
+		831D7CC8413E7E9B389CC459 /* Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1078FFB92BC87085ED0162F /* Pods-MUXSDKStatsGoogleIMAPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUXSDKStatsGoogleIMAPlugin.release.xcconfig"; path = "Target Support Files/Pods-MUXSDKStatsGoogleIMAPlugin/Pods-MUXSDKStatsGoogleIMAPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		EC2006031FA6C3F42DC3A36A /* Pods-MUXSDKStatsGoogleIMAPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MUXSDKStatsGoogleIMAPlugin.debug.xcconfig"; path = "Target Support Files/Pods-MUXSDKStatsGoogleIMAPlugin/Pods-MUXSDKStatsGoogleIMAPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19A7C8872B4CBB2500B0AF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE6C8A13D845798202A43AA /* Pods_MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C88F2B4CBB2500B0AF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8932B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8A42B4CBB6F00B0AF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBD35FAE30A6630B285A1136 /* Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8AB2B4CBB7000B0AF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8AF2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01AA7482A7E797D6BFFEF54E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C709CB397D0B796B02E7119 /* Pods_MUXSDKStatsGoogleIMAPlugin.framework */,
+				831D7CC8413E7E9B389CC459 /* Pods_MUXSDKStatsGoogleIMAPluginTVOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19A7C8802B4CBB2500B0AF18 = {
+			isa = PBXGroup;
+			children = (
+				19A7C88C2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin */,
+				19A7C8962B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests */,
+				19A7C8A82B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS */,
+				19A7C8B22B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests */,
+				19A7C88B2B4CBB2500B0AF18 /* Products */,
+				DD1EA4DB6EF629C9A847FDB4 /* Pods */,
+				01AA7482A7E797D6BFFEF54E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		19A7C88B2B4CBB2500B0AF18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19A7C88A2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */,
+				19A7C8922B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.xctest */,
+				19A7C8A72B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */,
+				19A7C8AE2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19A7C88C2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				19A7C88D2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.h */,
+			);
+			path = MUXSDKStatsGoogleIMAPlugin;
+			sourceTree = "<group>";
+		};
+		19A7C8962B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				19A7C8972B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.m */,
+			);
+			path = MUXSDKStatsGoogleIMAPluginTests;
+			sourceTree = "<group>";
+		};
+		19A7C8A82B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS */ = {
+			isa = PBXGroup;
+			children = (
+				19A7C8A92B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS.h */,
+			);
+			path = MUXSDKStatsGoogleIMAPluginTVOS;
+			sourceTree = "<group>";
+		};
+		19A7C8B22B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				19A7C8B32B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.m */,
+			);
+			path = MUXSDKStatsGoogleIMAPluginTVOSTests;
+			sourceTree = "<group>";
+		};
+		DD1EA4DB6EF629C9A847FDB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC2006031FA6C3F42DC3A36A /* Pods-MUXSDKStatsGoogleIMAPlugin.debug.xcconfig */,
+				D1078FFB92BC87085ED0162F /* Pods-MUXSDKStatsGoogleIMAPlugin.release.xcconfig */,
+				81416B5704178F74CB4E0888 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.debug.xcconfig */,
+				75DEFA2F748EAB73A3CC9722 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		19A7C8852B4CBB2500B0AF18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8992B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8A22B4CBB6F00B0AF18 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8B52B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		19A7C8892B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A7C89C2B4CBB2600B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPlugin" */;
+			buildPhases = (
+				FF430418D54BB93A7878AB75 /* [CP] Check Pods Manifest.lock */,
+				19A7C8852B4CBB2500B0AF18 /* Headers */,
+				19A7C8862B4CBB2500B0AF18 /* Sources */,
+				19A7C8872B4CBB2500B0AF18 /* Frameworks */,
+				19A7C8882B4CBB2500B0AF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MUXSDKStatsGoogleIMAPlugin;
+			productName = MUXSDKStatsGoogleIMAPlugin;
+			productReference = 19A7C88A2B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		19A7C8912B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A7C89F2B4CBB2600B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTests" */;
+			buildPhases = (
+				19A7C88E2B4CBB2500B0AF18 /* Sources */,
+				19A7C88F2B4CBB2500B0AF18 /* Frameworks */,
+				19A7C8902B4CBB2500B0AF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19A7C8952B4CBB2600B0AF18 /* PBXTargetDependency */,
+			);
+			name = MUXSDKStatsGoogleIMAPluginTests;
+			productName = MUXSDKStatsGoogleIMAPluginTests;
+			productReference = 19A7C8922B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19A7C8A62B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A7C8B62B4CBB7000B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTVOS" */;
+			buildPhases = (
+				90945F5FC36FBB082960B942 /* [CP] Check Pods Manifest.lock */,
+				19A7C8A22B4CBB6F00B0AF18 /* Headers */,
+				19A7C8A32B4CBB6F00B0AF18 /* Sources */,
+				19A7C8A42B4CBB6F00B0AF18 /* Frameworks */,
+				19A7C8A52B4CBB6F00B0AF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MUXSDKStatsGoogleIMAPluginTVOS;
+			productName = MUXSDKStatsGoogleIMAPluginTVOS;
+			productReference = 19A7C8A72B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		19A7C8AD2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A7C8B92B4CBB7000B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTVOSTests" */;
+			buildPhases = (
+				19A7C8AA2B4CBB7000B0AF18 /* Sources */,
+				19A7C8AB2B4CBB7000B0AF18 /* Frameworks */,
+				19A7C8AC2B4CBB7000B0AF18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19A7C8B12B4CBB7000B0AF18 /* PBXTargetDependency */,
+			);
+			name = MUXSDKStatsGoogleIMAPluginTVOSTests;
+			productName = MUXSDKStatsGoogleIMAPluginTVOSTests;
+			productReference = 19A7C8AE2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19A7C8812B4CBB2500B0AF18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					19A7C8892B4CBB2500B0AF18 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					19A7C8912B4CBB2500B0AF18 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					19A7C8A62B4CBB6F00B0AF18 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					19A7C8AD2B4CBB7000B0AF18 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 19A7C8842B4CBB2500B0AF18 /* Build configuration list for PBXProject "MUXSDKStatsGoogleIMAPlugin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19A7C8802B4CBB2500B0AF18;
+			productRefGroup = 19A7C88B2B4CBB2500B0AF18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19A7C8892B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin */,
+				19A7C8912B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPluginTests */,
+				19A7C8A62B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS */,
+				19A7C8AD2B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19A7C8882B4CBB2500B0AF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8902B4CBB2500B0AF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8A52B4CBB6F00B0AF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8AC2B4CBB7000B0AF18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90945F5FC36FBB082960B942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MUXSDKStatsGoogleIMAPluginTVOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF430418D54BB93A7878AB75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MUXSDKStatsGoogleIMAPlugin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19A7C8862B4CBB2500B0AF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C88E2B4CBB2500B0AF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8982B4CBB2600B0AF18 /* MUXSDKStatsGoogleIMAPluginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8A32B4CBB6F00B0AF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A7C8AA2B4CBB7000B0AF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A7C8B42B4CBB7000B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19A7C8952B4CBB2600B0AF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19A7C8892B4CBB2500B0AF18 /* MUXSDKStatsGoogleIMAPlugin */;
+			targetProxy = 19A7C8942B4CBB2600B0AF18 /* PBXContainerItemProxy */;
+		};
+		19A7C8B12B4CBB7000B0AF18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19A7C8A62B4CBB6F00B0AF18 /* MUXSDKStatsGoogleIMAPluginTVOS */;
+			targetProxy = 19A7C8B02B4CBB7000B0AF18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19A7C89A2B4CBB2600B0AF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		19A7C89B2B4CBB2600B0AF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		19A7C89D2B4CBB2600B0AF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2006031FA6C3F42DC3A36A /* Pods-MUXSDKStatsGoogleIMAPlugin.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19A7C89E2B4CBB2600B0AF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1078FFB92BC87085ED0162F /* Pods-MUXSDKStatsGoogleIMAPlugin.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19A7C8A02B4CBB2600B0AF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19A7C8A12B4CBB2600B0AF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19A7C8B72B4CBB7000B0AF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81416B5704178F74CB4E0888 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTVOS;
+				PRODUCT_MODULE_NAME = MUXSDKStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MUXSDKStatsGoogleIMAPlugin;
+				PUBLIC_HEADERS_FOLDER_PATH = MUXSDKStatsGoogleIMAPlugin/Headers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		19A7C8B82B4CBB7000B0AF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75DEFA2F748EAB73A3CC9722 /* Pods-MUXSDKStatsGoogleIMAPluginTVOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTVOS;
+				PRODUCT_MODULE_NAME = MUXSDKStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MUXSDKStatsGoogleIMAPlugin;
+				PUBLIC_HEADERS_FOLDER_PATH = MUXSDKStatsGoogleIMAPlugin/Headers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		19A7C8BA2B4CBB7000B0AF18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		19A7C8BB2B4CBB7000B0AF18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.MUXSDKStatsGoogleIMAPluginTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19A7C8842B4CBB2500B0AF18 /* Build configuration list for PBXProject "MUXSDKStatsGoogleIMAPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A7C89A2B4CBB2600B0AF18 /* Debug */,
+				19A7C89B2B4CBB2600B0AF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19A7C89C2B4CBB2600B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A7C89D2B4CBB2600B0AF18 /* Debug */,
+				19A7C89E2B4CBB2600B0AF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19A7C89F2B4CBB2600B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A7C8A02B4CBB2600B0AF18 /* Debug */,
+				19A7C8A12B4CBB2600B0AF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19A7C8B62B4CBB7000B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A7C8B72B4CBB7000B0AF18 /* Debug */,
+				19A7C8B82B4CBB7000B0AF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19A7C8B92B4CBB7000B0AF18 /* Build configuration list for PBXNativeTarget "MUXSDKStatsGoogleIMAPluginTVOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A7C8BA2B4CBB7000B0AF18 /* Debug */,
+				19A7C8BB2B4CBB7000B0AF18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19A7C8812B4CBB2500B0AF18 /* Project object */;
+}

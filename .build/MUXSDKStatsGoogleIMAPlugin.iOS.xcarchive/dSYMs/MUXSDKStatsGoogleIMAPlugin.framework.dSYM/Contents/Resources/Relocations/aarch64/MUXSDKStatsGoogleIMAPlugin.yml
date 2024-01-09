@@ -1,0 +1,21 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/abarinov/Library/Developer/Xcode/DerivedData/MUXSDKStatsGoogleIMAPlugin-canozixnlqnzbwhdasfokzxgtyzw/Build/Intermediates.noindex/ArchiveIntermediates/MUXSDKStatsGoogleIMAPlugin/InstallationBuildProductsLocation/Library/Frameworks/MUXSDKStatsGoogleIMAPlugin.framework/MUXSDKStatsGoogleIMAPlugin'
+relocations:
+  - { offsetInCU: 0x34, offset: 0x7234C, size: 0x8, addend: 0x0, symName: _MUXSDKStatsGoogleIMAPluginVersionString, symObjAddr: 0x0, symBinAddr: 0x4A08, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x72381, size: 0x8, addend: 0x0, symName: _MUXSDKStatsGoogleIMAPluginVersionNumber, symObjAddr: 0x50, symBinAddr: 0x4A58, symSize: 0x0 }
+  - { offsetInCU: 0x27, offset: 0x723BE, size: 0x8, addend: 0x0, symName: '-[MuxImaListener initWithPlayerBinding:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x8 }
+  - { offsetInCU: 0xE4, offset: 0x7247B, size: 0x8, addend: 0x0, symName: '-[MuxImaListener initWithPlayerBinding:]', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x8 }
+  - { offsetInCU: 0x127, offset: 0x724BE, size: 0x8, addend: 0x0, symName: '-[MuxImaListener initWithPlayerBinding:options:]', symObjAddr: 0x8, symBinAddr: 0x4008, symSize: 0x88 }
+  - { offsetInCU: 0x17E, offset: 0x72515, size: 0x8, addend: 0x0, symName: '-[MuxImaListener setupAdViewData:withAd:]', symObjAddr: 0x90, symBinAddr: 0x4090, symSize: 0x180 }
+  - { offsetInCU: 0x1F1, offset: 0x72588, size: 0x8, addend: 0x0, symName: '-[MuxImaListener dispatchEvent:]', symObjAddr: 0x210, symBinAddr: 0x4210, symSize: 0x1AC }
+  - { offsetInCU: 0x248, offset: 0x725DF, size: 0x8, addend: 0x0, symName: '-[MuxImaListener dispatchError:]', symObjAddr: 0x3BC, symBinAddr: 0x43BC, symSize: 0x4C }
+  - { offsetInCU: 0x297, offset: 0x7262E, size: 0x8, addend: 0x0, symName: '-[MuxImaListener onContentPauseOrResume:]', symObjAddr: 0x408, symBinAddr: 0x4408, symSize: 0xC8 }
+  - { offsetInCU: 0x309, offset: 0x726A0, size: 0x8, addend: 0x0, symName: '-[MuxImaListener setupAdViewDataAndDispatchEvent:]', symObjAddr: 0x4D0, symBinAddr: 0x44D0, symSize: 0x48 }
+  - { offsetInCU: 0x34C, offset: 0x726E3, size: 0x8, addend: 0x0, symName: '-[MuxImaListener clientAdRequest:]', symObjAddr: 0x518, symBinAddr: 0x4518, symSize: 0x48 }
+  - { offsetInCU: 0x38F, offset: 0x72726, size: 0x8, addend: 0x0, symName: '-[MuxImaListener daiAdRequest:]', symObjAddr: 0x560, symBinAddr: 0x4560, symSize: 0xC }
+  - { offsetInCU: 0x3CC, offset: 0x72763, size: 0x8, addend: 0x0, symName: '-[MuxImaListener dispatchAdRequestWithoutMetadata]', symObjAddr: 0x56C, symBinAddr: 0x456C, symSize: 0x3C }
+  - { offsetInCU: 0x40F, offset: 0x727A6, size: 0x8, addend: 0x0, symName: '-[MuxImaListener dispatchAdRequestForAdTag:]', symObjAddr: 0x5A8, symBinAddr: 0x45A8, symSize: 0x80 }
+  - { offsetInCU: 0x472, offset: 0x72809, size: 0x8, addend: 0x0, symName: '-[MuxImaListener setPictureInPicture:]', symObjAddr: 0x628, symBinAddr: 0x4628, symSize: 0x8 }
+  - { offsetInCU: 0x4AF, offset: 0x72846, size: 0x8, addend: 0x0, symName: '-[MuxImaListener .cxx_destruct]', symObjAddr: 0x630, symBinAddr: 0x4630, symSize: 0xC }
+...

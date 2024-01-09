@@ -1,0 +1,6 @@
+framework module Pods_MUXSDKStatsGoogleIMAPlugin {
+  umbrella header "Pods-MUXSDKStatsGoogleIMAPlugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

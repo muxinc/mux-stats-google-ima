@@ -1,3 +1,4 @@
-module Mux_Stats_Google_IMA {
+framework module MUXSDKStatsGoogleIMAPlugin {
     header "MuxImaListener.h"
+    export *
 }

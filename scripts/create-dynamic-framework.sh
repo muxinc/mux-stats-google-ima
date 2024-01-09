@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "▸ Selecting Xcode 15.1"
-sudo xcode-select -s /Applications/Xcode_15.1.app
+# sudo xcode-select -s /Applications/Xcode_15.1.app
 
 echo "▸ Installing xcbeautify"
 brew install xcbeautify
@@ -14,13 +14,14 @@ then
 fi
 
 readonly BUILD_DIR=$PWD/.build
-readonly PROJECT=$PWD/CarthageScheme/MuxStatsGoogleIMAPlugin/MuxStatsGoogleIMAPlugin.xcworkspace
+readonly WORKSPACE=$PWD/CarthageScheme/MUXSDKStatsGoogleIMAPlugin/MUXSDKStatsGoogleIMAPlugin.xcworkspace
+readonly PROJECT=$PWD/CarthageScheme/MUXSDKStatsGoogleIMAPlugin/MUXSDKStatsGoogleIMAPlugin.xcodeproj
 readonly TARGET_DIR=$PWD/XCFramework
 
-readonly IOS_SCHEME="MuxStatsGoogleIMAPlugin"
-readonly TVOS_SCHEME="MuxStatsGoogleIMAPlugin-tvOS"
+readonly IOS_SCHEME="MUXSDKStatsGoogleIMAPlugin"
+readonly TVOS_SCHEME="MUXSDKStatsGoogleIMAPluginTVOS"
 
-readonly FRAMEWORK_NAME="MuxStatsGoogleIMAPlugin"
+readonly FRAMEWORK_NAME="MUXSDKStatsGoogleIMAPlugin"
 readonly PACKAGE_NAME=${FRAMEWORK_NAME}.xcframework
 
 echo "▸ Current Xcode: $(xcode-select -p)"
@@ -45,9 +46,9 @@ echo "▸ Creating tvOS archive"
 
 xcodebuild clean archive \
     -scheme $TVOS_SCHEME \
-    -workspace $PROJECT \
+    -workspace $WORKSPACE \
     -destination "generic/platform=tvOS" \
-    -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.tvOS.xcarchive" \
+    -archivePath "$BUILD_DIR/MUXSDKStatsGoogleIMAPluginTVOS.tvOS.xcarchive" \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
 
@@ -55,9 +56,9 @@ echo "▸ Creating tvOS Simulator archive"
 
 xcodebuild clean archive \
     -scheme $TVOS_SCHEME \
-    -workspace $PROJECT \
+    -workspace $WORKSPACE \
     -destination "generic/platform=tvOS Simulator" \
-    -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.tvOS-simulator.xcarchive" \
+    -archivePath "$BUILD_DIR/MUXSDKStatsGoogleIMAPluginTVOS.tvOS-simulator.xcarchive" \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
 
@@ -65,9 +66,9 @@ echo "▸ Creating iOS archive"
 
 xcodebuild clean archive \
     -scheme $IOS_SCHEME \
-    -workspace $PROJECT \
+    -workspace $WORKSPACE \
     -destination "generic/platform=iOS" \
-    -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS.xcarchive" \
+    -archivePath "$BUILD_DIR/MUXSDKStatsGoogleIMAPlugin.iOS.xcarchive" \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
 
@@ -75,17 +76,17 @@ echo "▸ Creating iOS Simulator archive"
 
 xcodebuild clean archive \
     -scheme $IOS_SCHEME \
-    -workspace $PROJECT \
+    -workspace $WORKSPACE \
     -destination "generic/platform=iOS Simulator" \
-    -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS-simulator.xcarchive" \
+    -archivePath "$BUILD_DIR/MUXSDKStatsGoogleIMAPlugin.iOS-simulator.xcarchive" \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
 
 xcodebuild -create-xcframework \
-    -framework "$BUILD_DIR/MuxStatsGoogleIMAPlugin.tvOS.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPlugin.framework" \
-    -framework "$BUILD_DIR/MuxStatsGoogleIMAPlugin.tvOS-simulator.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPlugin.framework" \
-    -framework "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPlugin.framework" \
-    -framework "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS-simulator.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPlugin.framework" \
+    -framework "$BUILD_DIR/MUXSDKStatsGoogleIMAPluginTVOS.tvOS.xcarchive/Products/Library/Frameworks/MUXSDKStatsGoogleIMAPlugin.framework" \
+    -framework "$BUILD_DIR/MUXSDKStatsGoogleIMAPluginTVOS.tvOS-simulator.xcarchive/Products/Library/Frameworks/MUXSDKStatsGoogleIMAPlugin.framework" \
+    -framework "$BUILD_DIR/MUXSDKStatsGoogleIMAPlugin.iOS.xcarchive/Products/Library/Frameworks/MUXSDKStatsGoogleIMAPlugin.framework" \
+    -framework "$BUILD_DIR/MUXSDKStatsGoogleIMAPlugin.iOS-simulator.xcarchive/Products/Library/Frameworks/MUXSDKStatsGoogleIMAPlugin.framework" \
     -output "${TARGET_DIR}/${PACKAGE_NAME}" | xcbeautify
 
 if [[ $? == 0 ]]; then
@@ -97,4 +98,4 @@ fi
 
 echo "▸ Deleting Build Directory: ${BUILD_DIR}"
 
-rm -Rf $BUILD_DIR
+# rm -Rf $BUILD_DIR
