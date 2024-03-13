@@ -135,5 +135,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/Mux-Stats-AVPlayer/XCFramework/MUXSDKStats.xcframework" "Mux-Stats-AVPlayer" "framework" "tvos-arm64" "tvos-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/../../../mux-stats-sdk-avplayer/XCFramework/MUXSDKStats.xcframework" "Mux-Stats-AVPlayer" "framework" "tvos-arm64" "tvos-arm64_x86_64-simulator"
 

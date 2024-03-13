@@ -3,6 +3,7 @@ use_frameworks!
 target 'DemoApp' do
   platform :ios, '12.0'
   pod 'Mux-Stats-Google-IMA', :path => '../'
+  pod 'Mux-Stats-AVPlayer', :path => '../../mux-stats-sdk-avplayer/'
 end
 
 target 'MUXSDKIMATVOSExample' do

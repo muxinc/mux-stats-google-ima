@@ -135,5 +135,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/Mux-Stats-AVPlayer/XCFramework/MUXSDKStats.xcframework" "Mux-Stats-AVPlayer" "framework" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/../../../mux-stats-sdk-avplayer/XCFramework/MUXSDKStats.xcframework" "Mux-Stats-AVPlayer" "framework" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 
