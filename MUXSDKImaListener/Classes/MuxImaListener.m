@@ -166,4 +166,81 @@
     _isPictureInPicture = isPictureInPicture;
 }
 
+-(NSString *)adEventDebugString:(IMAAdEventType)forType {
+    switch (forType) {
+        case kIMAAdEvent_AD_BREAK_READY:
+            return @"AD_BREAK_READY";
+            break;
+        case kIMAAdEvent_AD_BREAK_FETCH_ERROR:
+            return @"AD_BREAK_FETCH_ERROR";
+            break;
+        case kIMAAdEvent_AD_BREAK_ENDED:
+            return @"AD_BREAK_ENDED";
+            break;
+        case kIMAAdEvent_AD_BREAK_STARTED:
+            return @"AD_BREAK_STARTED";
+            break;
+        case kIMAAdEvent_AD_PERIOD_ENDED:
+            return @"AD_PERIOD_ENDED";
+            break;
+        case kIMAAdEvent_AD_PERIOD_STARTED:
+            return @"AD_PERIOD_STARTED";
+            break;
+        case kIMAAdEvent_ALL_ADS_COMPLETED:
+            return @"ALL_ADS_COMPLETED";
+            break;
+        case kIMAAdEvent_CLICKED:
+            return @"CLICKED";
+            break;
+        case kIMAAdEvent_COMPLETE:
+            return @"COMPLETE";
+            break;
+        case kIMAAdEvent_CUEPOINTS_CHANGED:
+            return @"CUEPOINTS_CHANGED";
+            break;
+        case kIMAAdEvent_ICON_FALLBACK_IMAGE_CLOSED:
+            return @"ICON_FALLBACK_IMAGE_CLOSED";
+            break;
+        case kIMAAdEvent_ICON_TAPPED:
+            return @"ICON_TAPPED";
+            break;
+        case kIMAAdEvent_FIRST_QUARTILE:
+            return @"FIRST_QUARTILE";
+            break;
+        case kIMAAdEvent_LOADED:
+            return @"LOADED";
+            break;
+        case kIMAAdEvent_LOG:
+            return @"LOG";
+            break;
+        case kIMAAdEvent_MIDPOINT:
+            return @"MIDPOINT";
+            break;
+        case kIMAAdEvent_PAUSE:
+            return @"PAUSE";
+            break;
+        case kIMAAdEvent_SKIPPED:
+            return @"SKIPPED";
+            break;
+        case kIMAAdEvent_STARTED:
+            return @"STARTED";
+            break;
+        case kIMAAdEvent_STREAM_LOADED:
+            return @"STREAM_LOADED";
+            break;
+        case kIMAAdEvent_STREAM_STARTED:
+            return @"STREAM_STARTED";
+            break;
+        case kIMAAdEvent_TAPPED:
+            return @"TAPPED";
+            break;
+        case kIMAAdEvent_THIRD_QUARTILE:
+            return @"THIRD_QUARTILE";
+            break;
+        default:
+            return @"[unknown]";
+            break;
+    }
+}
+
 @end
