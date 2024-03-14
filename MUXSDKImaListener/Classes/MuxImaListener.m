@@ -49,6 +49,15 @@
 }
 
 - (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
+    NSString *evStr = [self adEventDebugString:event.type];
+    
+    NSDate *nowish = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"HH:mm:ss:SSS"];
+    NSString *dateStr = [outputFormatter stringFromDate:nowish];
+    
+    NSLog(@"ADTEST: Ad Event %@ at %@", evStr, dateStr);
+    
     MUXSDKAdEvent *playbackEvent;
     switch(event.type) {
         case kIMAAdEvent_LOADED:
