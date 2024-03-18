@@ -172,6 +172,16 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         playerViewController.player?.play()
     }
     
+    func adsManager(_ adsManager: IMAAdsManager, adDidProgressToTime mediaTime: TimeInterval, totalTime: TimeInterval) {
+        
+        let nowish = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("HH:mm:ss:SSS")
+        let dateStr = dateFormatter.string(from: nowish)
+        
+        print("ADTEST: adDidProgressToTime: \(String(describing: mediaTime)) / \(String(describing: totalTime)) at \(dateStr)")
+    }
+    
     func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager) {
         // Pause the content for the SDK to play ads.
         playerViewController.player?.pause()
