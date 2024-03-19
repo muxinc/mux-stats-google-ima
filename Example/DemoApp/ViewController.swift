@@ -98,6 +98,9 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     }
     
     func setUpAdsLoader() {
+        let settings = IMASettings()
+        settings.enableDebugMode = true
+//        adsLoader = IMAAdsLoader(settings: settings)
         adsLoader = IMAAdsLoader(settings: nil)
         adsLoader.delegate = self
     }

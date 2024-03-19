@@ -57,7 +57,17 @@
     NSString *dateStr = [outputFormatter stringFromDate:nowish];
     
     NSLog(@"ADTEST: Ad Event %@ at %@", evStr, dateStr);
-    
+    NSDictionary *adData = event.adData;
+    if (adData) {
+        NSLog(@"ADTEST:\t with metadata:");
+        NSEnumerator *e = adData.keyEnumerator;
+        id key;
+        while (key = [e nextObject]) {
+            NSLog(@"ADTEST:\t %@ -> %@", key, [adData objectForKey:key]);
+        }
+    }
+    NSLog(@"ADTEST:\t without metadata:");
+
     MUXSDKAdEvent *playbackEvent;
     switch(event.type) {
         case kIMAAdEvent_LOADED:
