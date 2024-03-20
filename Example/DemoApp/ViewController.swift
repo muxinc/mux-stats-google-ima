@@ -18,6 +18,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private let DEMO_PLAYER_NAME = "adplayer"
     private let MUX_DATA_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"
     
+    private let SSAI_ASSET_TAG_BUCK = "c-rArva4ShKVIAkNfy6HUQ"
+    
     private let AD_TAG_LOTS_OF_MIDROLLS = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostlongpod&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator="
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL_STEVE = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
@@ -89,6 +91,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         let customerPlayerData = MUXSDKCustomerPlayerData(environmentKey: envKey)
         let customerVideoData = MUXSDKCustomerVideoData()
         customerVideoData.videoTitle = "Mux Data IMA SDK Test"
+        customerVideoData.videoSourceUrl = nil
         let customerData = MUXSDKCustomerData(customerPlayerData: customerPlayerData, videoData: customerVideoData, viewData: nil, customData: nil)!
         let playerBinding = MUXSDKStats.monitorAVPlayerViewController(playerViewController, withPlayerName: DEMO_PLAYER_NAME, customerData: customerData)!
         self.playerBinding = playerBinding
@@ -114,11 +117,20 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         // Create ad display container for ad rendering.
         let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.view, viewController: self)
         // Create an ad request with our ad tag, display container, and optional user context.
-        let request = IMAAdsRequest(
+        sendClientAdsRequest(
             adTagUrl: AD_TAG_LOTS_OF_MIDROLLS,
             adDisplayContainer: adDisplayContainer,
+            contentPlayhead: contentPlayhead
+        )
+    }
+    
+    func sendClientAdsRequest(adTagUrl: String, adDisplayContainer: IMAAdDisplayContainer, contentPlayhead: IMAAVPlayerContentPlayhead?) {
+        let request = IMAAdsRequest(
+            adTagUrl: adTagUrl,
+            adDisplayContainer: adDisplayContainer,
             contentPlayhead: contentPlayhead,
-            userContext: nil)
+            userContext: nil
+        )
         
         imaListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
@@ -141,12 +153,15 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     // MARK: - IMAAdsLoaderDelegate
     
     func adsLoader(_ loader: IMAAdsLoader, adsLoadedWith adsLoadedData: IMAAdsLoadedData) {
+        print("ADTEST: adsLoader: adsLoadedWith called")
+        
         adsManager = adsLoadedData.adsManager
         adsManager.delegate = self
         adsManager.initialize(with: nil)
     }
     
     func adsLoader(_ loader: IMAAdsLoader, failedWith adErrorData: IMAAdLoadingErrorData) {
+        print("ADTEST: adsLoader error:" + (adErrorData.adError.message ?? "nil"))
         print("Error loading ads: " + (adErrorData.adError.message ?? "nil"))
         showContentPlayer()
         playerViewController.player?.play()
@@ -169,6 +184,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     
     func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
         // Fall back to playing content
+        print("ADTEST: AdsManager error: " + (error.message ?? "nil"))
         print("AdsManager error: " + (error.message ?? "nil"))
         imaListener?.dispatchError(error.message ?? "nil")
         showContentPlayer()

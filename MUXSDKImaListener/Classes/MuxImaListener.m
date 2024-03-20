@@ -60,9 +60,7 @@
     NSDictionary *adData = event.adData;
     if (adData) {
         NSLog(@"ADTEST:\t with metadata:");
-        NSEnumerator *e = adData.keyEnumerator;
-        id key;
-        while (key = [e nextObject]) {
+        for (id key in adData) {
             NSLog(@"ADTEST:\t %@ -> %@", key, [adData objectForKey:key]);
         }
     }
