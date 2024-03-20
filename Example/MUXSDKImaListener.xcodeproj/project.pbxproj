@@ -25,6 +25,7 @@
 		351790AD293822A100ABBCC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790AC293822A100ABBCC9 /* SceneDelegate.swift */; };
 		351790CC293822A200ABBCC9 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351790CB293822A200ABBCC9 /* DemoAppUITests.swift */; };
 		351790D92939012600ABBCC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351790D82939012600ABBCC9 /* Main.storyboard */; };
+		35C2FC662BAB7AF9005A6D5A /* ViewControllerSSAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C2FC652BAB7AF9005A6D5A /* ViewControllerSSAI.swift */; };
 		52F6EB7B81D13E7F7E1CF76C /* Pods_MUXSDKIMATVOSExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32D26FD7982E0B605E92663 /* Pods_MUXSDKIMATVOSExample.framework */; };
 		5D6682ECC69C781C9A89C8B3 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6555902C56B32AAF4BB7D006 /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		351790C7293822A200ABBCC9 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		351790CB293822A200ABBCC9 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		351790D82939012600ABBCC9 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		35C2FC652BAB7AF9005A6D5A /* ViewControllerSSAI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSSAI.swift; sourceTree = "<group>"; };
 		43EC73AD1AC164365E352A1C /* Mux-Stats-Google-IMA.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Mux-Stats-Google-IMA.podspec"; path = "../Mux-Stats-Google-IMA.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				1977273B2AA90A44002BA06E /* ViewController.swift */,
+				35C2FC652BAB7AF9005A6D5A /* ViewControllerSSAI.swift */,
 				1977273C2AA90A44002BA06E /* Assets.xcassets */,
 				1977273D2AA90A44002BA06E /* LaunchScreen.storyboard */,
 				1977273F2AA90A44002BA06E /* Main.storyboard */,
@@ -731,6 +734,7 @@
 			files = (
 				351790AB293822A100ABBCC9 /* AppDelegate.swift in Sources */,
 				197727432AA90A44002BA06E /* ViewController.swift in Sources */,
+				35C2FC662BAB7AF9005A6D5A /* ViewControllerSSAI.swift in Sources */,
 				351790AD293822A100ABBCC9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

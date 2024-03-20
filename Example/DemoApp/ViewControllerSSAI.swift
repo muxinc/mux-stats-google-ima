@@ -13,17 +13,14 @@ import Mux_Stats_Google_IMA
 import MUXSDKStats
 import GoogleInteractiveMediaAds
 
-class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
+class ViewControllerSSAI: UIViewController, IMAAdsLoaderDelegate,  IMAStreamManagerDelegate {
+    
     
     private let DEMO_PLAYER_NAME = "adplayer"
     private let MUX_DATA_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"
     
     private let SSAI_ASSET_TAG_BUCK = "c-rArva4ShKVIAkNfy6HUQ"
     
-    private let AD_TAG_LOTS_OF_MIDROLLS = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostlongpod&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator="
-    private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
-    private let VOD_TEST_URL_STEVE = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
-    private let VOD_TEST_URL_DRAGON_WOMAN = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
     
     // Player / Player State
     private var player: AVPlayer?
@@ -31,13 +28,15 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     
     // IMA Ads SDK
     private var adsLoader: IMAAdsLoader!
-    private var adsManager: IMAAdsManager!
+//    private var adsManager: IMAAdsManager!
+    private var adsManager: IMAStreamManager!
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     
     // Mux SDK
     private var imaListener: MuxImaListener?
     private var playerBinding: MUXSDKPlayerBinding?
     
+    private var adContainerView: UIView?
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -50,7 +49,13 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         self.view.backgroundColor = UIColor.black
         self.view.accessibilityIdentifier = "AVPlayerView"
         
-        setUpContentPlayer(mediaUrl: VOD_TEST_URL_STEVE)
+        let adContainerView = UIView()
+        self.adContainerView = adContainerView
+        self.view.addSubview(adContainerView)
+        adContainerView.frame = self.view.bounds;
+
+        
+        setUpContentPlayer(mediaUrl: SSAI_ASSET_TAG_BUCK)
         setUpAdsLoader()
     }
 
@@ -117,24 +122,20 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         // Create ad display container for ad rendering.
         let adDisplayContainer = IMAAdDisplayContainer(adContainer: self.view, viewController: self)
         // Create an ad request with our ad tag, display container, and optional user context.
-        sendClientAdsRequest(
-            adsLoader: self.adsLoader,
-            adTagUrl: AD_TAG_LOTS_OF_MIDROLLS,
+        sendServerAdsRequest(
+            adTagUrl: SSAI_ASSET_TAG_BUCK,
             adDisplayContainer: adDisplayContainer,
             contentPlayhead: contentPlayhead
         )
     }
     
-    func sendClientAdsRequest(adsLoader: IMAAdsLoader, adTagUrl: String, adDisplayContainer: IMAAdDisplayContainer, contentPlayhead: IMAAVPlayerContentPlayhead?) {
-        let request = IMAAdsRequest(
-            adTagUrl: adTagUrl,
-            adDisplayContainer: adDisplayContainer,
-            contentPlayhead: contentPlayhead,
-            userContext: nil
-        )
+    func sendServerAdsRequest(adTagUrl: String, adDisplayContainer: IMAAdDisplayContainer, contentPlayhead: IMAAVPlayerContentPlayhead?) {
+        let display = IMAAVPlayerVideoDisplay(avPlayer: self.playerViewController.player!)
+        let displayContainer = IMAAdDisplayContainer(adContainer: self.adContainerView!, viewController: self)
+        let request = IMALiveStreamRequest(assetKey: SSAI_ASSET_TAG_BUCK, adDisplayContainer: displayContainer, videoDisplay: display, userContext: nil)
         
-        imaListener?.clientAdRequest(request)
-        adsLoader.requestAds(with: request)
+        imaListener?.daiAdRequest(request)
+        adsLoader.requestStream(with: request)
     }
     
     func showContentPlayer() {
@@ -156,7 +157,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsLoader(_ loader: IMAAdsLoader, adsLoadedWith adsLoadedData: IMAAdsLoadedData) {
         print("ADTEST: adsLoader: adsLoadedWith called")
         
-        adsManager = adsLoadedData.adsManager
+        adsManager = adsLoadedData.streamManager
         adsManager.delegate = self
         adsManager.initialize(with: nil)
     }
@@ -172,18 +173,18 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         adsLoader?.contentComplete()
     }
     
-    // MARK: - IMAAdsManagerDelegate
+    // MARK: - IMAStreamManmagerDelegate
     
-    func adsManager(_ adsManager: IMAAdsManager, didReceive event: IMAAdEvent) {
+    func streamManager(_ adsManager: IMAStreamManager, didReceive event: IMAAdEvent) {
         imaListener?.dispatchEvent(event)
         
         // Play each ad once it has been loaded
-        if event.type == IMAAdEventType.LOADED {
-            adsManager.start()
-        }
+//        if event.type == IMAAdEventType.LOADED {
+//            adsManager.start()
+//        }
     }
     
-    func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
+    func streamManager(_ adsManager: IMAStreamManager, didReceive error: IMAAdError) {
         // Fall back to playing content
         print("ADTEST: AdsManager error: " + (error.message ?? "nil"))
         print("AdsManager error: " + (error.message ?? "nil"))
