@@ -63,8 +63,9 @@
         for (id key in adData) {
             NSLog(@"ADTEST:\t %@ -> %@", key, [adData objectForKey:key]);
         }
+    } else {
+        NSLog(@"ADTEST:\t without metadata:");
     }
-    NSLog(@"ADTEST:\t without metadata:");
 
     MUXSDKAdEvent *playbackEvent;
     switch(event.type) {

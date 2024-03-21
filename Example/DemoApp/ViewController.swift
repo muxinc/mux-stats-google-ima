@@ -24,6 +24,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL_STEVE = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
     private let VOD_TEST_URL_DRAGON_WOMAN = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    let HERE_IS_ONE = "https://stream.mux.com/5TK6BVSf2u0279OAQU8g0200O1SzUyHUqUl028phpCeashA.m3u8"
+
     
     // Player / Player State
     private var player: AVPlayer?
@@ -91,7 +93,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         let customerPlayerData = MUXSDKCustomerPlayerData(environmentKey: envKey)
         let customerVideoData = MUXSDKCustomerVideoData()
         customerVideoData.videoTitle = "Mux Data IMA SDK Test"
-        customerVideoData.videoSourceUrl = nil
+        customerVideoData.videoSourceUrl = HERE_IS_ONE
         let customerData = MUXSDKCustomerData(customerPlayerData: customerPlayerData, videoData: customerVideoData, viewData: nil, customData: nil)!
         let playerBinding = MUXSDKStats.monitorAVPlayerViewController(playerViewController, withPlayerName: DEMO_PLAYER_NAME, customerData: customerData)!
         self.playerBinding = playerBinding
