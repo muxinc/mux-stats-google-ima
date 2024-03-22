@@ -26,6 +26,7 @@
         }
         _usesServerSideAdInsertion = NO;
         _adRequestReported = NO;
+        _sendAdplayOnStarted = NO;
     }
     return(self);
 }
@@ -54,10 +55,14 @@
         case kIMAAdEvent_LOADED:
             playbackEvent = [MUXSDKAdResponseEvent new];
             [self setupAdViewData:playbackEvent withAd:event.ad];
-            [_playerBinding dispatchAdEvent: playbackEvent];
-            playbackEvent = [MUXSDKAdPlayEvent new];
             break;
         case kIMAAdEvent_STARTED:
+            if (_sendAdplayOnStarted) {
+                playbackEvent = [MUXSDKAdPlayEvent new];
+                [_playerBinding dispatchAdEvent: playbackEvent];
+            } else {
+                _sendAdplayOnStarted = YES;
+            }
             playbackEvent = [MUXSDKAdPlayingEvent new];
             break;
         case kIMAAdEvent_FIRST_QUARTILE:
@@ -114,6 +119,9 @@
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         
+        _sendAdplayOnStarted = NO;
+        [_playerBinding dispatchAdEvent: [MUXSDKAdPlayEvent new]];
+
         return;
     } else {
         if (_isPictureInPicture) {
