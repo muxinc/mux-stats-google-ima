@@ -52,10 +52,6 @@
 - (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
     MUXSDKAdEvent *playbackEvent;
     switch(event.type) {
-        case kIMAAdEvent_LOADED:
-            playbackEvent = [MUXSDKAdResponseEvent new];
-            [self setupAdViewData:playbackEvent withAd:event.ad];
-            break;
         case kIMAAdEvent_STARTED:
             if (_sendAdplayOnStarted) {
                 playbackEvent = [MUXSDKAdPlayEvent new];
