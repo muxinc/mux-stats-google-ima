@@ -77,12 +77,6 @@ describe(@"MuxImaListener", ^{
             imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding];
         });
 
-        it(@"should dispatch the correct event for kIMAAdEvent_LOADED", ^{
-            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_LOADED];
-            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
-            expect(playbackEvent).to.beKindOf([MUXSDKAdPlayEvent class]);
-        });
-
         it(@"should dispatch the correct event for kIMAAdEvent_STARTED", ^{
             MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_STARTED];
             MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];

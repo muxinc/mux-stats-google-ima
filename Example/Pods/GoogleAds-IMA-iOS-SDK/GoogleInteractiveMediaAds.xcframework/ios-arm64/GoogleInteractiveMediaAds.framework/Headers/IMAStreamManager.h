@@ -104,6 +104,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy, readonly, nullable) NSString *streamId;
 
 /**
+ * The cuepoints for the current stream, populated after @c kIMAAdEvent_CUEPOINTS_CHANGED event is
+ * dispatched. Will be empty for live streams.
+ */
+@property(nonatomic, readonly) NSArray<IMACuepoint *> *cuepoints;
+
+/**
  * Initializes and loads the stream.
  *
  * @param adsRenderingSettings the IMAAdsRenderingSettings. Pass in to influence ad rendering.
@@ -150,6 +156,18 @@ NS_ASSUME_NONNULL_BEGIN
  * @param adTagParameters   the new ad tag parameters for the current stream.
  */
 - (void)replaceAdTagParameters:(nullable NSDictionary<NSString *, NSString *> *)adTagParameters;
+
+/**
+ * Requests SDK to retrieve the ad metadata and then load the provided streamManifestUrl and
+ * streamSubtitles into the player. This should be manually triggered once the stream manifest has
+ * been retrieved from the third party video stitcher. Note that this is only used for Pod serving
+ * VOD with a third party video stitcher, and is a no-op for other stream request types.
+ *
+ * @param streamURL the manifest url for the stream with dynamic ad insertion.
+ * @param streamSubtitles the subtitles array for the stream.
+ */
+- (void)loadThirdPartyStream:(NSURL *)streamURL
+             streamSubtitles:(NSArray<NSDictionary<NSString *, NSString *> *> *)streamSubtitles;
 
 /**
  * :nodoc:

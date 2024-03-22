@@ -35,7 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
  * Client side: Returns the index of the ad pod. For a preroll pod, returns 0.
  * For midrolls, returns 1, 2,..., N. For a postroll pod, returns -1. Defaults
  * to 0 if this ad is not part of a pod, or this pod is not part of a playlist.
- * DAI live stream: Always returns -1.
+ * DAI live stream: Returns the index of the ad pod. For a preroll pod, returns
+ * 0. For midrolls, returns the break ID. Returns -2 if pod index cannot be
+ * determined (internal error).
  * DAI VOD: Returns the index of the ad pod. For a preroll pod, returns 0. For
  * midrolls, returns 1, 2,...,N. For a postroll pod, returns N+1...N+X.
  * Defaults to 0 if this ad is not part of a pod, or this pod is not part of a
