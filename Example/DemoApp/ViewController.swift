@@ -16,7 +16,7 @@ import GoogleInteractiveMediaAds
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
-    private let MUX_DATA_ENV_KEY = "rhhn9fph0nog346n4tqb6bqda"
+    private let MUX_DATA_ENV_KEY = "YOUR KEY HERE"
     
     private let SSAI_ASSET_TAG_BUCK = "c-rArva4ShKVIAkNfy6HUQ"
     
