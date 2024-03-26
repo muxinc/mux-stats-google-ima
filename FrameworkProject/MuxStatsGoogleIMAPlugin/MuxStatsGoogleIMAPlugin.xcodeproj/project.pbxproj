@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		190698222BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190698192BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework */; };
+		190698272BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 190698262BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m */; };
+		190698282BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		190698332BB37ABF00CE0FF7 /* MUXSDKStats in Frameworks */ = {isa = PBXBuildFile; productRef = 190698322BB37ABF00CE0FF7 /* MUXSDKStats */; };
+		1906983A2BB37B6700CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 190698392BB37B6700CE0FF7 /* GoogleInteractiveMediaAds */; };
+		190698822BB3932A00CE0FF7 /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 190698352BB37AE200CE0FF7 /* MuxImaListener.m */; };
+		190698842BB3935400CE0FF7 /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 190698832BB3935400CE0FF7 /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		190698232BB37A3300CE0FF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 190698102BB37A3300CE0FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 190698182BB37A3300CE0FF7;
+			remoteInfo = MuxStatsGoogleIMAPlugin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		190698192BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MuxStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuxStatsGoogleIMAPlugin.h; sourceTree = "<group>"; };
+		190698212BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		190698262BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuxStatsGoogleIMAPluginTests.m; sourceTree = "<group>"; };
+		190698352BB37AE200CE0FF7 /* MuxImaListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuxImaListener.m; sourceTree = "<group>"; };
+		190698832BB3935400CE0FF7 /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = ../../../MUXSDKImaListener/Classes/include/MuxImaListener.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		190698162BB37A3300CE0FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1906983A2BB37B6700CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */,
+				190698332BB37ABF00CE0FF7 /* MUXSDKStats in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1906981E2BB37A3300CE0FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698222BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1906980F2BB37A3300CE0FF7 = {
+			isa = PBXGroup;
+			children = (
+				1906981B2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin */,
+				190698252BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests */,
+				1906981A2BB37A3300CE0FF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1906981A2BB37A3300CE0FF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				190698192BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework */,
+				190698212BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1906981B2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				190698832BB3935400CE0FF7 /* MuxImaListener.h */,
+				190698352BB37AE200CE0FF7 /* MuxImaListener.m */,
+				1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */,
+			);
+			path = MuxStatsGoogleIMAPlugin;
+			sourceTree = "<group>";
+		};
+		190698252BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				190698262BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m */,
+			);
+			path = MuxStatsGoogleIMAPluginTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		190698142BB37A3300CE0FF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698282BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h in Headers */,
+				190698842BB3935400CE0FF7 /* MuxImaListener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		190698182BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1906982B2BB37A3300CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPlugin" */;
+			buildPhases = (
+				190698142BB37A3300CE0FF7 /* Headers */,
+				190698152BB37A3300CE0FF7 /* Sources */,
+				190698162BB37A3300CE0FF7 /* Frameworks */,
+				190698172BB37A3300CE0FF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuxStatsGoogleIMAPlugin;
+			packageProductDependencies = (
+				190698322BB37ABF00CE0FF7 /* MUXSDKStats */,
+				190698392BB37B6700CE0FF7 /* GoogleInteractiveMediaAds */,
+			);
+			productName = MuxStatsGoogleIMAPlugin;
+			productReference = 190698192BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		190698202BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1906982E2BB37A3300CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTests" */;
+			buildPhases = (
+				1906981D2BB37A3300CE0FF7 /* Sources */,
+				1906981E2BB37A3300CE0FF7 /* Frameworks */,
+				1906981F2BB37A3300CE0FF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				190698242BB37A3300CE0FF7 /* PBXTargetDependency */,
+			);
+			name = MuxStatsGoogleIMAPluginTests;
+			productName = MuxStatsGoogleIMAPluginTests;
+			productReference = 190698212BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		190698102BB37A3300CE0FF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					190698182BB37A3300CE0FF7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					190698202BB37A3300CE0FF7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 190698132BB37A3300CE0FF7 /* Build configuration list for PBXProject "MuxStatsGoogleIMAPlugin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1906980F2BB37A3300CE0FF7;
+			packageReferences = (
+				190698312BB37ABF00CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */,
+				190698382BB37B6700CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */,
+			);
+			productRefGroup = 1906981A2BB37A3300CE0FF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				190698182BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin */,
+				190698202BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		190698172BB37A3300CE0FF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1906981F2BB37A3300CE0FF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		190698152BB37A3300CE0FF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698822BB3932A00CE0FF7 /* MuxImaListener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1906981D2BB37A3300CE0FF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698272BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		190698242BB37A3300CE0FF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 190698182BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin */;
+			targetProxy = 190698232BB37A3300CE0FF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		190698292BB37A3300CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1906982A2BB37A3300CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1906982C2BB37A3300CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1906982D2BB37A3300CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1906982F2BB37A3300CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		190698302BB37A3300CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		190698132BB37A3300CE0FF7 /* Build configuration list for PBXProject "MuxStatsGoogleIMAPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				190698292BB37A3300CE0FF7 /* Debug */,
+				1906982A2BB37A3300CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1906982B2BB37A3300CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1906982C2BB37A3300CE0FF7 /* Debug */,
+				1906982D2BB37A3300CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1906982E2BB37A3300CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1906982F2BB37A3300CE0FF7 /* Debug */,
+				190698302BB37A3300CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		190698312BB37ABF00CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muxinc/mux-stats-sdk-avplayer";
+			requirement = {
+				kind = exactVersion;
+				version = 3.5.1;
+			};
+		};
+		190698382BB37B6700CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios/";
+			requirement = {
+				kind = exactVersion;
+				version = 3.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		190698322BB37ABF00CE0FF7 /* MUXSDKStats */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 190698312BB37ABF00CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */;
+			productName = MUXSDKStats;
+		};
+		190698392BB37B6700CE0FF7 /* GoogleInteractiveMediaAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 190698382BB37B6700CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */;
+			productName = GoogleInteractiveMediaAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 190698102BB37A3300CE0FF7 /* Project object */;
+}

@@ -1,0 +1,33 @@
+{
+  "originHash" : "aba7b742ac5e201c8bbadf7095d66d1b13bdbe0481102447dd58245d2cfe5310",
+  "pins" : [
+    {
+      "identity" : "mux-stats-sdk-avplayer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer",
+      "state" : {
+        "revision" : "97eb1dc268665aef7676347898156b394b02ca3d",
+        "version" : "3.5.1"
+      }
+    },
+    {
+      "identity" : "stats-sdk-objc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/muxinc/stats-sdk-objc.git",
+      "state" : {
+        "revision" : "982feb93c4601684b5e3eef9ad1a036e3ec117c7",
+        "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-tvos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos",
+      "state" : {
+        "revision" : "4b4105ffa6b4ed7a9d9ce2501c571a1c0ce0ef60",
+        "version" : "4.11.1"
+      }
+    }
+  ],
+  "version" : 3
+}
