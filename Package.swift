@@ -2,9 +2,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Mux_Stats_Google_IMA",
+    name: "MUXSDKStatsGoogleIMAPlugin",
     products: [
-        .library(name: "Mux_Stats_Google_IMA", targets: ["Mux_Stats_Google_IMA", "GoogleInteractiveMediaAds",]),
+        .library(
+            name: "MUXSDKStatsGoogleIMAPlugin", 
+            targets: [
+                "MUXSDKStatsGoogleIMAPlugin", 
+                "GoogleInteractiveMediaAds",
+            ]
+        ),
     ],
     dependencies: [
         .package(
@@ -15,7 +21,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Mux_Stats_Google_IMA",
+            name: "MUXSDKStatsGoogleIMAPlugin",
             dependencies: ["MUXSDKStats", "GoogleInteractiveMediaAds"],
             path: "MUXSDKImaListener/Classes"
         ),

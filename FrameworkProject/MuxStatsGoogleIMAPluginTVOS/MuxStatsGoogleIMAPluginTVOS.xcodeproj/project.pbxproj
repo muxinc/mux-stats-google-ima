@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1906984E2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */; };
+		190698542BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		190698622BB37BF400CE0FF7 /* MUXSDKStats in Frameworks */ = {isa = PBXBuildFile; productRef = 190698612BB37BF400CE0FF7 /* MUXSDKStats */; };
+		190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */; };
+		1906986D2BB3866400CE0FF7 /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 1906985F2BB37BB500CE0FF7 /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		190698802BB392EA00CE0FF7 /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906985D2BB37B9E00CE0FF7 /* MuxImaListener.m */; };
+		190698892BB3947F00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1906984F2BB37B8E00CE0FF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1906983C2BB37B8E00CE0FF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 190698442BB37B8E00CE0FF7;
+			remoteInfo = MuxStatsGoogleIMAPluginTVOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuxStatsGoogleIMAPluginTVOS.h; sourceTree = "<group>"; };
+		1906984D2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuxStatsGoogleIMAPluginTVOSTests.m; sourceTree = "<group>"; };
+		1906985D2BB37B9E00CE0FF7 /* MuxImaListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuxImaListener.m; sourceTree = "<group>"; };
+		1906985F2BB37BB500CE0FF7 /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuxImaListener.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		190698422BB37B8E00CE0FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */,
+				190698622BB37BF400CE0FF7 /* MUXSDKStats in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1906984A2BB37B8E00CE0FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1906984E2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1906983B2BB37B8E00CE0FF7 = {
+			isa = PBXGroup;
+			children = (
+				190698472BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS */,
+				190698512BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests */,
+				190698462BB37B8E00CE0FF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		190698462BB37B8E00CE0FF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */,
+				1906984D2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		190698472BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS */ = {
+			isa = PBXGroup;
+			children = (
+				190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */,
+				1906985F2BB37BB500CE0FF7 /* MuxImaListener.h */,
+				1906985D2BB37B9E00CE0FF7 /* MuxImaListener.m */,
+			);
+			path = MuxStatsGoogleIMAPluginTVOS;
+			sourceTree = "<group>";
+		};
+		190698512BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */,
+			);
+			path = MuxStatsGoogleIMAPluginTVOSTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		190698402BB37B8E00CE0FF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698542BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h in Headers */,
+				1906986D2BB3866400CE0FF7 /* MuxImaListener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		190698442BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 190698572BB37B8E00CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTVOS" */;
+			buildPhases = (
+				190698402BB37B8E00CE0FF7 /* Headers */,
+				190698412BB37B8E00CE0FF7 /* Sources */,
+				190698422BB37B8E00CE0FF7 /* Frameworks */,
+				190698432BB37B8E00CE0FF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuxStatsGoogleIMAPluginTVOS;
+			packageProductDependencies = (
+				190698612BB37BF400CE0FF7 /* MUXSDKStats */,
+				190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */,
+			);
+			productName = MuxStatsGoogleIMAPluginTVOS;
+			productReference = 190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1906984C2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1906985A2BB37B8E00CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTVOSTests" */;
+			buildPhases = (
+				190698492BB37B8E00CE0FF7 /* Sources */,
+				1906984A2BB37B8E00CE0FF7 /* Frameworks */,
+				1906984B2BB37B8E00CE0FF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				190698502BB37B8E00CE0FF7 /* PBXTargetDependency */,
+			);
+			name = MuxStatsGoogleIMAPluginTVOSTests;
+			productName = MuxStatsGoogleIMAPluginTVOSTests;
+			productReference = 1906984D2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1906983C2BB37B8E00CE0FF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					190698442BB37B8E00CE0FF7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					1906984C2BB37B8E00CE0FF7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 1906983F2BB37B8E00CE0FF7 /* Build configuration list for PBXProject "MuxStatsGoogleIMAPluginTVOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1906983B2BB37B8E00CE0FF7;
+			packageReferences = (
+				190698602BB37BF400CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */,
+				190698632BB37C7400CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-tvos" */,
+			);
+			productRefGroup = 190698462BB37B8E00CE0FF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				190698442BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS */,
+				1906984C2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		190698432BB37B8E00CE0FF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1906984B2BB37B8E00CE0FF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		190698412BB37B8E00CE0FF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698802BB392EA00CE0FF7 /* MuxImaListener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		190698492BB37B8E00CE0FF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190698892BB3947F00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		190698502BB37B8E00CE0FF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 190698442BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS */;
+			targetProxy = 1906984F2BB37B8E00CE0FF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		190698552BB37B8E00CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		190698562BB37B8E00CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		190698582BB37B8E00CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.tvos.MuxStatsGoogleIMAPluginTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		190698592BB37B8E00CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.tvos.MuxStatsGoogleIMAPluginTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		1906985B2BB37B8E00CE0FF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.tvos.MuxStatsGoogleIMAPluginTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		1906985C2BB37B8E00CE0FF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.tvos.MuxStatsGoogleIMAPluginTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1906983F2BB37B8E00CE0FF7 /* Build configuration list for PBXProject "MuxStatsGoogleIMAPluginTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				190698552BB37B8E00CE0FF7 /* Debug */,
+				190698562BB37B8E00CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		190698572BB37B8E00CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				190698582BB37B8E00CE0FF7 /* Debug */,
+				190698592BB37B8E00CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1906985A2BB37B8E00CE0FF7 /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginTVOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1906985B2BB37B8E00CE0FF7 /* Debug */,
+				1906985C2BB37B8E00CE0FF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		190698602BB37BF400CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muxinc/mux-stats-sdk-avplayer";
+			requirement = {
+				kind = exactVersion;
+				version = 3.5.1;
+			};
+		};
+		190698632BB37C7400CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-tvos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos";
+			requirement = {
+				kind = exactVersion;
+				version = 4.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		190698612BB37BF400CE0FF7 /* MUXSDKStats */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 190698602BB37BF400CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */;
+			productName = MUXSDKStats;
+		};
+		190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 190698632BB37C7400CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-tvos" */;
+			productName = GoogleInteractiveMediaAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1906983C2BB37B8E00CE0FF7 /* Project object */;
+}

@@ -16,7 +16,7 @@ import GoogleInteractiveMediaAds
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
-    private let MUX_DATA_ENV_KEY = "YOUR KEY HERE"
+    private let MUX_DATA_ENV_KEY = "qr9665qr78dac0hqld9bjofps"
     
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL_STEVE = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"

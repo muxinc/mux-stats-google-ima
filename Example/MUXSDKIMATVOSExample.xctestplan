@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "BB7E639C-7715-442A-9BB7-210EEBC023FD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "MUX_ENVIRONMENT_KEY",
+        "value" : ""
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MUXSDKImaListener.xcodeproj",
+      "identifier" : "1977270C2AA278EF002BA06E",
+      "name" : "MUXSDKIMATVOSExample"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MUXSDKImaListener.xcodeproj",
+        "identifier" : "1977271E2AA278F0002BA06E",
+        "name" : "MUXSDKIMATVOSExampleTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MUXSDKImaListener.xcodeproj",
+        "identifier" : "197727282AA278F0002BA06E",
+        "name" : "MUXSDKIMATVOSExampleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
