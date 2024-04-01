@@ -7,6 +7,14 @@
 
 #import "MuxImaListener.h"
 
+// todo - best practice is move other private properties from the header to here
+//  ref: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW3
+@interface MuxImaListener ()
+
+@property BOOL sendAdplayOnStarted;
+
+@end
+
 @implementation MuxImaListener
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
@@ -116,7 +124,7 @@
         [_playerBinding dispatchAdEvent: playbackEvent];
         
         _sendAdplayOnStarted = NO;
-        [_playerBinding dispatchAdEvent: [MUXSDKAdPlayEvent new]];
+        [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
 
         return;
     } else {
