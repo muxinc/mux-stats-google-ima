@@ -54,6 +54,9 @@
 
 - (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
     MUXSDKAdEvent *playbackEvent;
+    
+    NSDictionary *adData = event.adData;
+    
     switch(event.type) {
         case kIMAAdEvent_LOADED:
             playbackEvent = [MUXSDKAdResponseEvent new];
@@ -85,6 +88,16 @@
             [self setupAdViewData:playbackEvent withAd:event.ad];
             [_playerBinding dispatchAdEvent: playbackEvent];
             playbackEvent = [MUXSDKAdPlayingEvent new];
+            break;
+        case kIMAAdEvent_LOG:
+            if (adData && adData[@"logData"]) {
+                NSDictionary *errorLog = (NSDictionary *)adData[@"logData"];
+                if (errorLog) {
+                    if (errorLog[@"errorCode"] || errorLog[@"errorMessage"] || errorLog[@"type"]) {
+                        playbackEvent = [[MUXSDKAdErrorEvent alloc] init];
+                    }
+                }
+            }
             break;
         default:
             break;
