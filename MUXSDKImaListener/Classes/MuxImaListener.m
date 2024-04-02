@@ -7,6 +7,14 @@
 
 #import "MuxImaListener.h"
 
+// todo - best practice is move other private properties from the header to here
+//  ref: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW3
+@interface MuxImaListener ()
+
+@property BOOL sendAdplayOnStarted;
+
+@end
+
 @implementation MuxImaListener
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
@@ -26,6 +34,7 @@
         }
         _usesServerSideAdInsertion = NO;
         _adRequestReported = NO;
+        _sendAdplayOnStarted = NO;
     }
     return(self);
 }
@@ -58,13 +67,13 @@
     NSDictionary *adData = event.adData;
     
     switch(event.type) {
-        case kIMAAdEvent_LOADED:
-            playbackEvent = [MUXSDKAdResponseEvent new];
-            [self setupAdViewData:playbackEvent withAd:event.ad];
-            [_playerBinding dispatchAdEvent: playbackEvent];
-            playbackEvent = [MUXSDKAdPlayEvent new];
-            break;
         case kIMAAdEvent_STARTED:
+            if (_sendAdplayOnStarted) {
+                playbackEvent = [MUXSDKAdPlayEvent new];
+                [_playerBinding dispatchAdEvent: playbackEvent];
+            } else {
+                _sendAdplayOnStarted = YES;
+            }
             playbackEvent = [MUXSDKAdPlayingEvent new];
             break;
         case kIMAAdEvent_FIRST_QUARTILE:
@@ -131,6 +140,9 @@
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         
+        _sendAdplayOnStarted = NO;
+        [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
+
         return;
     } else {
         if (_isPictureInPicture) {
