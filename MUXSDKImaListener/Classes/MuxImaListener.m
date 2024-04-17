@@ -7,6 +7,14 @@
 
 #import "MuxImaListener.h"
 
+// todo - best practice is move other private properties from the header to here
+//  ref: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW3
+@interface MuxImaListener ()
+
+@property BOOL sendAdplayOnStarted;
+
+@end
+
 @implementation MuxImaListener
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
@@ -26,6 +34,7 @@
         }
         _usesServerSideAdInsertion = NO;
         _adRequestReported = NO;
+        _sendAdplayOnStarted = NO;
     }
     return(self);
 }
@@ -33,31 +42,38 @@
 - (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
     MUXSDKViewData *viewData = [MUXSDKViewData new];
     MUXSDKAdData *adData = [MUXSDKAdData new];
-    if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
-        if (ad != nil) {
+    if (ad != nil) {
+
+        if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
             viewData.viewPrerollAdId = ad.adId;
             viewData.viewPrerollCreativeId = ad.creativeID;
-            
-            adData.adId = ad.adId;
-            adData.adCreativeId = ad.creativeID;
-            // universalAdIdValue is deprecated, but used for parity with web&android
-            adData.adUniversalId = ad.universalAdIdValue;
-            event.adData = adData;
         }
+
+        adData.adId = ad.adId;
+        adData.adCreativeId = ad.creativeID;
+        
+        // TODO: use newer IMA API here. universalAdIdValue
+        // is deprecated, but used for time being for parity
+        // with web&android
+        adData.adUniversalId = ad.universalAdIdValue;
+        event.adData = adData;
     }
     event.viewData = viewData;
 }
 
 - (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
     MUXSDKAdEvent *playbackEvent;
+    
+    NSDictionary *adData = event.adData;
+    
     switch(event.type) {
-        case kIMAAdEvent_LOADED:
-            playbackEvent = [MUXSDKAdResponseEvent new];
-            [self setupAdViewData:playbackEvent withAd:event.ad];
-            [_playerBinding dispatchAdEvent: playbackEvent];
-            playbackEvent = [MUXSDKAdPlayEvent new];
-            break;
         case kIMAAdEvent_STARTED:
+            if (_sendAdplayOnStarted) {
+                playbackEvent = [MUXSDKAdPlayEvent new];
+                [_playerBinding dispatchAdEvent: playbackEvent];
+            } else {
+                _sendAdplayOnStarted = YES;
+            }
             playbackEvent = [MUXSDKAdPlayingEvent new];
             break;
         case kIMAAdEvent_FIRST_QUARTILE:
@@ -81,6 +97,16 @@
             [self setupAdViewData:playbackEvent withAd:event.ad];
             [_playerBinding dispatchAdEvent: playbackEvent];
             playbackEvent = [MUXSDKAdPlayingEvent new];
+            break;
+        case kIMAAdEvent_LOG:
+            if (adData && adData[@"logData"]) {
+                NSDictionary *errorLog = (NSDictionary *)adData[@"logData"];
+                if (errorLog) {
+                    if (errorLog[@"errorCode"] || errorLog[@"errorMessage"] || errorLog[@"type"]) {
+                        playbackEvent = [[MUXSDKAdErrorEvent alloc] init];
+                    }
+                }
+            }
             break;
         default:
             break;
@@ -114,6 +140,9 @@
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         
+        _sendAdplayOnStarted = NO;
+        [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
+
         return;
     } else {
         if (_isPictureInPicture) {

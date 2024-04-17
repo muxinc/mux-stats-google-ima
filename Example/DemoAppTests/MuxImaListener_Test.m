@@ -26,14 +26,22 @@
     enum IMAAdEventType type;
 }
     @property (nonatomic) enum IMAAdEventType type;
+    @property(nonatomic, copy, nullable) NSDictionary<NSString *, id> *adData;
 @end
 
 @implementation MuxMockImaAdEvent
 
 @synthesize type;
+@synthesize adData;
 
 - (id)initWithType:(NSInteger)_type {
     type = _type;
+    return self;
+}
+
+- (id)initWithType:(NSInteger)_type andAdData:(NSDictionary*)_adData {
+    type = _type;
+    adData = _adData;
     return self;
 }
 @end
@@ -77,12 +85,6 @@ describe(@"MuxImaListener", ^{
             imaListener = [[MuxImaListener alloc] initWithPlayerBinding:playerBinding];
         });
 
-        it(@"should dispatch the correct event for kIMAAdEvent_LOADED", ^{
-            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_LOADED];
-            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
-            expect(playbackEvent).to.beKindOf([MUXSDKAdPlayEvent class]);
-        });
-
         it(@"should dispatch the correct event for kIMAAdEvent_STARTED", ^{
             MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_STARTED];
             MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
@@ -123,6 +125,26 @@ describe(@"MuxImaListener", ^{
             MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_PAUSE];
             MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
             expect(playbackEvent).to.beKindOf([MUXSDKAdPauseEvent class]);
+        });
+        
+        it(@"should not dispatch aderror for LOG event *without* error info", ^{
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_LOG];
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beNil();
+        });
+        
+        it(@"should dispatch aderror for LOG event with error info", ^{
+            NSMutableDictionary *mockErrorData = [[NSMutableDictionary alloc] init];
+            [mockErrorData setObject:[NSNumber numberWithInt:110] forKey:@"errorCode"];
+            [mockErrorData setObject:@"mock message" forKey:@"errorMessage"];
+            [mockErrorData setObject:@"adPlayError" forKey:@"type"];
+            NSMutableDictionary *mockLogData = [[NSMutableDictionary alloc] init];
+            [mockLogData setObject:mockErrorData forKey:@"logData"];
+            
+            MuxMockImaAdEvent *adEvent = [[MuxMockImaAdEvent alloc] initWithType:kIMAAdEvent_LOG andAdData:mockLogData];
+            
+            MUXSDKPlaybackEvent *playbackEvent = [imaListener dispatchEvent:adEvent];
+            expect(playbackEvent).to.beKindOf([MUXSDKAdErrorEvent class]);
         });
 
         it(@"should not dispatch an event for kIMAAdEvent_TAPPED", ^{
