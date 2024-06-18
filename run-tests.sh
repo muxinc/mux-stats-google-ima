@@ -13,6 +13,9 @@ set -euo pipefail
 
 brew install xcbeautify
 
+echo "▸ Switching to Xcode 15.4"
+sudo xcode-select -p /Applications/Xcode_15.4.app
+
 echo "▸ Using Xcode Version: ${XCODE_VERSION}"
 
 echo "▸ Shutdown and reset the simulator"
