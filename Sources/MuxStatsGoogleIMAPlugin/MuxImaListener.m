@@ -16,7 +16,6 @@
 @property (assign) BOOL usesServerSideAdInsertion;
 @property (assign) BOOL adRequestReported;
 
-
 @end
 
 @implementation MuxImaListener

@@ -6,12 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MuxCore/MuxCoreTv.h>
+#import <MUXSDKStats/MUXSDKStats.h>
+#import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@import MuxCore;
-@import MUXSDKStats;
-@import GoogleInteractiveMediaAds;
 
 @class MUXSDKPlayerBinding;
 
