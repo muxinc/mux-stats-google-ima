@@ -7,11 +7,15 @@
 
 #import "MuxImaListener.h"
 
-// todo - best practice is move other private properties from the header to here
-//  ref: https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW3
 @interface MuxImaListener ()
 
-@property BOOL sendAdplayOnStarted;
+@property (nonatomic, nonnull) MUXSDKPlayerBinding *playerBinding;
+
+@property (assign) BOOL sendAdplayOnStarted;
+@property (assign) BOOL isPictureInPicture;
+@property (assign) BOOL usesServerSideAdInsertion;
+@property (assign) BOOL adRequestReported;
+
 
 @end
 

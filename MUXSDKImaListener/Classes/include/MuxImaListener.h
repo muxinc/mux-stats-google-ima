@@ -20,12 +20,7 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
     MuxImaListenerOptionsPictureInPicture        = 1 << 0,
 };
 
-@interface MuxImaListener : NSObject {
-    @private MUXSDKPlayerBinding *_playerBinding;
-    @private BOOL _isPictureInPicture;
-    @private BOOL _usesServerSideAdInsertion;
-    @private BOOL _adRequestReported;
-}
+@interface MuxImaListener : NSObject
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding options:(MuxImaListenerOptions) options;
