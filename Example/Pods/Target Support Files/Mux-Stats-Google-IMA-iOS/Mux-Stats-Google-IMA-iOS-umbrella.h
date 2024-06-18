@@ -12,6 +12,6 @@
 
 #import "MuxImaListener.h"
 
-FOUNDATION_EXPORT double Mux_Stats_Google_IMAVersionNumber;
-FOUNDATION_EXPORT const unsigned char Mux_Stats_Google_IMAVersionString[];
+FOUNDATION_EXPORT double MuxStatsGoogleIMAPluginVersionNumber;
+FOUNDATION_EXPORT const unsigned char MuxStatsGoogleIMAPluginVersionString[];
 

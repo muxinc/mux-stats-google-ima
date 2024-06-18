@@ -32,6 +32,12 @@ variant_for_slice()
   "MUXSDKStats.xcframework/tvos-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "MUXSDKStats.xcframework/xros-arm64")
+    echo ""
+    ;;
+  "MUXSDKStats.xcframework/xros-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
   esac
 }
 
@@ -51,6 +57,12 @@ archs_for_slice()
     echo "arm64"
     ;;
   "MUXSDKStats.xcframework/tvos-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "MUXSDKStats.xcframework/xros-arm64")
+    echo "arm64"
+    ;;
+  "MUXSDKStats.xcframework/xros-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   esac

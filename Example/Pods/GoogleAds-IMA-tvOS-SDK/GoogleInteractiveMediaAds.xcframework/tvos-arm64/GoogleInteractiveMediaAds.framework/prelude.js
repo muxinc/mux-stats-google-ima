@@ -44,13 +44,26 @@ browserlessReceiver = function(name, messageData) {
   google.ima.NativeBridge.receiveMessage(name, JSON.stringify(messageData));
 };
 
+/**
+ * Sends a calculateIdlessState message from Obj-c to the native bridge.
+ *
+ * @param {!Object<string, ?>} cmpStrings CMP collected data
+ * @param {?Object<string, string>=} requestInfo Additional request
+ *     information, may contain the Ad tag (clientside) or Ad tag params
+ *     (DAI).
+ * @return {boolean} The Idless state.
+ */
+calculateIdlessState = function(cmpStrings, requestInfo = {}) {
+  return google.ima.NativeBridge.calculateIdlessState(cmpStrings, requestInfo);
+};
+
 google = {};
 google.ima = {};
 google.ima.NativeLoader = {};
 google.ima.BrowserlessExports = {};
 
 /**
- * Sends a message from Obj-c to the native bridge.
+ * Encrypts a string.
  *
  * @param {string} text the text to be encrypted.
  * @param {string} keyset the keyset to be loaded.

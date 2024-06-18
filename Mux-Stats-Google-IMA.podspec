@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/muxinc/mux-stats-google-ima.git', :tag => "v#{s.version}" }
 
   s.ios.deployment_target = '12.0'
-  s.tvos.deployment_target = '12.0'
+  s.tvos.deployment_target = '14.0'
 
 
   s.ios.dependency 'Mux-Stats-AVPlayer', '~> 4.0'

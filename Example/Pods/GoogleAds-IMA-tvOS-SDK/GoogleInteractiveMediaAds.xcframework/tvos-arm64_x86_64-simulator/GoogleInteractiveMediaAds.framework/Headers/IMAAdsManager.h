@@ -184,11 +184,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Skips the advertisement if the ad is skippable and the skip offset has been reached.
+ * <code>IMAAdsManager.skip()</code> only skips ads if IMA does not render the 'Skip ad' button.
  */
 - (void)skip;
 
 /**
- * Performs a clickthrough on the advertisement if the UI was successfully disabled via
+ * Performs a clickthrough on the advertisement if the UI was successfully disabled using
  * AdsRenderingSettings.disableUi.
  * :nodoc:
  */

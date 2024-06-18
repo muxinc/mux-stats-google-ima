@@ -1,4 +1,4 @@
-framework module Mux_Stats_Google_IMA {
+framework module MuxStatsGoogleIMAPlugin {
   umbrella header "Mux-Stats-Google-IMA-iOS-umbrella.h"
 
   export *
