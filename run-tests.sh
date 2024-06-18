@@ -30,7 +30,7 @@ echo "▸ Executing Tests"
 
 xcodebuild -workspace ${WORKSPACE_PATH} \
            -scheme "${SCHEME}" \
-           -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4' \
+           -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
            clean test \
            | xcbeautify
 
