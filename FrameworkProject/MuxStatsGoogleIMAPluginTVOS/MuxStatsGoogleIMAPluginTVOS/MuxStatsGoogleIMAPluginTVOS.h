@@ -2,8 +2,6 @@
 //  MuxStatsGoogleIMAPluginTVOS.h
 //  MuxStatsGoogleIMAPluginTVOS
 //
-//  Created by AJ Barinov on 3/26/24.
-//
 
 #import <Foundation/Foundation.h>
 

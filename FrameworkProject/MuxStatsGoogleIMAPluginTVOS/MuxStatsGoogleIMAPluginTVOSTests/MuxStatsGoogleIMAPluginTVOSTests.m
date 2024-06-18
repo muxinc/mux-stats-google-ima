@@ -2,8 +2,6 @@
 //  MuxStatsGoogleIMAPluginTVOSTests.m
 //  MuxStatsGoogleIMAPluginTVOSTests
 //
-//  Created by AJ Barinov on 3/26/24.
-//
 
 #import <XCTest/XCTest.h>
 

@@ -6,7 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#if TARGET_OS_TV
 #import <MuxCore/MuxCoreTv.h>
+#else
+#import <MuxCore/MuxCore.h>
+#endif
+
 #import <MUXSDKStats/MUXSDKStats.h>
 #import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
 
