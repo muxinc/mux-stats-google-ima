@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
-               BuildableName = "Mux_Stats_Google_IMA.framework"
+               BuildableName = "MuxStatsGoogleIMAPlugin.framework"
                BlueprintName = "Mux-Stats-Google-IMA-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8316A029179DAA758D7AC9122D97E40D"
-            BuildableName = "Mux_Stats_Google_IMA.framework"
+            BuildableName = "MuxStatsGoogleIMAPlugin.framework"
             BlueprintName = "Mux-Stats-Google-IMA-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
