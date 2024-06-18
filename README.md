@@ -5,8 +5,6 @@
 
 # Mux-Stats-Google-IMA
 
-This pod was created with `pod lib create`
-
 ## Development
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. Then open

@@ -3,6 +3,9 @@ import PackageDescription
 
 let package = Package(
     name: "MuxStatsGoogleIMAPlugin",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
         .library(
             name: "MuxStatsGoogleIMAPlugin",

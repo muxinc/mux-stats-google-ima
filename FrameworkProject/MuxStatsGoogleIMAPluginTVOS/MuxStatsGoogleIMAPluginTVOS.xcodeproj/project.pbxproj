@@ -31,7 +31,7 @@
 		190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuxStatsGoogleIMAPluginTVOS.h; sourceTree = "<group>"; };
 		1906984D2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuxStatsGoogleIMAPluginTVOSTests.m; sourceTree = "<group>"; };
-		1986123F2C22331700E6A50C /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.h; sourceTree = "<group>"; };
+		1986123F2C22331700E6A50C /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/include/MuxImaListener.h; sourceTree = "<group>"; };
 		198612402C22331700E6A50C /* MuxImaListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuxImaListener.m; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
