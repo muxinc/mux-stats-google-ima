@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IMAVideoStitcherVODStreamRequest : IMAStreamRequest
 
 /** The adTagURL for the stream. */
-@property(nonatomic, readonly) NSString *adTagURL;
+@property(nonatomic, readonly, nullable) NSString *adTagURL;
 
 /** The URL of the content source for the stream. */
-@property(nonatomic, readonly) NSString *contentSourceURL;
+@property(nonatomic, readonly, nullable) NSString *contentSourceURL;
 
 /** The networkCode associate with the stream. */
 @property(nonatomic, readonly) NSString *networkCode;
@@ -29,6 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** The region for the stream. */
 @property(nonatomic, readonly) NSString *region;
+
+/** The VOD Config ID for the stream. */
+@property(nonatomic, readonly, nullable) NSString *VODConfigID;
+
+/**
+ * The session options are used to set Video Stitcher-specific parameters for this request.
+ */
+@property(nonatomic, copy, nullable) NSDictionary<NSString *, id> *videoStitcherSessionOptions;
 
 /**
  * Initializes a stream request instance with the given network code, content source url, ad tag
@@ -44,6 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param adDisplayContainer The IMAAdDisplayContainer for rendering the ad UI.
  * @param videoDisplay The IMAVideoDisplay where the stream will be played.
  * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
  *
  * @return The IMAVideoStitcherVODStreamRequest instance.
  */
@@ -55,7 +64,9 @@ NS_ASSUME_NONNULL_BEGIN
                 contentSourceURL:(NSString *)contentSourceURL
               adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                     videoDisplay:(id<IMAVideoDisplay>)videoDisplay
-                     userContext:(nullable id)userContext;
+                     userContext:(nullable id)userContext
+     videoStitcherSessionOptions:
+         (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
 /**
  * Initializes a stream request instance with the given network code, content source url, ad tag
  * url, project number, region, and OAuth token. Uses the given ad display container to display the
@@ -71,6 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param videoDisplay The IMAVideoDisplay where the stream will be played.
  * @param pictureInPictureProxy The IMAPictureInPictureProxy for tracking PIP events.
  * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
  *
  * @return The IMAVideoStitcherVODStreamRequest instance.
  */
@@ -83,7 +95,65 @@ NS_ASSUME_NONNULL_BEGIN
               adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                     videoDisplay:(id<IMAVideoDisplay>)videoDisplay
            pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy
-                     userContext:(nullable id)userContext;
+                     userContext:(nullable id)userContext
+     videoStitcherSessionOptions:
+         (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
+
+/**
+ * Initializes a stream request instance with the given network code, vod config ID, project number,
+ * region, and OAuth token. Uses the given ad display container to display the stream.
+ *
+ * @param VODConfigID The VOD Config ID for the stream from cloud stitcher.
+ * @param networkCode The networkCode for the stream.
+ * @param OAuthToken The OAuth token for the stream.
+ * @param projectNumber The projectNumber for the stream.
+ * @param region The region for the stream.
+ * @param adDisplayContainer The IMAAdDisplayContainer for rendering the ad UI.
+ * @param videoDisplay The IMAVideoDisplay where the stream will be played.
+ * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
+ *
+ * @return The IMAVideoStitcherVODStreamRequest instance.
+ */
+- (instancetype)initWithVODConfigID:(NSString *)VODConfigID
+                             region:(NSString *)region
+                      projectNumber:(NSString *)projectNumber
+                         OAuthToken:(NSString *)OAuthToken
+                        networkCode:(NSString *)networkCode
+                 adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
+                       videoDisplay:(id<IMAVideoDisplay>)videoDisplay
+                        userContext:(nullable id)userContext
+        videoStitcherSessionOptions:
+            (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
+/**
+ * Initializes a stream request instance with the given network code, vod config ID, project number,
+ * region, and OAuth token. Uses the given ad display container to display the stream. Uses the
+ * picture in picture proxy to track PIP events.
+ *
+ * @param VODConfigID The VOD Config ID for the stream from cloud stitcher.
+ * @param networkCode The networkCode for the stream.
+ * @param OAuthToken The OAuth Token for the stream.
+ * @param projectNumber The projectNumber for the stream.
+ * @param region The region for the stream.
+ * @param adDisplayContainer The IMAAdDisplayContainer for rendering the ad UI.
+ * @param videoDisplay The IMAVideoDisplay where the stream will be played.
+ * @param pictureInPictureProxy The IMAPictureInPictureProxy for tracking PIP events.
+ * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
+ *
+ * @return The IMAVideoStitcherVODStreamRequest instance.
+ */
+- (instancetype)initWithVODConfigID:(NSString *)VODConfigID
+                             region:(NSString *)region
+                      projectNumber:(NSString *)projectNumber
+                         OAuthToken:(NSString *)OAuthToken
+                        networkCode:(NSString *)networkCode
+                 adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
+                       videoDisplay:(id<IMAVideoDisplay>)videoDisplay
+              pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy
+                        userContext:(nullable id)userContext
+        videoStitcherSessionOptions:
+            (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
 
 /**
  * :nodoc:

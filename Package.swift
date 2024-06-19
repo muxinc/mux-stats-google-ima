@@ -1,28 +1,41 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
-    name: "Mux_Stats_Google_IMA",
+    name: "MuxStatsGoogleIMAPlugin",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
-        .library(name: "Mux_Stats_Google_IMA", targets: ["Mux_Stats_Google_IMA", "GoogleInteractiveMediaAds",]),
+        .library(
+            name: "MuxStatsGoogleIMAPlugin",
+            targets: [
+                "MuxStatsGoogleIMAPlugin",
+                "GoogleInteractiveMediaAds",
+            ]
+        ),
     ],
     dependencies: [
         .package(
-            name: "MUXSDKStats",
             url: "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
-            from: "3.2.1"
+            from: "4.0.0"
         ),
     ],
     targets: [
         .target(
-            name: "Mux_Stats_Google_IMA",
-            dependencies: ["MUXSDKStats", "GoogleInteractiveMediaAds"],
-            path: "MUXSDKImaListener/Classes"
+            name: "MuxStatsGoogleIMAPlugin",
+            dependencies: [
+                .product(
+                    name: "MUXSDKStats",
+                    package: "mux-stats-sdk-avplayer"
+                ),
+                "GoogleInteractiveMediaAds"
+            ]
         ),
         .binaryTarget(
-            name: "GoogleInteractiveMediaAds",
-            url: "https://imasdk.googleapis.com/native/downloads/ima-ios-v3.16.3.zip",
-            checksum: "049bac92551b50247ea14dcbfde9aeb99ac2bea578a74f67c6f3e781d9aca101"
+              name: "GoogleInteractiveMediaAds",
+              url: "https://imasdk.googleapis.com/downloads/ima/ios/GoogleInteractiveMediaAds-ios-v3.23.0.zip",
+              checksum: "6fa5ad05c4ab85d74b8aad5fdace8a069f3dbd1eb820496bc04df7aeda0cd5e0"
         )
     ]
 )

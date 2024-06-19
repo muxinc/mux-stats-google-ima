@@ -176,13 +176,13 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-tvOS/Mux_Stats_Google_IMA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-tvOS/MuxStatsGoogleIMAPlugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-AVPlayer/MUXSDKStats.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-Core/MuxCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-tvOS-SDK/GoogleInteractiveMediaAds.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-tvOS/Mux_Stats_Google_IMA.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Mux-Stats-Google-IMA-tvOS/MuxStatsGoogleIMAPlugin.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-AVPlayer/MUXSDKStats.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/Mux-Stats-Core/MuxCore.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-tvOS-SDK/GoogleInteractiveMediaAds.framework"

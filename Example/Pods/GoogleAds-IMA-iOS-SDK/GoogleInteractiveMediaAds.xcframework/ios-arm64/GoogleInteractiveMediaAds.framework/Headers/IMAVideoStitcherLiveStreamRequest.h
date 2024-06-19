@@ -22,6 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) NSString *OAuthToken;
 
 /**
+ * The session options are used to set Video Stitcher-specific parameters
+ * for this Video Stitcher stream request.
+ */
+@property(nonatomic, copy, nullable) NSDictionary<NSString *, id> *videoStitcherSessionOptions;
+
+/**
  * Initializes a stream request instance with the given network code and custom
  * asset key. Uses the given ad display container to display the stream.
  *
@@ -34,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param adDisplayContainer The IMAAdDisplayContainer for rendering the ad UI.
  * @param videoDisplay The IMAVideoDisplay where the stream will be played.
  * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
  *
  * @return The IMAVideoStitcherLiveStreamRequest instance.
  */
@@ -45,7 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
                            customAssetKey:(NSString *)customAssetKey
                        adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                              videoDisplay:(id<IMAVideoDisplay>)videoDisplay
-                              userContext:(nullable id)userContext;
+                              userContext:(nullable id)userContext
+              videoStitcherSessionOptions:
+                  (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
 
 /**
  * Initializes a stream request instance with the given network code and custom
@@ -62,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param videoDisplay The IMAVideoDisplay where the stream will be played.
  * @param pictureInPictureProxy The IMAPictureInPictureProxy for tracking PIP events.
  * @param userContext The user context for tracking requests (optional)
+ * @param videoStitcherSessionOptions limited set of cloud session overrides (optional)
  *
  * @return The IMAVideoStitcherLiveStreamRequest instance.
  */
@@ -74,7 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
                        adDisplayContainer:(IMAAdDisplayContainer *)adDisplayContainer
                              videoDisplay:(id<IMAVideoDisplay>)videoDisplay
                     pictureInPictureProxy:(nullable IMAPictureInPictureProxy *)pictureInPictureProxy
-                              userContext:(nullable id)userContext;
+                              userContext:(nullable id)userContext
+              videoStitcherSessionOptions:
+                  (nullable NSDictionary<NSString *, id> *)videoStitcherSessionOptions;
 
 /**
  * :nodoc:

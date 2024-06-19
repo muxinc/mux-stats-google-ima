@@ -9,9 +9,9 @@
 /* Begin PBXAggregateTarget section */
 		5526128214308C0807F9C2136AB687B2 /* Mux-Stats-Core-tvOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 51A9CD61ACD8B1BC250DAFD71D700763 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-tvOS" */;
+			buildConfigurationList = 9E0EB2CE749F31B6ACC66921DA036A9D /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-tvOS" */;
 			buildPhases = (
-				FA7605ADFC179EC5F0DD72EBF335126E /* [CP] Copy XCFrameworks */,
+				E1F7BE47B834DE82174612E41D88513C /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -44,7 +44,7 @@
 				A0A8B3390D83497FAA58E9C9A08C60C9 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				F765DCEE94BE6DC31712CABE001A030D /* PBXTargetDependency */,
+				4071884E5B8A3F66F951089F0702E2D3 /* PBXTargetDependency */,
 			);
 			name = "Mux-Stats-AVPlayer-tvOS";
 		};
@@ -55,15 +55,15 @@
 				D645DDBF0731FE60273D9C8543E2B83F /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				954ECEE6858C48671C2BF4EADA843EB9 /* PBXTargetDependency */,
+				D1ACF6CDD12488B2F072B7F85E611342 /* PBXTargetDependency */,
 			);
 			name = "Mux-Stats-AVPlayer-iOS";
 		};
 		C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = B9B2F9248BF45545C964ED2C809C5844 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-iOS" */;
+			buildConfigurationList = 9F215BA04005ED07FEF6F364DD851D08 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-iOS" */;
 			buildPhases = (
-				912B60C76E6C7B380EB699F6EBBA9F4E /* [CP] Copy XCFrameworks */,
+				371FE3E719E1530B7055A5ED46F2798B /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -75,7 +75,8 @@
 		0025D13B7AEE68BC24AD05067DC2A634 /* EXPMatcherHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CABDF39EE32A3BE1762A220630D44B42 /* EXPMatcherHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0090908EB0053F8979209F9D94FBAAEA /* SPTExcludeGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C6B005EB035B012BF0BB3DA0EF7267 /* SPTExcludeGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01B2F71DE1B7C212CCC195E2921F6FF5 /* SPTGlobalBeforeAfterEach.h in Headers */ = {isa = PBXBuildFile; fileRef = C42FBA28B164C069B6B10D84E1CC8BEB /* SPTGlobalBeforeAfterEach.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03BE8DEE459BDA2A1590AFE3F5AA623B /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C03253C8D43E08CCB18232BA1DA91F /* MuxImaListener.m */; };
+		09CCA4BDF658759C76CF9FBB58197B4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0007D3D9A310D3C1F188CDDABB99FA59 /* Foundation.framework */; };
+		0A2A2B4A3208668EF3309BCCE04D6337 /* Mux-Stats-Google-IMA-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1A6AED34FA0AC1D55D916F69AD84BD3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B719B2FE0A44F90FC5CBB8069B888A6 /* EXPMatchers+raiseWithReason.h in Headers */ = {isa = PBXBuildFile; fileRef = C285E8566A9A9636E5059E0F8B25E41E /* EXPMatchers+raiseWithReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F3A7C0144901D6BC28990003EA6B98B /* EXPMatchers+raise.h in Headers */ = {isa = PBXBuildFile; fileRef = 62426CE0B6FB576AFA63B6AA40B448A3 /* EXPMatchers+raise.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1107C031F6C7F5A9786CF038198D5601 /* EXPMatchers+beLessThanOrEqualTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F3A08FCF04F43CF6E0654E6CA4A2B8E /* EXPMatchers+beLessThanOrEqualTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,6 +92,7 @@
 		26A962DE541F4B916FAD5B2C63DC03D3 /* EXPMatchers+contain.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A331362946ED196BBAFB7BDE30EF46E /* EXPMatchers+contain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2724B84468084FE58F326C056E9B5AE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CA6EB1DCE94EC3514D27DFCC247D30 /* XCTest.framework */; };
 		2B727B09A817CECC7EB325762552FC47 /* XCTest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B5395E56B10F612D9CEBB0038F8FD59 /* XCTest+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF4F3946F560F81336994A6661AB15A /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 4274C0E2CAD3B3D4AAA92102665E1D66 /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FE77B0B34A29D14F572FE245819B44E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0007D3D9A310D3C1F188CDDABB99FA59 /* Foundation.framework */; };
 		332B30F9EDEF981FE1AF2FDE37B9C692 /* EXPMatchers+endWith.m in Sources */ = {isa = PBXBuildFile; fileRef = 204CE79580B98963B8CA609612671308 /* EXPMatchers+endWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		371DFDA7FEFD5D7A781885E98CCA5D37 /* EXPExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = A8295A6A4D68D5CCBEFCFEEFDC09BA2D /* EXPExpect.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -102,28 +104,27 @@
 		40EDEFC16D8C7D6CAAC7CBA13BAD45DD /* EXPMatchers+beLessThan.h in Headers */ = {isa = PBXBuildFile; fileRef = 565590EBE5F1C12B1DD5FBA7F5B89D64 /* EXPMatchers+beLessThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4497B6FA75F0F29B8B39D81901403906 /* EXPMatchers+beGreaterThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8EF38BE38534DF1C9A171ED4C8CDA7 /* EXPMatchers+beGreaterThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		455907198CBA47E299D80F7CDDD053FF /* EXPMatchers+match.h in Headers */ = {isa = PBXBuildFile; fileRef = 631F333709D52A0BDCE560AC50B84C72 /* EXPMatchers+match.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47012D1E3709F71E65A3A5ED8ED1D381 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A792B234E52E2E75BA6B83D5D54BF8 /* Foundation.framework */; };
 		47D8A422DA09808F727923FD7857D228 /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E4D5B0FDBC9A3E3EF8271B7556C36C4 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		485D7274CCB0A5C0A812A2F68164767A /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = AF943A2FBA2C7E17A117B4E2C18E323D /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		48F95EE6350709299F3A1BF899CC3945 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = A3FAA2FEF849B92899FD321DC6A13075 /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B18410915DAE75249C67FC8750619BA /* EXPMatchers+endWith.h in Headers */ = {isa = PBXBuildFile; fileRef = 75AA5C7EB7DF2DF403282F07EE758266 /* EXPMatchers+endWith.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BC1A531C650A76D2CF83209EA688015 /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = E00A3E6CE371C44F49296F370078F37C /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4E141E2E07BA66C10EEC935FE7197FDC /* EXPMatchers+equal.h in Headers */ = {isa = PBXBuildFile; fileRef = B187740EB41F8F4B3A736158F23300FB /* EXPMatchers+equal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4FAFC2BC1915820392B1058213AABC55 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = DFB7085DA10BB2A43CB9E89C9246ACC6 /* module.modulemap */; };
 		517188CF13AFC3DA1EB95CC0B7407A25 /* EXPMatchers+beInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A93E773E47594EDFC1FC66D8FF49BA /* EXPMatchers+beInstanceOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51DDBE3E0576E7A64636777830C4BCF6 /* SPTSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F937A60906D1B9FB16C7B7F4F16D6F6 /* SPTSpec.m */; };
 		53E8AC11D6EDF5CCEEC42638071D204B /* EXPMatchers+haveCountOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 629BD9FBD697518885AB0817B4C24390 /* EXPMatchers+haveCountOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		53ECDFA3BA07A0579CBEE10DDDC2DA19 /* Pods-DemoApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6515E59D927AE79F8E7DEB0835E3F97D /* Pods-DemoApp-dummy.m */; };
 		558E8B26F74765B3CF7816070197F4DF /* EXPUnsupportedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AD2B0B341C09BFD33782A431E3D4D25 /* EXPUnsupportedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56FA054B9BABCA675A23A6A1547540D5 /* Mux-Stats-Google-IMA-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1F9830EB547E394C40DFE1EF2EAA20 /* Mux-Stats-Google-IMA-iOS-dummy.m */; };
 		583610186425FF3ECD4FC6CB6A1847FC /* EXPMatcherHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 364BF8C5E175A4CBB6B45D2AD3358563 /* EXPMatcherHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		58CB55B0F20BE7BDA67BEDEBB9DDBA65 /* SPTTestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A4A861048262D2D87E0F0A07D613A2 /* SPTTestSuite.m */; };
+		5B33F5519446BEA06F456595011B6237 /* Mux-Stats-Google-IMA-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE682F6A35BC0D0A292460F0D81DFC6 /* Mux-Stats-Google-IMA-iOS-dummy.m */; };
+		5CDBA3EA21566180EB5E29D3FE88ED58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A792B234E52E2E75BA6B83D5D54BF8 /* Foundation.framework */; };
 		604E2F3AF42D7A42648596CD18D16A53 /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 0300752B45D5791F2D9D26A6C01C2891 /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		625DE4A50D59ADCD62E5F01BB17BCFDA /* Pods-MUXSDKIMATVOSExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43374FF998B472B76277BD222229996F /* Pods-MUXSDKIMATVOSExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6367ABA9E4BE5060A38818C145C92EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0007D3D9A310D3C1F188CDDABB99FA59 /* Foundation.framework */; };
 		65A8EB522A8CF44C401E6B1ABC67018F /* EXPMatchers+beNil.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDDAAC2320749722007D4035E66CF4C /* EXPMatchers+beNil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BB206F41A2A9F70DE7C021A4B7A6917 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5446060CB6377F87A9606D35E991B349 /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DA76CEA6A3CEE0CE9985681753D2B48 /* EXPMatchers+match.m in Sources */ = {isa = PBXBuildFile; fileRef = 2743849B6FD94D0369700A0960B972CE /* EXPMatchers+match.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6E1CFB9D35D903DF4715F829AF1E3CFD /* Mux-Stats-Google-IMA-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4A2703D8DF12D7D5B80DD5D553A13 /* Mux-Stats-Google-IMA-tvOS-dummy.m */; };
 		6E549E4864D0EA2C1B0DFC774CAD78EA /* EXPMatchers+beKindOf.h in Headers */ = {isa = PBXBuildFile; fileRef = E6A52A50630A83F7B56A12BB53133D90 /* EXPMatchers+beKindOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E90C8424FDBEC38061929C572C4C891 /* EXPMatchers+raiseWithReason.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D83F095709A23C07CC7079F72A59F8 /* EXPMatchers+raiseWithReason.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6EB456A9807B93A6F814A286F8160D27 /* SpectaTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E30FE2BF384BF6F7DEED7A2CC177131A /* SpectaTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -134,13 +135,11 @@
 		74BCA9241955ED11E5ABE14C151F2C3F /* EXPMatchers+beIdenticalTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 81584ABE9B0F1F1C7AD1160791C51EAD /* EXPMatchers+beIdenticalTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76EFFA9A26AED6BCC81D791812367462 /* Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 284353107742FC5569127B1C58A02989 /* Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		785A1A6140143F52B65F096945E78C69 /* EXPMatchers+raise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CF222850B105AC6546374A8D1355A /* EXPMatchers+raise.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7BA06869AFBAAA743124F39BFD430AC8 /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E790D2B104C3C97E8FFAE430365C4B /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7CD7971156177F0EB9519B0418C69B45 /* Mux-Stats-Google-IMA-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C1DFA056BB682F622A5C5572267BE4 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80270ECBDEB82924094F7A784F9AE40D /* Specta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7B5D457914359E8885B342FECE3724 /* Specta-dummy.m */; };
 		847312CB953329122B7F5B864C15F5FE /* NSValue+Expecta.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644D5F14738FA831BC4CEEE48F267D6 /* NSValue+Expecta.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		87509A41F730B62243697FE2A2535377 /* SPTTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 071202901F93C989BB895824D6FA98F1 /* SPTTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		889F7202B92C79E6F6D4D2EC62D82352 /* Mux-Stats-Google-IMA-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 722E5C72936DEB539CDF4135CC946754 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88DCA1A8606768C16601B77DDDCA2231 /* EXPMatchers+beLessThan.m in Sources */ = {isa = PBXBuildFile; fileRef = D09D6B72665B47CC265D5D11E3E226B5 /* EXPMatchers+beLessThan.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		88DFA9C7DB626BCD6289C44F8D39F988 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = DFB7085DA10BB2A43CB9E89C9246ACC6 /* module.modulemap */; };
 		8FD2AF08E345DD650AA5ECF708E869D8 /* Pods-MUXSDKIMATVOSExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CA38F4E95CC64478DFB451B9E722F8 /* Pods-MUXSDKIMATVOSExample-dummy.m */; };
 		913C954DE11D6E3863890AD4A358708F /* SpectaDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD32F7017641B87CCD12E8526BAF20F /* SpectaDSL.m */; };
 		95038CE338827425E785F35822B5D7B1 /* SpectaUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DB270D06455292936E42ED1065382F77 /* SpectaUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,20 +148,20 @@
 		95F6327743E88CC9CBADDBAD0193A755 /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B8AF291640C46EA560FA8C0D9B6764 /* SPTExample.m */; };
 		98374FA5B001B43B4B8C03E8A7C81318 /* SPTCompiledExample.m in Sources */ = {isa = PBXBuildFile; fileRef = AD17AFE75A1D6507609FE309A488DC1B /* SPTCompiledExample.m */; };
 		9851254D93144EFEDD443C799D464D5B /* ExpectaObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7500FA1CF5C436495142702F56111C /* ExpectaObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		987D9B089B84702AFC641F534A21E4D9 /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 4274C0E2CAD3B3D4AAA92102665E1D66 /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AE4AF19CDF8DF5A15FD1A515F7DD0B5 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9573A960AE706A47320F22F4D1E6B5C5 /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E5BA4B7CBB1B65826B07B9EBF679CBF /* EXPMatchers+beginWith.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA78320563DC203CD4C1496475B4C4E /* EXPMatchers+beginWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A26A680A687CFFFF050919E96281321A /* EXPUnsupportedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E560D4BF157C1748B016BBEE1831EE45 /* EXPUnsupportedObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A2CA8283BC8A4FF5AFFAF58FDAA83D24 /* EXPMatchers+beInstanceOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD6228092685F81E69B0AC859549350 /* EXPMatchers+beInstanceOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A4C5C421378ED1F97C948EE3C4EC877E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A792B234E52E2E75BA6B83D5D54BF8 /* Foundation.framework */; };
-		A92A27610E1901C669A61CD92299F70A /* Mux-Stats-Google-IMA-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E66D346116B57373E97D5BFF57CEF3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADCDC7E24F8AC5459D1CB24A21539577 /* ExpectaObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E86B615609457A903F8BC87C80423B0 /* ExpectaObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B0CC7AB95670A68A37FEDC9A45FAA878 /* EXPFloatTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC210D059CA9DAD451790713B3D0EBF /* EXPFloatTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2BA73B71EA5CB6B0FAE50C6D05D8AC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A792B234E52E2E75BA6B83D5D54BF8 /* Foundation.framework */; };
 		B4E20C5849C8E6C3F527740A124C056A /* SPTSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F19BC8E5B5F0797B2BC91BF80CF354 /* SPTSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6B192A81FD75F1BE8CF8AB7E2797E67 /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 948324ABEE80FCA44A42D993C70687CB /* MuxImaListener.m */; };
 		B9A8D1009E2D22005452FB81808E9EE2 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C07C9D5B9B6A8930FE02672690953F6 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA0518909BF2A12C4C38F84E7D31EF15 /* Pods-DemoAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D893F0CB9A129922CD93179461EFA49 /* Pods-DemoAppTests-dummy.m */; };
 		BB25CB33079202625133E162ADB9BEE2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CA6EB1DCE94EC3514D27DFCC247D30 /* XCTest.framework */; };
-		BB8DB40D0D0B009F3E187B35A6C6D92F /* Mux-Stats-Google-IMA-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1246DB31BDD4397D1D766DD829698AA2 /* Mux-Stats-Google-IMA-tvOS-dummy.m */; };
 		BE77F1E2777B84D9DCD523CAE1131739 /* Pods-DemoAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A747B18FBEE4BC0C86F1ABBFFDB1FD1 /* Pods-DemoAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BED80124D9086688501DE572EDA56F2D /* EXPMatchers+beCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 170722FBE110B64E194AE679C3041ABF /* EXPMatchers+beCloseTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C01088D23625B652C3DFE9C68C599E0E /* EXPMatchers+beIdenticalTo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EF1B1FA6495770ED9CC8A1E3BB82F6 /* EXPMatchers+beIdenticalTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -178,8 +177,6 @@
 		D20ED422F19CBEBE50EFD34D10A7204D /* EXPMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 98CDCA7AB7A4C782461B67F2EF23EEA0 /* EXPMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D265ED87490296DBD76C9D20394875A1 /* EXPMatchers+equal.m in Sources */ = {isa = PBXBuildFile; fileRef = E874767AE7FBF5D763F4C1DB44AC4CB4 /* EXPMatchers+equal.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D67114A7D3E6BAA39DBEDCBBA5D325AA /* Expecta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A846258D587AB99597AB2CCB9225EC71 /* Expecta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC5CF1591B5EA79B4630A6F225638F51 /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E790D2B104C3C97E8FFAE430365C4B /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DD7708E67C07CBF08E657D598B1AB95B /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C03253C8D43E08CCB18232BA1DA91F /* MuxImaListener.m */; };
 		DF127505C375B4DA4FA02D9DC29D0F61 /* XCTestCase+Specta.h in Headers */ = {isa = PBXBuildFile; fileRef = 8096324FBC07DD76EB18F7BC9558B161 /* XCTestCase+Specta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFC264EAE636DDBCDB8A7D3AA6DC1B26 /* EXPMatchers+beSubclassOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B060B4D3FED96FBEC4BF6147F56FA3C /* EXPMatchers+beSubclassOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E082108CECC5BED2ED34FEAA3A982E43 /* SPTSharedExampleGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 0877D8434C984071953FF01671520EBB /* SPTSharedExampleGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -198,149 +195,150 @@
 		F63E14CCD57CC9BCB926AA59B5094256 /* EXPMatchers+beGreaterThanOrEqualTo.h in Headers */ = {isa = PBXBuildFile; fileRef = D306C6DF3C478E02B0C51AE3433A3ADD /* EXPMatchers+beGreaterThanOrEqualTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8B9E5CAE5B20040636DB485549D5F3F /* EXPMatchers+haveCountOf.h in Headers */ = {isa = PBXBuildFile; fileRef = B8796A7E62FCD738AE9ED020B91EB650 /* EXPMatchers+haveCountOf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F909FBF41408B79AF63E187E357ADC6F /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = D54CB391DE791A40AF3CAB0594F6FE6E /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD04162F5A151C796AB11EEEEF0F8662 /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 948324ABEE80FCA44A42D993C70687CB /* MuxImaListener.m */; };
 		FF4277313682681CBDBBC697A7CB4F82 /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A8A7EEA7EABCBD29271813509270E2 /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0ED280B3AF2ECDEA053EE9159539A725 /* PBXContainerItemProxy */ = {
+		06275C1ECC53DD527DA0793846C7000C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8316A029179DAA758D7AC9122D97E40D;
-			remoteInfo = "Mux-Stats-Google-IMA-iOS";
+			remoteGlobalIDString = 8D8DD638EFFF8DBE3599EC57E5CC1036;
+			remoteInfo = "GoogleAds-IMA-tvOS-SDK";
 		};
-		0EEF72F19C1D1931189B0D6F4244AF06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B951A0EF1A62B67EE3F65F09E82CB428;
-			remoteInfo = "Mux-Stats-AVPlayer-iOS";
-		};
-		1178D8546297D953DB658CF34E6FD68C /* PBXContainerItemProxy */ = {
+		065280C962BC80F252A5308C06B88B71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5526128214308C0807F9C2136AB687B2;
 			remoteInfo = "Mux-Stats-Core-tvOS";
 		};
-		136FF2D66F8CF24739103D6413BC6B47 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
-			remoteInfo = "GoogleAds-IMA-iOS-SDK";
-		};
-		14C6E09EC655353A415D600193E6F7EA /* PBXContainerItemProxy */ = {
+		0994991F1ECBCCDD4F24056013400363 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C1F1F8F5FE7D716516721F66BC75FDD2;
 			remoteInfo = "Mux-Stats-Core-iOS";
 		};
-		2D0EB18E1FB8B9E97E6883D61136151D /* PBXContainerItemProxy */ = {
+		15C299870780F4B92ACE998D1C6EBAC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1D327FB11B4EBDF9A35C51AEC7740EA3;
 			remoteInfo = "Mux-Stats-Google-IMA-tvOS";
 		};
-		2D213B6D19B81FB63DE1D2F951D14BDE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3EFCEDB20CBDC85A157B113EB9C8CBA;
-			remoteInfo = "Mux-Stats-AVPlayer-tvOS";
-		};
-		3D4DBD2922C1726F9E14502F7CDF913B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D8DD638EFFF8DBE3599EC57E5CC1036;
-			remoteInfo = "GoogleAds-IMA-tvOS-SDK";
-		};
-		43B70E4FF6A010FA42E08A85F21400C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1F1F8F5FE7D716516721F66BC75FDD2;
-			remoteInfo = "Mux-Stats-Core-iOS";
-		};
-		6C41EAC3776112D6FA1A3E05D17B73B8 /* PBXContainerItemProxy */ = {
+		2572EDD6406A343F25E4D4A15C11FF8E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B951A0EF1A62B67EE3F65F09E82CB428;
 			remoteInfo = "Mux-Stats-AVPlayer-iOS";
 		};
-		84E62A9D9B064379223F410EE235E898 /* PBXContainerItemProxy */ = {
+		2DF3FD615F6F6A386EE8151320ECD93B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3EFCEDB20CBDC85A157B113EB9C8CBA;
+			remoteInfo = "Mux-Stats-AVPlayer-tvOS";
+		};
+		3E280149EDFFAA4114F08CE29D9AEC91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F1F8F5FE7D716516721F66BC75FDD2;
+			remoteInfo = "Mux-Stats-Core-iOS";
+		};
+		452C8904C564892F0AE297749D19F55D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B951A0EF1A62B67EE3F65F09E82CB428;
+			remoteInfo = "Mux-Stats-AVPlayer-iOS";
+		};
+		48E6FE4F188A788F2FBCFADCC1D48E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
+			remoteInfo = "GoogleAds-IMA-iOS-SDK";
+		};
+		4F6E5672ACD87ED3BA8C881CDF4BA4A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
+			remoteInfo = "GoogleAds-IMA-iOS-SDK";
+		};
+		5DBE37C0368308BEA0034A943A5DA3F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3EFCEDB20CBDC85A157B113EB9C8CBA;
+			remoteInfo = "Mux-Stats-AVPlayer-tvOS";
+		};
+		5E5A969FB56BF79A89B50C471FD61DA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DC371B7477C88184274EC6710690F97C;
 			remoteInfo = Expecta;
 		};
-		A191A4D640FD9619046AA42C6C046C25 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D8DD638EFFF8DBE3599EC57E5CC1036;
-			remoteInfo = "GoogleAds-IMA-tvOS-SDK";
-		};
-		B2ABDE22BBCAABD5D9099EB304ED6452 /* PBXContainerItemProxy */ = {
+		842647D48E21F3E69C57E14A1CF1507C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8316A029179DAA758D7AC9122D97E40D;
 			remoteInfo = "Mux-Stats-Google-IMA-iOS";
 		};
-		BE550D63C6401FF703A9CDF4893E0292 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5526128214308C0807F9C2136AB687B2;
-			remoteInfo = "Mux-Stats-Core-tvOS";
-		};
-		DA6310F9BBD78C2DBF2E0BDCEC31213B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8676010755CF1530FC02DA9A0D8822B;
-			remoteInfo = Specta;
-		};
-		DBE86E103FC3AD4B040B3C79405AAF6C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
-			remoteInfo = "GoogleAds-IMA-iOS-SDK";
-		};
-		E12BB102FF2B043D43BA6866B8F8E3DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1F1F8F5FE7D716516721F66BC75FDD2;
-			remoteInfo = "Mux-Stats-Core-iOS";
-		};
-		EE887431682156DD4C8C28C61E0FF244 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A3EFCEDB20CBDC85A157B113EB9C8CBA;
-			remoteInfo = "Mux-Stats-AVPlayer-tvOS";
-		};
-		F96E7D3242EDBDDA1142200B646EAD86 /* PBXContainerItemProxy */ = {
+		99259B3049E7C821A20B4CD06C0ADCEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B951A0EF1A62B67EE3F65F09E82CB428;
 			remoteInfo = "Mux-Stats-AVPlayer-iOS";
 		};
-		FB592F4129FA896A9D2A44033B5E3263 /* PBXContainerItemProxy */ = {
+		9F129D7C7BA422D6573766C20D068B2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8676010755CF1530FC02DA9A0D8822B;
+			remoteInfo = Specta;
+		};
+		B690B99383703E59ADB437C5B049B6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8316A029179DAA758D7AC9122D97E40D;
+			remoteInfo = "Mux-Stats-Google-IMA-iOS";
+		};
+		B765EDDA3870AAA1BE36AF3C1F8B20CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7362DAB47E2EFA5452F30DD7E9830B56;
 			remoteInfo = "GoogleAds-IMA-iOS-SDK";
+		};
+		C0BB4489F15AB8D9DC894786FD7DA082 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D8DD638EFFF8DBE3599EC57E5CC1036;
+			remoteInfo = "GoogleAds-IMA-tvOS-SDK";
+		};
+		D37A1134A2A4F02BB044041F4F78BE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5526128214308C0807F9C2136AB687B2;
+			remoteInfo = "Mux-Stats-Core-tvOS";
+		};
+		D76E2B412F5C5186ACECCAD8B72CE9E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1F1F8F5FE7D716516721F66BC75FDD2;
+			remoteInfo = "Mux-Stats-Core-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -361,19 +359,17 @@
 		0A747B18FBEE4BC0C86F1ABBFFDB1FD1 /* Pods-DemoAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DemoAppTests-umbrella.h"; sourceTree = "<group>"; };
 		0BD5CBBD2C7E91C5837361FCA17B3DCD /* Mux-Stats-Core-tvOS-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; name = "Mux-Stats-Core-tvOS-xcframeworks.sh"; path = "../Mux-Stats-Core-tvOS/Mux-Stats-Core-tvOS-xcframeworks.sh"; sourceTree = "<group>"; };
 		0C04FC3AF760D56389791A85BA7EBD8B /* Mux-Stats-AVPlayer-iOS-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Mux-Stats-AVPlayer-iOS-xcframeworks.sh"; sourceTree = "<group>"; };
-		0DCE75351C990D28F24437B2BCD5CF33 /* Mux-Stats-Google-IMA-tvOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Mux-Stats-Google-IMA-tvOS"; path = Mux_Stats_Google_IMA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E1F9830EB547E394C40DFE1EF2EAA20 /* Mux-Stats-Google-IMA-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mux-Stats-Google-IMA-iOS-dummy.m"; sourceTree = "<group>"; };
-		1246DB31BDD4397D1D766DD829698AA2 /* Mux-Stats-Google-IMA-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Mux-Stats-Google-IMA-tvOS-dummy.m"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-dummy.m"; sourceTree = "<group>"; };
+		0D042F67217AE3AE1A6FE2AF514CAF81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0DCE75351C990D28F24437B2BCD5CF33 /* Mux-Stats-Google-IMA-tvOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Mux-Stats-Google-IMA-tvOS"; path = MuxStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12CA38F4E95CC64478DFB451B9E722F8 /* Pods-MUXSDKIMATVOSExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MUXSDKIMATVOSExample-dummy.m"; sourceTree = "<group>"; };
 		14011141D4C4109F1B89F92E376C748B /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		15B13B063AA97C48C9010C298AECBDDA /* Specta */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Specta; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170722FBE110B64E194AE679C3041ABF /* EXPMatchers+beCloseTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beCloseTo.m"; path = "Expecta/Matchers/EXPMatchers+beCloseTo.m"; sourceTree = "<group>"; };
-		17E66D346116B57373E97D5BFF57CEF3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mux-Stats-Google-IMA-iOS-umbrella.h"; sourceTree = "<group>"; };
 		19D294664834AB27C11F328232EAC6AE /* Mux-Stats-AVPlayer-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-AVPlayer-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1B39AE38D8788460E674130C6E0DFF16 /* Mux-Stats-Google-IMA-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mux-Stats-Google-IMA-iOS-prefix.pch"; sourceTree = "<group>"; };
 		1C07C9D5B9B6A8930FE02672690953F6 /* SPTCallSite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCallSite.h; path = Specta/Specta/SPTCallSite.h; sourceTree = "<group>"; };
 		1C7500FA1CF5C436495142702F56111C /* ExpectaObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaObject.h; path = Expecta/ExpectaObject.h; sourceTree = "<group>"; };
 		1CC2257D1B80F8B06977EA7814FB0A42 /* GoogleAds-IMA-tvOS-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAds-IMA-tvOS-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		1DC4A2703D8DF12D7D5B80DD5D553A13 /* Mux-Stats-Google-IMA-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Mux-Stats-Google-IMA-tvOS-dummy.m"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-dummy.m"; sourceTree = "<group>"; };
 		1F8C28B7090133D9733B141DC4F3662E /* ExpectaSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaSupport.m; path = Expecta/ExpectaSupport.m; sourceTree = "<group>"; };
 		20297E1B00AE49BAB6F80064D5605688 /* Pods-MUXSDKIMATVOSExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MUXSDKIMATVOSExample.modulemap"; sourceTree = "<group>"; };
 		204CE79580B98963B8CA609612671308 /* EXPMatchers+endWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+endWith.m"; path = "Expecta/Matchers/EXPMatchers+endWith.m"; sourceTree = "<group>"; };
@@ -389,18 +385,21 @@
 		2E4D5B0FDBC9A3E3EF8271B7556C36C4 /* SPTExampleGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExampleGroup.h; path = Specta/Specta/SPTExampleGroup.h; sourceTree = "<group>"; };
 		2F3A08FCF04F43CF6E0654E6CA4A2B8E /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
 		30CE91049E26C5548B20A4E671922015 /* Specta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Specta.debug.xcconfig; sourceTree = "<group>"; };
+		33496E2113180E995D1A6A7552EA9719 /* Mux-Stats-Google-IMA-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Mux-Stats-Google-IMA-iOS.modulemap"; sourceTree = "<group>"; };
 		33DBEF2B056CD8106A8B910BE460771A /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+postNotification.m"; path = "Expecta/Matchers/EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
 		35FAD033231D8C33B0D401D95A534190 /* Pods-DemoAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		364BF8C5E175A4CBB6B45D2AD3358563 /* EXPMatcherHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPMatcherHelpers.m; path = Expecta/Matchers/EXPMatcherHelpers.m; sourceTree = "<group>"; };
 		37AAC205C0CD4D9944F23242AA177DF8 /* EXPMatchers+beSubclassOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSubclassOf.m"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.m"; sourceTree = "<group>"; };
 		37DE0B892F3876C38DA0C4C4BCA3FCEF /* Mux-Stats-Core-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Core-tvOS.release.xcconfig"; path = "../Mux-Stats-Core-tvOS/Mux-Stats-Core-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		38F1DCF17DDFA61EDA94B1D3381AFD6D /* Mux-Stats-Core-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Core-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		38F5DB3CFA34D6D877D89C4BBCA297B8 /* Mux-Stats-Google-IMA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "Mux-Stats-Google-IMA.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3924B9841364E9EBD3DCD7C7463152EC /* Expecta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Expecta-Info.plist"; sourceTree = "<group>"; };
 		3A1FFEFAAB38C61EB38AACB6DD037460 /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beFalsy.h"; path = "Expecta/Matchers/EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
 		3D893F0CB9A129922CD93179461EFA49 /* Pods-DemoAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DemoAppTests-dummy.m"; sourceTree = "<group>"; };
 		3E86B615609457A903F8BC87C80423B0 /* ExpectaObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaObject.m; path = Expecta/ExpectaObject.m; sourceTree = "<group>"; };
 		3F2F5DBA946B482BFF91D7AC8831B48E /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPBlockDefinedMatcher.h; path = Expecta/EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
 		3FD1AAD6240B9D5E816228BC3783EA0B /* Expecta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Expecta.modulemap; sourceTree = "<group>"; };
+		4274C0E2CAD3B3D4AAA92102665E1D66 /* MuxImaListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.h; sourceTree = "<group>"; };
 		43374FF998B472B76277BD222229996F /* Pods-MUXSDKIMATVOSExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MUXSDKIMATVOSExample-umbrella.h"; sourceTree = "<group>"; };
 		453D60E3DEC81F7D310D51B7B3E02106 /* GoogleAds-IMA-iOS-SDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAds-IMA-iOS-SDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		46F19BC8E5B5F0797B2BC91BF80CF354 /* SPTSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTSpec.h; path = Specta/Specta/SPTSpec.h; sourceTree = "<group>"; };
@@ -413,8 +412,9 @@
 		4FE3A8914DCE32ADB404396D24D8F340 /* Pods-DemoApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DemoApp"; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF0C353F470008AC0AE5C3E99DB25C8 /* Mux-Stats-Core-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Core-tvOS.debug.xcconfig"; path = "../Mux-Stats-Core-tvOS/Mux-Stats-Core-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		50D818344C3E7DAC051921AB01F6538C /* SPTCompiledExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTCompiledExample.h; path = Specta/Specta/SPTCompiledExample.h; sourceTree = "<group>"; };
+		52969651B7976C3592C701E51DCA0835 /* Mux-Stats-Google-IMA-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Mux-Stats-Google-IMA-iOS-Info.plist"; sourceTree = "<group>"; };
+		52BCCBBE7A56B9C491641431AE2EBA1A /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Google-IMA-tvOS.debug.xcconfig"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		5446060CB6377F87A9606D35E991B349 /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beNil.h"; path = "Expecta/Matchers/EXPMatchers+beNil.h"; sourceTree = "<group>"; };
-		55E790D2B104C3C97E8FFAE430365C4B /* MuxImaListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MuxImaListener.h; sourceTree = "<group>"; };
 		565590EBE5F1C12B1DD5FBA7F5B89D64 /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThan.h"; path = "Expecta/Matchers/EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
 		56B04C108EE9B24A48164F9086BC718D /* SPTCallSite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCallSite.m; path = Specta/Specta/SPTCallSite.m; sourceTree = "<group>"; };
 		593EAFBEF9F539F65ADA82E81744BB18 /* EXPMatchers+respondTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+respondTo.m"; path = "Expecta/Matchers/EXPMatchers+respondTo.m"; sourceTree = "<group>"; };
@@ -422,10 +422,8 @@
 		5B060B4D3FED96FBEC4BF6147F56FA3C /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSubclassOf.h"; path = "Expecta/Matchers/EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
 		5BC894F88174CA7401AEC67D235F4257 /* Specta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Specta.modulemap; sourceTree = "<group>"; };
 		5C6CF222850B105AC6546374A8D1355A /* EXPMatchers+raise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raise.m"; path = "Expecta/Matchers/EXPMatchers+raise.m"; sourceTree = "<group>"; };
-		5D72A98E18D2C7F0DC1761DB98085D33 /* Mux-Stats-Google-IMA-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Google-IMA-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5DDC5BB1FAEADE212CCCD8A73E1D6F66 /* Pods-DemoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DemoApp.modulemap"; sourceTree = "<group>"; };
 		5E8EFE1A219A027C43C48A9FD6562FAB /* SpectaDSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaDSL.h; path = Specta/Specta/SpectaDSL.h; sourceTree = "<group>"; };
-		5FC461276413CE61A3C500DE4E42D7ED /* Mux-Stats-Google-IMA-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Mux-Stats-Google-IMA-tvOS.modulemap"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap"; sourceTree = "<group>"; };
 		6121C9027508468DB8031F5D0AA2B8CC /* Pods-DemoAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DemoAppTests.modulemap"; sourceTree = "<group>"; };
 		621CAEED2FE521A52D59C1259C8B0E6A /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		62426CE0B6FB576AFA63B6AA40B448A3 /* EXPMatchers+raise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "Expecta/Matchers/EXPMatchers+raise.h"; sourceTree = "<group>"; };
@@ -435,14 +433,13 @@
 		63D83F095709A23C07CC7079F72A59F8 /* EXPMatchers+raiseWithReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+raiseWithReason.m"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.m"; sourceTree = "<group>"; };
 		6515E59D927AE79F8E7DEB0835E3F97D /* Pods-DemoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DemoApp-dummy.m"; sourceTree = "<group>"; };
 		66A4A861048262D2D87E0F0A07D613A2 /* SPTTestSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTTestSuite.m; path = Specta/Specta/SPTTestSuite.m; sourceTree = "<group>"; };
-		679646907CEEA9240E2B6CD6567DC4A8 /* Mux-Stats-Google-IMA-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Mux-Stats-Google-IMA-tvOS-Info.plist"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist"; sourceTree = "<group>"; };
-		6990D8A4E5DD8F2E307F2EA95F9E45A8 /* Mux-Stats-Google-IMA-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Mux-Stats-Google-IMA-iOS.modulemap"; sourceTree = "<group>"; };
 		6A0D68E17F52D02E40DCDCEA8359158F /* Pods-DemoAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DemoAppTests-frameworks.sh"; sourceTree = "<group>"; };
 		6A0D90565978C2A5EDEAA96C48BD7D3E /* GoogleInteractiveMediaAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleInteractiveMediaAds.xcframework; sourceTree = "<group>"; };
+		6DE682F6A35BC0D0A292460F0D81DFC6 /* Mux-Stats-Google-IMA-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mux-Stats-Google-IMA-iOS-dummy.m"; sourceTree = "<group>"; };
 		707809FBDAD46184F3A23481EC147495 /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
+		722E5C72936DEB539CDF4135CC946754 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Mux-Stats-Google-IMA-tvOS-umbrella.h"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		75AA5C7EB7DF2DF403282F07EE758266 /* EXPMatchers+endWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+endWith.h"; path = "Expecta/Matchers/EXPMatchers+endWith.h"; sourceTree = "<group>"; };
 		77B5B03D3041CFCC3046601D769E5FB3 /* SPTExample.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExample.h; path = Specta/Specta/SPTExample.h; sourceTree = "<group>"; };
-		77C1DFA056BB682F622A5C5572267BE4 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Mux-Stats-Google-IMA-tvOS-umbrella.h"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		7A727A7BF99ECC8C656BB513F3BF83C3 /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7AF1950A1AB95B15D7E12EE28026A906 /* GoogleAds-IMA-tvOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-tvOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		7B04258BF7D492BCB6C82C833E30ADD2 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beGreaterThan.h"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
@@ -451,35 +448,36 @@
 		7C14D84C0ADD3103ED71DF86ECC041F0 /* Mux-Stats-AVPlayer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-AVPlayer-tvOS.debug.xcconfig"; path = "../Mux-Stats-AVPlayer-tvOS/Mux-Stats-AVPlayer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7CB1323D70BCF44B46BF91C1C2AB8B91 /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+respondTo.h"; path = "Expecta/Matchers/EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
 		7D6BA7927B6A8862A5C8707F3E088D85 /* EXPDoubleTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPDoubleTuple.h; path = Expecta/EXPDoubleTuple.h; sourceTree = "<group>"; };
-		7F757FEB3BCC41871385D13FD17EDCB8 /* Mux-Stats-Google-IMA-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Mux-Stats-Google-IMA-iOS-Info.plist"; sourceTree = "<group>"; };
 		7F937A60906D1B9FB16C7B7F4F16D6F6 /* SPTSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSpec.m; path = Specta/Specta/SPTSpec.m; sourceTree = "<group>"; };
 		8096324FBC07DD76EB18F7BC9558B161 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "Specta/Specta/XCTestCase+Specta.h"; sourceTree = "<group>"; };
 		81584ABE9B0F1F1C7AD1160791C51EAD /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beIdenticalTo.h"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
 		82B8AF291640C46EA560FA8C0D9B6764 /* SPTExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExample.m; path = Specta/Specta/SPTExample.m; sourceTree = "<group>"; };
-		83C03253C8D43E08CCB18232BA1DA91F /* MuxImaListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MuxImaListener.m; path = MUXSDKImaListener/Classes/MuxImaListener.m; sourceTree = "<group>"; };
 		851977EA0A12ACB5EF0D1CCF671AAB69 /* Pods-MUXSDKIMATVOSExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MUXSDKIMATVOSExample-Info.plist"; sourceTree = "<group>"; };
 		855198D5FD33E7E86769F4FF0EE25C23 /* EXPMatchers+beSupersetOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beSupersetOf.m"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.m"; sourceTree = "<group>"; };
 		85CF95484809257011B653E37348B0BD /* Expecta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.release.xcconfig; sourceTree = "<group>"; };
 		87B3D88834BEA7A0012A1DA7763D1F36 /* Pods-DemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8950EB67576C5D94F6403BA5C9B44C42 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Google-IMA-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8F93E03BC94D517E9A4B8E55FADB4730 /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
+		948324ABEE80FCA44A42D993C70687CB /* MuxImaListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MuxImaListener.m; path = Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.m; sourceTree = "<group>"; };
 		9573A960AE706A47320F22F4D1E6B5C5 /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
 		95A792B234E52E2E75BA6B83D5D54BF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		98CDCA7AB7A4C782461B67F2EF23EEA0 /* EXPMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcher.h; path = Expecta/EXPMatcher.h; sourceTree = "<group>"; };
 		99CA6EB1DCE94EC3514D27DFCC247D30 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9A2F5593A93DC588DE3C0B0E6DFC3477 /* EXPMatchers+beginWith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beginWith.h"; path = "Expecta/Matchers/EXPMatchers+beginWith.h"; sourceTree = "<group>"; };
+		9B07979578F1C8F517F8666CFEC38D59 /* Mux-Stats-Google-IMA-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Mux-Stats-Google-IMA-tvOS-prefix.pch"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		9C02947A170BC96A9686B6DA00A769CB /* Expecta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Expecta-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E8265D60B084044EA199594F26250DC /* Mux-Stats-Google-IMA-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mux-Stats-Google-IMA-iOS-prefix.pch"; sourceTree = "<group>"; };
 		9FB31FD87DF56BEDAD3D352A86D7844B /* EXPMatchers+beTruthy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beTruthy.m"; path = "Expecta/Matchers/EXPMatchers+beTruthy.m"; sourceTree = "<group>"; };
+		A1A6AED34FA0AC1D55D916F69AD84BD3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mux-Stats-Google-IMA-iOS-umbrella.h"; sourceTree = "<group>"; };
 		A3FAA2FEF849B92899FD321DC6A13075 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beTruthy.h"; path = "Expecta/Matchers/EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
 		A610847339C4EE604BDD7A9100870919 /* Specta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-umbrella.h"; sourceTree = "<group>"; };
 		A7B52CD884FC90482383F0E50DFA1EFC /* EXPMatchers+contain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+contain.m"; path = "Expecta/Matchers/EXPMatchers+contain.m"; sourceTree = "<group>"; };
 		A8295A6A4D68D5CCBEFCFEEFDC09BA2D /* EXPExpect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPExpect.m; path = Expecta/EXPExpect.m; sourceTree = "<group>"; };
 		A846258D587AB99597AB2CCB9225EC71 /* Expecta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-umbrella.h"; sourceTree = "<group>"; };
+		A91AB45C56DEFA4A4C6AE7D56A6DBC2E /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Google-IMA-tvOS.release.xcconfig"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A946AF70A4174079D73A92B681AEE273 /* Pods-MUXSDKIMATVOSExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MUXSDKIMATVOSExample.debug.xcconfig"; sourceTree = "<group>"; };
 		AAA78320563DC203CD4C1496475B4C4E /* EXPMatchers+beginWith.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beginWith.m"; path = "Expecta/Matchers/EXPMatchers+beginWith.m"; sourceTree = "<group>"; };
 		AAD5A6DFE58E735C22AE3FF714D4C444 /* Expecta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Expecta-prefix.pch"; sourceTree = "<group>"; };
-		AC059B58EC452A64D7CA3B45E3C08EC3 /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Google-IMA-tvOS.debug.xcconfig"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AD17AFE75A1D6507609FE309A488DC1B /* SPTCompiledExample.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTCompiledExample.m; path = Specta/Specta/SPTCompiledExample.m; sourceTree = "<group>"; };
 		AD8AE1ACFE8E76C7491AD9E3844504F1 /* Specta-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Specta-prefix.pch"; sourceTree = "<group>"; };
 		AEAA1FD7FA79F2AE439CAF0785664E90 /* Pods-DemoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoApp-Info.plist"; sourceTree = "<group>"; };
@@ -489,8 +487,6 @@
 		B3EF1B1FA6495770ED9CC8A1E3BB82F6 /* EXPMatchers+beIdenticalTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beIdenticalTo.m"; path = "Expecta/Matchers/EXPMatchers+beIdenticalTo.m"; sourceTree = "<group>"; };
 		B3FF61C9F1E0643096D13EF3638F7D2E /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beInTheRangeOf.h"; path = "Expecta/Matchers/EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
 		B42EAB7E5610CFB6D8554CD9E9474E3B /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beSupersetOf.h"; path = "Expecta/Matchers/EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
-		B44514386270B6030C7D3D67095F50B3 /* Mux-Stats-Google-IMA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "Mux-Stats-Google-IMA.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B718DB7D15A83E4D4692AD315E813F32 /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-Google-IMA-tvOS.release.xcconfig"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B8796A7E62FCD738AE9ED020B91EB650 /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+haveCountOf.h"; path = "Expecta/Matchers/EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
 		B9C6B005EB035B012BF0BB3DA0EF7267 /* SPTExcludeGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTExcludeGlobalBeforeAfterEach.h; path = Specta/Specta/SPTExcludeGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		BEC278413130908EBC731532B238F375 /* Specta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Specta-Info.plist"; sourceTree = "<group>"; };
@@ -499,8 +495,6 @@
 		C285E8566A9A9636E5059E0F8B25E41E /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raiseWithReason.h"; path = "Expecta/Matchers/EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
 		C42FBA28B164C069B6B10D84E1CC8BEB /* SPTGlobalBeforeAfterEach.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTGlobalBeforeAfterEach.h; path = Specta/Specta/SPTGlobalBeforeAfterEach.h; sourceTree = "<group>"; };
 		C97DAD2D8A5563B2B9A75A35FAE0BB0E /* Pods-MUXSDKIMATVOSExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MUXSDKIMATVOSExample-frameworks.sh"; sourceTree = "<group>"; };
-		CA86FF5F798CDDB247ABED68E900800D /* Mux-Stats-Google-IMA-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Mux-Stats-Google-IMA-tvOS-prefix.pch"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch"; sourceTree = "<group>"; };
-		CA9B92084A1FEF240AFDFE9ADFF7775D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CAA81106528F8B09296E8ABDF8A0E259 /* EXPMatchers+beGreaterThan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beGreaterThan.m"; path = "Expecta/Matchers/EXPMatchers+beGreaterThan.m"; sourceTree = "<group>"; };
 		CABDF39EE32A3BE1762A220630D44B42 /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatcherHelpers.h; path = Expecta/Matchers/EXPMatcherHelpers.h; sourceTree = "<group>"; };
 		CAC185D9D518D923A63503A2911907EC /* Pods-DemoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoApp-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -513,26 +507,29 @@
 		D5CC729CE4AF34E0C4423ABE0FA83767 /* GoogleAds-IMA-tvOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GoogleAds-IMA-tvOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		D97EF68B6BCE60E93653E6A070B9D51E /* Pods-DemoApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DemoApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DB270D06455292936E42ED1065382F77 /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
+		DB71FB193C3F0D43A1228C06DE9266AA /* Mux-Stats-Google-IMA-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Mux-Stats-Google-IMA-tvOS-Info.plist"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist"; sourceTree = "<group>"; };
+		DBAA562BA0228C6F5488B9723F2B6501 /* Mux-Stats-Google-IMA-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Mux-Stats-Google-IMA-tvOS.modulemap"; path = "../Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap"; sourceTree = "<group>"; };
 		DF410D6142904109C0FB0D643DF72134 /* Pods-MUXSDKIMATVOSExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MUXSDKIMATVOSExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		DFB7085DA10BB2A43CB9E89C9246ACC6 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
 		DFC2296FB05E7BCE4147EC9BDD192FA3 /* Pods-DemoAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DemoAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E00A3E6CE371C44F49296F370078F37C /* EXPFloatTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPFloatTuple.m; path = Expecta/EXPFloatTuple.m; sourceTree = "<group>"; };
 		E0CABED6587E88C9D4049F37709681C2 /* Pods-DemoAppTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoAppTests-Info.plist"; sourceTree = "<group>"; };
 		E24DB0CCC3FE89181706B7E5D786DAA4 /* EXPMatchers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPMatchers.h; path = Expecta/Matchers/EXPMatchers.h; sourceTree = "<group>"; };
-		E2F785F187C0CC071BEB59B5DDF03039 /* Mux-Stats-Google-IMA-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Mux-Stats-Google-IMA-iOS"; path = Mux_Stats_Google_IMA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F785F187C0CC071BEB59B5DDF03039 /* Mux-Stats-Google-IMA-iOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Mux-Stats-Google-IMA-iOS"; path = MuxStatsGoogleIMAPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30FE2BF384BF6F7DEED7A2CC177131A /* SpectaTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaTypes.h; path = Specta/Specta/SpectaTypes.h; sourceTree = "<group>"; };
 		E41AE54DF9C45E0A216AC9239BBA7877 /* Pods-DemoAppTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DemoAppTests"; path = Pods_DemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560D4BF157C1748B016BBEE1831EE45 /* EXPUnsupportedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXPUnsupportedObject.m; path = Expecta/EXPUnsupportedObject.m; sourceTree = "<group>"; };
 		E6A52A50630A83F7B56A12BB53133D90 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beKindOf.h"; path = "Expecta/Matchers/EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
+		E7E4AD5530D26B80C41B170210305D14 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E7FF438F537E8F0C15E6340C7537121E /* Pods-MUXSDKIMATVOSExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MUXSDKIMATVOSExample.release.xcconfig"; sourceTree = "<group>"; };
 		E874767AE7FBF5D763F4C1DB44AC4CB4 /* EXPMatchers+equal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+equal.m"; path = "Expecta/Matchers/EXPMatchers+equal.m"; sourceTree = "<group>"; };
-		E928184078A61F185A3BA16C97B2A9A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		E949A70BE48CE74E340CF7B23D9B461C /* Mux-Stats-AVPlayer-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Mux-Stats-AVPlayer-tvOS.release.xcconfig"; path = "../Mux-Stats-AVPlayer-tvOS/Mux-Stats-AVPlayer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA7B5D457914359E8885B342FECE3724 /* Specta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Specta-dummy.m"; sourceTree = "<group>"; };
 		EBDDAAC2320749722007D4035E66CF4C /* EXPMatchers+beNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beNil.m"; path = "Expecta/Matchers/EXPMatchers+beNil.m"; sourceTree = "<group>"; };
 		EEBABCC8E67408067C6917F753B532E9 /* Pods-MUXSDKIMATVOSExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MUXSDKIMATVOSExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F023BB4138A5C605397EBB71E0EEF4DA /* NSValue+Expecta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+Expecta.h"; path = "Expecta/NSValue+Expecta.h"; sourceTree = "<group>"; };
 		F042DB47B07383343CC8930ADA2041D3 /* Pods-MUXSDKIMATVOSExample */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MUXSDKIMATVOSExample"; path = Pods_MUXSDKIMATVOSExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60CD1191DCA058319B3C76A34597538 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Google-IMA-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FDFF468979E3675AAF53B08B67D74C9B /* Mux-Stats-Google-IMA-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mux-Stats-Google-IMA-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FEB746BD38D188700EA08FD64A9EF818 /* Specta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Specta.release.xcconfig; sourceTree = "<group>"; };
 		FEBBCE7F88A0F38F383A3CA2B2E6FA2F /* SpectaUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SpectaUtility.m; path = Specta/Specta/SpectaUtility.m; sourceTree = "<group>"; };
 		FEC210D059CA9DAD451790713B3D0EBF /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
@@ -540,19 +537,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D2A288F2E6FA5DFA161B1E57D63C1B0 /* Frameworks */ = {
+		2320343E5563A0C622EF9693298C302F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47012D1E3709F71E65A3A5ED8ED1D381 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1ECC53014911673AD0A9F7398E306422 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6367ABA9E4BE5060A38818C145C92EDD /* Foundation.framework in Frameworks */,
+				09CCA4BDF658759C76CF9FBB58197B4E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +578,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EE54A4D9FB89BF93ADD6D4A7D32B8F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDBA3EA21566180EB5E29D3FE88ED58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DCB54193370510845B6DDEFFF9EA35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,6 +598,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011FEB5ACE0AB346D2B5A71B50CD75AA /* Mux-Stats-Google-IMA */ = {
+			isa = PBXGroup;
+			children = (
+				4274C0E2CAD3B3D4AAA92102665E1D66 /* MuxImaListener.h */,
+				948324ABEE80FCA44A42D993C70687CB /* MuxImaListener.m */,
+				9947ADB92031032951E9D893A8626C1B /* Pod */,
+				959CF4749CCC8EC7D7244AA622D3D8B1 /* Support Files */,
+			);
+			name = "Mux-Stats-Google-IMA";
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		1AF80CCD1C2203E240E8CE17B8A38362 /* Specta */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +644,20 @@
 			path = Specta;
 			sourceTree = "<group>";
 		};
+		25577FBC03BCAECD22EC3BADBD92EA10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08F7F0770B4878B9883B87DCD8569CB4 /* Expecta */,
+				E2F785F187C0CC071BEB59B5DDF03039 /* Mux-Stats-Google-IMA-iOS */,
+				0DCE75351C990D28F24437B2BCD5CF33 /* Mux-Stats-Google-IMA-tvOS */,
+				4FE3A8914DCE32ADB404396D24D8F340 /* Pods-DemoApp */,
+				E41AE54DF9C45E0A216AC9239BBA7877 /* Pods-DemoAppTests */,
+				F042DB47B07383343CC8930ADA2041D3 /* Pods-MUXSDKIMATVOSExample */,
+				15B13B063AA97C48C9010C298AECBDDA /* Specta */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		25863BB3D0BBA8E6976DAA6CB5FF088A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,28 +667,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/GoogleAds-IMA-tvOS-SDK";
-			sourceTree = "<group>";
-		};
-		293DE344AE6C8B14135879AEE80D7A28 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				DFB7085DA10BB2A43CB9E89C9246ACC6 /* module.modulemap */,
-				55E790D2B104C3C97E8FFAE430365C4B /* MuxImaListener.h */,
-			);
-			name = include;
-			path = MUXSDKImaListener/Classes/include;
-			sourceTree = "<group>";
-		};
-		2B0192431769F5C1187E66E691E9A7E7 /* Mux-Stats-Google-IMA */ = {
-			isa = PBXGroup;
-			children = (
-				83C03253C8D43E08CCB18232BA1DA91F /* MuxImaListener.m */,
-				293DE344AE6C8B14135879AEE80D7A28 /* include */,
-				FCCCA8DF96410A450C67B6CC281637F0 /* Pod */,
-				967E1F4B05BFE5B2622322FDE44DB52E /* Support Files */,
-			);
-			name = "Mux-Stats-Google-IMA";
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		2E38900E196F5265884A94077C684779 /* Pods-DemoAppTests */ = {
@@ -683,20 +684,6 @@
 			);
 			name = "Pods-DemoAppTests";
 			path = "Target Support Files/Pods-DemoAppTests";
-			sourceTree = "<group>";
-		};
-		36854344BC84661D17336AE33AEB181C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				08F7F0770B4878B9883B87DCD8569CB4 /* Expecta */,
-				E2F785F187C0CC071BEB59B5DDF03039 /* Mux-Stats-Google-IMA-iOS */,
-				0DCE75351C990D28F24437B2BCD5CF33 /* Mux-Stats-Google-IMA-tvOS */,
-				4FE3A8914DCE32ADB404396D24D8F340 /* Pods-DemoApp */,
-				E41AE54DF9C45E0A216AC9239BBA7877 /* Pods-DemoAppTests */,
-				F042DB47B07383343CC8930ADA2041D3 /* Pods-MUXSDKIMATVOSExample */,
-				15B13B063AA97C48C9010C298AECBDDA /* Specta */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		488B495F7203CFD1C61C0B7356C7827D /* Targets Support Files */ = {
@@ -866,7 +853,7 @@
 		8729D330ADDAF6F1704B875BEEC9222B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2B0192431769F5C1187E66E691E9A7E7 /* Mux-Stats-Google-IMA */,
+				011FEB5ACE0AB346D2B5A71B50CD75AA /* Mux-Stats-Google-IMA */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -881,6 +868,28 @@
 			path = "Mux-Stats-Core";
 			sourceTree = "<group>";
 		};
+		959CF4749CCC8EC7D7244AA622D3D8B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				33496E2113180E995D1A6A7552EA9719 /* Mux-Stats-Google-IMA-iOS.modulemap */,
+				6DE682F6A35BC0D0A292460F0D81DFC6 /* Mux-Stats-Google-IMA-iOS-dummy.m */,
+				52969651B7976C3592C701E51DCA0835 /* Mux-Stats-Google-IMA-iOS-Info.plist */,
+				9E8265D60B084044EA199594F26250DC /* Mux-Stats-Google-IMA-iOS-prefix.pch */,
+				A1A6AED34FA0AC1D55D916F69AD84BD3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */,
+				F60CD1191DCA058319B3C76A34597538 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */,
+				FDFF468979E3675AAF53B08B67D74C9B /* Mux-Stats-Google-IMA-iOS.release.xcconfig */,
+				DBAA562BA0228C6F5488B9723F2B6501 /* Mux-Stats-Google-IMA-tvOS.modulemap */,
+				1DC4A2703D8DF12D7D5B80DD5D553A13 /* Mux-Stats-Google-IMA-tvOS-dummy.m */,
+				DB71FB193C3F0D43A1228C06DE9266AA /* Mux-Stats-Google-IMA-tvOS-Info.plist */,
+				9B07979578F1C8F517F8666CFEC38D59 /* Mux-Stats-Google-IMA-tvOS-prefix.pch */,
+				722E5C72936DEB539CDF4135CC946754 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */,
+				52BCCBBE7A56B9C491641431AE2EBA1A /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */,
+				A91AB45C56DEFA4A4C6AE7D56A6DBC2E /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Mux-Stats-Google-IMA-iOS";
+			sourceTree = "<group>";
+		};
 		9667298576F4E04000EE8E34D8DA8CF8 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -892,34 +901,22 @@
 			path = "../Target Support Files/GoogleAds-IMA-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		967E1F4B05BFE5B2622322FDE44DB52E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6990D8A4E5DD8F2E307F2EA95F9E45A8 /* Mux-Stats-Google-IMA-iOS.modulemap */,
-				0E1F9830EB547E394C40DFE1EF2EAA20 /* Mux-Stats-Google-IMA-iOS-dummy.m */,
-				7F757FEB3BCC41871385D13FD17EDCB8 /* Mux-Stats-Google-IMA-iOS-Info.plist */,
-				1B39AE38D8788460E674130C6E0DFF16 /* Mux-Stats-Google-IMA-iOS-prefix.pch */,
-				17E66D346116B57373E97D5BFF57CEF3 /* Mux-Stats-Google-IMA-iOS-umbrella.h */,
-				8950EB67576C5D94F6403BA5C9B44C42 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */,
-				5D72A98E18D2C7F0DC1761DB98085D33 /* Mux-Stats-Google-IMA-iOS.release.xcconfig */,
-				5FC461276413CE61A3C500DE4E42D7ED /* Mux-Stats-Google-IMA-tvOS.modulemap */,
-				1246DB31BDD4397D1D766DD829698AA2 /* Mux-Stats-Google-IMA-tvOS-dummy.m */,
-				679646907CEEA9240E2B6CD6567DC4A8 /* Mux-Stats-Google-IMA-tvOS-Info.plist */,
-				CA86FF5F798CDDB247ABED68E900800D /* Mux-Stats-Google-IMA-tvOS-prefix.pch */,
-				77C1DFA056BB682F622A5C5572267BE4 /* Mux-Stats-Google-IMA-tvOS-umbrella.h */,
-				AC059B58EC452A64D7CA3B45E3C08EC3 /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */,
-				B718DB7D15A83E4D4692AD315E813F32 /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Mux-Stats-Google-IMA-iOS";
-			sourceTree = "<group>";
-		};
 		991C227FEA25F2E941EED2508CCBCD57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				03263714A8A08574714E94FEB9E2F3B0 /* GoogleInteractiveMediaAds.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9947ADB92031032951E9D893A8626C1B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E7E4AD5530D26B80C41B170210305D14 /* LICENSE */,
+				38F5DB3CFA34D6D877D89C4BBCA297B8 /* Mux-Stats-Google-IMA.podspec */,
+				0D042F67217AE3AE1A6FE2AF514CAF81 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		A689D4F57117C20956C0E4E9C44F42DA /* Frameworks */ = {
@@ -970,7 +967,7 @@
 				8729D330ADDAF6F1704B875BEEC9222B /* Development Pods */,
 				A689D4F57117C20956C0E4E9C44F42DA /* Frameworks */,
 				5A79D8190F526C394C6BE893138EE367 /* Pods */,
-				36854344BC84661D17336AE33AEB181C /* Products */,
+				25577FBC03BCAECD22EC3BADBD92EA10 /* Products */,
 				488B495F7203CFD1C61C0B7356C7827D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -1047,16 +1044,6 @@
 			path = "Mux-Stats-AVPlayer";
 			sourceTree = "<group>";
 		};
-		FCCCA8DF96410A450C67B6CC281637F0 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CA9B92084A1FEF240AFDFE9ADFF7775D /* LICENSE */,
-				B44514386270B6030C7D3D67095F50B3 /* Mux-Stats-Google-IMA.podspec */,
-				E928184078A61F185A3BA16C97B2A9A5 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1068,12 +1055,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30003531D401F0CFE03AB96558874EA7 /* Headers */ = {
+		49BD062F6FF22C3B17AD10FB093AFAD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A92A27610E1901C669A61CD92299F70A /* Mux-Stats-Google-IMA-iOS-umbrella.h in Headers */,
-				7BA06869AFBAAA743124F39BFD430AC8 /* MuxImaListener.h in Headers */,
+				889F7202B92C79E6F6D4D2EC62D82352 /* Mux-Stats-Google-IMA-tvOS-umbrella.h in Headers */,
+				2DF4F3946F560F81336994A6661AB15A /* MuxImaListener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,12 +1150,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFF6CFD18FE76794FF666796EB9FD51E /* Headers */ = {
+		EDE350C24CFF510CC43858026FB76849 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD7971156177F0EB9519B0418C69B45 /* Mux-Stats-Google-IMA-tvOS-umbrella.h in Headers */,
-				DC5CF1591B5EA79B4630A6F225638F51 /* MuxImaListener.h in Headers */,
+				0A2A2B4A3208668EF3309BCCE04D6337 /* Mux-Stats-Google-IMA-iOS-umbrella.h in Headers */,
+				987D9B089B84702AFC641F534A21E4D9 /* MuxImaListener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,12 +1174,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				252CF9895F136342C18A5D22C364418F /* PBXTargetDependency */,
-				4A7F552ED8F6988A6CD4D7B4B8B499C0 /* PBXTargetDependency */,
-				90F97D625D7870F18435CEDCEA6C85B7 /* PBXTargetDependency */,
-				318F79323328B11C9B2593DE06B66B77 /* PBXTargetDependency */,
-				CA72F0C8DA17361DE367F1FBD7DFBD37 /* PBXTargetDependency */,
-				1428CF69BE40CC79E9F1C932E463C4F7 /* PBXTargetDependency */,
+				35A9A8042D33BA50546BDA8C6394AABD /* PBXTargetDependency */,
+				2BB43EE06B818CCB38337F9277117BB5 /* PBXTargetDependency */,
+				5654839CC3B58EA5765B73DA18ABDD64 /* PBXTargetDependency */,
+				C0112F22DADB77747853698DB9E23F13 /* PBXTargetDependency */,
+				62F73795AEBEED02D014D8288CD1DE0C /* PBXTargetDependency */,
+				997F216B7AAD64C9E2D8826A04E78185 /* PBXTargetDependency */,
 			);
 			name = "Pods-DemoAppTests";
 			productName = Pods_DemoAppTests;
@@ -1211,10 +1198,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				81BA8D92379647108614EB7C77518B85 /* PBXTargetDependency */,
-				FC9EF3EB05C9FF04801A0DD8AB74FFC2 /* PBXTargetDependency */,
-				2A46BEC1509F697D609903A43456AD62 /* PBXTargetDependency */,
-				7F706F9E79BE6E1242A81D2FE5772D90 /* PBXTargetDependency */,
+				9241628D67D918D9EF333BA2BEBA6FEE /* PBXTargetDependency */,
+				9E3664B508C63166146F822310B7A728 /* PBXTargetDependency */,
+				7C38C0A1881C2EEFC04516CF9210CCF6 /* PBXTargetDependency */,
+				4DA4B33BD243A5100F5D4018A179B4E7 /* PBXTargetDependency */,
 			);
 			name = "Pods-DemoApp";
 			productName = Pods_DemoApp;
@@ -1223,41 +1210,41 @@
 		};
 		1D327FB11B4EBDF9A35C51AEC7740EA3 /* Mux-Stats-Google-IMA-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F1BA1A27705F415A582E71351A55163 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-tvOS" */;
+			buildConfigurationList = 30A2C97171D7792FEC089045E2669FC1 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-tvOS" */;
 			buildPhases = (
-				DFF6CFD18FE76794FF666796EB9FD51E /* Headers */,
-				BC276F658CD790DCD23B7E9A420CAF6E /* Sources */,
-				1ECC53014911673AD0A9F7398E306422 /* Frameworks */,
-				F60C90228EB7BFFB763201C213CD1880 /* Resources */,
+				49BD062F6FF22C3B17AD10FB093AFAD7 /* Headers */,
+				9BC43D49172B6559137403E2E61AABE4 /* Sources */,
+				2320343E5563A0C622EF9693298C302F /* Frameworks */,
+				4781397DBBA201611FE1E3E7C40234B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B5D3503AFA146E500439CDCAEBA20F46 /* PBXTargetDependency */,
-				F0DF951E64CAA1E96FFD8CA877632080 /* PBXTargetDependency */,
+				6305BF2A2A5C2F3362F87AE28CB81009 /* PBXTargetDependency */,
+				16728B57F1021BAE0ADC7F8F62F0CCFA /* PBXTargetDependency */,
 			);
 			name = "Mux-Stats-Google-IMA-tvOS";
-			productName = Mux_Stats_Google_IMA;
+			productName = MuxStatsGoogleIMAPlugin;
 			productReference = 0DCE75351C990D28F24437B2BCD5CF33 /* Mux-Stats-Google-IMA-tvOS */;
 			productType = "com.apple.product-type.framework";
 		};
 		8316A029179DAA758D7AC9122D97E40D /* Mux-Stats-Google-IMA-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9722A1D00F03E19DD030DD82C7343958 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-iOS" */;
+			buildConfigurationList = BC8319B720CC9D26AAD1BC88D3F8B7E6 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-iOS" */;
 			buildPhases = (
-				30003531D401F0CFE03AB96558874EA7 /* Headers */,
-				49FCBD0F903C976E22A3B5CF2AFBA79B /* Sources */,
-				0D2A288F2E6FA5DFA161B1E57D63C1B0 /* Frameworks */,
-				CB9FBFCD12A2AB734F546B8ACE828E10 /* Resources */,
+				EDE350C24CFF510CC43858026FB76849 /* Headers */,
+				992ED9330EF0F591EC1FE1377C9029B8 /* Sources */,
+				EE54A4D9FB89BF93ADD6D4A7D32B8F8F /* Frameworks */,
+				3748F44CEFD3FAF0B0CBDE705C50809A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B3F45B9164190BFB0F1D4370224204DD /* PBXTargetDependency */,
-				1B96DABAB2920DCCEF8903D8CEC53332 /* PBXTargetDependency */,
+				F96B9F6B06200C0D51A3C738A5D16201 /* PBXTargetDependency */,
+				C1240BAF40E947D7428DC94336577C83 /* PBXTargetDependency */,
 			);
 			name = "Mux-Stats-Google-IMA-iOS";
-			productName = Mux_Stats_Google_IMA;
+			productName = MuxStatsGoogleIMAPlugin;
 			productReference = E2F785F187C0CC071BEB59B5DDF03039 /* Mux-Stats-Google-IMA-iOS */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -1291,10 +1278,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				32EBA45FACC6EE5D4BB3644076FAC572 /* PBXTargetDependency */,
-				CCD36FC94A9C7B0B8801BEB75D685845 /* PBXTargetDependency */,
-				C795DE6313D462F24318B6944940658E /* PBXTargetDependency */,
-				F9A093BACB51EFD5997B9E00442BF469 /* PBXTargetDependency */,
+				13A0311967A6CBBBAB8A10A0150906B5 /* PBXTargetDependency */,
+				93A5E45D25909AC23E05736480D0863F /* PBXTargetDependency */,
+				5281C163CDD7787D486719229AC607CB /* PBXTargetDependency */,
+				E948DC6FA78E020F12D0607CB69F910E /* PBXTargetDependency */,
 			);
 			name = "Pods-MUXSDKIMATVOSExample";
 			productName = Pods_MUXSDKIMATVOSExample;
@@ -1337,7 +1324,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 36854344BC84661D17336AE33AEB181C /* Products */;
+			productRefGroup = 25577FBC03BCAECD22EC3BADBD92EA10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1366,14 +1353,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72F5E27F04BB49C6AF26F15D070CDDDF /* Resources */ = {
+		3748F44CEFD3FAF0B0CBDE705C50809A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB9FBFCD12A2AB734F546B8ACE828E10 /* Resources */ = {
+		4781397DBBA201611FE1E3E7C40234B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F5E27F04BB49C6AF26F15D070CDDDF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1388,13 +1382,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F432C6837AC1A7B0A8753B0E937651FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F60C90228EB7BFFB763201C213CD1880 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1429,7 +1416,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/GoogleAds-IMA-tvOS-SDK/GoogleAds-IMA-tvOS-SDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		912B60C76E6C7B380EB699F6EBBA9F4E /* [CP] Copy XCFrameworks */ = {
+		371FE3E719E1530B7055A5ED46F2798B /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1501,7 +1488,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Mux-Stats-AVPlayer-iOS/Mux-Stats-AVPlayer-iOS-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA7605ADFC179EC5F0DD72EBF335126E /* [CP] Copy XCFrameworks */ = {
+		E1F7BE47B834DE82174612E41D88513C /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1548,13 +1535,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49FCBD0F903C976E22A3B5CF2AFBA79B /* Sources */ = {
+		992ED9330EF0F591EC1FE1377C9029B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88DFA9C7DB626BCD6289C44F8D39F988 /* module.modulemap in Sources */,
-				56FA054B9BABCA675A23A6A1547540D5 /* Mux-Stats-Google-IMA-iOS-dummy.m in Sources */,
-				DD7708E67C07CBF08E657D598B1AB95B /* MuxImaListener.m in Sources */,
+				5B33F5519446BEA06F456595011B6237 /* Mux-Stats-Google-IMA-iOS-dummy.m in Sources */,
+				FD04162F5A151C796AB11EEEEF0F8662 /* MuxImaListener.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC43D49172B6559137403E2E61AABE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1CFB9D35D903DF4715F829AF1E3CFD /* Mux-Stats-Google-IMA-tvOS-dummy.m in Sources */,
+				B6B192A81FD75F1BE8CF8AB7E2797E67 /* MuxImaListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1563,16 +1558,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0518909BF2A12C4C38F84E7D31EF15 /* Pods-DemoAppTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC276F658CD790DCD23B7E9A420CAF6E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4FAFC2BC1915820392B1058213AABC55 /* module.modulemap in Sources */,
-				BB8DB40D0D0B009F3E187B35A6C6D92F /* Mux-Stats-Google-IMA-tvOS-dummy.m in Sources */,
-				03BE8DEE459BDA2A1590AFE3F5AA623B /* MuxImaListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1629,161 +1614,144 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1428CF69BE40CC79E9F1C932E463C4F7 /* PBXTargetDependency */ = {
+		13A0311967A6CBBBAB8A10A0150906B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Specta;
-			target = F8676010755CF1530FC02DA9A0D8822B /* Specta */;
-			targetProxy = DA6310F9BBD78C2DBF2E0BDCEC31213B /* PBXContainerItemProxy */;
+			name = "GoogleAds-IMA-tvOS-SDK";
+			target = 8D8DD638EFFF8DBE3599EC57E5CC1036 /* GoogleAds-IMA-tvOS-SDK */;
+			targetProxy = C0BB4489F15AB8D9DC894786FD7DA082 /* PBXContainerItemProxy */;
 		};
-		1B96DABAB2920DCCEF8903D8CEC53332 /* PBXTargetDependency */ = {
+		16728B57F1021BAE0ADC7F8F62F0CCFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Mux-Stats-AVPlayer-iOS";
-			target = B951A0EF1A62B67EE3F65F09E82CB428 /* Mux-Stats-AVPlayer-iOS */;
-			targetProxy = 6C41EAC3776112D6FA1A3E05D17B73B8 /* PBXContainerItemProxy */;
+			name = "Mux-Stats-AVPlayer-tvOS";
+			target = A3EFCEDB20CBDC85A157B113EB9C8CBA /* Mux-Stats-AVPlayer-tvOS */;
+			targetProxy = 5DBE37C0368308BEA0034A943A5DA3F8 /* PBXContainerItemProxy */;
 		};
-		252CF9895F136342C18A5D22C364418F /* PBXTargetDependency */ = {
+		2BB43EE06B818CCB38337F9277117BB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAds-IMA-iOS-SDK";
+			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 4F6E5672ACD87ED3BA8C881CDF4BA4A9 /* PBXContainerItemProxy */;
+		};
+		35A9A8042D33BA50546BDA8C6394AABD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Expecta;
 			target = DC371B7477C88184274EC6710690F97C /* Expecta */;
-			targetProxy = 84E62A9D9B064379223F410EE235E898 /* PBXContainerItemProxy */;
+			targetProxy = 5E5A969FB56BF79A89B50C471FD61DA6 /* PBXContainerItemProxy */;
 		};
-		2A46BEC1509F697D609903A43456AD62 /* PBXTargetDependency */ = {
+		4071884E5B8A3F66F951089F0702E2D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Mux-Stats-Core-iOS";
-			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
-			targetProxy = 14C6E09EC655353A415D600193E6F7EA /* PBXContainerItemProxy */;
+			name = "Mux-Stats-Core-tvOS";
+			target = 5526128214308C0807F9C2136AB687B2 /* Mux-Stats-Core-tvOS */;
+			targetProxy = D37A1134A2A4F02BB044041F4F78BE34 /* PBXContainerItemProxy */;
 		};
-		318F79323328B11C9B2593DE06B66B77 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Mux-Stats-Core-iOS";
-			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
-			targetProxy = E12BB102FF2B043D43BA6866B8F8E3DB /* PBXContainerItemProxy */;
-		};
-		32EBA45FACC6EE5D4BB3644076FAC572 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GoogleAds-IMA-tvOS-SDK";
-			target = 8D8DD638EFFF8DBE3599EC57E5CC1036 /* GoogleAds-IMA-tvOS-SDK */;
-			targetProxy = 3D4DBD2922C1726F9E14502F7CDF913B /* PBXContainerItemProxy */;
-		};
-		4A7F552ED8F6988A6CD4D7B4B8B499C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GoogleAds-IMA-iOS-SDK";
-			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
-			targetProxy = 136FF2D66F8CF24739103D6413BC6B47 /* PBXContainerItemProxy */;
-		};
-		7F706F9E79BE6E1242A81D2FE5772D90 /* PBXTargetDependency */ = {
+		4DA4B33BD243A5100F5D4018A179B4E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mux-Stats-Google-IMA-iOS";
 			target = 8316A029179DAA758D7AC9122D97E40D /* Mux-Stats-Google-IMA-iOS */;
-			targetProxy = B2ABDE22BBCAABD5D9099EB304ED6452 /* PBXContainerItemProxy */;
+			targetProxy = B690B99383703E59ADB437C5B049B6E5 /* PBXContainerItemProxy */;
 		};
-		81BA8D92379647108614EB7C77518B85 /* PBXTargetDependency */ = {
+		5281C163CDD7787D486719229AC607CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "GoogleAds-IMA-iOS-SDK";
-			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
-			targetProxy = DBE86E103FC3AD4B040B3C79405AAF6C /* PBXContainerItemProxy */;
+			name = "Mux-Stats-Core-tvOS";
+			target = 5526128214308C0807F9C2136AB687B2 /* Mux-Stats-Core-tvOS */;
+			targetProxy = 065280C962BC80F252A5308C06B88B71 /* PBXContainerItemProxy */;
 		};
-		90F97D625D7870F18435CEDCEA6C85B7 /* PBXTargetDependency */ = {
+		5654839CC3B58EA5765B73DA18ABDD64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mux-Stats-AVPlayer-iOS";
 			target = B951A0EF1A62B67EE3F65F09E82CB428 /* Mux-Stats-AVPlayer-iOS */;
-			targetProxy = F96E7D3242EDBDDA1142200B646EAD86 /* PBXContainerItemProxy */;
+			targetProxy = 2572EDD6406A343F25E4D4A15C11FF8E /* PBXContainerItemProxy */;
 		};
-		954ECEE6858C48671C2BF4EADA843EB9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Mux-Stats-Core-iOS";
-			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
-			targetProxy = 43B70E4FF6A010FA42E08A85F21400C8 /* PBXContainerItemProxy */;
-		};
-		B3F45B9164190BFB0F1D4370224204DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GoogleAds-IMA-iOS-SDK";
-			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
-			targetProxy = FB592F4129FA896A9D2A44033B5E3263 /* PBXContainerItemProxy */;
-		};
-		B5D3503AFA146E500439CDCAEBA20F46 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GoogleAds-IMA-tvOS-SDK";
-			target = 8D8DD638EFFF8DBE3599EC57E5CC1036 /* GoogleAds-IMA-tvOS-SDK */;
-			targetProxy = A191A4D640FD9619046AA42C6C046C25 /* PBXContainerItemProxy */;
-		};
-		C795DE6313D462F24318B6944940658E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Mux-Stats-Core-tvOS";
-			target = 5526128214308C0807F9C2136AB687B2 /* Mux-Stats-Core-tvOS */;
-			targetProxy = BE550D63C6401FF703A9CDF4893E0292 /* PBXContainerItemProxy */;
-		};
-		CA72F0C8DA17361DE367F1FBD7DFBD37 /* PBXTargetDependency */ = {
+		62F73795AEBEED02D014D8288CD1DE0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mux-Stats-Google-IMA-iOS";
 			target = 8316A029179DAA758D7AC9122D97E40D /* Mux-Stats-Google-IMA-iOS */;
-			targetProxy = 0ED280B3AF2ECDEA053EE9159539A725 /* PBXContainerItemProxy */;
+			targetProxy = 842647D48E21F3E69C57E14A1CF1507C /* PBXContainerItemProxy */;
 		};
-		CCD36FC94A9C7B0B8801BEB75D685845 /* PBXTargetDependency */ = {
+		6305BF2A2A5C2F3362F87AE28CB81009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAds-IMA-tvOS-SDK";
+			target = 8D8DD638EFFF8DBE3599EC57E5CC1036 /* GoogleAds-IMA-tvOS-SDK */;
+			targetProxy = 06275C1ECC53DD527DA0793846C7000C /* PBXContainerItemProxy */;
+		};
+		7C38C0A1881C2EEFC04516CF9210CCF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mux-Stats-Core-iOS";
+			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
+			targetProxy = 3E280149EDFFAA4114F08CE29D9AEC91 /* PBXContainerItemProxy */;
+		};
+		9241628D67D918D9EF333BA2BEBA6FEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleAds-IMA-iOS-SDK";
+			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
+			targetProxy = B765EDDA3870AAA1BE36AF3C1F8B20CA /* PBXContainerItemProxy */;
+		};
+		93A5E45D25909AC23E05736480D0863F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mux-Stats-AVPlayer-tvOS";
 			target = A3EFCEDB20CBDC85A157B113EB9C8CBA /* Mux-Stats-AVPlayer-tvOS */;
-			targetProxy = EE887431682156DD4C8C28C61E0FF244 /* PBXContainerItemProxy */;
+			targetProxy = 2DF3FD615F6F6A386EE8151320ECD93B /* PBXContainerItemProxy */;
 		};
-		F0DF951E64CAA1E96FFD8CA877632080 /* PBXTargetDependency */ = {
+		997F216B7AAD64C9E2D8826A04E78185 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Mux-Stats-AVPlayer-tvOS";
-			target = A3EFCEDB20CBDC85A157B113EB9C8CBA /* Mux-Stats-AVPlayer-tvOS */;
-			targetProxy = 2D213B6D19B81FB63DE1D2F951D14BDE /* PBXContainerItemProxy */;
+			name = Specta;
+			target = F8676010755CF1530FC02DA9A0D8822B /* Specta */;
+			targetProxy = 9F129D7C7BA422D6573766C20D068B2A /* PBXContainerItemProxy */;
 		};
-		F765DCEE94BE6DC31712CABE001A030D /* PBXTargetDependency */ = {
+		9E3664B508C63166146F822310B7A728 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Mux-Stats-Core-tvOS";
-			target = 5526128214308C0807F9C2136AB687B2 /* Mux-Stats-Core-tvOS */;
-			targetProxy = 1178D8546297D953DB658CF34E6FD68C /* PBXContainerItemProxy */;
+			name = "Mux-Stats-AVPlayer-iOS";
+			target = B951A0EF1A62B67EE3F65F09E82CB428 /* Mux-Stats-AVPlayer-iOS */;
+			targetProxy = 99259B3049E7C821A20B4CD06C0ADCEF /* PBXContainerItemProxy */;
 		};
-		F9A093BACB51EFD5997B9E00442BF469 /* PBXTargetDependency */ = {
+		C0112F22DADB77747853698DB9E23F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mux-Stats-Core-iOS";
+			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
+			targetProxy = D76E2B412F5C5186ACECCAD8B72CE9E0 /* PBXContainerItemProxy */;
+		};
+		C1240BAF40E947D7428DC94336577C83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mux-Stats-AVPlayer-iOS";
+			target = B951A0EF1A62B67EE3F65F09E82CB428 /* Mux-Stats-AVPlayer-iOS */;
+			targetProxy = 452C8904C564892F0AE297749D19F55D /* PBXContainerItemProxy */;
+		};
+		D1ACF6CDD12488B2F072B7F85E611342 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mux-Stats-Core-iOS";
+			target = C1F1F8F5FE7D716516721F66BC75FDD2 /* Mux-Stats-Core-iOS */;
+			targetProxy = 0994991F1ECBCCDD4F24056013400363 /* PBXContainerItemProxy */;
+		};
+		E948DC6FA78E020F12D0607CB69F910E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Mux-Stats-Google-IMA-tvOS";
 			target = 1D327FB11B4EBDF9A35C51AEC7740EA3 /* Mux-Stats-Google-IMA-tvOS */;
-			targetProxy = 2D0EB18E1FB8B9E97E6883D61136151D /* PBXContainerItemProxy */;
+			targetProxy = 15C299870780F4B92ACE998D1C6EBAC3 /* PBXContainerItemProxy */;
 		};
-		FC9EF3EB05C9FF04801A0DD8AB74FFC2 /* PBXTargetDependency */ = {
+		F96B9F6B06200C0D51A3C738A5D16201 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Mux-Stats-AVPlayer-iOS";
-			target = B951A0EF1A62B67EE3F65F09E82CB428 /* Mux-Stats-AVPlayer-iOS */;
-			targetProxy = 0EEF72F19C1D1931189B0D6F4244AF06 /* PBXContainerItemProxy */;
+			name = "GoogleAds-IMA-iOS-SDK";
+			target = 7362DAB47E2EFA5452F30DD7E9830B56 /* GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 48E6FE4F188A788F2FBCFADCC1D48E62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		149CB13DDC150125969B3C2F765764A2 /* Debug */ = {
+		10A14FE370743CD587A3B52B9E03D765 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A946AF70A4174079D73A92B681AEE273 /* Pods-MUXSDKIMATVOSExample.debug.xcconfig */;
+			baseConfigurationReference = 38F1DCF17DDFA61EDA94B1D3381AFD6D /* Mux-Stats-Core-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		19E1BF92A7B270FF21D01B1970174049 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1816,9 +1784,9 @@
 			};
 			name = Debug;
 		};
-		1D75EC75F050DCF1AC7C607EA54F4FCF /* Release */ = {
+		1D06B771D9DBC6B9872D8A40A68329BC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F1DCF17DDFA61EDA94B1D3381AFD6D /* Mux-Stats-Core-iOS.release.xcconfig */;
+			baseConfigurationReference = 19D294664834AB27C11F328232EAC6AE /* Mux-Stats-AVPlayer-iOS.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1828,36 +1796,133 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		1F3DF3D35E1A1ED9431B50A6BDD33DF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
-		240A7CB6267CC9E0437EE9D0C31C129C /* Release */ = {
+		204CA52114C7B7EC3AC0C3A5BE43BA85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37DE0B892F3876C38DA0C4C4BCA3FCEF /* Mux-Stats-Core-tvOS.release.xcconfig */;
+			baseConfigurationReference = FDFF468979E3675AAF53B08B67D74C9B /* Mux-Stats-Google-IMA-iOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS.modulemap";
+				PRODUCT_MODULE_NAME = MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MuxStatsGoogleIMAPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		31CA0996615965FA5F7A973F42802E66 /* Debug */ = {
+		28DD18AC3B552E7AB75C373A29B79582 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C14D84C0ADD3103ED71DF86ECC041F0 /* Mux-Stats-AVPlayer-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 52BCCBBE7A56B9C491641431AE2EBA1A /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MuxStatsGoogleIMAPlugin;
 				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1896,51 +1961,37 @@
 			};
 			name = Release;
 		};
-		3FB2469C0EDE4A32E7DFF50911A21CCA /* Release */ = {
+		3AA894898FADCA2F10248DE94DCB5E7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AF1950A1AB95B15D7E12EE28026A906 /* GoogleAds-IMA-tvOS-SDK.release.xcconfig */;
+			baseConfigurationReference = 7B357CA63D83B0465FAB41D1047651DE /* Mux-Stats-AVPlayer-iOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4FEEB0446AADF3AF63362A7F3DA30BA3 /* Debug */ = {
+		4BDD04304F1376E2469C76A6B41BFDF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC059B58EC452A64D7CA3B45E3C08EC3 /* Mux-Stats-Google-IMA-tvOS.debug.xcconfig */;
+			baseConfigurationReference = B1435EBA3EAB3D14706EDFFFEB385681 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		54DC367BE823291139714254066D462A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1973,150 +2024,7 @@
 			};
 			name = Debug;
 		};
-		5B120301B63460529D8017E0A6AE8584 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85CF95484809257011B653E37348B0BD /* Expecta.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Expecta/Expecta-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
-				PRODUCT_MODULE_NAME = Expecta;
-				PRODUCT_NAME = Expecta;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6C5560E792A604907B084A941DA54DAD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8950EB67576C5D94F6403BA5C9B44C42 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7716022D6536302F44DC8149A4E62BCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19D294664834AB27C11F328232EAC6AE /* Mux-Stats-AVPlayer-iOS.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7E818B409871CBBDF9C02777EA8431B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF0C353F470008AC0AE5C3E99DB25C8 /* Mux-Stats-Core-tvOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Debug;
-		};
-		82B739F7B753E031D5446ED8C9262B69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14011141D4C4109F1B89F92E376C748B /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		85BDA8E8D93F77F7FEAAD461AEE11AB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 621CAEED2FE521A52D59C1259C8B0E6A /* Pods-DemoApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DemoApp/Pods-DemoApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DemoApp/Pods-DemoApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8E661E89743757171523F9CBF2FA6CB7 /* Debug */ = {
+		570CF29A7AC6B5D4AD5D85868B41933A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2179,14 +2087,29 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
-		8E8308A0CE5453244D49DF6FD15B8B44 /* Release */ = {
+		581FCB18142BA38D5FFBA0FCABF7A253 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B718DB7D15A83E4D4692AD315E813F32 /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */;
+			baseConfigurationReference = D5CC729CE4AF34E0C4423ABE0FA83767 /* GoogleAds-IMA-tvOS-SDK.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		5B120301B63460529D8017E0A6AE8584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CF95484809257011B653E37348B0BD /* Expecta.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2195,25 +2118,172 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Expecta/Expecta-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Expecta/Expecta-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = appletvos;
+				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
+				PRODUCT_MODULE_NAME = Expecta;
+				PRODUCT_NAME = Expecta;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		6BB27C973204E87A735EA9E580237DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A946AF70A4174079D73A92B681AEE273 /* Pods-MUXSDKIMATVOSExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		73D68323E9CACE7E873D04E7FE4B4583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7FF438F537E8F0C15E6340C7537121E /* Pods-MUXSDKIMATVOSExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82FE62422B245BF02B89785674371DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60CD1191DCA058319B3C76A34597538 /* Mux-Stats-Google-IMA-iOS.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS.modulemap";
+				PRODUCT_MODULE_NAME = MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MuxStatsGoogleIMAPlugin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85BDA8E8D93F77F7FEAAD461AEE11AB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621CAEED2FE521A52D59C1259C8B0E6A /* Pods-DemoApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DemoApp/Pods-DemoApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DemoApp/Pods-DemoApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8EDE654B6AC6E566D6C4A9C80A6195C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FF0C353F470008AC0AE5C3E99DB25C8 /* Mux-Stats-Core-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
 		};
 		9075F8225C7E957640ADD27314A8C231 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2247,38 +2317,9 @@
 			};
 			name = Release;
 		};
-		969C6B9776EE263C553CD8015BDDD25A /* Release */ = {
+		97EACFA8691281DB1B4D9D19F1846C7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E949A70BE48CE74E340CF7B23D9B461C /* Mux-Stats-AVPlayer-tvOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9B28E6DD7322FFC45C879950CC39F7A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5CC729CE4AF34E0C4423ABE0FA83767 /* GoogleAds-IMA-tvOS-SDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Debug;
-		};
-		9F7A9895269938DE3EDA39A02EC6A992 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1435EBA3EAB3D14706EDFFFEB385681 /* GoogleAds-IMA-iOS-SDK.release.xcconfig */;
+			baseConfigurationReference = 14011141D4C4109F1B89F92E376C748B /* GoogleAds-IMA-iOS-SDK.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2288,9 +2329,23 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
+		};
+		9E0E35A495126E80D64F973702336B66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 099A55E65B9A69172D3F5442B818FE33 /* Mux-Stats-Core-iOS.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		A0FC92EC7D2ECA94954B1C0064389E1A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2326,105 +2381,39 @@
 			};
 			name = Debug;
 		};
-		A1FF77532139B9494C14CD2D8845C02C /* Release */ = {
+		B4B61A7CECC3C15322398A4434AEFC59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF1950A1AB95B15D7E12EE28026A906 /* GoogleAds-IMA-tvOS-SDK.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Release;
-		};
-		B1BC0798646E40EFA8036500417F51D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B357CA63D83B0465FAB41D1047651DE /* Mux-Stats-AVPlayer-iOS.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B1F4DCB09C3E97F42E274CB31F63D9B3 /* Debug */ = {
+		B8444974777B4142AE837D947BEB4F46 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 099A55E65B9A69172D3F5442B818FE33 /* Mux-Stats-Core-iOS.debug.xcconfig */;
+			baseConfigurationReference = 7C14D84C0ADD3103ED71DF86ECC041F0 /* Mux-Stats-AVPlayer-tvOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
-		E34B57129D0833E6EACCFDA9AEB62EC4 /* Release */ = {
+		B8854211B6A1A6AE72CCF014D5728D2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7FF438F537E8F0C15E6340C7537121E /* Pods-MUXSDKIMATVOSExample.release.xcconfig */;
+			baseConfigurationReference = A91AB45C56DEFA4A4C6AE7D56A6DBC2E /* Mux-Stats-Google-IMA-tvOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2433,57 +2422,38 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MUXSDKIMATVOSExample/Pods-MUXSDKIMATVOSExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-tvOS/Mux-Stats-Google-IMA-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = MuxStatsGoogleIMAPlugin;
+				PRODUCT_NAME = MuxStatsGoogleIMAPlugin;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		E3DB6F69AB3D7AEB192B4135145D5BE7 /* Release */ = {
+		E6125FA5DB1722B5EB7E5B093B8EBD44 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D72A98E18D2C7F0DC1761DB98085D33 /* Mux-Stats-Google-IMA-iOS.release.xcconfig */;
+			baseConfigurationReference = E949A70BE48CE74E340CF7B23D9B461C /* Mux-Stats-AVPlayer-tvOS.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Mux-Stats-Google-IMA-iOS/Mux-Stats-Google-IMA-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Mux_Stats_Google_IMA;
-				PRODUCT_NAME = Mux_Stats_Google_IMA;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -2521,6 +2491,21 @@
 			};
 			name = Debug;
 		};
+		F98B2ED7E4C0AB25BFF5CED9E63EA5E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37DE0B892F3876C38DA0C4C4BCA3FCEF /* Mux-Stats-Core-tvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2542,20 +2527,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+		30A2C97171D7792FEC089045E2669FC1 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E661E89743757171523F9CBF2FA6CB7 /* Debug */,
-				A1FF77532139B9494C14CD2D8845C02C /* Release */,
+				28DD18AC3B552E7AB75C373A29B79582 /* Debug */,
+				B8854211B6A1A6AE72CCF014D5728D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F1BA1A27705F415A582E71351A55163 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-tvOS" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FEEB0446AADF3AF63362A7F3DA30BA3 /* Debug */,
-				8E8308A0CE5453244D49DF6FD15B8B44 /* Release */,
+				570CF29A7AC6B5D4AD5D85868B41933A /* Debug */,
+				1F3DF3D35E1A1ED9431B50A6BDD33DF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2569,29 +2554,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51A9CD61ACD8B1BC250DAFD71D700763 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E818B409871CBBDF9C02777EA8431B7 /* Debug */,
-				240A7CB6267CC9E0437EE9D0C31C129C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8CC1C063550B656D9F1EDC621F7BE1CC /* Build configuration list for PBXNativeTarget "Pods-MUXSDKIMATVOSExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				149CB13DDC150125969B3C2F765764A2 /* Debug */,
-				E34B57129D0833E6EACCFDA9AEB62EC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9722A1D00F03E19DD030DD82C7343958 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C5560E792A604907B084A941DA54DAD /* Debug */,
-				E3DB6F69AB3D7AEB192B4135145D5BE7 /* Release */,
+				6BB27C973204E87A735EA9E580237DE9 /* Debug */,
+				73D68323E9CACE7E873D04E7FE4B4583 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2599,8 +2566,26 @@
 		9A52955F9AFD3A6A0EA13F213FAC2A0C /* Build configuration list for PBXAggregateTarget "GoogleAds-IMA-tvOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B28E6DD7322FFC45C879950CC39F7A3 /* Debug */,
-				3FB2469C0EDE4A32E7DFF50911A21CCA /* Release */,
+				581FCB18142BA38D5FFBA0FCABF7A253 /* Debug */,
+				B4B61A7CECC3C15322398A4434AEFC59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E0EB2CE749F31B6ACC66921DA036A9D /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EDE654B6AC6E566D6C4A9C80A6195C0 /* Debug */,
+				F98B2ED7E4C0AB25BFF5CED9E63EA5E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F215BA04005ED07FEF6F364DD851D08 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E0E35A495126E80D64F973702336B66 /* Debug */,
+				10A14FE370743CD587A3B52B9E03D765 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2608,8 +2593,8 @@
 		AA82C62FBB7F00A3C7D4DBA0C7D6C570 /* Build configuration list for PBXAggregateTarget "GoogleAds-IMA-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82B739F7B753E031D5446ED8C9262B69 /* Debug */,
-				9F7A9895269938DE3EDA39A02EC6A992 /* Release */,
+				97EACFA8691281DB1B4D9D19F1846C7F /* Debug */,
+				4BDD04304F1376E2469C76A6B41BFDF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2626,17 +2611,17 @@
 		B9A541B84BBB25147B90CA62A6CDACF0 /* Build configuration list for PBXAggregateTarget "Mux-Stats-AVPlayer-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7716022D6536302F44DC8149A4E62BCB /* Debug */,
-				B1BC0798646E40EFA8036500417F51D4 /* Release */,
+				1D06B771D9DBC6B9872D8A40A68329BC /* Debug */,
+				3AA894898FADCA2F10248DE94DCB5E7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9B2F9248BF45545C964ED2C809C5844 /* Build configuration list for PBXAggregateTarget "Mux-Stats-Core-iOS" */ = {
+		BC8319B720CC9D26AAD1BC88D3F8B7E6 /* Build configuration list for PBXNativeTarget "Mux-Stats-Google-IMA-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B1F4DCB09C3E97F42E274CB31F63D9B3 /* Debug */,
-				1D75EC75F050DCF1AC7C607EA54F4FCF /* Release */,
+				82FE62422B245BF02B89785674371DD4 /* Debug */,
+				204CA52114C7B7EC3AC0C3A5BE43BA85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2644,8 +2629,8 @@
 		E44F5E01B4E027639AD767D65BF4FF88 /* Build configuration list for PBXAggregateTarget "Mux-Stats-AVPlayer-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31CA0996615965FA5F7A973F42802E66 /* Debug */,
-				969C6B9776EE263C553CD8015BDDD25A /* Release */,
+				B8444974777B4142AE837D947BEB4F46 /* Debug */,
+				E6125FA5DB1722B5EB7E5B093B8EBD44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

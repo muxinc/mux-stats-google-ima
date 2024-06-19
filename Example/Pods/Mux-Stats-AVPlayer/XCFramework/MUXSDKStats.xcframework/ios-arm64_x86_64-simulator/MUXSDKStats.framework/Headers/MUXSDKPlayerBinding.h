@@ -12,6 +12,8 @@
 #import <AVFoundation/AVFoundation.h>
 #if TVOS
 #import <MuxCore/MuxCoreTv.h>
+#elif TARGET_OS_VISION
+#import <MuxCore/MuxCoreVision.h>
 #else
 #import <MuxCore/MuxCore.h>
 #endif
@@ -113,11 +115,85 @@ typedef NS_ENUM(NSUInteger, MUXSDKViewOrientation) {
 - (void)setAdPlaying:(BOOL)isAdPlaying;
 - (BOOL)setAutomaticErrorTracking:(BOOL)automaticErrorTracking;
 - (BOOL)setAutomaticVideoChange:(BOOL)automaticVideoChange;
-- (void)dispatchError:(NSString *)code withMessage:(NSString *)message;
-- (void)dispatchError:(NSString *)code withMessage:(NSString *)message withErrorContext:(NSString *)errorContext;
 - (void)didTriggerManualVideoChange;
 
 #pragma clang diagnostic pop
+
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message;
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+///   - errorContext: additional details for the error such
+///   as a stack trace
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message
+     withErrorContext:(nonnull NSString *)errorContext;
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+///   - severity: severity of a player error recorded by the SDK
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message
+             severity:(MUXSDKErrorSeverity)severity;
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+///   - severity: severity of a player error recorded by the SDK
+///   - errorContext: additional details for the error such
+///   as a stack trace
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message
+             severity:(MUXSDKErrorSeverity)severity
+         errorContext:(nonnull NSString *)errorContext;
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+///   - severity: severity of a player error recorded by the SDK
+///   - isBusinessException: If ``YES`` indicates that the error
+///   is classified to be a business exception. If ``NO``
+///   indicates that the error is classified as a technical
+///   failure. Defaults to ``NO`.
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message
+             severity:(MUXSDKErrorSeverity)severity
+  isBusinessException:(BOOL)isBusinessException;
+
+/// Records an error related to the player attached to this binding
+/// and dispatches it to Mux
+/// - Parameters:
+///   - code: error code that should be numeric
+///   - message: message describing the error
+///   - severity: severity of a player error recorded by the SDK
+///   - isBusinessException: If ``YES`` indicates that the error
+///   is classified to be a business exception. If ``NO``
+///   indicates that the error is classified as a technical
+///   failure. Defaults to ``NO`.
+///   - errorContext: additional details for the error such
+///     as a stack trace
+- (void)dispatchError:(nonnull NSString *)code
+          withMessage:(nonnull NSString *)message
+             severity:(MUXSDKErrorSeverity)severity
+  isBusinessException:(BOOL)isBusinessException
+         errorContext:(nonnull NSString *)errorContext;
 
 - (nonnull id)initWithPlayerName:(nonnull NSString *)playerName
                     softwareName:(nullable NSString *)softwareName;
@@ -171,6 +247,7 @@ typedef NS_ENUM(NSUInteger, MUXSDKViewOrientation) {
 
 @end
 
+API_UNAVAILABLE(visionos) 
 @interface MUXSDKAVPlayerLayerBinding : MUXSDKPlayerBinding {
 @private
     AVPlayerLayer *_view;

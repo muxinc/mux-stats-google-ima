@@ -5,7 +5,7 @@
 
 import AVFoundation
 import GoogleInteractiveMediaAds
-import Mux_Stats_Google_IMA
+import MuxStatsGoogleIMAPlugin
 import UIKit
 
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {

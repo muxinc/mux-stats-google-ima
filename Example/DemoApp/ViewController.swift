@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 import AVFoundation
-import Mux_Stats_Google_IMA
+import MuxStatsGoogleIMAPlugin
 import MUXSDKStats
 import GoogleInteractiveMediaAds
 

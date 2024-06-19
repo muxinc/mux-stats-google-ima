@@ -8,7 +8,8 @@
 
 // https://github.com/Specta/Specta
 
-@import Mux_Stats_Google_IMA;
+#import <MuxStatsGoogleIMAPlugin/MuxImaListener.h>
+#import <AVKit/AVKit.h>
 
 @interface MuxMockAVPlayerViewController : AVPlayerViewController
 @end
@@ -58,10 +59,12 @@ describe(@"MuxImaListener", ^{
         videoData.videoId = @"bigbuckbunny";
         videoData.videoSeries = @"animation";
         MuxMockAVPlayerViewController *avPlayerController = [[MuxMockAVPlayerViewController alloc] init];
+        MUXSDKCustomerData *customerData = [[MUXSDKCustomerData alloc] initWithCustomerPlayerData:playerData
+                                                                                        videoData:videoData
+                                                                                         viewData:nil];
         playerBinding = [MUXSDKStats monitorAVPlayerViewController:avPlayerController
-                                                   withPlayerName:name
-                                                       playerData:playerData
-                                                        videoData:videoData];
+                                                    withPlayerName:name
+                                                      customerData:customerData];
     });
 
     describe(@"initWithPlayerBinding", ^{

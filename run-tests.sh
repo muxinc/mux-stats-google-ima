@@ -13,6 +13,9 @@ set -euo pipefail
 
 brew install xcbeautify
 
+echo "▸ Switching to Xcode 15.4"
+sudo xcode-select -s /Applications/Xcode_15.4.app
+
 echo "▸ Using Xcode Version: ${XCODE_VERSION}"
 
 echo "▸ Shutdown and reset the simulator"
@@ -30,7 +33,7 @@ echo "▸ Executing Tests"
 
 xcodebuild -workspace ${WORKSPACE_PATH} \
            -scheme "${SCHEME}" \
-           -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4' \
+           -destination 'platform=iOS Simulator,name=iPhone 15,OS=17.5' \
            clean test \
            | xcbeautify
 
