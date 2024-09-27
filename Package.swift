@@ -18,7 +18,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
-            from: "4.0.0"
+            from: "4.1.0"
         ),
     ],
     targets: [
