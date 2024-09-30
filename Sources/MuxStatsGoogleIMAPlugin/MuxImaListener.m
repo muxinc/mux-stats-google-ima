@@ -47,7 +47,10 @@
     MUXSDKAdData *adData = [[MUXSDKAdData alloc] init];
     if (ad != nil) {
 
-
+        if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
+            viewData.viewPrerollAdId = ad.adId;
+            viewData.viewPrerollCreativeId = ad.creativeID;
+        }
 
         adData.adId = ad.adId;
         adData.adCreativeId = ad.creativeID;
