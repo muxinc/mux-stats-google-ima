@@ -203,7 +203,7 @@
 }
 
 - (void)onContentPauseOrResume:(BOOL)isPause {
-    [self dispatchPauseOrResume:isPause]
+    [self dispatchPauseOrResume:isPause];
 }
 
 - (void)setupAdViewDataAndDispatchEvent:(MUXSDKAdEvent *) event {
