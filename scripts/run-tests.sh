@@ -16,5 +16,6 @@ echo "▸ Executing Tests"
 
 xcodebuild -scheme "${SCHEME}" \
            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
+           -sdk iphonesimulator18.0 \
            clean test \
            | xcbeautify
