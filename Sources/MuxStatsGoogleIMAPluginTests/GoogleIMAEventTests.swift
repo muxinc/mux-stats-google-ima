@@ -10,42 +10,6 @@ import MUXSDKStats
 
 @testable import MuxStatsGoogleIMAPlugin
 
-class MUXSDKMockIMAAdStartedEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .STARTED
-    }
-}
-
-class MUXSDKMockIMAAdFirstQuartileEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .FIRST_QUARTILE
-    }
-}
-
-class MUXSDKMockIMAAdMidpointEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .MIDPOINT
-    }
-}
-
-class MUXSDKMockIMAAdThirdQuartileEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .THIRD_QUARTILE
-    }
-}
-
-class MUXSDKMockIMAAdSkippedEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .SKIPPED
-    }
-}
-
-class MUXSDKMockIMAAdCompleteEvent: IMAAdEvent {
-    override var type: IMAAdEventType {
-        return .COMPLETE
-    }
-}
-
 final class GoogleIMAEventTests: XCTestCase {
 
     override func setUpWithError() throws {
