@@ -33,7 +33,8 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
                                withAdData:(nullable MUXSDKAdData *)adData
                             withIMAAdData:(nullable NSDictionary *)imaAdData;
 - (void)dispatchError:(NSString *)message;
-- (void)onContentPauseOrResume:(bool)isPause;
+- (void)dispatchPauseOrResume:(BOOL)isPause;
+- (void)onContentPauseOrResume:(BOOL)isPause;
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 - (void)daiAdRequest:(IMAStreamRequest *)request;

@@ -171,7 +171,7 @@
     [_playerBinding dispatchAdEvent:playbackEvent];
 }
 
-- (void)onContentPauseOrResume:(bool)isPause {
+- (void)dispatchPauseOrResume:(BOOL)isPause {
     MUXSDKAdEvent *playbackEvent;
     if (isPause) {
         if (_isPictureInPicture) {
@@ -202,6 +202,10 @@
     }
 }
 
+- (void)onContentPauseOrResume:(BOOL)isPause {
+    [self dispatchPauseOrResume:isPause]
+}
+
 - (void)setupAdViewDataAndDispatchEvent:(MUXSDKAdEvent *) event {
     [self setupAdViewData:event withAd:nil];
     [_playerBinding dispatchAdEvent:event];
@@ -223,17 +227,19 @@
 
 - (void)dispatchAdRequestWithoutMetadata {
     MUXSDKAdEvent* playbackEvent = [[MUXSDKAdRequestEvent alloc] init];
-    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+    [self setupAdViewData:playbackEvent withAd:nil];
+    [[self playerBinding] dispatchAdEvent:playbackEvent];
 }
 
 - (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl {
     MUXSDKAdEvent* playbackEvent = [[MUXSDKAdRequestEvent alloc] init];
     MUXSDKAdData* adData = [[MUXSDKAdData alloc] init];
-    if(adTagUrl) {
+    if (adTagUrl) {
         adData.adTagUrl = adTagUrl;
     }
     
-    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+    [self setupAdViewData:playbackEvent withAd:nil];
+    [[self playerBinding] dispatchAdEvent:playbackEvent];
 }
 
 - (void)setPictureInPicture:(BOOL)isPictureInPicture {
