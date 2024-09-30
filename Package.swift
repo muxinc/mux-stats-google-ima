@@ -40,7 +40,8 @@ let package = Package(
         .testTarget(
             name: "MuxStatsGoogleIMAPluginTests",
             dependencies: [
-                "MuxStatsGoogleIMAPlugin"
+                "MuxStatsGoogleIMAPlugin",
+                "GoogleInteractiveMediaAds"
             ]
         ),
     ]
