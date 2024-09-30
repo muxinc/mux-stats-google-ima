@@ -36,6 +36,12 @@ let package = Package(
               name: "GoogleInteractiveMediaAds",
               url: "https://imasdk.googleapis.com/downloads/ima/ios/GoogleInteractiveMediaAds-ios-v3.23.0.zip",
               checksum: "6fa5ad05c4ab85d74b8aad5fdace8a069f3dbd1eb820496bc04df7aeda0cd5e0"
-        )
+        ),
+        .testTarget(
+            name: "MuxStatsGoogleIMAPluginTests",
+            dependencies: [
+                "MuxStatsGoogleIMAPlugin"
+            ]
+        ),
     ]
 )
