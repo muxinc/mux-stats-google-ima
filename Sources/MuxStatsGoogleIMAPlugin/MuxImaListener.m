@@ -77,9 +77,9 @@
         adData.adUniversalId = event.ad.universalAdIdValue;
     }
 
-    [self dispatchEvent:event.type
-             withAdData:adData
-          withIMAAdData:event.adData];
+    return [self dispatchEvent:event.type
+                    withAdData:adData
+                 withIMAAdData:event.adData];
 }
 
 - (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEventType)eventType
