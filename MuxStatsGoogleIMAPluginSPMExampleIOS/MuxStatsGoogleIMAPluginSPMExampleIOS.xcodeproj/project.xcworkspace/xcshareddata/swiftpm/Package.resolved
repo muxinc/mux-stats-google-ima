@@ -1,4 +1,5 @@
 {
+  "originHash" : "23027a473fc131a607f22d9077da969f5413192da31fa8032761eb1fb2c57c14",
   "pins" : [
     {
       "identity" : "mux-stats-sdk-avplayer",
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
