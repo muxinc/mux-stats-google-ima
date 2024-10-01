@@ -28,13 +28,9 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding;
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding options:(MuxImaListenerOptions) options;
-- (nullable MUXSDKPlaybackEvent *)dispatchEvent:(IMAAdEvent *)event;
-- (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEventType)eventType
-                               withAdData:(nullable MUXSDKAdData *)adData
-                            withIMAAdData:(nullable NSDictionary *)imaAdData;
+- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEvent *)event;
 - (void)dispatchError:(NSString *)message;
-- (void)dispatchPauseOrResume:(BOOL)isPause;
-- (void)onContentPauseOrResume:(BOOL)isPause;
+- (void)onContentPauseOrResume:(bool)isPause;
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 - (void)daiAdRequest:(IMAStreamRequest *)request;

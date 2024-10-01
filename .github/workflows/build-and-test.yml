@@ -6,10 +6,10 @@ on:
 jobs:
   tests:
     name: Test the SDK with a Demo App
-    runs-on: macos-15
+    runs-on: macos-14
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run tests
-        run: "./scripts/run-tests.sh"
+        run: "./run-tests.sh"
 
