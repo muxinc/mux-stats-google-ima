@@ -38,6 +38,8 @@ class PlayerContainerViewController: UIViewController {
 
     var imaListener: MuxImaListener?
 
+    var observation: NSKeyValueObservation?
+
     // MARK: View controller lifecycle
 
     override func viewDidLoad() {
@@ -98,6 +100,31 @@ class PlayerContainerViewController: UIViewController {
         adsLoader.delegate = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.observation = observe(
+            \.adsLoader.delegate
+        ) { loader, change in
+
+            print("loader delegate changed!")
+
+            if let n = change.newValue ?? nil {
+                print("new: \(n)")
+            }
+
+            if let o = change.oldValue ?? nil {
+                print("old: \(o)")
+            }
+        }
+
+        DispatchQueue.main.asyncAfter(
+            deadline: .now() + 5,
+            execute: DispatchWorkItem(block: { [adsLoader] in
+                adsLoader.delegate = nil
+            })
+        )
+    }
     // MARK: Show and hide content player
 
     func showContentPlayer() {
