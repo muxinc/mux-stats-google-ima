@@ -48,8 +48,6 @@ class PlayerContainerViewController: UIViewController {
 
         // MARK: Setup Content Player
         playerViewController.player = contentPlayer
-        playerViewController.allowsPictureInPicturePlayback = true
-        playerViewController.delegate = self
 
         // MARK: Setup Mux Data
 
@@ -243,40 +241,3 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
         imaListener?.dispatchPauseOrResume(false)
     }
 }
-
-extension PlayerContainerViewController: AVPlayerViewControllerDelegate {
-
-    func playerViewControllerWillStartPictureInPicture(
-        _ playerViewController: AVPlayerViewController
-    ) {
-
-    }
-
-    func playerViewControllerDidStartPictureInPicture(
-        _ playerViewController: AVPlayerViewController
-    ) {
-
-    }
-
-    func playerViewControllerWillStopPictureInPicture(
-        _ playerViewController: AVPlayerViewController
-    ) {
-
-    }
-
-    func playerViewControllerDidStopPictureInPicture(
-        _ playerViewController: AVPlayerViewController
-    ) {
-
-    }
-
-    func playerViewController(
-        _ playerViewController: AVPlayerViewController,
-        failedToStartPictureInPictureWithError error: any Error
-    ) {
-
-    }
-
-}
-
-
