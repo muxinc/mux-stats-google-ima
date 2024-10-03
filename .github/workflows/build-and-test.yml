@@ -30,7 +30,7 @@ jobs:
       - name: "Upload iOS XCFramework"
         uses: actions/upload-artifact@v3
         with:
-          name: "MuxStatsGoogleIMAPluginTVOS.xcframework.zip"
-          path: "MuxStatsGoogleIMAPluginTVOS.xcframework.zip"
+          name: "MuxStatsGoogleIMAPlugin.xcframework.zip"
+          path: "MuxStatsGoogleIMAPlugin.xcframework.zip"
     
 
