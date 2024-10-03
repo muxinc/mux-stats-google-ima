@@ -11,7 +11,7 @@ fi
 
 readonly BUILD_DIR=$PWD/.build
 readonly PROJECT=$PWD/FrameworkProject/MuxStatsGoogleIMAPlugin/MuxStatsGoogleIMAPlugin.xcodeproj
-readonly TARGET_DIR=$PWD/XCFramework
+readonly TARGET_DIR=$PWD
 
 readonly IOS_SCHEME="MuxStatsGoogleIMAPlugin"
 
@@ -27,14 +27,8 @@ echo "▸ Using Xcode Version: ${XCODE}"
 echo "▸ Available Xcode SDKs"
 xcodebuild -showsdks
 
-echo "▸ Deleting Target Directory: ${TARGET_DIR}"
-rm -Rf $TARGET_DIR
-
 echo "▸ Creating Build Directory: ${BUILD_DIR}"
 mkdir -p $BUILD_DIR
-
-echo "▸ Creating Target Directory: ${TARGET_DIR}"
-mkdir -p $TARGET_DIR
 
 echo "▸ Available Schemes: $(xcodebuild -list -project FrameworkProject/MuxStatsGoogleIMAPlugin/MuxStatsGoogleIMAPlugin.xcodeproj)"
 
@@ -73,3 +67,5 @@ fi
 echo "▸ Deleting Build Directory: ${BUILD_DIR}"
 
 rm -Rf $BUILD_DIR
+
+zip -ry $FRAMEWORK_NAME.xcframework.zip $FRAMEWORK_NAME.xcframework
