@@ -65,8 +65,8 @@
 }
 
 - (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
-    MUXSDKViewData *viewData = [MUXSDKViewData new];
-    MUXSDKAdData *adData = [MUXSDKAdData new];
+    MUXSDKViewData *viewData = [[MUXSDKViewData alloc] init];
+    MUXSDKAdData *adData = [[MUXSDKAdData alloc] init];
     if (ad != nil) {
         
         if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
@@ -94,34 +94,34 @@
     switch(event.type) {
         case kIMAAdEvent_STARTED:
             if (_sendAdplayOnStarted) {
-                playbackEvent = [MUXSDKAdPlayEvent new];
+                playbackEvent = [[MUXSDKAdPlayEvent alloc] init];
                 [_playerBinding dispatchAdEvent: playbackEvent];
             } else {
                 _sendAdplayOnStarted = YES;
             }
-            playbackEvent = [MUXSDKAdPlayingEvent new];
+            playbackEvent = [[MUXSDKAdPlayingEvent alloc] init];
             break;
         case kIMAAdEvent_FIRST_QUARTILE:
-            playbackEvent = [MUXSDKAdFirstQuartileEvent new];
+            playbackEvent = [[MUXSDKAdFirstQuartileEvent alloc] init];
             break;
         case kIMAAdEvent_MIDPOINT:
-            playbackEvent = [MUXSDKAdMidpointEvent new];
+            playbackEvent = [[MUXSDKAdMidpointEvent alloc] init];
             break;
         case kIMAAdEvent_THIRD_QUARTILE:
-            playbackEvent = [MUXSDKAdThirdQuartileEvent new];
+            playbackEvent = [[MUXSDKAdThirdQuartileEvent alloc] init];
             break;
         case kIMAAdEvent_SKIPPED:
         case kIMAAdEvent_COMPLETE:
-            playbackEvent = [MUXSDKAdEndedEvent new];
+            playbackEvent = [[MUXSDKAdEndedEvent alloc] init];
             break;
         case kIMAAdEvent_PAUSE:
-            playbackEvent = [MUXSDKAdPauseEvent new];
+            playbackEvent = [[MUXSDKAdPauseEvent alloc] init];
             break;
         case kIMAAdEvent_RESUME:
-            playbackEvent = [MUXSDKAdPlayEvent new];
+            playbackEvent = [[MUXSDKAdPlayEvent alloc] init];
             [self setupAdViewData:playbackEvent withAd:event.ad];
             [_playerBinding dispatchAdEvent: playbackEvent];
-            playbackEvent = [MUXSDKAdPlayingEvent new];
+            playbackEvent = [[MUXSDKAdPlayingEvent alloc] init];
             break;
         case kIMAAdEvent_LOG:
             if (adData && adData[@"logData"]) {
@@ -146,7 +146,7 @@
 }
 
 - (void)dispatchError:(NSString *)message {
-    MUXSDKAdEvent *playbackEvent = [MUXSDKAdErrorEvent new];
+    MUXSDKAdEvent *playbackEvent = [[MUXSDKAdErrorEvent alloc] init];
     [self setupAdViewData:playbackEvent withAd:nil];
     [_playerBinding dispatchAdEvent:playbackEvent];
 }
@@ -161,7 +161,7 @@
             // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
             [self dispatchAdRequestWithoutMetadata];
         }
-        MUXSDKAdEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
+        MUXSDKAdEvent *playbackEvent = [[MUXSDKAdBreakStartEvent alloc] init];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
         
@@ -173,7 +173,7 @@
         if (_isPictureInPicture) {
             [_playerBinding setAdPlaying:NO];
         }
-        playbackEvent = [MUXSDKAdBreakEndEvent new];
+        playbackEvent = [[MUXSDKAdBreakEndEvent alloc] init];
         [self setupAdViewDataAndDispatchEvent: playbackEvent];
         if (_usesServerSideAdInsertion) {
             [_playerBinding dispatchPlay];
@@ -202,13 +202,13 @@
 }
 
 - (void)dispatchAdRequestWithoutMetadata {
-    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
+    MUXSDKAdEvent* playbackEvent = [[MUXSDKAdRequestEvent alloc] init];
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
 - (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl {
-    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
-    MUXSDKAdData* adData = [MUXSDKAdData new];
+    MUXSDKAdEvent* playbackEvent = [[MUXSDKAdRequestEvent alloc] init];
+    MUXSDKAdData* adData = [[MUXSDKAdData alloc] init];
     if(adTagUrl) {
         self.adTagURL = adTagUrl;
         adData.adTagUrl = adTagUrl;
