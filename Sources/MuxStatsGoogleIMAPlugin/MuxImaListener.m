@@ -224,27 +224,29 @@
 /* IMAAdsManagerDelegate */
 
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
-    [self dispatchEvent: event];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManager:adsManager didReceiveAdEvent:event];
     }
+    [self dispatchEvent: event];
 }
 
 - (void)adsManager:(nonnull IMAAdsManager *)adsManager didReceiveAdError:(nonnull IMAAdError *)error {
-    [self dispatchError: error.message];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManager:adsManager didReceiveAdError:error];
     }
+    [self dispatchError: error.message];
 }
 
 - (void)adsManagerDidRequestContentPause:(nonnull IMAAdsManager *)adsManager {
-    [self onContentPauseOrResume:true];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManagerDidRequestContentPause:adsManager];
     }
+    // record content-pause last so adbreakstart happens after pause, to bracket the adbreak correctly
+    [self onContentPauseOrResume:true];
 }
 
 - (void)adsManagerDidRequestContentResume:(nonnull IMAAdsManager *)adsManager {
+    // record content-resume first so adbreakend happens before playing (brackets the ad break
     [self onContentPauseOrResume:false];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManagerDidRequestContentResume:adsManager];
@@ -254,17 +256,17 @@
 /* IMAAdsLoaderDelegate */
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
-    [self.playerBinding dispatchAdEvent:[[MUXSDKAdResponseEvent alloc] init]];
     if (self.customerAdsLoaderDelegate) {
         [self.customerAdsLoaderDelegate adsLoader:loader adsLoadedWithData:adsLoadedData];
     }
+    [self.playerBinding dispatchAdEvent:[[MUXSDKAdResponseEvent alloc] init]];
 }
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader failedWithErrorData:(nonnull IMAAdLoadingErrorData *)adErrorData {
-    [self dispatchError:adErrorData.adError.message];
     if (self.customerAdsLoaderDelegate) {
         [self.customerAdsLoaderDelegate adsLoader:loader failedWithErrorData:adErrorData];
     }
+    [self dispatchError:adErrorData.adError.message];
 }
 
 @end
