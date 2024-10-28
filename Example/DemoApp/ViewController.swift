@@ -103,7 +103,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         adsLoader = IMAAdsLoader(settings: nil)
         adsLoader.delegate = self;
         
-        // MARK: mux: Set up Mux after you set up your AVPlayer and IAMAdsLoader
+        // MARK: mux - Set up Mux after you set up your AVPlayer and IAMAdsLoader
         if let player = player {
             setUpMux(player: player, adsLoader: adsLoader);
         }
@@ -124,7 +124,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             contentPlayhead: contentPlayhead,
             userContext: nil)
         
-        // MARK: mux: Tell us when you first request CSAI ads
+        // MARK: mux - Tell us when you first request CSAI ads
         imaListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
     }

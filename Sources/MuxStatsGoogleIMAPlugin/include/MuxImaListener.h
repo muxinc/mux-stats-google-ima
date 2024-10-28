@@ -39,11 +39,6 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 - (void)daiAdRequest:(IMAStreamRequest *)request;
 
-// Removed methods (we can deprecate instead, although we're still on v0.x)
-//- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEvent *)event;
-//- (void)dispatchError:(NSString *)message;
-//- (void)onContentPauseOrResume:(bool)isPause;
-
 @end
 
 NS_ASSUME_NONNULL_END
