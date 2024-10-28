@@ -28,9 +28,11 @@ final class GoogleIMAEventTests: XCTestCase {
                 andSoftware: ""
             )
         )
-
+        
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
-            playerBinding: binding
+            playerBinding: binding,
+            monitoringAdsLoader: adsLoader
         )
 
         XCTAssertNotNil(imaListener)
@@ -46,9 +48,11 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         XCTAssertNotNil(imaListener)
@@ -63,9 +67,11 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
@@ -91,6 +97,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -119,6 +126,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -147,6 +155,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -175,6 +184,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -203,6 +213,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -231,6 +242,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
@@ -259,6 +271,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding
         )
@@ -282,6 +295,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding
         )
@@ -318,6 +332,7 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
             options: .pictureInPicture
