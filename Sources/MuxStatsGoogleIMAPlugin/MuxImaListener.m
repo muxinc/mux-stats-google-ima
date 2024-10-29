@@ -23,8 +23,7 @@
 
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
-      monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader
-{
+      monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader {
     return [
         self initWithPlayerBinding:binding
                            options:MuxImaListenerOptionsNone
@@ -34,8 +33,7 @@
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                     options:(MuxImaListenerOptions)options
-               monitoringAdsLoader:(IMAAdsLoader *)adsLoader
-{
+               monitoringAdsLoader:(IMAAdsLoader *)adsLoader {
     self = [super init];
     
     if (self) {
