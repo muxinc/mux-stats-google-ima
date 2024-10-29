@@ -256,7 +256,7 @@
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
-- (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl {
+- (void)dispatchAdRequestForAdTag:(nullable NSString *)adTagUrl {
     MUXSDKAdEvent* playbackEvent = [[MUXSDKAdRequestEvent alloc] init];
     MUXSDKAdData* adData = [[MUXSDKAdData alloc] init];
     if(adTagUrl) {

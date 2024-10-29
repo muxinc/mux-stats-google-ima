@@ -5,17 +5,17 @@
 //  Created by Emily Dixon on 10/29/24.
 //
 
-#ifndef Header_h
-#define Header_h
+#ifndef MuxImaListenerPrivate_h
+#define MuxImaListenerPrivate_h
 
 #import "MuxImaListener.h"
 
 @interface MuxImaListener(Private)
 
 // todo nice nullability
-- (MUXSDKAdEvent *_Nullable)dispatchEventOfType:(IMAAdEventType)eventType;
+- (nullable MUXSDKAdEvent *)dispatchEventOfType:(IMAAdEventType)eventType;
 // todo nice nullability
-- (MUXSDKAdEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
+- (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEventType)eventType
                                      withAdData:(nullable MUXSDKAdData *)adData 
                                   withIMAAdData:(nullable NSDictionary *)imaAdData;
 - (void)dispatchError:(nullable NSString *)message;
@@ -23,4 +23,4 @@
 
 @end
 
-#endif /* Header_h */
+#endif /* MuxImaListenerPrivate_h */
