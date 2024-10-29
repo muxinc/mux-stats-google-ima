@@ -21,7 +21,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
   var playerViewController: AVPlayerViewController!
   var adBreakActive = false
   var playerBinding: MUXSDKPlayerBinding?
-  var imaListener: MuxImaListener?
+  var imaListener: MUXSDKIMAAdsListener?
 
   deinit {
     NotificationCenter.default.removeObserver(self)
@@ -181,7 +181,7 @@ extension ViewController {
         self.playerBinding = playerBinding
 
         // IMA Ads
-        imaListener = MuxImaListener(playerBinding: playerBinding)
+        imaListener = MUXSDKIMAAdsListener(playerBinding: playerBinding)
     }
 
 }
