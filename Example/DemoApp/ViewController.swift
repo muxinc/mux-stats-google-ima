@@ -52,7 +52,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         requestAds()
         player?.play()
     }
@@ -75,7 +75,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             self,
             selector: #selector(ViewController.contentDidFinishPlaying(_:)),
             name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: player.currentItem);
+            object: player.currentItem)
         
         showContentPlayer()
     }
@@ -101,11 +101,11 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func setUpAdsLoader() {
         
         adsLoader = IMAAdsLoader(settings: nil)
-        adsLoader.delegate = self;
+        adsLoader.delegate = self
         
         // MARK: mux - Set up Mux after you set up your AVPlayer and IAMAdsLoader
         if let player = player {
-            setUpMux(player: player, adsLoader: adsLoader);
+            setUpMux(player: player, adsLoader: adsLoader)
         }
     }
     
