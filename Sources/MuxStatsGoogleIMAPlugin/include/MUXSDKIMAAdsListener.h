@@ -1,8 +1,7 @@
 //
-//  MUXSDKImaListener.h
-//  Expecta
-//
-//  Created by Dylan Jhaveri on 9/11/19.
+
+//  MUXSDKIMAAdsListener.h
+//  MuxStatsGoogleIMAPlugin
 //
 
 #import <Foundation/Foundation.h>
@@ -19,13 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class MUXSDKPlayerBinding;
 
-typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
-    MuxImaListenerOptionsNone                    = 0,
-    MuxImaListenerOptionsPictureInPicture        = 1 << 0,
+typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
+    MUXSDKIMAAdsListenerOptionsNone                    = 0,
+    MUXSDKIMAAdsListenerOptionsPictureInPicture        = 1 << 0,
 };
 
-NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
-@interface MuxImaListener : NSObject<IMAAdsManagerDelegate, IMAAdsLoaderDelegate>
+@interface MUXSDKIMAAdsListener : NSObject<IMAAdsManagerDelegate, IMAAdsLoaderDelegate>
 
 @property (nonatomic, weak, nullable) id<IMAAdsManagerDelegate> customerAdsManagerDelegate;
 @property (nonatomic, weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
@@ -33,7 +31,7 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
-                    options:(MuxImaListenerOptions)options
+                    options:(MUXSDKIMAAdsListenerOptions)options
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager;
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
