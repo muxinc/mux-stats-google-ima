@@ -9,6 +9,7 @@ import GoogleInteractiveMediaAds
 import MUXSDKStats
 
 @testable import MuxStatsGoogleIMAPlugin
+@testable import MuxStatsGoogleIMAPlugin.Private
 
 final class GoogleIMAEventTests: XCTestCase {
 
@@ -76,9 +77,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .STARTED,
-                with: nil,
-                withIMAAdData: nil
+                of: .STARTED
             )
         )
 
@@ -106,9 +105,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .FIRST_QUARTILE,
-                with: nil,
-                withIMAAdData: nil
+                of: .FIRST_QUARTILE
             )
         )
 
@@ -136,9 +133,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .MIDPOINT,
-                with: nil,
-                withIMAAdData: nil
+                of: .MIDPOINT
             )
         )
 
@@ -166,9 +161,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .THIRD_QUARTILE,
-                with: nil,
-                withIMAAdData: nil
+                of: .THIRD_QUARTILE
             )
         )
 
@@ -196,9 +189,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .SKIPPED,
-                with: nil,
-                withIMAAdData: nil
+                of: .SKIPPED
             )
         )
 
@@ -226,9 +217,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .COMPLETE,
-                with: nil,
-                withIMAAdData: nil
+                of: .COMPLETE
             )
         )
 
@@ -256,9 +245,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .PAUSE,
-                with: nil,
-                withIMAAdData: nil
+                of: .PAUSE
             )
         )
 
@@ -283,10 +270,10 @@ final class GoogleIMAEventTests: XCTestCase {
             monitoringAdsLoader: adsLoader
         )
 
-        let event = imaListener.dispatchEvent(
-            .LOG,
-            with: nil,
-            withIMAAdData: nil
+        let event = try XCTUnwrap(
+            imaListener.dispatchEvent(
+                of: .LOG
+            )
         )
 
         XCTAssertNil(
@@ -319,9 +306,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .LOG,
-                with: nil,
-                withIMAAdData: logData
+                of: .LOG
             )
         )
 
@@ -348,9 +333,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let event = imaListener.dispatchEvent(
-            .TAPPED,
-            with: nil,
-            withIMAAdData: nil
+            of: .TAPPED
         )
 
         XCTAssertNil(event)

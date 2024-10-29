@@ -104,6 +104,12 @@
                  withIMAAdData:event.adData];
 }
 
+- (nullable MUXSDKAdEvent *)dispatchEventOfType:(IMAAdEventType)eventType {
+    return [self dispatchEvent:eventType
+                    withAdData:nil
+                 withIMAAdData:nil];
+}
+
 - (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEventType)eventType
                                withAdData:(nullable MUXSDKAdData *)adData
                             withIMAAdData:(nullable NSDictionary *)imaAdData {

@@ -39,12 +39,6 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 - (void)daiAdRequest:(IMAStreamRequest *)request;
 
-// MARK: Manual event reporting
-- (MUXSDKAdEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
-                                     withAdData:(nullable MUXSDKAdData *)adData
-                                  withIMAAdData:(nullable NSDictionary *)imaAdData;
-- (void)dispatchError:(NSString *)message;
-- (void)onContentPauseOrResume:(bool)isPause;
 @end
 
 NS_ASSUME_NONNULL_END
