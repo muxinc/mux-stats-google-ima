@@ -35,7 +35,7 @@
                     options:(MuxImaListenerOptions)options
                monitoringAdsLoader:(IMAAdsLoader *)adsLoader {
     self = [super init];
-    
+
     if (self) {
         self.customerAdsLoaderDelegate = adsLoader.delegate;
         adsLoader.delegate = self;
