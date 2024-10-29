@@ -50,7 +50,8 @@
         _adRequestReported = NO;
         _sendAdplayOnStarted = NO;
     }
-    return(self);
+
+    return self;
 }
 
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {

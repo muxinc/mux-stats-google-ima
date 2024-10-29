@@ -30,9 +30,9 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 @property (nonatomic, weak, nullable) id<IMAAdsManagerDelegate> customerAdsManagerDelegate;
 @property (nonatomic, weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
 
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                     options:(MuxImaListenerOptions)options
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager;

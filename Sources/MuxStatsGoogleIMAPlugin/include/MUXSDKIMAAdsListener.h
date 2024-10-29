@@ -28,9 +28,9 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 @property (nonatomic, weak, nullable) id<IMAAdsManagerDelegate> customerAdsManagerDelegate;
 @property (nonatomic, weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
 
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                     options:(MUXSDKIMAAdsListenerOptions)options
         monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager;
