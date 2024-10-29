@@ -10,8 +10,7 @@
 
 #import "MuxImaListener.h"
 
-// todo - (Private)
-@interface MuxImaListener(Manual)
+@interface MuxImaListener(Private)
 
 // todo nice nullability
 - (MUXSDKAdEvent *_Nullable)dispatchEventOfType:(IMAAdEventType)eventType;
