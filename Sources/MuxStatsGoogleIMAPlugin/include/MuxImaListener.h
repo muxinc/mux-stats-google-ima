@@ -40,7 +40,7 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 - (void)daiAdRequest:(IMAStreamRequest *)request;
 
 // MARK: Manual event reporting
-- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
+- (MUXSDKAdEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
                                      withAdData:(nullable MUXSDKAdData *)adData
                                   withIMAAdData:(nullable NSDictionary *)imaAdData;
 - (void)dispatchError:(NSString *)message;
