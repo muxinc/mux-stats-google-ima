@@ -9,7 +9,7 @@ import GoogleInteractiveMediaAds
 import MUXSDKStats
 
 @testable import MuxStatsGoogleIMAPlugin
-@testable import MuxStatsGoogleIMAPlugin.Private
+@testable import MuxStatsGoogleIMAPlugin.Manual
 
 final class GoogleIMAEventTests: XCTestCase {
 

@@ -8,8 +8,10 @@
 #ifndef Header_h
 #define Header_h
 
+#import "MuxImaListener.h"
+
 // todo - (Private)
-@interface MuxImaListener(Tests)
+@interface MuxImaListener(Manual)
 
 // todo nice nullability
 - (MUXSDKAdEvent *_Nullable)dispatchEventOfType:(IMAAdEventType)eventType;
