@@ -49,8 +49,21 @@ class PlayerContainerViewController: UIViewController {
         // MARK: Setup Content Player
         playerViewController.player = contentPlayer
 
-        // MARK: Setup Mux Data
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(Self.handleContentDidFinishPlaying(_:)),
+            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: contentPlayer.currentItem)
 
+        // MARK: Setup Google IMA Ads
+        contentPlayhead = IMAAVPlayerContentPlayhead(
+            avPlayer: contentPlayer
+        )
+
+        adsLoader = IMAAdsLoader(settings: IMASettings())
+        adsLoader.delegate = self
+        
+        // MARK: Setup Mux Data
         guard let environmentKey = ProcessInfo.processInfo.environmentKey else {
             return
         }
@@ -74,28 +87,15 @@ class PlayerContainerViewController: UIViewController {
         }
 
         // MARK: Setup Mux Data IMA Plugin
-
         imaListener = MuxImaListener(
-            playerBinding: playerBinding
+            playerBinding: playerBinding,
+            monitoringAdsLoader: adsLoader
         )
-
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(Self.handleContentDidFinishPlaying(_:)),
-            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: contentPlayer.currentItem)
-
-        // MARK: Setup Google IMA Ads
-
-        contentPlayhead = IMAAVPlayerContentPlayhead(
-            avPlayer: contentPlayer
-        )
-
-        // TODO: viewWillAppear?
-        showContentPlayer()
-
-        adsLoader = IMAAdsLoader(settings: IMASettings())
-        adsLoader.delegate = self
+    }
+    
+    override func viewWillAppear() {
+        super. viewWillAppear(animated)
+       showContentPlayer()
     }
 
     // MARK: Show and hide content player
@@ -168,7 +168,11 @@ extension PlayerContainerViewController: IMAAdsLoaderDelegate {
         }
 
         loadedAdsManager.delegate = self
-
+        
+        // MARK: Monitor the IMAAdsManager with Mux
+        // note - do this *after* setting your delegate but *before*
+        imaListener?.monitorAdsManager(loadedAdsManager)
+        
         let renderingSettings = IMAAdsRenderingSettings()
         renderingSettings.enablePreloading = true;
         loadedAdsManager.initialize(
@@ -195,9 +199,6 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
         _ adsManager: IMAAdsManager,
         didReceive event: IMAAdEvent
     ) {
-
-        imaListener?.dispatchEvent(event)
-
         // Play each ad once it has been loaded
         if event.type == IMAAdEventType.LOADED {
             adsManager.start()
@@ -212,8 +213,6 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
         showContentPlayer()
         contentPlayer.play()
 
-        imaListener?.dispatchError(error.message ?? "nil")
-
         if let message = error.message {
             print("AdsManager error: \(message)")
         }
@@ -227,7 +226,6 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
         playerViewController.player?.pause()
 
         hideContentPlayer()
-        imaListener?.dispatchPauseOrResume(true)
     }
 
     func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager) {
@@ -237,7 +235,5 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
 
         showContentPlayer()
         contentPlayer.play()
-
-        imaListener?.dispatchPauseOrResume(false)
     }
 }

@@ -9,6 +9,7 @@ import GoogleInteractiveMediaAds
 import MUXSDKStats
 
 @testable import MuxStatsGoogleIMAPlugin
+@testable import MuxStatsGoogleIMAPlugin.Private
 
 final class GoogleIMAEventTests: XCTestCase {
 
@@ -28,9 +29,11 @@ final class GoogleIMAEventTests: XCTestCase {
                 andSoftware: ""
             )
         )
-
+        
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
-            playerBinding: binding
+            playerBinding: binding,
+            monitoringAdsLoader: adsLoader
         )
 
         XCTAssertNotNil(imaListener)
@@ -46,9 +49,11 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         XCTAssertNotNil(imaListener)
@@ -63,16 +68,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .STARTED,
-                with: nil,
-                withIMAAdData: nil
+                of: .STARTED
             )
         )
 
@@ -91,16 +96,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .FIRST_QUARTILE,
-                with: nil,
-                withIMAAdData: nil
+                of: .FIRST_QUARTILE
             )
         )
 
@@ -119,16 +124,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .MIDPOINT,
-                with: nil,
-                withIMAAdData: nil
+                of: .MIDPOINT
             )
         )
 
@@ -147,16 +152,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .THIRD_QUARTILE,
-                with: nil,
-                withIMAAdData: nil
+                of: .THIRD_QUARTILE
             )
         )
 
@@ -175,16 +180,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .SKIPPED,
-                with: nil,
-                withIMAAdData: nil
+                of: .SKIPPED
             )
         )
 
@@ -203,16 +208,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .COMPLETE,
-                with: nil,
-                withIMAAdData: nil
+                of: .COMPLETE
             )
         )
 
@@ -231,16 +236,16 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                .PAUSE,
-                with: nil,
-                withIMAAdData: nil
+                of: .PAUSE
             )
         )
 
@@ -259,15 +264,13 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
-            playerBinding: binding
+            playerBinding: binding,
+            monitoringAdsLoader: adsLoader
         )
 
-        let event = imaListener.dispatchEvent(
-            .LOG,
-            with: nil,
-            withIMAAdData: nil
-        )
+        let event =  imaListener.dispatchEvent(of: .LOG)
 
         XCTAssertNil(
             event
@@ -282,8 +285,10 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
-            playerBinding: binding
+            playerBinding: binding,
+            monitoringAdsLoader: adsLoader
         )
 
         let errorData: [String : Any] = [
@@ -318,15 +323,15 @@ final class GoogleIMAEventTests: XCTestCase {
             )
         )
 
+        let adsLoader = IMAAdsLoader()
         let imaListener = MuxImaListener(
             playerBinding: binding,
-            options: .pictureInPicture
+            options: .pictureInPicture,
+            monitoringAdsLoader: adsLoader
         )
 
         let event = imaListener.dispatchEvent(
-            .TAPPED,
-            with: nil,
-            withIMAAdData: nil
+            of: .TAPPED
         )
 
         XCTAssertNil(event)
