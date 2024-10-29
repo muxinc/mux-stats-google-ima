@@ -8,11 +8,16 @@
 #ifndef Header_h
 #define Header_h
 
+// todo - (Private)
 @interface MuxImaListener(Tests)
 
-// MARK: Manual event reporting
+// todo nice nullability
 - (MUXSDKAdEvent *_Nullable)dispatchEventOfType:(IMAAdEventType)eventType;
-- (void)dispatchError:(NSString *)message;
+// todo nice nullability
+- (MUXSDKAdEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
+                                     withAdData:(nullable MUXSDKAdData *)adData 
+                                  withIMAAdData:(nullable NSDictionary *)imaAdData;
+- (void)dispatchError:(nullable NSString *)message;
 - (void)onContentPauseOrResume:(bool)isPause;
 
 @end

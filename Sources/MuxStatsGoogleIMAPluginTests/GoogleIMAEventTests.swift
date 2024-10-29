@@ -270,11 +270,7 @@ final class GoogleIMAEventTests: XCTestCase {
             monitoringAdsLoader: adsLoader
         )
 
-        let event = try XCTUnwrap(
-            imaListener.dispatchEvent(
-                of: .LOG
-            )
-        )
+        let event =  imaListener.dispatchEvent(of: .LOG)
 
         XCTAssertNil(
             event
@@ -306,7 +302,9 @@ final class GoogleIMAEventTests: XCTestCase {
 
         let event = try XCTUnwrap(
             imaListener.dispatchEvent(
-                of: .LOG
+                .LOG,
+                with: nil,
+                withIMAAdData: logData
             )
         )
 
