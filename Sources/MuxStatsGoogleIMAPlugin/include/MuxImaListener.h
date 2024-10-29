@@ -30,15 +30,21 @@ typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
 @property (weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
 
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
-       monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
+        monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                     options:(MuxImaListenerOptions)options
-       monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
+        monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager;
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 - (void)daiAdRequest:(IMAStreamRequest *)request;
 
+// MARK: Manual event reporting
+- (MUXSDKPlaybackEvent *_Nullable)dispatchEvent:(IMAAdEventType)eventType
+                                     withAdData:(nullable MUXSDKAdData *)adData
+                                  withIMAAdData:(nullable NSDictionary *)imaAdData;
+- (void)dispatchError:(NSString *)message;
+- (void)onContentPauseOrResume:(bool)isPause;
 @end
 
 NS_ASSUME_NONNULL_END
