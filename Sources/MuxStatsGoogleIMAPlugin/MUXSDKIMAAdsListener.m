@@ -34,7 +34,7 @@
     self = [super init];
 
     if (self) {
-        self.customerAdsLoaderDelegate = adsLoader.delegate;
+        _customerAdsLoaderDelegate = adsLoader.delegate;
         adsLoader.delegate = self;
 
         // The Ads Manager isn't created until further into the wokflow
