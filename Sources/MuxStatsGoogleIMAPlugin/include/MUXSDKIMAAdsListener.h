@@ -57,9 +57,9 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 
-/// Initializes `MUXSDKIMAAdsListener` automatically monitors the IMA
-/// ad lifecycle and notifies the Mux Data SDK of key points
-/// in the ad lifecycle.
+/// Initializes `MUXSDKIMAAdsListener`, automatically monitors
+/// the IMA ad playback, and notifies the Mux Data SDK at key
+/// points in the ad lifecycle.
 ///
 /// After initialization delegate calls from the provided
 /// IMA ads loader will be intercepted and translated into

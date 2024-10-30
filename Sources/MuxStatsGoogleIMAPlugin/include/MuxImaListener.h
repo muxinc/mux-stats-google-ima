@@ -39,9 +39,9 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 /// Your applications ads loader delegate, if configured
 @property (nonatomic, weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
 
-/// Initializes `MuxImaListener` automatically monitors the IMA
-/// ad lifecycle and notifies the Mux Data SDK of key points
-/// in the ad lifecycle.
+/// Initializes `MUXSDKIMAAdsListener`, automatically monitors
+/// the IMA ad playback, and notifies the Mux Data SDK at key
+/// points in the ad lifecycle.
 ///
 /// After initialization delegate calls from the provided
 /// IMA ads loader will be intercepted and translated into
