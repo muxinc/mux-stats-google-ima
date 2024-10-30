@@ -32,7 +32,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     
     // Mux SDK
-    private var imaListener: MuxImaListener?
+    private var adsListener: MUXSDKIMAAdsListener?
     private var playerBinding: MUXSDKPlayerBinding?
     
     
@@ -92,7 +92,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         self.playerBinding = playerBinding
         
         // IMA Ads
-        imaListener = MuxImaListener(
+        adsListener = MUXSDKIMAAdsListener(
             playerBinding: playerBinding,
             monitoringAdsLoader: adsLoader
         )
@@ -125,7 +125,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             userContext: nil)
         
         // MARK: mux - Tell us when you first request CSAI ads
-        imaListener?.clientAdRequest(request)
+        adsListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
     }
     
@@ -150,7 +150,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         adsManager.delegate = self
         
         //MARK: mux: Call before initialize() but after setting your IMAAdsManagerDelegate
-        imaListener?.monitorAdsManager(adsManager)
+        adsListener?.monitorAdsManager(adsManager)
         
         adsManager.initialize(with: nil)
     }

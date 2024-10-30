@@ -21,7 +21,7 @@ final class GoogleIMAEventTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testMuxImaListenerInitialization() throws {
+    func testMUXSDKIMAAdsListenerInitialization() throws {
 
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
@@ -31,7 +31,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
         
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             monitoringAdsLoader: adsLoader
         )
@@ -40,7 +40,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
     }
 
-    func testMuxImaListenerInitializationOptions() throws {
+    func testMUXSDKIMAAdsListenerInitializationOptions() throws {
 
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
@@ -50,7 +50,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -60,7 +60,7 @@ final class GoogleIMAEventTests: XCTestCase {
 
     }
 
-    func testMuxImaListenerStartedEvent() throws {
+    func testMUXSDKIMAAdsListenerStartedEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -69,7 +69,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -88,7 +88,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerFirstQuartileEvent() throws {
+    func testMUXSDKIMAAdsListenerFirstQuartileEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -97,7 +97,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -116,7 +116,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerMidpointEvent() throws {
+    func testMUXSDKIMAAdsListenerMidpointEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -125,7 +125,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -144,7 +144,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerThirdQuartileEvent() throws {
+    func testMUXSDKIMAAdsListenerThirdQuartileEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -153,7 +153,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -172,7 +172,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerSkippedEvent() throws {
+    func testMUXSDKIMAAdsListenerSkippedEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -181,7 +181,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -200,7 +200,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerCompleteEvent() throws {
+    func testMUXSDKIMAAdsListenerCompleteEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -209,7 +209,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -228,7 +228,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerPauseEvent() throws {
+    func testMUXSDKIMAAdsListenerPauseEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -237,7 +237,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader
@@ -256,7 +256,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerLogEventWithoutErrorData() throws {
+    func testMUXSDKIMAAdsListenerLogEventWithoutErrorData() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -265,7 +265,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             monitoringAdsLoader: adsLoader
         )
@@ -277,7 +277,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerLogEventWithErrorData() throws {
+    func testMUXSDKIMAAdsListenerLogEventWithErrorData() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -286,7 +286,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             monitoringAdsLoader: adsLoader
         )
@@ -315,7 +315,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
     }
 
-    func testMuxImaListenerTappedEvent() throws {
+    func testMUXSDKIMAAdsListenerTappedEvent() throws {
         let binding = try XCTUnwrap(
             MUXSDKPlayerBinding(
                 name: "",
@@ -324,7 +324,7 @@ final class GoogleIMAEventTests: XCTestCase {
         )
 
         let adsLoader = IMAAdsLoader()
-        let imaListener = MuxImaListener(
+        let imaListener = MUXSDKIMAAdsListener(
             playerBinding: binding,
             options: .pictureInPicture,
             monitoringAdsLoader: adsLoader

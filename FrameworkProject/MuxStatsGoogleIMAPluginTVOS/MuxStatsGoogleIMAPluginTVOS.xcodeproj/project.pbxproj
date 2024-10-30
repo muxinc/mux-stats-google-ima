@@ -12,6 +12,10 @@
 		190698622BB37BF400CE0FF7 /* MUXSDKStats in Frameworks */ = {isa = PBXBuildFile; productRef = 190698612BB37BF400CE0FF7 /* MUXSDKStats */; };
 		190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */; };
 		190698892BB3947F00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */; };
+		1915A2372CD186D40094AA27 /* MUXSDKIMAAdsListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A2362CD186D40094AA27 /* MUXSDKIMAAdsListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1915A2392CD186ED0094AA27 /* MUXSDKIMAAdsListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1915A2382CD186ED0094AA27 /* MUXSDKIMAAdsListener.m */; };
+		1915A23D2CD187300094AA27 /* MuxImaListener+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A23C2CD187300094AA27 /* MuxImaListener+Private.h */; };
+		1915A23F2CD1874B0094AA27 /* MUXSDKIMAAdsListener+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A23E2CD1874B0094AA27 /* MUXSDKIMAAdsListener+Private.h */; };
 		198612412C22331700E6A50C /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 1986123F2C22331700E6A50C /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		198612422C22331700E6A50C /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 198612402C22331700E6A50C /* MuxImaListener.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +35,10 @@
 		190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuxStatsGoogleIMAPluginTVOS.h; sourceTree = "<group>"; };
 		1906984D2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuxStatsGoogleIMAPluginTVOSTests.m; sourceTree = "<group>"; };
+		1915A2362CD186D40094AA27 /* MUXSDKIMAAdsListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MUXSDKIMAAdsListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/include/MUXSDKIMAAdsListener.h; sourceTree = "<group>"; };
+		1915A2382CD186ED0094AA27 /* MUXSDKIMAAdsListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MUXSDKIMAAdsListener.m; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MUXSDKIMAAdsListener.m; sourceTree = "<group>"; };
+		1915A23C2CD187300094AA27 /* MuxImaListener+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MuxImaListener+Private.h"; path = "../../../Sources/MuxStatsGoogleIMAPlugin/include/MuxImaListener+Private.h"; sourceTree = "<group>"; };
+		1915A23E2CD1874B0094AA27 /* MUXSDKIMAAdsListener+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MUXSDKIMAAdsListener+Private.h"; path = "../../../Sources/MuxStatsGoogleIMAPlugin/include/MUXSDKIMAAdsListener+Private.h"; sourceTree = "<group>"; };
 		1986123F2C22331700E6A50C /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/include/MuxImaListener.h; sourceTree = "<group>"; };
 		198612402C22331700E6A50C /* MuxImaListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuxImaListener.m; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +87,10 @@
 			children = (
 				1986123F2C22331700E6A50C /* MuxImaListener.h */,
 				198612402C22331700E6A50C /* MuxImaListener.m */,
+				1915A23C2CD187300094AA27 /* MuxImaListener+Private.h */,
+				1915A2362CD186D40094AA27 /* MUXSDKIMAAdsListener.h */,
+				1915A2382CD186ED0094AA27 /* MUXSDKIMAAdsListener.m */,
+				1915A23E2CD1874B0094AA27 /* MUXSDKIMAAdsListener+Private.h */,
 				190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */,
 			);
 			path = MuxStatsGoogleIMAPluginTVOS;
@@ -99,8 +111,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1915A2372CD186D40094AA27 /* MUXSDKIMAAdsListener.h in Headers */,
 				190698542BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h in Headers */,
 				198612412C22331700E6A50C /* MuxImaListener.h in Headers */,
+				1915A23F2CD1874B0094AA27 /* MUXSDKIMAAdsListener+Private.h in Headers */,
+				1915A23D2CD187300094AA27 /* MuxImaListener+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1915A2392CD186ED0094AA27 /* MUXSDKIMAAdsListener.m in Sources */,
 				198612422C22331700E6A50C /* MuxImaListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

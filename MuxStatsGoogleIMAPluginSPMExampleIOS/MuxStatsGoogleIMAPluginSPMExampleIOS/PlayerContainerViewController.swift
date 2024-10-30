@@ -36,7 +36,7 @@ class PlayerContainerViewController: UIViewController {
     )
     lazy var playerViewController = AVPlayerViewController()
 
-    var imaListener: MuxImaListener?
+    var adsListener: MUXSDKIMAAdsListener?
 
     // MARK: View controller lifecycle
 
@@ -87,7 +87,7 @@ class PlayerContainerViewController: UIViewController {
         }
 
         // MARK: Setup Mux Data IMA Plugin
-        imaListener = MuxImaListener(
+        adsListener = MUXSDKIMAAdsListener(
             playerBinding: playerBinding,
             monitoringAdsLoader: adsLoader
         )
@@ -146,7 +146,7 @@ class PlayerContainerViewController: UIViewController {
         adsLoader.requestAds(with: request)
 
         // Notify Mux Data about request
-        imaListener?.clientAdRequest(request)
+        adsListener?.clientAdRequest(request)
     }
 
     // MARK: deinit
@@ -171,7 +171,7 @@ extension PlayerContainerViewController: IMAAdsLoaderDelegate {
         
         // MARK: Monitor the IMAAdsManager with Mux
         // note - do this *after* setting your delegate but *before*
-        imaListener?.monitorAdsManager(loadedAdsManager)
+        adsListener?.monitorAdsManager(loadedAdsManager)
         
         let renderingSettings = IMAAdsRenderingSettings()
         renderingSettings.enablePreloading = true;
