@@ -84,7 +84,7 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 
 /// Called when an `IMAAdsManager` is available to your
-/// application. Similarly to the `IMAAdsLoader`, delegate
+/// application. Like `IMAAdsLoader`, delegate
 /// calls from the ads manager will be intercepted. Playback
 /// events will be forwarded to the Mux Data player binding
 /// configured during initialization
