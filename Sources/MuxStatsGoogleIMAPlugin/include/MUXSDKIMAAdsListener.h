@@ -61,7 +61,7 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 /// the IMA ad playback, and notifies the Mux Data SDK at key
 /// points in the ad lifecycle.
 ///
-/// After initialization delegate calls from the provided
+/// After initialization, delegate calls from the provided
 /// IMA ads loader will be intercepted and translated into
 /// `MUXSDKPlaybackEvent`.
 ///
