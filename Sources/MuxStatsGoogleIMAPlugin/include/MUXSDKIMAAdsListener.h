@@ -80,8 +80,8 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 ///   **before** calling this initializer. Delegate calls
 ///   will then be automatically forwarded to your delegate.
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
-                    options:(MUXSDKIMAAdsListenerOptions)options
-        monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
+                              options:(MUXSDKIMAAdsListenerOptions)options
+                  monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 
 /// Called when an `IMAAdsManager` is available to your
 /// application. Similarly to the `IMAAdsLoader`, delegate
