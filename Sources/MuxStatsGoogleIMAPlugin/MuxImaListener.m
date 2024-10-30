@@ -6,196 +6,147 @@
 //
 
 #import "MuxImaListener.h"
+#import "MUXSDKIMAAdsListener.h"
+#import "MUXSDKIMAAdsListener+Private.h"
 
 @interface MuxImaListener ()
 
-@property (nonatomic, nonnull) MUXSDKPlayerBinding *playerBinding;
-
-@property (assign) BOOL sendAdplayOnStarted;
-@property (assign) BOOL isPictureInPicture;
-@property (assign) BOOL usesServerSideAdInsertion;
-@property (assign) BOOL adRequestReported;
+@property (nonatomic, strong) MUXSDKIMAAdsListener *adsListener;
 
 @end
 
 @implementation MuxImaListener
 
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding {
-    return [self initWithPlayerBinding:binding options:MuxImaListenerOptionsNone];
+
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+                  monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader {
+    return [self initWithPlayerBinding:binding
+                               options:MuxImaListenerOptionsNone
+                   monitoringAdsLoader:adsLoader];
 }
 
-- (id)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding options:(MuxImaListenerOptions) options {
+- (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
+                              options:(MuxImaListenerOptions)options
+                  monitoringAdsLoader:(IMAAdsLoader *)adsLoader {
     self = [super init];
 
     if (self) {
-        _playerBinding = binding;
-        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsNone) {
-            _isPictureInPicture = NO;
-        }
-        if ((options & MuxImaListenerOptionsPictureInPicture) == MuxImaListenerOptionsPictureInPicture) {
-            _isPictureInPicture = YES;
-        }
-        _usesServerSideAdInsertion = NO;
-        _adRequestReported = NO;
-        _sendAdplayOnStarted = NO;
+
+        MUXSDKIMAAdsListenerOptions adsListenerOptions = (options & MUXSDKIMAAdsListenerOptionsPictureInPicture) == 0 ?
+        MUXSDKIMAAdsListenerOptionsNone : MUXSDKIMAAdsListenerOptionsPictureInPicture;
+        _adsListener = [[MUXSDKIMAAdsListener alloc] initWithPlayerBinding:binding
+                                                                   options:adsListenerOptions
+                                                       monitoringAdsLoader:adsLoader];
     }
-    return(self);
+    return self;
+}
+
+- (nullable id<IMAAdsManagerDelegate>)customerAdsManagerDelegate {
+    return [self.adsListener customerAdsManagerDelegate];
+}
+
+- (void)setCustomerAdsManagerDelegate:(id<IMAAdsManagerDelegate>)customerAdsManagerDelegate {
+    [self.adsListener setCustomerAdsManagerDelegate:customerAdsManagerDelegate];
+}
+
+- (nullable id<IMAAdsLoaderDelegate>)customerAdsLoaderDelegate {
+    return [self.adsListener customerAdsLoaderDelegate];
+}
+
+- (void) setCustomerAdsLoaderDelegate:(id<IMAAdsLoaderDelegate>)customerAdsLoaderDelegate {
+    [self.adsListener setCustomerAdsLoaderDelegate:customerAdsLoaderDelegate];
+}
+
+- (void)monitorAdsManager:(IMAAdsManager *)adsManager {
+    [self.adsListener monitorAdsManager:adsManager];
 }
 
 - (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
-    MUXSDKViewData *viewData = [MUXSDKViewData new];
-    MUXSDKAdData *adData = [MUXSDKAdData new];
-    if (ad != nil) {
-
-        if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
-            viewData.viewPrerollAdId = ad.adId;
-            viewData.viewPrerollCreativeId = ad.creativeID;
-        }
-
-        adData.adId = ad.adId;
-        adData.adCreativeId = ad.creativeID;
-        
-        // TODO: use newer IMA API here. universalAdIdValue
-        // is deprecated, but used for time being for parity
-        // with web&android
-        adData.adUniversalId = ad.universalAdIdValue;
-        event.adData = adData;
-    }
-    event.viewData = viewData;
+    [self.adsListener setupAdViewData:event
+                               withAd:ad];
 }
 
-- (MUXSDKAdEvent *_Nullable) dispatchEvent:(IMAAdEvent *)event {
-    MUXSDKAdEvent *playbackEvent;
-    
-    NSDictionary *adData = event.adData;
-    
-    switch(event.type) {
-        case kIMAAdEvent_STARTED:
-            if (_sendAdplayOnStarted) {
-                playbackEvent = [MUXSDKAdPlayEvent new];
-                [_playerBinding dispatchAdEvent: playbackEvent];
-            } else {
-                _sendAdplayOnStarted = YES;
-            }
-            playbackEvent = [MUXSDKAdPlayingEvent new];
-            break;
-        case kIMAAdEvent_FIRST_QUARTILE:
-            playbackEvent = [MUXSDKAdFirstQuartileEvent new];
-            break;
-        case kIMAAdEvent_MIDPOINT:
-            playbackEvent = [MUXSDKAdMidpointEvent new];
-            break;
-        case kIMAAdEvent_THIRD_QUARTILE:
-            playbackEvent = [MUXSDKAdThirdQuartileEvent new];
-            break;
-        case kIMAAdEvent_SKIPPED:
-        case kIMAAdEvent_COMPLETE:
-            playbackEvent = [MUXSDKAdEndedEvent new];
-            break;
-        case kIMAAdEvent_PAUSE:
-            playbackEvent = [MUXSDKAdPauseEvent new];
-            break;
-        case kIMAAdEvent_RESUME:
-            playbackEvent = [MUXSDKAdPlayEvent new];
-            [self setupAdViewData:playbackEvent withAd:event.ad];
-            [_playerBinding dispatchAdEvent: playbackEvent];
-            playbackEvent = [MUXSDKAdPlayingEvent new];
-            break;
-        case kIMAAdEvent_LOG:
-            if (adData && adData[@"logData"]) {
-                NSDictionary *errorLog = (NSDictionary *)adData[@"logData"];
-                if (errorLog) {
-                    if (errorLog[@"errorCode"] || errorLog[@"errorMessage"] || errorLog[@"type"]) {
-                        playbackEvent = [[MUXSDKAdErrorEvent alloc] init];
-                    }
-                }
-            }
-            break;
-        default:
-            break;
-    }
-    if (playbackEvent != nil) {
-        [self setupAdViewData:playbackEvent withAd:event.ad];
-        [_playerBinding dispatchAdEvent:playbackEvent];
-        return playbackEvent;
-    } else {
-        return nil;
-    }
+- (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEvent *)event {
+    return [self.adsListener dispatchEvent:event];
+}
+
+- (nullable MUXSDKAdEvent *)dispatchEventOfType:(IMAAdEventType)eventType {
+    return [self.adsListener dispatchEventOfType:eventType];
+}
+
+- (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEventType)eventType
+                               withAdData:(nullable MUXSDKAdData *)adData
+                            withIMAAdData:(nullable NSDictionary *)imaAdData {
+    return [self.adsListener dispatchEvent:eventType
+                                withAdData:adData
+                             withIMAAdData:imaAdData];
 }
 
 - (void)dispatchError:(NSString *)message {
-    MUXSDKAdEvent *playbackEvent = [MUXSDKAdErrorEvent new];
-    [self setupAdViewData:playbackEvent withAd:nil];
-    [_playerBinding dispatchAdEvent:playbackEvent];
+    [self.adsListener dispatchError:message];
 }
 
-- (void)onContentPauseOrResume:(bool)isPause {
-    MUXSDKAdEvent *playbackEvent;
-    if (isPause) {
-        if (_isPictureInPicture) {
-            [_playerBinding setAdPlaying:YES];
-        }
-        if (!_adRequestReported) {
-            // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
-            [self dispatchAdRequestWithoutMetadata];
-        }
-        MUXSDKAdEvent *playbackEvent = [MUXSDKAdBreakStartEvent new];
-        [self setupAdViewData:playbackEvent withAd:nil];
-        [_playerBinding dispatchAdEvent: playbackEvent];
-        
-        _sendAdplayOnStarted = NO;
-        [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
+- (void)dispatchPauseOrResume:(BOOL)isPause {
+    [self.adsListener dispatchPauseOrResume:isPause];
+}
 
-        return;
-    } else {
-        if (_isPictureInPicture) {
-            [_playerBinding setAdPlaying:NO];
-        }
-        playbackEvent = [MUXSDKAdBreakEndEvent new];
-        [self setupAdViewDataAndDispatchEvent: playbackEvent];
-        if (_usesServerSideAdInsertion) {
-            [_playerBinding dispatchPlay];
-            [_playerBinding dispatchPlaying];
-        }
-    }
+- (void)onContentPauseOrResume:(BOOL)isPause {
+    [self.adsListener onContentPauseOrResume:isPause];
 }
 
 - (void)setupAdViewDataAndDispatchEvent:(MUXSDKAdEvent *) event {
-    [self setupAdViewData:event withAd:nil];
-    [_playerBinding dispatchAdEvent:event];
+    [self.adsListener setupAdViewDataAndDispatchEvent:event];
 }
 
 - (void)clientAdRequest:(IMAAdsRequest *)request {
-    _usesServerSideAdInsertion = NO;
-    _adRequestReported = YES;
-    
-    [self dispatchAdRequestForAdTag:request.adTagUrl];
+    [self.adsListener clientAdRequest:request];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
-    _usesServerSideAdInsertion = YES;
-    _adRequestReported = YES;
-    
-    [self dispatchAdRequestWithoutMetadata];
+    [self.adsListener daiAdRequest:request];
 }
 
 - (void)dispatchAdRequestWithoutMetadata {
-    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
-    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+    [self.adsListener dispatchAdRequestWithoutMetadata];
 }
 
-- (void)dispatchAdRequestForAdTag:(NSString *_Nullable)adTagUrl {
-    MUXSDKAdEvent* playbackEvent = [MUXSDKAdRequestEvent new];
-    MUXSDKAdData* adData = [MUXSDKAdData new];
-    if(adTagUrl) {
-        adData.adTagUrl = adTagUrl;
-    }
-    
-    [self setupAdViewDataAndDispatchEvent: playbackEvent];
+- (void)dispatchAdRequestForAdTag:(nullable NSString *)adTagUrl {
+    [self.adsListener dispatchAdRequestForAdTag:adTagUrl];
 }
 
 - (void)setPictureInPicture:(BOOL)isPictureInPicture {
-    _isPictureInPicture = isPictureInPicture;
+    [self.adsListener setPictureInPicture:isPictureInPicture];
+}
+
+/* IMAAdsManagerDelegate */
+
+- (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
+    [self.adsListener adsManager:adsManager didReceiveAdEvent:event];
+}
+
+- (void)adsManager:(nonnull IMAAdsManager *)adsManager didReceiveAdError:(nonnull IMAAdError *)error {
+    [self.adsListener adsManager:adsManager
+               didReceiveAdError:error];
+}
+
+- (void)adsManagerDidRequestContentPause:(nonnull IMAAdsManager *)adsManager {
+    [self.adsListener adsManagerDidRequestContentPause:adsManager];
+}
+
+- (void)adsManagerDidRequestContentResume:(nonnull IMAAdsManager *)adsManager {
+    [self.adsListener adsManagerDidRequestContentResume:adsManager];
+}
+
+/* IMAAdsLoaderDelegate */
+
+- (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
+    [self.adsListener adsLoader:loader
+              adsLoadedWithData:adsLoadedData];
+}
+
+- (void)adsLoader:(nonnull IMAAdsLoader *)loader failedWithErrorData:(nonnull IMAAdLoadingErrorData *)adErrorData {
+    [self.adsListener adsLoader:loader
+            failedWithErrorData:adErrorData];
 }
 
 @end

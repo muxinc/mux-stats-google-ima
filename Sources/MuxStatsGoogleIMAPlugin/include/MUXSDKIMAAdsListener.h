@@ -1,8 +1,7 @@
 //
-//  MUXSDKImaListener.h
-//  Expecta
-//
-//  Created by Dylan Jhaveri on 9/11/19.
+
+//  MUXSDKIMAAdsListener.h
+//  MuxStatsGoogleIMAPlugin
 //
 
 #import <Foundation/Foundation.h>
@@ -19,19 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class MUXSDKPlayerBinding;
 
-typedef NS_OPTIONS(NSUInteger, MuxImaListenerOptions) {
-    MuxImaListenerOptionsNone                    = 0,
-    MuxImaListenerOptionsPictureInPicture        = 1 << 0,
+typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
+    MUXSDKIMAAdsListenerOptionsNone                    = 0,
+    MUXSDKIMAAdsListenerOptionsPictureInPicture        = 1 << 0,
 };
 
-/// Use `MuxImaListener` to intercept `IMAAdsManager`
+/// Use `MUXSDKIMAAdsListener` to intercept `IMAAdsManager`
 /// and `IMAAdsLoader` events from the IMA SDK on behalf of
 /// your application.
-///
-/// **Note: this class is deprecated and will be removed in
-/// a future SDK release. Please switch to using `MUXSDKIMAAdsListener`.**
-NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
-@interface MuxImaListener : NSObject<IMAAdsManagerDelegate, IMAAdsLoaderDelegate>
+@interface MUXSDKIMAAdsListener : NSObject<IMAAdsManagerDelegate, IMAAdsLoaderDelegate>
 
 /// Your applications ads manager delegate, if configured
 @property (nonatomic, weak, nullable) id<IMAAdsManagerDelegate> customerAdsManagerDelegate;
@@ -39,7 +34,7 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 /// Your applications ads loader delegate, if configured
 @property (nonatomic, weak, nullable) id<IMAAdsLoaderDelegate> customerAdsLoaderDelegate;
 
-/// Initializes `MuxImaListener`, automatically monitors
+/// Initializes `MUXSDKIMAAdsListener`, automatically monitors
 /// the IMA ad playback, and notifies the Mux Data SDK at key
 /// points in the ad lifecycle.
 ///
@@ -62,12 +57,11 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
 
-
-/// Initializes `MuxImaListener`, automatically monitors
+/// Initializes `MUXSDKIMAAdsListener`, automatically monitors
 /// the IMA ad playback, and notifies the Mux Data SDK at key
 /// points in the ad lifecycle.
 ///
-/// After initialization delegate calls from the provided
+/// After initialization, delegate calls from the provided
 /// IMA ads loader will be intercepted and translated into
 /// `MUXSDKPlaybackEvent`.
 ///
@@ -86,9 +80,8 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 ///   **before** calling this initializer. Delegate calls
 ///   will then be automatically forwarded to your delegate.
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
-                              options:(MuxImaListenerOptions)options
+                              options:(MUXSDKIMAAdsListenerOptions)options
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader;
-
 
 /// Called when an `IMAAdsManager` is available to your
 /// application. Like `IMAAdsLoader`, delegate
@@ -102,14 +95,12 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 ///   will then be automatically forwarded to your delegate.
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager;
 
-
 /// Signals if the monitored player is being displayed as
 /// picture in picture during ad playback.
 /// - Parameter isPictureInPicture: Pass ``YES`` to indicate
 /// the player is current displayed using picture in picture.
 /// Pass ``NO`` otherwise.
 - (void)setPictureInPicture:(BOOL)isPictureInPicture;
-
 
 /// Signals a client ad request made by your application.
 ///
@@ -119,7 +110,6 @@ NS_CLASS_DEPRECATED_IOS(2_0, 12_0, "Use MUXSDKIMAAdsListener instead.")
 /// - Parameter request: a client ad request your application
 /// just made
 - (void)clientAdRequest:(IMAAdsRequest *)request;
-
 
 /// Signals a stream ad request has been made by your
 /// application.

@@ -1,4 +1,10 @@
 
 module MuxStatsGoogleIMAPlugin {
     header "MuxImaListener.h"
+    header "MUXSDKIMAAdsListener.h"
+
+    explicit module Private {
+        header "MuxImaListener+Private.h"
+        header "MUXSDKIMAAdsListener+Private.h"
+    }
 }

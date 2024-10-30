@@ -12,6 +12,10 @@
 		190698282BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		190698332BB37ABF00CE0FF7 /* MUXSDKStats in Frameworks */ = {isa = PBXBuildFile; productRef = 190698322BB37ABF00CE0FF7 /* MUXSDKStats */; };
 		1906983A2BB37B6700CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 190698392BB37B6700CE0FF7 /* GoogleInteractiveMediaAds */; };
+		1915A2432CD188470094AA27 /* MuxImaListener+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A2402CD188470094AA27 /* MuxImaListener+Private.h */; };
+		1915A2442CD188470094AA27 /* MUXSDKIMAAdsListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A2412CD188470094AA27 /* MUXSDKIMAAdsListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1915A2452CD188470094AA27 /* MUXSDKIMAAdsListener+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A2422CD188470094AA27 /* MUXSDKIMAAdsListener+Private.h */; };
+		1915A2472CD188540094AA27 /* MUXSDKIMAAdsListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1915A2462CD188540094AA27 /* MUXSDKIMAAdsListener.m */; };
 		198612452C22337F00E6A50C /* MuxImaListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 198612432C22337F00E6A50C /* MuxImaListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		198612462C22337F00E6A50C /* MuxImaListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 198612442C22337F00E6A50C /* MuxImaListener.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +35,10 @@
 		1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuxStatsGoogleIMAPlugin.h; sourceTree = "<group>"; };
 		190698212BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		190698262BB37A3300CE0FF7 /* MuxStatsGoogleIMAPluginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuxStatsGoogleIMAPluginTests.m; sourceTree = "<group>"; };
+		1915A2402CD188470094AA27 /* MuxImaListener+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MuxImaListener+Private.h"; path = "../../../Sources/MuxStatsGoogleIMAPlugin/include/MuxImaListener+Private.h"; sourceTree = "<group>"; };
+		1915A2412CD188470094AA27 /* MUXSDKIMAAdsListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MUXSDKIMAAdsListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/include/MUXSDKIMAAdsListener.h; sourceTree = "<group>"; };
+		1915A2422CD188470094AA27 /* MUXSDKIMAAdsListener+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MUXSDKIMAAdsListener+Private.h"; path = "../../../Sources/MuxStatsGoogleIMAPlugin/include/MUXSDKIMAAdsListener+Private.h"; sourceTree = "<group>"; };
+		1915A2462CD188540094AA27 /* MUXSDKIMAAdsListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MUXSDKIMAAdsListener.m; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MUXSDKIMAAdsListener.m; sourceTree = "<group>"; };
 		198612432C22337F00E6A50C /* MuxImaListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuxImaListener.h; path = ../../../Sources/MuxStatsGoogleIMAPlugin/include/MuxImaListener.h; sourceTree = "<group>"; };
 		198612442C22337F00E6A50C /* MuxImaListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuxImaListener.m; path = ../../../Sources/MuxStatsGoogleIMAPlugin/MuxImaListener.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +87,10 @@
 			children = (
 				198612432C22337F00E6A50C /* MuxImaListener.h */,
 				198612442C22337F00E6A50C /* MuxImaListener.m */,
+				1915A2402CD188470094AA27 /* MuxImaListener+Private.h */,
+				1915A2412CD188470094AA27 /* MUXSDKIMAAdsListener.h */,
+				1915A2462CD188540094AA27 /* MUXSDKIMAAdsListener.m */,
+				1915A2422CD188470094AA27 /* MUXSDKIMAAdsListener+Private.h */,
 				1906981C2BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h */,
 			);
 			path = MuxStatsGoogleIMAPlugin;
@@ -101,6 +113,9 @@
 			files = (
 				190698282BB37A3300CE0FF7 /* MuxStatsGoogleIMAPlugin.h in Headers */,
 				198612452C22337F00E6A50C /* MuxImaListener.h in Headers */,
+				1915A2432CD188470094AA27 /* MuxImaListener+Private.h in Headers */,
+				1915A2442CD188470094AA27 /* MUXSDKIMAAdsListener.h in Headers */,
+				1915A2452CD188470094AA27 /* MUXSDKIMAAdsListener+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1915A2472CD188540094AA27 /* MUXSDKIMAAdsListener.m in Sources */,
 				198612462C22337F00E6A50C /* MuxImaListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XX95P4Y787;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -373,7 +389,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.13.0;
+				MARKETING_VERSION = 0.14.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPlugin;
@@ -390,7 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XX95P4Y787;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -403,7 +419,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.13.0;
+				MARKETING_VERSION = 0.14.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.ios.MuxStatsGoogleIMAPlugin;
@@ -482,7 +498,7 @@
 			repositoryURL = "https://github.com/muxinc/mux-stats-sdk-avplayer";
 			requirement = {
 				kind = exactVersion;
-				version = 4.0.0;
+				version = 4.1.0;
 			};
 		};
 		190698382BB37B6700CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */ = {

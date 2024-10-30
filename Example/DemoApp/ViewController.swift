@@ -16,7 +16,7 @@ import GoogleInteractiveMediaAds
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
     
     private let DEMO_PLAYER_NAME = "adplayer"
-    private let MUX_DATA_ENV_KEY = "YOUR KEY HERE"
+    private let MUX_DATA_ENV_KEY = "YOUR ENV KEY HERE"
     
     private let AD_TAG_URL = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
     private let VOD_TEST_URL_STEVE = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
@@ -32,7 +32,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     
     // Mux SDK
-    private var imaListener: MuxImaListener?
+    private var adsListener: MUXSDKIMAAdsListener?
     private var playerBinding: MUXSDKPlayerBinding?
     
     
@@ -52,7 +52,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated);
+        super.viewDidAppear(animated)
         requestAds()
         player?.play()
     }
@@ -67,8 +67,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         playerViewController = AVPlayerViewController()
         playerViewController.player = player
         
-        setUpMux(player: player)
-        
         self.player = player
         
         // Set up your content playhead and contentComplete callback.
@@ -77,12 +75,13 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             self,
             selector: #selector(ViewController.contentDidFinishPlaying(_:)),
             name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: player.currentItem);
+            object: player.currentItem)
         
         showContentPlayer()
     }
     
-    func setUpMux(player: AVPlayer) {
+    // MARK: mux: Monitor your AVPlayer and IMAAdsLoader
+    func setUpMux(player: AVPlayer, adsLoader: IMAAdsLoader) {
         // Basic Data
         let envKey = ProcessInfo.processInfo.environment["ENV_KEY"] ?? MUX_DATA_ENV_KEY
         let customerPlayerData = MUXSDKCustomerPlayerData(environmentKey: envKey)
@@ -93,12 +92,21 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
         self.playerBinding = playerBinding
         
         // IMA Ads
-        imaListener = MuxImaListener(playerBinding: playerBinding)
+        adsListener = MUXSDKIMAAdsListener(
+            playerBinding: playerBinding,
+            monitoringAdsLoader: adsLoader
+        )
     }
     
     func setUpAdsLoader() {
+        
         adsLoader = IMAAdsLoader(settings: nil)
         adsLoader.delegate = self
+        
+        // MARK: mux - Set up Mux after you set up your AVPlayer and IAMAdsLoader
+        if let player = player {
+            setUpMux(player: player, adsLoader: adsLoader)
+        }
     }
     
     func requestAds() {
@@ -116,7 +124,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             contentPlayhead: contentPlayhead,
             userContext: nil)
         
-        imaListener?.clientAdRequest(request)
+        // MARK: mux - Tell us when you first request CSAI ads
+        adsListener?.clientAdRequest(request)
         adsLoader.requestAds(with: request)
     }
     
@@ -139,6 +148,10 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsLoader(_ loader: IMAAdsLoader, adsLoadedWith adsLoadedData: IMAAdsLoadedData) {
         adsManager = adsLoadedData.adsManager
         adsManager.delegate = self
+        
+        //MARK: mux: Call before initialize() but after setting your IMAAdsManagerDelegate
+        adsListener?.monitorAdsManager(adsManager)
+        
         adsManager.initialize(with: nil)
     }
     
@@ -155,8 +168,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     // MARK: - IMAAdsManagerDelegate
     
     func adsManager(_ adsManager: IMAAdsManager, didReceive event: IMAAdEvent) {
-        imaListener?.dispatchEvent(event)
-        
         // Play each ad once it has been loaded
         if event.type == IMAAdEventType.LOADED {
             adsManager.start()
@@ -166,7 +177,6 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsManager(_ adsManager: IMAAdsManager, didReceive error: IMAAdError) {
         // Fall back to playing content
         print("AdsManager error: " + (error.message ?? "nil"))
-        imaListener?.dispatchError(error.message ?? "nil")
         showContentPlayer()
         playerViewController.player?.play()
     }
@@ -174,14 +184,12 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     func adsManagerDidRequestContentPause(_ adsManager: IMAAdsManager) {
         // Pause the content for the SDK to play ads.
         playerViewController.player?.pause()
-        imaListener?.onContentPauseOrResume(true)
         hideContentPlayer()
     }
     
     func adsManagerDidRequestContentResume(_ adsManager: IMAAdsManager) {
         // Resume the content since the SDK is done playing ads (at least for now).
         showContentPlayer()
-        imaListener?.onContentPauseOrResume(false)
         playerViewController.player?.play()
     }
     
