@@ -93,8 +93,8 @@ class PlayerContainerViewController: UIViewController {
         )
     }
     
-    override func viewWillAppear() {
-        super. viewWillAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
        showContentPlayer()
     }
 
