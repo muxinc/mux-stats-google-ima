@@ -14,6 +14,10 @@ struct ContentView: View {
     @State var adTagURL: String
     @State var contentURL: String
 
+    @FocusState var environmentKeyTextFieldFocussed: Bool
+    @FocusState var adTagURLTextFieldFocussed: Bool
+    @FocusState var contentURLTextFieldFocussed: Bool
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(
@@ -27,8 +31,12 @@ struct ContentView: View {
                 text: $environmentKey,
                 axis: .vertical
             )
+            .focused($environmentKeyTextFieldFocussed)
             .lineLimit(nil)
             .autocorrectionDisabled()
+            .onSubmit {
+                environmentKeyTextFieldFocussed = false
+            }
 
             Text(
                 "Ad Tag URL"
@@ -41,8 +49,12 @@ struct ContentView: View {
                 text: $adTagURL,
                 axis: .vertical
             )
+            .focused($adTagURLTextFieldFocussed)
             .lineLimit(nil)
             .autocorrectionDisabled()
+            .onSubmit {
+                adTagURLTextFieldFocussed = false
+            }
 
             Text(
                 "Content URL"
@@ -55,8 +67,12 @@ struct ContentView: View {
                 text: $contentURL,
                 axis: .vertical
             )
+            .focused($contentURLTextFieldFocussed)
             .lineLimit(nil)
             .autocorrectionDisabled()
+            .onSubmit {
+                contentURLTextFieldFocussed = false
+            }
 
             ZStack {
                 PlayerView(
