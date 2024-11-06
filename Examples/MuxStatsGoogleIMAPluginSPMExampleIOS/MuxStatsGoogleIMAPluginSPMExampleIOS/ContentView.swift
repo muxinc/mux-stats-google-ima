@@ -115,9 +115,16 @@ private struct PlayerView: UIViewControllerRepresentable {
         return viewController
     }
 
-    func updateUIViewController(_ uiViewController: PlayerContainerViewController, context: Context) {
+    func updateUIViewController(
+        _ uiViewController: PlayerContainerViewController,
+        context: Context
+    ) {
         if didPressPlay {
             uiViewController.playButtonPressed()
         }
+        uiViewController.adTagURLString = adTagURL
+        uiViewController.contentURLString = contentURL
+        uiViewController.environmentKey = environmentKey
+        uiViewController.title = title
     }
 }
