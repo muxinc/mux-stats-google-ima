@@ -63,7 +63,9 @@ class PlayerContainerViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.black
         self.view.accessibilityIdentifier = "AVPlayerView"
+    }
 
+    func setupPlayer() {
         // MARK: Setup Content Player
         playerViewController.player = contentPlayer
 
@@ -81,7 +83,7 @@ class PlayerContainerViewController: UIViewController {
         adsLoader = IMAAdsLoader(settings: IMASettings())
         adsLoader.delegate = self
 
-        // MARK: Setup Mux Data 
+        // MARK: Setup Mux Data
         let customerPlayerData = MUXSDKCustomerPlayerData()
         customerPlayerData.environmentKey = environmentKey
 
@@ -121,6 +123,7 @@ class PlayerContainerViewController: UIViewController {
             playerName
         )
         hideContentPlayer()
+        contentPlayer.replaceCurrentItem(with: nil)
         super.viewWillDisappear(animated)
     }
 
@@ -144,6 +147,7 @@ class PlayerContainerViewController: UIViewController {
     // MARK: Handlers
 
     func playButtonPressed() {
+        setupPlayer()
         requestAds()
     }
 
