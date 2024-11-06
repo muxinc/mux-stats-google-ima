@@ -21,7 +21,7 @@ class PlayerContainerViewController: UIViewController {
     + "single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&"
     + "gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
 
-    var contentURLString = "https://stream.mux.com/qxb01i6T202018GFS02vp9RIe01icTcDCjVzQpmaB00CUisJ4.m3u8"
+    var contentURLString = "https://stream.mux.com/a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M.m3u8"
 
     // Google IMA
 
