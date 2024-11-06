@@ -9,7 +9,7 @@ import SwiftUI
 struct MuxStatsGoogleIMAPluginSPMExampleIOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView()
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19330C852CDB4A2C00F9221E /* MuxStatsGoogleIMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 19330C842CDB4A2C00F9221E /* MuxStatsGoogleIMAPlugin */; };
 		193D52B62CAB6B32004F20AA /* MuxStatsGoogleIMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 193D52B52CAB6B32004F20AA /* MuxStatsGoogleIMAPlugin */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				193D52B62CAB6B32004F20AA /* MuxStatsGoogleIMAPlugin in Frameworks */,
+				19330C852CDB4A2C00F9221E /* MuxStatsGoogleIMAPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = MuxStatsGoogleIMAPluginSPMExampleIOS;
 			packageProductDependencies = (
 				193D52B52CAB6B32004F20AA /* MuxStatsGoogleIMAPlugin */,
+				19330C842CDB4A2C00F9221E /* MuxStatsGoogleIMAPlugin */,
 			);
 			productName = MuxStatsGoogleIMAPluginSPMExampleIOS;
 			productReference = 193D52812CAB698F004F20AA /* MuxStatsGoogleIMAPluginSPMExampleIOS.app */;
@@ -215,7 +218,7 @@
 			mainGroup = 193D52782CAB698F004F20AA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				193D52B42CAB6B32004F20AA /* XCLocalSwiftPackageReference "../../mux-stats-google-ima" */,
+				19330C832CDB4A2C00F9221E /* XCLocalSwiftPackageReference "../../../mux-stats-google-ima" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 193D52822CAB698F004F20AA /* Products */;
@@ -584,13 +587,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		193D52B42CAB6B32004F20AA /* XCLocalSwiftPackageReference "../../mux-stats-google-ima" */ = {
+		19330C832CDB4A2C00F9221E /* XCLocalSwiftPackageReference "../../../mux-stats-google-ima" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../mux-stats-google-ima";
+			relativePath = "../../../mux-stats-google-ima";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		19330C842CDB4A2C00F9221E /* MuxStatsGoogleIMAPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MuxStatsGoogleIMAPlugin;
+		};
 		193D52B52CAB6B32004F20AA /* MuxStatsGoogleIMAPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MuxStatsGoogleIMAPlugin;

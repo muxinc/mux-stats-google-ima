@@ -13,10 +13,17 @@ import MUXSDKStats
 import MuxCore
 
 class PlayerContainerViewController: UIViewController {
-    static let adTagURLString =
-      "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/"
-      + "single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&"
-      + "gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+
+    // Default URLs
+
+    var adTagURLString =
+    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/"
+    + "single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&"
+    + "gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+
+    var contentURLString = "https://stream.mux.com/qxb01i6T202018GFS02vp9RIe01icTcDCjVzQpmaB00CUisJ4.m3u8"
+
+    // Google IMA
 
     var imaAdsSDKSettings: IMASettings {
         IMASettings()
@@ -28,15 +35,26 @@ class PlayerContainerViewController: UIViewController {
 
     var contentPlayhead: IMAAVPlayerContentPlayhead?
 
-    static let contentURL = URL(
-        string: "https://stream.mux.com/qxb01i6T202018GFS02vp9RIe01icTcDCjVzQpmaB00CUisJ4.m3u8"
-    )!
-    var contentPlayer = AVPlayer(
-        url: PlayerContainerViewController.contentURL
-    )
-    lazy var playerViewController = AVPlayerViewController()
+    // Mux Data
+
+    var playerBinding: MUXSDKPlayerBinding?
 
     var adsListener: MUXSDKIMAAdsListener?
+
+    var environmentKey: String = ProcessInfo.processInfo.environmentKey ?? ""
+
+    var playerName: String {
+        title ?? "adplayer"
+    }
+
+    // Player
+
+    lazy var contentPlayer = AVPlayer(
+        url: URL(
+            string: contentURLString
+        )!
+    )
+    lazy var playerViewController = AVPlayerViewController()
 
     // MARK: View controller lifecycle
 
@@ -62,17 +80,15 @@ class PlayerContainerViewController: UIViewController {
 
         adsLoader = IMAAdsLoader(settings: IMASettings())
         adsLoader.delegate = self
-        
-        // MARK: Setup Mux Data
-        guard let environmentKey = ProcessInfo.processInfo.environmentKey else {
-            return
-        }
 
+        // MARK: Setup Mux Data 
         let customerPlayerData = MUXSDKCustomerPlayerData()
         customerPlayerData.environmentKey = environmentKey
 
         let customerVideoData = MUXSDKCustomerVideoData()
-        customerVideoData.videoTitle = "Mux Data IMA SDK Example Preroll"
+        if let title {
+            customerVideoData.videoTitle = title
+        }
 
         let customerData = MUXSDKCustomerData()
         customerData.customerPlayerData = customerPlayerData
@@ -80,11 +96,13 @@ class PlayerContainerViewController: UIViewController {
 
         guard let playerBinding = MUXSDKStats.monitorAVPlayerViewController(
             playerViewController,
-            withPlayerName: "adplayer",
+            withPlayerName: playerName,
             customerData: customerData
         ) else {
             return
         }
+
+        self.playerBinding = playerBinding
 
         // MARK: Setup Mux Data IMA Plugin
         adsListener = MUXSDKIMAAdsListener(
@@ -92,10 +110,18 @@ class PlayerContainerViewController: UIViewController {
             monitoringAdsLoader: adsLoader
         )
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
-       showContentPlayer()
+        super.viewWillAppear(animated)
+        showContentPlayer()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        MUXSDKStats.destroyPlayer(
+            playerName
+        )
+        hideContentPlayer()
+        super.viewWillDisappear(animated)
     }
 
     // MARK: Show and hide content player
@@ -137,7 +163,7 @@ class PlayerContainerViewController: UIViewController {
         // Create an ad request with our ad tag, display
         // container, and optional user context.
         let request = IMAAdsRequest(
-            adTagUrl: PlayerContainerViewController.adTagURLString,
+            adTagUrl: adTagURLString,
             adDisplayContainer: adDisplayContainer,
             contentPlayhead: contentPlayhead,
             userContext: nil
@@ -152,7 +178,7 @@ class PlayerContainerViewController: UIViewController {
     // MARK: deinit
 
     deinit {
-      NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
@@ -168,11 +194,12 @@ extension PlayerContainerViewController: IMAAdsLoaderDelegate {
         }
 
         loadedAdsManager.delegate = self
-        
+
         // MARK: Monitor the IMAAdsManager with Mux
-        // note - do this *after* setting your delegate but *before*
+        // note - do this *after* setting your delegate but
+        // not *before*
         adsListener?.monitorAdsManager(loadedAdsManager)
-        
+
         let renderingSettings = IMAAdsRenderingSettings()
         renderingSettings.enablePreloading = true;
         loadedAdsManager.initialize(

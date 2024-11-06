@@ -1,6 +1,15 @@
 # OS X
 .DS_Store
 
+**/.build
+**/Build
+
+**/DistributionSummary.plist
+**/ExportOptions.plist
+**/Packaging.log
+**/Payload/*
+**/*.ipa
+
 # Xcode
 build/
 *.pbxuser
