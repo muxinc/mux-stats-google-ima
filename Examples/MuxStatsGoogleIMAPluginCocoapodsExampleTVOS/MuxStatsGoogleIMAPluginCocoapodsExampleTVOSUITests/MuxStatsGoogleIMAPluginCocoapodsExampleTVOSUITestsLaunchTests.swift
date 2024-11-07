@@ -1,14 +1,13 @@
 //
-//  MUXSDKIMATVOSExampleUITestsLaunchTests.swift
-//  MUXSDKIMATVOSExampleUITests
+//  MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITestsLaunchTests.swift
+//  MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests
 //
-//  Created by AJ Barinov on 9/1/23.
-//  Copyright © 2023 Dylan Jhaveri. All rights reserved.
+//  Created by AJ Barinov on 11/7/24.
 //
 
 import XCTest
 
-final class MUXSDKIMATVOSExampleUITestsLaunchTests: XCTestCase {
+final class MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -18,6 +17,7 @@ final class MUXSDKIMATVOSExampleUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()

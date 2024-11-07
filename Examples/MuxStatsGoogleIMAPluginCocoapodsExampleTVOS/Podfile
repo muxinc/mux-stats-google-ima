@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'MuxStatsGoogleIMAPluginCocoapodsExampleTVOS' do
+  platform :tvos, '15.0'
+  pod 'Mux-Stats-Google-IMA', :path => '../..'
+end

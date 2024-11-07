@@ -1,9 +1,6 @@
 //
 //  AppDelegate.swift
-//  MUXSDKIMATVOSExample
-//
-//  Created by AJ Barinov on 9/1/23.
-//  Copyright © 2023 Dylan Jhaveri. All rights reserved.
+//  MuxStatsGoogleIMAPluginCocoapodsExampleTVOS
 //
 
 import UIKit

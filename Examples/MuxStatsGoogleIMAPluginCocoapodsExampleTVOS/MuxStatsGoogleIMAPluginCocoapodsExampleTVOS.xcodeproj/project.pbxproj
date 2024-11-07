@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E0CAF57941A7CE15BAF748D /* Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF4066A25CD62992AB84329 /* Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1900C4052CDD502C00A9D47B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1900C3E92CDD502A00A9D47B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1900C3F02CDD502A00A9D47B;
+			remoteInfo = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+		};
+		1900C40F2CDD502C00A9D47B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1900C3E92CDD502A00A9D47B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1900C3F02CDD502A00A9D47B;
+			remoteInfo = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1900C3F12CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1900C4042CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1900C40E2CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91EAAB7E4486A7E90C8A3BB6 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.debug.xcconfig"; path = "Target Support Files/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A70F8F475458AF52605E0E21 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.release.xcconfig"; path = "Target Support Files/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.release.xcconfig"; sourceTree = "<group>"; };
+		ABF4066A25CD62992AB84329 /* Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1900C3F32CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS; sourceTree = "<group>"; };
+		1900C4072CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests; sourceTree = "<group>"; };
+		1900C4112CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1900C3EE2CDD502A00A9D47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E0CAF57941A7CE15BAF748D /* Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C4012CDD502C00A9D47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C40B2CDD502C00A9D47B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		107A3A6C2ADB418BDA30422D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4066A25CD62992AB84329 /* Pods_MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1900C3E82CDD502A00A9D47B = {
+			isa = PBXGroup;
+			children = (
+				1900C3F32CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */,
+				1900C4072CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests */,
+				1900C4112CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests */,
+				1900C3F22CDD502A00A9D47B /* Products */,
+				BE24FDCE92F1C5818AE16B5A /* Pods */,
+				107A3A6C2ADB418BDA30422D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1900C3F22CDD502A00A9D47B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1900C3F12CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app */,
+				1900C4042CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests.xctest */,
+				1900C40E2CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE24FDCE92F1C5818AE16B5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91EAAB7E4486A7E90C8A3BB6 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.debug.xcconfig */,
+				A70F8F475458AF52605E0E21 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1900C3F02CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1900C4182CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOS" */;
+			buildPhases = (
+				1D8FDA3E50B2902B6BB990B9 /* [CP] Check Pods Manifest.lock */,
+				1900C3ED2CDD502A00A9D47B /* Sources */,
+				1900C3EE2CDD502A00A9D47B /* Frameworks */,
+				1900C3EF2CDD502A00A9D47B /* Resources */,
+				EAEADE46BD79B52B03B87386 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1900C3F32CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */,
+			);
+			name = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+			productName = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+			productReference = 1900C3F12CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1900C4032CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1900C41B2CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests" */;
+			buildPhases = (
+				1900C4002CDD502C00A9D47B /* Sources */,
+				1900C4012CDD502C00A9D47B /* Frameworks */,
+				1900C4022CDD502C00A9D47B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1900C4062CDD502C00A9D47B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1900C4072CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests */,
+			);
+			name = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests;
+			productName = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests;
+			productReference = 1900C4042CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1900C40D2CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1900C41E2CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests" */;
+			buildPhases = (
+				1900C40A2CDD502C00A9D47B /* Sources */,
+				1900C40B2CDD502C00A9D47B /* Frameworks */,
+				1900C40C2CDD502C00A9D47B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1900C4102CDD502C00A9D47B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1900C4112CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests */,
+			);
+			name = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests;
+			productName = MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests;
+			productReference = 1900C40E2CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1900C3E92CDD502A00A9D47B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1900C3F02CDD502A00A9D47B = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					1900C4032CDD502C00A9D47B = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1900C3F02CDD502A00A9D47B;
+					};
+					1900C40D2CDD502C00A9D47B = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 1900C3F02CDD502A00A9D47B;
+					};
+				};
+			};
+			buildConfigurationList = 1900C3EC2CDD502A00A9D47B /* Build configuration list for PBXProject "MuxStatsGoogleIMAPluginCocoapodsExampleTVOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1900C3E82CDD502A00A9D47B;
+			minimizedProjectReferenceProxies = 1;
+			productRefGroup = 1900C3F22CDD502A00A9D47B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1900C3F02CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */,
+				1900C4032CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests */,
+				1900C40D2CDD502C00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1900C3EF2CDD502A00A9D47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C4022CDD502C00A9D47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C40C2CDD502C00A9D47B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8FDA3E50B2902B6BB990B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAEADE46BD79B52B03B87386 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS/Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1900C3ED2CDD502A00A9D47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C4002CDD502C00A9D47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1900C40A2CDD502C00A9D47B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1900C4062CDD502C00A9D47B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1900C3F02CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */;
+			targetProxy = 1900C4052CDD502C00A9D47B /* PBXContainerItemProxy */;
+		};
+		1900C4102CDD502C00A9D47B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1900C3F02CDD502A00A9D47B /* MuxStatsGoogleIMAPluginCocoapodsExampleTVOS */;
+			targetProxy = 1900C40F2CDD502C00A9D47B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1900C4162CDD502C00A9D47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
+			};
+			name = Debug;
+		};
+		1900C4172CDD502C00A9D47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				TVOS_DEPLOYMENT_TARGET = 15.6;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1900C4192CDD502C00A9D47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91EAAB7E4486A7E90C8A3BB6 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		1900C41A2CDD502C00A9D47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A70F8F475458AF52605E0E21 /* Pods-MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		1900C41C2CDD502C00A9D47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuxStatsGoogleIMAPluginCocoapodsExampleTVOS";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+			};
+			name = Debug;
+		};
+		1900C41D2CDD502C00A9D47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuxStatsGoogleIMAPluginCocoapodsExampleTVOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuxStatsGoogleIMAPluginCocoapodsExampleTVOS";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+			};
+			name = Release;
+		};
+		1900C41F2CDD502C00A9D47B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+			};
+			name = Debug;
+		};
+		1900C4202CDD502C00A9D47B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX95P4Y787;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mux.data.googleimaplugin.cocoapodsexample.tvos.MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = MuxStatsGoogleIMAPluginCocoapodsExampleTVOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1900C3EC2CDD502A00A9D47B /* Build configuration list for PBXProject "MuxStatsGoogleIMAPluginCocoapodsExampleTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1900C4162CDD502C00A9D47B /* Debug */,
+				1900C4172CDD502C00A9D47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1900C4182CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1900C4192CDD502C00A9D47B /* Debug */,
+				1900C41A2CDD502C00A9D47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1900C41B2CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1900C41C2CDD502C00A9D47B /* Debug */,
+				1900C41D2CDD502C00A9D47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1900C41E2CDD502C00A9D47B /* Build configuration list for PBXNativeTarget "MuxStatsGoogleIMAPluginCocoapodsExampleTVOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1900C41F2CDD502C00A9D47B /* Debug */,
+				1900C4202CDD502C00A9D47B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1900C3E92CDD502A00A9D47B /* Project object */;
+}

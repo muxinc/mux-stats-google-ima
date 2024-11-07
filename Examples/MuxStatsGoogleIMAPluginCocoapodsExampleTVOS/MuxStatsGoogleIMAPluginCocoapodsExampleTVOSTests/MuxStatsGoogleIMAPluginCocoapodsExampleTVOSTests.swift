@@ -1,15 +1,14 @@
 //
-//  MUXSDKIMATVOSExampleTests.swift
-//  MUXSDKIMATVOSExampleTests
+//  MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests.swift
+//  MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests
 //
-//  Created by AJ Barinov on 9/1/23.
-//  Copyright © 2023 Dylan Jhaveri. All rights reserved.
+//  Created by AJ Barinov on 11/7/24.
 //
 
 import XCTest
-@testable import MUXSDKIMATVOSExample
+@testable import MuxStatsGoogleIMAPluginCocoapodsExampleTVOS
 
-final class MUXSDKIMATVOSExampleTests: XCTestCase {
+final class MuxStatsGoogleIMAPluginCocoapodsExampleTVOSTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
