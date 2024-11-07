@@ -201,7 +201,7 @@ extension PlayerContainerViewController: IMAAdsLoaderDelegate {
 
         // MARK: Monitor the IMAAdsManager with Mux
         // note - do this *after* setting your delegate but
-        // not *before*
+        // *before* calling `IMAAdsManager:initialize:with`
         adsListener?.monitorAdsManager(loadedAdsManager)
 
         let renderingSettings = IMAAdsRenderingSettings()
