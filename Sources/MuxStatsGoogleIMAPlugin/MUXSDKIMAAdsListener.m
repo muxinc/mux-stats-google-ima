@@ -70,6 +70,7 @@ static NSInteger kPreRollCuePointSec = 0;
         NSLog(@"!! CuePoint: %@", cueTime);
         
         if (cueTime == kPostRollCuePointSec) {
+            NSLog(@"!! POSTROLL detected");
             self.hasPostRollCuePoint = YES;
             // todo - have to handle automatic video change disabled by the user
             self.changeVideoOnPostRollOver = YES;
