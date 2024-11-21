@@ -13,13 +13,13 @@ import MUXSDKStats
 import MuxCore
 
 class PlayerContainerViewController: UIViewController {
-
+    
+    var currentVideoIndex = 0
+    
     // Default URLs
 
     var adTagURLString =
-    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/"
-    + "single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&"
-    + "gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+    "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpremidpostpod&ciu_szs=300x250&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&cmsid=496&vid=short_onecue&correlator="
 
     var contentURLString = "https://stream.mux.com/a4nOgmxGWg6gULfcBbAa00gXyfcwPnAFldF8RdsNyk8M.m3u8"
 
@@ -38,6 +38,12 @@ class PlayerContainerViewController: UIViewController {
     // Mux Data
 
     var playerBinding: MUXSDKPlayerBinding?
+    static let contentURL = URL(
+        string: "https://stream.mux.com/qxb01i6T202018GFS02vp9RIe01icTcDCjVzQpmaB00CUisJ4.m3u8"
+    )!
+//    var contentPlayer = AVPlayer(
+//        url: PlayerContainerViewController.contentURL
+//    )
 
     var adsListener: MUXSDKIMAAdsListener?
 
@@ -48,12 +54,14 @@ class PlayerContainerViewController: UIViewController {
     }
 
     // Player
-
-    lazy var contentPlayer = AVPlayer(
-        url: URL(
-            string: contentURLString
-        )!
-    )
+    var contentPlayer: AVQueuePlayer = {
+        let items = [
+            AVPlayerItem(url: URL(string: "https://stream.mux.com/00ezSo01tK00mfbBKDLUtKnwVsUKF2y5cjBMvJwBh5Z0202g.m3u8")!),
+            AVPlayerItem(url: URL(string: "https://stream.mux.com/VQRLlUJ4rRQMaTnQs01F003rBmg2szk01G7ygbZstg45es.m3u8")!),
+            AVPlayerItem(url: URL(string: "https://stream.mux.com/8T5HNq7EE54pnY22pZeE56ae9eW02Z01jcc8GE9aiTsm00.m3u8")!),
+        ]
+        return AVQueuePlayer(items: items)
+    }();
     lazy var playerViewController = AVPlayerViewController()
 
     // MARK: View controller lifecycle
@@ -74,7 +82,30 @@ class PlayerContainerViewController: UIViewController {
             selector: #selector(Self.handleContentDidFinishPlaying(_:)),
             name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
             object: contentPlayer.currentItem)
-
+        
+        let observation = contentPlayer.observe(\.currentItem, options: [.new]) { [weak self]  obj, change in
+            guard let self else {
+                return
+            }
+                
+            let urlAsset = change.newValue??.asset as? AVURLAsset
+            
+            self.currentVideoIndex += 1
+            let customerVideoData = MUXSDKCustomerVideoData()
+            customerVideoData.videoTitle = "AVQueuePlayer + Postrolls Video \(currentVideoIndex)"
+            let customerData = MUXSDKCustomerData()
+            customerData.customerVideoData = customerVideoData
+//            playerBinding?.prepareForAvQueuePlayerNextItem()
+            
+            
+            if let urlAsset {
+                print("!!>>>!!>> Current Item is now \(urlAsset.url)")
+            } else {
+                print("!!>>>!!>> Current Item is now NIL")
+            }
+        }
+        
+        
         // MARK: Setup Google IMA Ads
         contentPlayhead = IMAAVPlayerContentPlayhead(
             avPlayer: contentPlayer
@@ -88,9 +119,9 @@ class PlayerContainerViewController: UIViewController {
         customerPlayerData.environmentKey = environmentKey
 
         let customerVideoData = MUXSDKCustomerVideoData()
-        if let title {
-            customerVideoData.videoTitle = title
-        }
+//        if let title {
+            customerVideoData.videoTitle = "AVQueuePlayer + Postrolls Video \(currentVideoIndex)"
+//        }
 
         let customerData = MUXSDKCustomerData()
         customerData.customerPlayerData = customerPlayerData
@@ -103,6 +134,10 @@ class PlayerContainerViewController: UIViewController {
         ) else {
             return
         }
+        
+//        contentPlayhead = IMAAVPlayerContentPlayhead(
+//            avPlayer: contentPlayer
+//        )
 
         self.playerBinding = playerBinding
 
@@ -154,7 +189,11 @@ class PlayerContainerViewController: UIViewController {
     @objc func handleContentDidFinishPlaying(
         _ notification: Notification
     ) {
+        // todo - probs need to request ads again but for sure only if we have more items to play
         adsLoader.contentComplete()
+        
+        let item = contentPlayer.currentItem
+        print(">>>>><<<<< PLAYER ITEM URL IS \((item?.asset as? AVURLAsset)?.url.absoluteString ?? "nil")")
     }
 
     func requestAds() {

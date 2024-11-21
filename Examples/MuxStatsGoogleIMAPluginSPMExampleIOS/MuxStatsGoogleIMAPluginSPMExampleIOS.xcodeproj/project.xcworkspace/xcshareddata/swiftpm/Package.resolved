@@ -1,13 +1,13 @@
 {
-  "originHash" : "23027a473fc131a607f22d9077da969f5413192da31fa8032761eb1fb2c57c14",
+  "originHash" : "dbdc44e8c272d3c6ea5f4989e6947164e47cf954ba71108806c7bda804e23296",
   "pins" : [
     {
       "identity" : "mux-stats-sdk-avplayer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
       "state" : {
-        "revision" : "9d4d18656216158a307330d96a0c54b3c35edbb0",
-        "version" : "4.1.2"
+        "branch" : "feat/send-ended-on-playeritem-end",
+        "revision" : "cc04f90aacc77d8773852e684f3975c264e12749"
       }
     },
     {
