@@ -92,10 +92,11 @@ class PlayerContainerViewController: UIViewController {
             
             self.currentVideoIndex += 1
             let customerVideoData = MUXSDKCustomerVideoData()
-            customerVideoData.videoTitle = "AVQueuePlayer + Postrolls Video \(currentVideoIndex)"
+            customerVideoData.videoTitle = "AVQueuePlayer + Postrolls"
             let customerData = MUXSDKCustomerData()
             customerData.customerVideoData = customerVideoData
 //            playerBinding?.prepareForAvQueuePlayerNextItem()
+            // dang it no way to update customer data from outside player binding
             
             
             if let urlAsset {
