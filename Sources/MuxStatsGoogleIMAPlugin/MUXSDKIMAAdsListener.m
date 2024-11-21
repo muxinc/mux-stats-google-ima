@@ -16,13 +16,7 @@
 @property (assign) BOOL adRequestReported;
 @property (assign) NSString *adTagURL;
 
-@property (assign) BOOL hasPostRollCuePoint;
-@property (assign) BOOL changeVideoOnPostRollOver;
-
 @end
-
-static NSInteger kPostRollCuePointSec = -1;
-static NSInteger kPreRollCuePointSec = 0;
 
 @implementation MUXSDKIMAAdsListener
 
@@ -63,20 +57,6 @@ static NSInteger kPreRollCuePointSec = 0;
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {
     self.customerAdsManagerDelegate = adsManager.delegate;
     adsManager.delegate = self;
-    
-    NSArray *cuePoints = adsManager.adCuePoints;
-    for (int i = 0; i < cuePoints.count; i++) {
-        NSInteger cueTime = [cuePoints objectAtIndex:i];
-        NSLog(@"!! CuePoint: %@", cueTime);
-        
-        if (cueTime == kPostRollCuePointSec) {
-            NSLog(@"!! POSTROLL detected");
-            self.hasPostRollCuePoint = YES;
-            // todo - have to handle automatic video change disabled by the user
-            self.changeVideoOnPostRollOver = YES;
-            [_playerBinding setAutomaticVideoChange:NO];
-        }
-    }
 }
 
 - (void)setupAdViewData:(MUXSDKAdEvent *)event withAd:(IMAAd *)ad {
@@ -100,38 +80,6 @@ static NSInteger kPreRollCuePointSec = 0;
 }
 
 - (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEvent *)event {
-    
-//    if (event.ad) {
-//        IMAAdPodInfo *podInfo = event.ad.adPodInfo;
-//        if (podInfo) {
-//            NSInteger podIndex = podInfo.podIndex;
-//            NSLog(@"Event: Got pod index %d", podIndex);
-//        } else {
-//            NSLog(@"Event: NO pod info");
-//        }
-//    } else {
-//        NSLog(@"Event: NO Ad");
-//    }
-    
-    // todo - move this into the if
-    if (kIMAAdEvent_ALL_ADS_COMPLETED == event.type) {
-        NSLog(@"Event: ALL_ADS_COMPLETED");
-        // todo - here would be a good place to manually end views, but only if
-        //  we are doing a postroll
-        
-        if (self.changeVideoOnPostRollOver) {
-            NSLog(@"Event: ALL_ADS_COMPLETED: Sending video change");
-            self.changeVideoOnPostRollOver = NO;
-            [_playerBinding didTriggerManualVideoChange];
-        }
-        
-        // doesn't tell if we had ads or not, doesn't tell if postroll or not
-        if (event.ad) {
-            NSLog(@"Event: ALL_ADS_COMPLETED and we HAD an ad");
-        } else {
-            NSLog(@"Event: ALL_ADS_COMPLETED and NO AD");
-        }
-    }
 
     MUXSDKAdData *adData = [[MUXSDKAdData alloc] init];
     if (event.ad != nil) {
@@ -159,7 +107,7 @@ static NSInteger kPreRollCuePointSec = 0;
                                withAdData:(nullable MUXSDKAdData *)adData
                             withIMAAdData:(nullable NSDictionary *)imaAdData {
     MUXSDKAdEvent *playbackEvent;
-    
+
     switch(eventType) {
         case kIMAAdEvent_STARTED: {
             if (_sendAdplayOnStarted) {
@@ -254,12 +202,10 @@ static NSInteger kPreRollCuePointSec = 0;
             // TODO: This is for backward compatability. Callers should call one of the *AdRequest methods. Remove this check in the next major rev
             [self dispatchAdRequestWithoutMetadata];
         }
-        
-        [_playerBinding setAdPlaying:YES];
-        
         MUXSDKAdEvent *playbackEvent = [[MUXSDKAdBreakStartEvent alloc] init];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
+
         _sendAdplayOnStarted = NO;
         [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
 
@@ -270,9 +216,6 @@ static NSInteger kPreRollCuePointSec = 0;
         }
         playbackEvent = [[MUXSDKAdBreakEndEvent alloc] init];
         [self setupAdViewDataAndDispatchEvent: playbackEvent];
-        
-        [_playerBinding setAdPlaying:NO];
-        
         if (_usesServerSideAdInsertion) {
             [_playerBinding dispatchPlay];
             [_playerBinding dispatchPlaying];
@@ -358,7 +301,6 @@ static NSInteger kPreRollCuePointSec = 0;
 /* IMAAdsLoaderDelegate */
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
-    
     if (self.customerAdsLoaderDelegate) {
         [self.customerAdsLoaderDelegate adsLoader:loader adsLoadedWithData:adsLoadedData];
     }
