@@ -32,13 +32,13 @@
                               options:(MUXSDKIMAAdsListenerOptions)options
                   monitoringAdsLoader:(IMAAdsLoader *)adsLoader {
     self = [super init];
-
+    
     if (self) {
         _customerAdsLoaderDelegate = adsLoader.delegate;
         adsLoader.delegate = self;
-
+        
         // The Ads Manager isn't created until further into the wokflow
-
+        
         _playerBinding = binding;
         if ((options & MUXSDKIMAAdsListenerOptionsPictureInPicture) == MUXSDKIMAAdsListenerOptionsNone) {
             _isPictureInPicture = NO;
@@ -50,7 +50,7 @@
         _adRequestReported = NO;
         _sendAdplayOnStarted = NO;
     }
-
+    
     return self;
 }
 
@@ -69,7 +69,7 @@
         }
         adData.adId = ad.adId;
         adData.adCreativeId = ad.creativeID;
-
+        
         // TODO: use newer IMA API here. universalAdIdValue
         // is deprecated, but used for time being for parity
         // with web&android
@@ -80,18 +80,18 @@
 }
 
 - (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEvent *)event {
-
+    
     MUXSDKAdData *adData = [[MUXSDKAdData alloc] init];
     if (event.ad != nil) {
         adData.adId = event.ad.adId;
         adData.adCreativeId = event.ad.creativeID;
-
+        
         // TODO: use newer IMA API here. universalAdIdValue
         // is deprecated, but used for time being for parity
         // with web&android
         adData.adUniversalId = event.ad.universalAdIdValue;
     }
-
+    
     return [self dispatchEvent:event.type
                     withAdData:adData
                  withIMAAdData:event.adData];
@@ -107,7 +107,7 @@
                                withAdData:(nullable MUXSDKAdData *)adData
                             withIMAAdData:(nullable NSDictionary *)imaAdData {
     MUXSDKAdEvent *playbackEvent;
-
+    
     switch(eventType) {
         case kIMAAdEvent_STARTED: {
             if (_sendAdplayOnStarted) {
@@ -170,7 +170,7 @@
         default:
             break;
     }
-
+    
     if (playbackEvent != nil) {
         MUXSDKViewData *viewData = [[MUXSDKViewData alloc] init];
         if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
@@ -205,10 +205,10 @@
         MUXSDKAdEvent *playbackEvent = [[MUXSDKAdBreakStartEvent alloc] init];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
-
+        
         _sendAdplayOnStarted = NO;
         [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
-
+        
         return;
     } else {
         if (_isPictureInPicture) {
@@ -235,14 +235,14 @@
 - (void)clientAdRequest:(IMAAdsRequest *)request {
     _usesServerSideAdInsertion = NO;
     _adRequestReported = YES;
-
+    
     [self dispatchAdRequestForAdTag:request.adTagUrl];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
     _usesServerSideAdInsertion = YES;
     _adRequestReported = YES;
-
+    
     [self dispatchAdRequestWithoutMetadata];
 }
 
@@ -258,7 +258,7 @@
         self.adTagURL = adTagUrl;
         adData.adTagUrl = adTagUrl;
     }
-
+    
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
@@ -266,7 +266,16 @@
     _isPictureInPicture = isPictureInPicture;
 }
 
-/* IMAAdsManagerDelegate */
+typedef void (^TryBlock)(void);
+- (void)trySafely:(TryBlock)block {
+    @try {
+        block();
+    } @catch (NSException *exception) {
+        NSLog(@"Swallowed NSException %@", [exception description]);
+    }
+}
+
+#pragma mark IMAAdsManagerDelegate required methods
 
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
     if (self.customerAdsManagerDelegate) {
@@ -291,14 +300,53 @@
 }
 
 - (void)adsManagerDidRequestContentResume:(nonnull IMAAdsManager *)adsManager {
-    // record content-resume first so adbreakend happens before playing (brackets the ad break
+    // record content-resume first so adbreakend happens before playing (brackets the ad break)
     [self onContentPauseOrResume:false];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManagerDidRequestContentResume:adsManager];
     }
 }
 
-/* IMAAdsLoaderDelegate */
+#pragma mark IMAAdsManagerDelegate optional methods
+
+- (void)adsManager:(IMAAdsManager *)adsManager
+adDidProgressToTime:(NSTimeInterval)mediaTime
+         totalTime:(NSTimeInterval)totalTime {
+    [self trySafely:^{
+        if (self.customerAdsManagerDelegate) {
+            [self.customerAdsManagerDelegate adsManager:adsManager
+                                    adDidProgressToTime:mediaTime
+                                              totalTime:totalTime];
+        }
+    }];
+}
+
+- (void)adsManagerAdPlaybackReady:(IMAAdsManager *)adsManager {
+    [self trySafely:^{
+        if (self.customerAdsManagerDelegate) {
+            [self.customerAdsManagerDelegate adsManagerAdPlaybackReady:adsManager];
+        }
+    }];
+}
+
+- (void)adsManagerAdDidStartBuffering:(IMAAdsManager *)adsManager {
+    [self trySafely:^{
+        if (self.customerAdsManagerDelegate) {
+            [self.customerAdsManagerDelegate adsManagerAdDidStartBuffering:adsManager];
+        }
+    }];
+}
+
+- (void)adsManager:(IMAAdsManager *)adsManager
+adDidBufferToMediaTime:(NSTimeInterval)mediaTime {
+    [self trySafely:^{
+        if (self.customerAdsManagerDelegate) {
+            [self.customerAdsManagerDelegate adsManager:adsManager adDidBufferToMediaTime:mediaTime];
+        }
+    }];
+}
+
+#pragma mark IMAAdsLoaderDelegate
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
     if (self.customerAdsLoaderDelegate) {
