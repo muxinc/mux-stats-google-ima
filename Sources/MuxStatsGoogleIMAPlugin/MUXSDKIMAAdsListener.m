@@ -20,7 +20,6 @@
 
 @implementation MUXSDKIMAAdsListener
 
-
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader {
     return [self initWithPlayerBinding:binding
@@ -32,13 +31,13 @@
                               options:(MUXSDKIMAAdsListenerOptions)options
                   monitoringAdsLoader:(IMAAdsLoader *)adsLoader {
     self = [super init];
-    
+
     if (self) {
         _customerAdsLoaderDelegate = adsLoader.delegate;
         adsLoader.delegate = self;
-        
+
         // The Ads Manager isn't created until further into the wokflow
-        
+
         _playerBinding = binding;
         if ((options & MUXSDKIMAAdsListenerOptionsPictureInPicture) == MUXSDKIMAAdsListenerOptionsNone) {
             _isPictureInPicture = NO;
@@ -50,7 +49,7 @@
         _adRequestReported = NO;
         _sendAdplayOnStarted = NO;
     }
-    
+
     return self;
 }
 
@@ -69,7 +68,7 @@
         }
         adData.adId = ad.adId;
         adData.adCreativeId = ad.creativeID;
-        
+
         // TODO: use newer IMA API here. universalAdIdValue
         // is deprecated, but used for time being for parity
         // with web&android
@@ -80,18 +79,18 @@
 }
 
 - (nullable MUXSDKAdEvent *)dispatchEvent:(IMAAdEvent *)event {
-    
+
     MUXSDKAdData *adData = [[MUXSDKAdData alloc] init];
     if (event.ad != nil) {
         adData.adId = event.ad.adId;
         adData.adCreativeId = event.ad.creativeID;
-        
+
         // TODO: use newer IMA API here. universalAdIdValue
         // is deprecated, but used for time being for parity
         // with web&android
         adData.adUniversalId = event.ad.universalAdIdValue;
     }
-    
+
     return [self dispatchEvent:event.type
                     withAdData:adData
                  withIMAAdData:event.adData];
@@ -107,7 +106,7 @@
                                withAdData:(nullable MUXSDKAdData *)adData
                             withIMAAdData:(nullable NSDictionary *)imaAdData {
     MUXSDKAdEvent *playbackEvent;
-    
+
     switch(eventType) {
         case kIMAAdEvent_STARTED: {
             if (_sendAdplayOnStarted) {
@@ -170,7 +169,7 @@
         default:
             break;
     }
-    
+
     if (playbackEvent != nil) {
         MUXSDKViewData *viewData = [[MUXSDKViewData alloc] init];
         if ([_playerBinding getCurrentPlayheadTimeMs] < 1000) {
@@ -205,10 +204,10 @@
         MUXSDKAdEvent *playbackEvent = [[MUXSDKAdBreakStartEvent alloc] init];
         [self setupAdViewData:playbackEvent withAd:nil];
         [_playerBinding dispatchAdEvent: playbackEvent];
-        
+
         _sendAdplayOnStarted = NO;
         [_playerBinding dispatchAdEvent: [[MUXSDKAdPlayEvent alloc] init]];
-        
+
         return;
     } else {
         if (_isPictureInPicture) {
@@ -235,14 +234,14 @@
 - (void)clientAdRequest:(IMAAdsRequest *)request {
     _usesServerSideAdInsertion = NO;
     _adRequestReported = YES;
-    
+
     [self dispatchAdRequestForAdTag:request.adTagUrl];
 }
 
 - (void)daiAdRequest:(IMAStreamRequest *)request {
     _usesServerSideAdInsertion = YES;
     _adRequestReported = YES;
-    
+
     [self dispatchAdRequestWithoutMetadata];
 }
 
@@ -258,7 +257,7 @@
         self.adTagURL = adTagUrl;
         adData.adTagUrl = adTagUrl;
     }
-    
+
     [self setupAdViewDataAndDispatchEvent: playbackEvent];
 }
 
