@@ -319,7 +319,7 @@ adDidProgressToTime:(NSTimeInterval)mediaTime
 
 - (void)adsManagerAdDidStartBuffering:(IMAAdsManager *)adsManager {
     if (self.customerAdsManagerDelegate &&
-        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdDidStartBuffering::)]) {
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdDidStartBuffering:)]) {
         [self.customerAdsManagerDelegate adsManagerAdDidStartBuffering:adsManager];
     }
 }
@@ -327,7 +327,7 @@ adDidProgressToTime:(NSTimeInterval)mediaTime
 - (void)adsManager:(IMAAdsManager *)adsManager
 adDidBufferToMediaTime:(NSTimeInterval)mediaTime {
     if (self.customerAdsManagerDelegate &&
-        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidBufferToMediaTime:::)]) {
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidBufferToMediaTime:)]) {
         [self.customerAdsManagerDelegate adsManager:adsManager adDidBufferToMediaTime:mediaTime];
     }
 }
