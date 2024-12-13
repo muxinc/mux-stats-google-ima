@@ -265,15 +265,6 @@
     _isPictureInPicture = isPictureInPicture;
 }
 
-typedef void (^TryBlock)(void);
-- (void)trySafely:(TryBlock)block {
-    @try {
-        block();
-    } @catch (NSException *exception) {
-        NSLog(@"Swallowed NSException %@", [exception description]);
-    }
-}
-
 #pragma mark IMAAdsManagerDelegate required methods
 
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
@@ -311,38 +302,34 @@ typedef void (^TryBlock)(void);
 - (void)adsManager:(IMAAdsManager *)adsManager
 adDidProgressToTime:(NSTimeInterval)mediaTime
          totalTime:(NSTimeInterval)totalTime {
-    [self trySafely:^{
-        if (self.customerAdsManagerDelegate) {
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidProgressToTime:totalTime:)]) {
             [self.customerAdsManagerDelegate adsManager:adsManager
                                     adDidProgressToTime:mediaTime
                                               totalTime:totalTime];
         }
-    }];
 }
 
 - (void)adsManagerAdPlaybackReady:(IMAAdsManager *)adsManager {
-    [self trySafely:^{
-        if (self.customerAdsManagerDelegate) {
-            [self.customerAdsManagerDelegate adsManagerAdPlaybackReady:adsManager];
-        }
-    }];
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdPlaybackReady:)]) {
+        [self.customerAdsManagerDelegate adsManagerAdPlaybackReady:adsManager];
+    }
 }
 
 - (void)adsManagerAdDidStartBuffering:(IMAAdsManager *)adsManager {
-    [self trySafely:^{
-        if (self.customerAdsManagerDelegate) {
-            [self.customerAdsManagerDelegate adsManagerAdDidStartBuffering:adsManager];
-        }
-    }];
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdDidStartBuffering::)]) {
+        [self.customerAdsManagerDelegate adsManagerAdDidStartBuffering:adsManager];
+    }
 }
 
 - (void)adsManager:(IMAAdsManager *)adsManager
 adDidBufferToMediaTime:(NSTimeInterval)mediaTime {
-    [self trySafely:^{
-        if (self.customerAdsManagerDelegate) {
-            [self.customerAdsManagerDelegate adsManager:adsManager adDidBufferToMediaTime:mediaTime];
-        }
-    }];
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidBufferToMediaTime:::)]) {
+        [self.customerAdsManagerDelegate adsManager:adsManager adDidBufferToMediaTime:mediaTime];
+    }
 }
 
 #pragma mark IMAAdsLoaderDelegate
