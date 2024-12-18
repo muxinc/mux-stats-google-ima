@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
       "state" : {
-        "branch" : "feat/send-ended-on-playeritem-end",
-        "revision" : "cc04f90aacc77d8773852e684f3975c264e12749"
+        "revision" : "7f597bd145fa90e2afc9c73d3b0a2c5287331bef",
+        "version" : "4.2.0"
       }
     },
     {

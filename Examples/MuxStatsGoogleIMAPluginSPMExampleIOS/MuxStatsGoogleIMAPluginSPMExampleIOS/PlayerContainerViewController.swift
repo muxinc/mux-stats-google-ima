@@ -52,16 +52,16 @@ class PlayerContainerViewController: UIViewController {
     var playerName: String {
         title ?? "adplayer"
     }
+    
+    let playerItems = [
+        AVPlayerItem(url: URL(string: "https://stream.mux.com/00ezSo01tK00mfbBKDLUtKnwVsUKF2y5cjBMvJwBh5Z0202g.m3u8")!),
+        AVPlayerItem(url: URL(string: "https://stream.mux.com/VQRLlUJ4rRQMaTnQs01F003rBmg2szk01G7ygbZstg45es.m3u8")!),
+        AVPlayerItem(url: URL(string: "https://stream.mux.com/8T5HNq7EE54pnY22pZeE56ae9eW02Z01jcc8GE9aiTsm00.m3u8")!),
+    ]
 
+    
     // Player
-    var contentPlayer: AVQueuePlayer = {
-        let items = [
-            AVPlayerItem(url: URL(string: "https://stream.mux.com/00ezSo01tK00mfbBKDLUtKnwVsUKF2y5cjBMvJwBh5Z0202g.m3u8")!),
-            AVPlayerItem(url: URL(string: "https://stream.mux.com/VQRLlUJ4rRQMaTnQs01F003rBmg2szk01G7ygbZstg45es.m3u8")!),
-            AVPlayerItem(url: URL(string: "https://stream.mux.com/8T5HNq7EE54pnY22pZeE56ae9eW02Z01jcc8GE9aiTsm00.m3u8")!),
-        ]
-        return AVQueuePlayer(items: items)
-    }();
+    lazy var contentPlayer: AVQueuePlayer = AVQueuePlayer(items: playerItems)
     lazy var playerViewController = AVPlayerViewController()
 
     // MARK: View controller lifecycle
@@ -186,7 +186,9 @@ class PlayerContainerViewController: UIViewController {
         setupPlayer()
         requestAds()
     }
-
+    
+    var requestMoreAdsOnAdBreakOver: Bool = false
+    
     @objc func handleContentDidFinishPlaying(
         _ notification: Notification
     ) {
@@ -194,7 +196,22 @@ class PlayerContainerViewController: UIViewController {
         adsLoader.contentComplete()
         
         let item = contentPlayer.currentItem
-        print(">>>>><<<<< PLAYER ITEM URL IS \((item?.asset as? AVURLAsset)?.url.absoluteString ?? "nil")")
+        // here it's the item that just finished playing.
+        //  so theoretically we know that contentPlayer.currentItem just finished here, and we can tell from IMAAAdsManager if there's
+        //  a postroll happening, so here we can know whether or not to request more ads.
+        if adsManager?.adCuePoints.contains(where: {it in (it as! Int) < 0 }) == true {
+            print(">>>>><<<<< handleContentDidFinishPlaying: We had a postroll")
+            if (contentPlayer.currentItem != playerItems.last) {
+                print(">>>>><<<<< handleContentDidFinishPlaying: postroll and not the last item")
+                requestMoreAdsOnAdBreakOver = true
+            }
+        } else {
+            // no postrolls on the item that just ended, request ads for the next item
+            requestMoreAdsOnAdBreakOver = false
+            requestAds()
+        }
+        print(">>>>><<<<< handleContentDidFinishPlaying: CUE POINTS ARE \(String(describing: self.adsManager?.adCuePoints))")
+        print(">>>>><<<<< handleContentDidFinishPlaying: PLAYER ITEM URL IS \((item?.asset as? AVURLAsset)?.url.absoluteString ?? "nil")")
     }
 
     func requestAds() {
@@ -270,9 +287,21 @@ extension PlayerContainerViewController: IMAAdsManagerDelegate {
         _ adsManager: IMAAdsManager,
         didReceive event: IMAAdEvent
     ) {
-        // Play each ad once it has been loaded
-        if event.type == IMAAdEventType.LOADED {
+        switch(event.type) {
+        case IMAAdEventType.LOADED:
+            // Play each ad once it has been loaded
             adsManager.start()
+            break
+        case IMAAdEventType.ALL_ADS_COMPLETED:
+            // TODO: Doesn't do anything since we'll be here already
+            // Request ads for the new playeritem
+            if requestMoreAdsOnAdBreakOver {
+                requestAds()
+                requestMoreAdsOnAdBreakOver = false
+            }
+            break
+        default:
+            break
         }
     }
 
