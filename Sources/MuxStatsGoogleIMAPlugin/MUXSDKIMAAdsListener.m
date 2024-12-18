@@ -14,6 +14,7 @@
 @property (assign) BOOL isPictureInPicture;
 @property (assign) BOOL usesServerSideAdInsertion;
 @property (assign) BOOL adRequestReported;
+@property (assign) BOOL isPostRollAdScheduled;
 @property (assign) NSString *adTagURL;
 
 @end
@@ -48,12 +49,34 @@
         _usesServerSideAdInsertion = NO;
         _adRequestReported = NO;
         _sendAdplayOnStarted = NO;
+        _isPostRollAdScheduled = NO;
     }
 
     return self;
 }
 
+// TODO move down the file
+-(BOOL)adsManagerSchedulesPostroll:(IMAAdsManager *)adsManager {
+    NSNumber *postRollCuePointValue = [NSNumber numberWithInt:-1];
+    NSUInteger cuePoint = [adsManager.adCuePoints indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([postRollCuePointValue isEqual:obj]) {
+                stop = YES;
+                return true;
+            } else {
+                return false;
+            }
+        }];
+    return cuePoint != nil;
+}
+
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {
+    // TODO: SDK always disables automaticVideoChange
+    if (adsManager && adsManager.adCuePoints && [self adsManagerSchedulesPostroll:adsManager]) {
+        _isPostRollAdScheduled = YES;
+    } else {
+        _isPostRollAdScheduled = NO;
+    }
+    
     self.customerAdsManagerDelegate = adsManager.delegate;
     adsManager.delegate = self;
 }
