@@ -15,6 +15,7 @@
 @property (assign) BOOL usesServerSideAdInsertion;
 @property (assign) BOOL adRequestReported;
 @property (assign) BOOL isPostRollAdScheduled;
+@property (assign) BOOL automaticVideoChange;
 @property (assign) NSString *adTagURL;
 
 @end
@@ -40,6 +41,14 @@
         // The Ads Manager isn't created until further into the wokflow
 
         _playerBinding = binding;
+        
+        // We take this over from the base SDK so we can handle postrolls without changing the view
+        // TODO: Must also be able to query if automatic video change is enabled (or else an API on playerBinding to tell it when ads are scheduled & completed)
+        if (/*not exactly the condition we want*/true) {
+            [binding setAutomaticVideoChange:NO];
+            _automaticVideoChange = YES;
+        }
+        
         if ((options & MUXSDKIMAAdsListenerOptionsPictureInPicture) == MUXSDKIMAAdsListenerOptionsNone) {
             _isPictureInPicture = NO;
         }
