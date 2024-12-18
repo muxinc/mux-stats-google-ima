@@ -79,7 +79,7 @@
 }
 
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {
-    // TODO: SDK always disables automaticVideoChange
+    // TODO: SDK always disables automaticVideoChange??
     if (adsManager && adsManager.adCuePoints && [self adsManagerSchedulesPostroll:adsManager]) {
         _isPostRollAdScheduled = YES;
     } else {
@@ -140,6 +140,14 @@
     MUXSDKAdEvent *playbackEvent;
 
     switch(eventType) {
+        case kIMAAdEvent_ALL_ADS_COMPLETED: {
+            if (_isPostRollAdScheduled && _automaticVideoChange) {
+                NSLog(@">>dispatchEvent: Postroll was scheduled and automatic video change");
+                if (_playerBinding) {
+                    [MUXSDKStats videoChangeForPlayer:<#(nonnull NSString *)#> withCustomerData:[[MUXSDKCustomData alloc] init]];
+                }
+            }
+        }
         case kIMAAdEvent_STARTED: {
             if (_sendAdplayOnStarted) {
                 playbackEvent = [[MUXSDKAdPlayEvent alloc] init];
