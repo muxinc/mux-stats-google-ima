@@ -43,9 +43,8 @@
         _playerBinding = binding;
         
         // We take this over from the base SDK so we can handle postrolls without changing the view
-        // TODO: Must also be able to query if automatic video change is enabled (or else an API on playerBinding to tell it when ads are scheduled & completed)
         if (/*not exactly the condition we want*/true) {
-            [binding setAutomaticVideoChange:NO];
+            // TODO: Must also be able to query if automatic video change is enabled (or else an API on playerBinding to tell it when ads are scheduled & completed)
             _automaticVideoChange = YES;
         }
         
@@ -82,7 +81,10 @@
     // TODO: SDK always disables automaticVideoChange??
     if (adsManager && adsManager.adCuePoints && [self adsManagerSchedulesPostroll:adsManager]) {
         _isPostRollAdScheduled = YES;
+        [_playerBinding setAutomaticVideoChange:NO];
     } else {
+        // TODO: Only if it was enabled in base SDk
+        [_playerBinding setAutomaticVideoChange:YES];
         _isPostRollAdScheduled = NO;
     }
     
@@ -144,7 +146,10 @@
             if (_isPostRollAdScheduled && _automaticVideoChange) {
                 NSLog(@">>dispatchEvent: Postroll was scheduled and automatic video change");
                 if (_playerBinding) {
-                    [MUXSDKStats videoChangeForPlayer:<#(nonnull NSString *)#> withCustomerData:[[MUXSDKCustomData alloc] init]];
+                    [MUXSDKStats
+                     videoChangeForPlayer:[_playerBinding playerName]
+                     withCustomerData:[[MUXSDKCustomerData alloc] init]
+                    ];
                 }
             }
         }
