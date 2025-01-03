@@ -83,28 +83,46 @@ class PlayerContainerViewController: UIViewController {
             name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
             object: contentPlayer.currentItem)
         
-        let observation = contentPlayer.observe(\.currentItem, options: [.new]) { [weak self]  obj, change in
-            guard let self else {
-                return
-            }
-                
-            let urlAsset = change.newValue??.asset as? AVURLAsset
-            
-            self.currentVideoIndex += 1
-            let customerVideoData = MUXSDKCustomerVideoData()
-            customerVideoData.videoTitle = "AVQueuePlayer + Postrolls"
-            let customerData = MUXSDKCustomerData()
-            customerData.customerVideoData = customerVideoData
-//            playerBinding?.prepareForAvQueuePlayerNextItem()
-            // dang it no way to update customer data from outside player binding
-            
-            
-            if let urlAsset {
-                print("!!>>>!!>> Current Item is now \(urlAsset.url)")
-            } else {
-                print("!!>>>!!>> Current Item is now NIL")
-            }
-        }
+//        let observation = contentPlayer.observe(\.currentItem, options: [.old, .new]) { [weak self]  obj, change in
+//            guard let self else {
+//                return
+//            }
+//            
+//            if let oldVal = change.oldValue, let oldVal {
+//                print("changing playeritem, had old value")
+//                
+//                NotificationCenter.default.removeObserver(
+//                    self,
+//                    name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+//                    object: oldVal
+//                )
+//            }
+//            
+//            if let newVal = change.newValue, let newVal {
+//                print("changing playeritem, had new value")
+//                NotificationCenter.default.addObserver(
+//                    self,
+//                    selector: #selector(Self.handleContentDidFinishPlaying(_:)),
+//                    name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+//                    object: newVal)
+//                
+//                let x: AVPlayerItem = newVal
+//                
+//                let urlAsset = newVal.asset as? AVURLAsset
+//                self.currentVideoIndex += 1
+//                let customerVideoData = MUXSDKCustomerVideoData()
+//                customerVideoData.videoTitle = "AVQueuePlayer + Postrolls"
+//                let customerData = MUXSDKCustomerData()
+//                customerData.customerVideoData = customerVideoData
+//                
+//                
+//                if let urlAsset {
+//                    print("!!>>>!!>> Current Item is now \(urlAsset.url)")
+//                } else {
+//                    print("!!>>>!!>> Current Item is now NIL")
+//                }
+//            }
+//        }
         
         
         // MARK: Setup Google IMA Ads
@@ -195,6 +213,7 @@ class PlayerContainerViewController: UIViewController {
         // todo - probs need to request ads again but for sure only if we have more items to play
         adsLoader.contentComplete()
         
+        // TODO: This is all dumb. Just listen for ALL_ADS_COMPLETED and playerItem changes, and only request ads when item changes and ALL_ADS_COMPLETED
         let item = contentPlayer.currentItem
         // here it's the item that just finished playing.
         //  so theoretically we know that contentPlayer.currentItem just finished here, and we can tell from IMAAAdsManager if there's

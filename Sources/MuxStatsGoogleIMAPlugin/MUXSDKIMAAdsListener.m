@@ -80,11 +80,13 @@
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {
     // TODO: SDK always disables automaticVideoChange??
     if (adsManager && adsManager.adCuePoints && [self adsManagerSchedulesPostroll:adsManager]) {
+        NSLog(@"monitorAdsManager: postroll scheduled");
         _isPostRollAdScheduled = YES;
         [_playerBinding setAutomaticVideoChange:NO];
     } else {
+        NSLog(@"monitorAdsManager: postroll NOT scheduled");
         // TODO: Only if it was enabled in base SDk
-        [_playerBinding setAutomaticVideoChange:YES];
+        [_playerBinding setAutomaticVideoChange:_automaticVideoChange];
         _isPostRollAdScheduled = NO;
     }
     
@@ -143,6 +145,7 @@
 
     switch(eventType) {
         case kIMAAdEvent_ALL_ADS_COMPLETED: {
+            NSLog(@">>dispatchEvent: isPostRollAdScheduled %d and automaticVideoChange %d", _isPostRollAdScheduled, _automaticVideoChange);
             if (_isPostRollAdScheduled && _automaticVideoChange) {
                 NSLog(@">>dispatchEvent: Postroll was scheduled and automatic video change");
                 if (_playerBinding) {

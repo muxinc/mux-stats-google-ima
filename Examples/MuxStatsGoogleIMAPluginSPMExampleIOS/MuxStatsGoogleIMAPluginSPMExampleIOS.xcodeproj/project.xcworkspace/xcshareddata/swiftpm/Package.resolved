@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
       "state" : {
-        "revision" : "7f597bd145fa90e2afc9c73d3b0a2c5287331bef",
-        "version" : "4.2.0"
+        "branch" : "update/decouple-video-change",
+        "revision" : "156022a48d0c8bd202e872b69a8e5ffe5f88abe3"
       }
     },
     {
