@@ -74,7 +74,7 @@
                 return false;
             }
         }];
-    return cuePoint != nil;
+    return cuePoint != NSNotFound;
 }
 
 - (void)monitorAdsManager:(IMAAdsManager *)adsManager {
