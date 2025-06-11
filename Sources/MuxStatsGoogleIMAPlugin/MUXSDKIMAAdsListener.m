@@ -298,6 +298,12 @@
     }
 }
 
+- (void)adsManager:(IMAAdsManager *)adsManager adDidProgressToTime:(NSTimeInterval)mediaTime totalTime:(NSTimeInterval)totalTime {
+    if (self.customerAdsManagerDelegate) {
+        [self.customerAdsManagerDelegate adsManager:adsManager adDidProgressToTime:mediaTime totalTime:totalTime];
+    }
+}
+
 /* IMAAdsLoaderDelegate */
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
