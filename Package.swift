@@ -10,8 +10,7 @@ let package = Package(
         .library(
             name: "MuxStatsGoogleIMAPlugin",
             targets: [
-                "MuxStatsGoogleIMAPlugin",
-                "GoogleInteractiveMediaAds",
+                "MuxStatsGoogleIMAPlugin"
             ]
         ),
     ],
@@ -20,6 +19,8 @@ let package = Package(
             url: "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
             from: "4.1.0"
         ),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", from: "3.26.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos", from: "4.15.0")
     ],
     targets: [
         .target(
@@ -29,19 +30,29 @@ let package = Package(
                     name: "MUXSDKStats",
                     package: "mux-stats-sdk-avplayer"
                 ),
-                "GoogleInteractiveMediaAds"
+                "GoogleIMA"
             ]
         ),
-        .binaryTarget(
-              name: "GoogleInteractiveMediaAds",
-              url: "https://imasdk.googleapis.com/downloads/ima/ios/GoogleInteractiveMediaAds-ios-v3.23.0.zip",
-              checksum: "6fa5ad05c4ab85d74b8aad5fdace8a069f3dbd1eb820496bc04df7aeda0cd5e0"
+        .target(
+            name: "GoogleIMA",
+            dependencies: [
+                .product(
+                    name: "GoogleInteractiveMediaAds",
+                    package: "swift-package-manager-google-interactive-media-ads-ios",
+                    condition: .when(platforms: [.iOS])
+                ),
+                .product(
+                    name: "GoogleInteractiveMediaAdsTvOS",
+                    package: "swift-package-manager-google-interactive-media-ads-tvos",
+                    condition: .when(platforms: [.tvOS])
+                )
+            ]
         ),
         .testTarget(
             name: "MuxStatsGoogleIMAPluginTests",
             dependencies: [
                 "MuxStatsGoogleIMAPlugin",
-                "GoogleInteractiveMediaAds"
+                "GoogleIMA"
             ]
         ),
     ]
