@@ -2,6 +2,11 @@ agents:
   queue: "macOS-Monterey-12-4"
 
 steps:
+  - label: ":xcode_simulator: Unit Test Package"
+    command: "./scripts/run-tests.sh"
+  - label: ":cocoapods: Validate Podspec"
+    command: "./scripts/validate-podspec.sh"
+  - wait
   - command: "./scripts/create-example-application-archive.sh MuxStatsGoogleIMAPluginSPMExampleIOS"
     label: ":xcode: Export Test Application Archive"
     artifact_paths:
