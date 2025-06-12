@@ -10,7 +10,7 @@ let package = Package(
         .library(
             name: "MuxStatsGoogleIMAPlugin",
             targets: [
-                "MuxStatsGoogleIMAPlugin"
+                "MuxStatsGoogleIMAPlugin",
             ]
         ),
     ],
@@ -19,8 +19,14 @@ let package = Package(
             url: "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
             from: "4.1.0"
         ),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", from: "3.26.0"),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos", from: "4.15.0")
+        .package(
+            url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios",
+            from: "3.23.0"
+        ),
+        .package(
+            url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos",
+            from: "4.13.0"
+        ),
     ],
     targets: [
         .target(
@@ -30,12 +36,6 @@ let package = Package(
                     name: "MUXSDKStats",
                     package: "mux-stats-sdk-avplayer"
                 ),
-                "GoogleIMA"
-            ]
-        ),
-        .target(
-            name: "GoogleIMA",
-            dependencies: [
                 .product(
                     name: "GoogleInteractiveMediaAds",
                     package: "swift-package-manager-google-interactive-media-ads-ios",
@@ -45,14 +45,13 @@ let package = Package(
                     name: "GoogleInteractiveMediaAdsTvOS",
                     package: "swift-package-manager-google-interactive-media-ads-tvos",
                     condition: .when(platforms: [.tvOS])
-                )
+                ),
             ]
         ),
         .testTarget(
             name: "MuxStatsGoogleIMAPluginTests",
             dependencies: [
                 "MuxStatsGoogleIMAPlugin",
-                "GoogleIMA"
             ]
         ),
     ]
