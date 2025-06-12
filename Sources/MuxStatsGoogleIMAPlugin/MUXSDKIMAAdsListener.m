@@ -20,7 +20,6 @@
 
 @implementation MUXSDKIMAAdsListener
 
-
 - (instancetype)initWithPlayerBinding:(MUXSDKPlayerBinding *)binding
                   monitoringAdsLoader:(nullable IMAAdsLoader *)adsLoader {
     return [self initWithPlayerBinding:binding
@@ -266,7 +265,7 @@
     _isPictureInPicture = isPictureInPicture;
 }
 
-/* IMAAdsManagerDelegate */
+#pragma mark IMAAdsManagerDelegate required methods
 
 - (void)adsManager:(IMAAdsManager *)adsManager didReceiveAdEvent:(IMAAdEvent *)event {
     if (self.customerAdsManagerDelegate) {
@@ -291,20 +290,50 @@
 }
 
 - (void)adsManagerDidRequestContentResume:(nonnull IMAAdsManager *)adsManager {
-    // record content-resume first so adbreakend happens before playing (brackets the ad break
+    // record content-resume first so adbreakend happens before playing (brackets the ad break)
     [self onContentPauseOrResume:false];
     if (self.customerAdsManagerDelegate) {
         [self.customerAdsManagerDelegate adsManagerDidRequestContentResume:adsManager];
     }
 }
 
-- (void)adsManager:(IMAAdsManager *)adsManager adDidProgressToTime:(NSTimeInterval)mediaTime totalTime:(NSTimeInterval)totalTime {
-    if (self.customerAdsManagerDelegate) {
-        [self.customerAdsManagerDelegate adsManager:adsManager adDidProgressToTime:mediaTime totalTime:totalTime];
+/* IMAAdsLoaderDelegate */
+#pragma mark IMAAdsManagerDelegate optional methods
+
+- (void)adsManager:(IMAAdsManager *)adsManager
+adDidProgressToTime:(NSTimeInterval)mediaTime
+         totalTime:(NSTimeInterval)totalTime {
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidProgressToTime:totalTime:)]) {
+            [self.customerAdsManagerDelegate adsManager:adsManager
+                                    adDidProgressToTime:mediaTime
+                                              totalTime:totalTime];
+        }
+}
+
+- (void)adsManagerAdPlaybackReady:(IMAAdsManager *)adsManager {
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdPlaybackReady:)]) {
+        [self.customerAdsManagerDelegate adsManagerAdPlaybackReady:adsManager];
     }
 }
 
-/* IMAAdsLoaderDelegate */
+- (void)adsManagerAdDidStartBuffering:(IMAAdsManager *)adsManager {
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManagerAdDidStartBuffering:)]) {
+        [self.customerAdsManagerDelegate adsManagerAdDidStartBuffering:adsManager];
+    }
+}
+
+- (void)adsManager:(IMAAdsManager *)adsManager
+adDidBufferToMediaTime:(NSTimeInterval)mediaTime {
+    if (self.customerAdsManagerDelegate &&
+        [(id)(self.customerAdsManagerDelegate) respondsToSelector:@selector(adsManager:adDidBufferToMediaTime:)]) {
+        [self.customerAdsManagerDelegate adsManager:adsManager adDidBufferToMediaTime:mediaTime];
+    }
+}
+
+#pragma mark IMAAdsLoaderDelegate
 
 - (void)adsLoader:(nonnull IMAAdsLoader *)loader adsLoadedWithData:(nonnull IMAAdsLoadedData *)adsLoadedData {
     if (self.customerAdsLoaderDelegate) {
