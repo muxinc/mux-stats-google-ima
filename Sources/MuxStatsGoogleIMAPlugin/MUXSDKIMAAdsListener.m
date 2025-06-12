@@ -297,6 +297,7 @@
     }
 }
 
+/* IMAAdsLoaderDelegate */
 #pragma mark IMAAdsManagerDelegate optional methods
 
 - (void)adsManager:(IMAAdsManager *)adsManager
