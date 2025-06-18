@@ -22,7 +22,7 @@ In order to install in your iOS application open your `Package.swift` file, add 
 ```swift
 .package(
 	url: "https://github.com/muxinc/mux-stats-google-ima",
-	.upToNextMajor(from: "0.14.0")
+	.upToNextMajor(from: "0.15.0")
  ),
 ```
 

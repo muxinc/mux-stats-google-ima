@@ -15,7 +15,11 @@ echo "▸ Using Xcode Version: ${XCODE_VERSION}"
 echo "▸ Executing Tests"
 
 xcodebuild -scheme "${SCHEME}" \
-           -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0' \
-           -sdk iphonesimulator18.0 \
+           -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
+           clean test \
+           | xcbeautify
+
+xcodebuild -scheme "${SCHEME}" \
+           -destination 'platform=tvOS Simulator,name=Apple TV 4K (3rd generation) (at 1080p)' \
            clean test \
            | xcbeautify

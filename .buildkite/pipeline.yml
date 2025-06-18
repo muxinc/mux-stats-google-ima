@@ -1,0 +1,18 @@
+agents:
+  queue: "macOS-Monterey-12-4"
+
+steps:
+  - label: ":xcode_simulator: Unit Test Package"
+    command: "./scripts/run-tests.sh"
+  - label: ":cocoapods: Validate Podspec"
+    command: "./scripts/validate-podspec.sh"
+  - wait
+  - command: "./scripts/create-example-application-archive.sh MuxStatsGoogleIMAPluginSPMExampleIOS"
+    label: ":xcode: Export Test Application Archive"
+    artifact_paths:
+      - "./Examples/MuxStatsGoogleIMAPluginSPMExampleIOS/MuxStatsGoogleIMAPluginSPMExampleIOS.ipa"
+      - "./Examples/MuxStatsGoogleIMAPluginSPMExampleIOS/Packaging.log"
+      - "./Examples/MuxStatsGoogleIMAPluginSPMExampleIOS/DistributionSummary.plist"
+  - wait
+  - command: "echo $BUILDKITE_HOOKS_PATH && ls -ls $BUILDKITE_HOOKS_PATH && buildkite-agent artifact download \"Examples/MuxStatsGoogleIMAPluginSPMExampleIOS/MuxStatsGoogleIMAPluginSPMExampleIOS.ipa\" \"$PWD\" && ./scripts/upload-example-application-to-sauce-labs.sh"
+    label: ":saucelabs: Upload Test Application to Sauce Labs App Storage"
