@@ -89,6 +89,17 @@
         // is deprecated, but used for time being for parity
         // with web&android
         adData.adUniversalId = event.ad.universalAdIdValue;
+        
+        if (event.ad.adPodInfo != nil && !_usesServerSideAdInsertion) {
+            NSInteger podIndex = event.ad.adPodInfo.podIndex;
+            if (podIndex == 0) {
+                adData.adType = MUXSDKAdTypePreRoll;
+            } else if (podIndex < 0) {
+                adData.adType = MUXSDKAdTypePostRoll;
+            } else {
+                adData.adType = MUXSDKAdTypeMidRoll;
+            }
+        }
     }
 
     return [self dispatchEvent:event.type
