@@ -111,7 +111,7 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 /// just made
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 
-/// Signals a stream ad request has been made by your
+/// Signals a DAI stream ad request has been made by your
 /// application.
 ///
 /// Call as soon as possible after sending the request to
