@@ -8,6 +8,9 @@ echo "▸ Using Xcode Version: $(xcodebuild -version | grep Xcode | cut -d " " -
 echo "▸ Set US UTF-8 Locale"
 export LC_ALL=en_US.UTF-8
 
+echo "--- Updating pods repo"
+pod repo update
+
 echo "--- Linting Podspec (default options)"
 pod lib lint --skip-tests --allow-warnings
 
