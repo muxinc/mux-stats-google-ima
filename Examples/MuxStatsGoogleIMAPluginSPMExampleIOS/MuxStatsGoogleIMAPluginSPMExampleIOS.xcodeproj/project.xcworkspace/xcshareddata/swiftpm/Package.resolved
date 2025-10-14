@@ -1,13 +1,13 @@
 {
-  "originHash" : "23027a473fc131a607f22d9077da969f5413192da31fa8032761eb1fb2c57c14",
+  "originHash" : "dbdc44e8c272d3c6ea5f4989e6947164e47cf954ba71108806c7bda804e23296",
   "pins" : [
     {
       "identity" : "mux-stats-sdk-avplayer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
       "state" : {
-        "revision" : "9d4d18656216158a307330d96a0c54b3c35edbb0",
-        "version" : "4.1.2"
+        "revision" : "ed4e8a73372843ec4fe18822b0a8381519969162",
+        "version" : "4.10.0"
       }
     },
     {
@@ -15,8 +15,26 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/stats-sdk-objc.git",
       "state" : {
-        "revision" : "b75c77756b43d6dfe6d93c1f3445e23843d497ea",
-        "version" : "5.1.2"
+        "revision" : "645a23a8d8215ecdea2a557b04807a5a7ba6c554",
+        "version" : "5.7.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios",
+      "state" : {
+        "revision" : "db4cbeb8c39f7c0fa2a28c52897e75288f6a3eaf",
+        "version" : "3.27.4"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-tvos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos",
+      "state" : {
+        "revision" : "05109c3b19133c3495a32e5a0059bef917b5fde9",
+        "version" : "4.15.1"
       }
     }
   ],

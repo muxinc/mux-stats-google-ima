@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/mux-stats-sdk-avplayer.git",
       "state" : {
-        "revision" : "dec068faeaeb94165057a3ca96ee8e04041a1c1f",
-        "version" : "4.1.0"
+        "revision" : "ed4e8a73372843ec4fe18822b0a8381519969162",
+        "version" : "4.10.0"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/muxinc/stats-sdk-objc.git",
       "state" : {
-        "revision" : "856a4a6eb418b85d12b3c3435ecb615eb356c623",
-        "version" : "5.1.0"
+        "revision" : "645a23a8d8215ecdea2a557b04807a5a7ba6c554",
+        "version" : "5.7.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios",
       "state" : {
-        "revision" : "60c708f077d0d2aa02dfbfdeb60f2be8feb1c548",
-        "version" : "3.26.1"
+        "revision" : "db4cbeb8c39f7c0fa2a28c52897e75288f6a3eaf",
+        "version" : "3.27.4"
       }
     },
     {
