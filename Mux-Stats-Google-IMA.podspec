@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '14.0'
 
 
-  s.ios.dependency 'Mux-Stats-AVPlayer', '~> 4.1'
+  s.ios.dependency 'Mux-Stats-AVPlayer', '~> 4.10'
   s.ios.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.23'
   s.ios.source_files = 'Sources/MuxStatsGoogleIMAPlugin/**/*'
 
