@@ -5,11 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#if TARGET_OS_TV
-#import <MuxCore/MuxCoreTv.h>
-#else
 #import <MuxCore/MuxCore.h>
-#endif
 
 #import <MUXSDKStats/MUXSDKStats.h>
 #import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
@@ -111,7 +107,7 @@ typedef NS_OPTIONS(NSUInteger, MUXSDKIMAAdsListenerOptions) {
 /// just made
 - (void)clientAdRequest:(IMAAdsRequest *)request;
 
-/// Signals a stream ad request has been made by your
+/// Signals a DAI stream ad request has been made by your
 /// application.
 ///
 /// Call as soon as possible after sending the request to
