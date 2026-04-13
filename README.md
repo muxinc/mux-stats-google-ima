@@ -26,18 +26,6 @@ In order to install in your iOS application open your `Package.swift` file, add 
  ),
 ```
 
-Swift Package Manager does not support installation of Google IMA packages for both iOS `GoogleAds-IMA-iOS-SDK` and tvOS `GoogleAds-IMA-tvOS-SDK` at the same time because they cannot be disambiguated at the time of package resolution. [This is a known issue with Google IMA tracked here](https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos/issues/1).
-
-As a workaround, if installing for just tvOS, add the following binary target to your `Package.swift` file.
-
-```swift
-.binaryTarget(
-    name: "MuxStatsGoogleIMAPluginTVOS",
-    url: "https://github.com/muxinc/mux-stats-google-ima/releases/download/v0.14.0/MuxStatsGoogleIMAPluginTVOS.xcframework.zip",
-    checksum: "c0a0499a471a20803e29e3133d51a45ed81d53152e6a19e9e7e4f611662505ce"
-)
-```
-
 ### Cocoapods
 
 The Mux Google IMA plugin is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile:
@@ -59,9 +47,9 @@ pod 'Mux-Stats-Google-IMA'
 1. Checkout a new release branch named releases/vX.Y.Z where X, Y, and Z are the major, minor, and patch versions of the released SDK.
 2. Update Mux-Stats-Google-IMA.podspec with new major, minor, and patch versions.
 3. Update marketing version with new major, minor, and patch versions in Xcode project files in `FrameworkProject/MuxStatsGoogleIMAPlugin` and `FrameworkProject/MuxStatsGoogleIMAPluginTVOS`   
-4. create a PR against master for your `releaes/v*` branch
+4. Create a PR against master for your `releases/v*` branch
 5. merge PR after release notes pop in (check them for spelling/grammar/tone)
 6. wait for PR comment to appear with a link to a draft release
-7. attach the `MuxStatsGoogleIMAPlugin.xcframework.zip` anc `MuxStatsGoogleIMAPluginTVOS.xcframework.zip` file to that release
+7. Attach the `MuxStatsGoogleIMAPlugin.xcframework.zip` and `MuxStatsGoogleIMAPluginTVOS.xcframework.zip` files to that release
 8. Create the release
 9. From up-to-date `master`: `pod trunk push Mux-Stats-Google-IMA.podspec --allow-warnings`
