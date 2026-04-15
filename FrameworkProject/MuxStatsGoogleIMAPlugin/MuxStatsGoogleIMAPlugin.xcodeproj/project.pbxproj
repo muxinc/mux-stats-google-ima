@@ -497,16 +497,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/muxinc/mux-stats-sdk-avplayer";
 			requirement = {
-				kind = exactVersion;
-				version = 4.1.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.10.0;
 			};
 		};
 		190698382BB37B6700CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios/";
 			requirement = {
-				kind = exactVersion;
-				version = 3.23.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.30.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
