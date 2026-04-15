@@ -4,8 +4,8 @@ import PackageDescription
 let package = Package(
     name: "MuxStatsGoogleIMAPlugin",
     platforms: [
-        .iOS(.v12),
-        .tvOS(.v12),
+        .iOS(.v15),
+        .tvOS(.v15),
     ],
     products: [
         .library(
@@ -22,11 +22,11 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios",
-            from: "3.23.0"
+            from: "3.30.0"
         ),
         .package(
             url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos",
-            from: "4.13.0"
+            from: "4.16.0"
         ),
     ],
     targets: [
