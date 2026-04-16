@@ -40,7 +40,8 @@ xcodebuild clean archive \
     -destination "generic/platform=tvOS" \
     -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPluginTVOS.tvOS.xcarchive" \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    ENABLE_MODULE_VERIFIER=NO | xcbeautify
 
 echo "▸ Creating tvOS Simulator archive"
 
@@ -50,7 +51,8 @@ xcodebuild clean archive \
     -destination "generic/platform=tvOS Simulator" \
     -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPluginTVOS.tvOS-simulator.xcarchive" \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    ENABLE_MODULE_VERIFIER=NO | xcbeautify
 
 xcodebuild -create-xcframework \
     -framework "$BUILD_DIR/MuxStatsGoogleIMAPluginTVOS.tvOS.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPluginTVOS.framework" \

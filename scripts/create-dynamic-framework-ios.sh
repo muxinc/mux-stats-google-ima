@@ -40,7 +40,8 @@ xcodebuild clean archive \
     -destination "generic/platform=iOS" \
     -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS.xcarchive" \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    ENABLE_MODULE_VERIFIER=NO | xcbeautify
 
 echo "▸ Creating iOS Simulator archive"
 
@@ -50,7 +51,8 @@ xcodebuild clean archive \
     -destination "generic/platform=iOS Simulator" \
     -archivePath "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS-simulator.xcarchive" \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES | xcbeautify
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    ENABLE_MODULE_VERIFIER=NO | xcbeautify
 
 xcodebuild -create-xcframework \
     -framework "$BUILD_DIR/MuxStatsGoogleIMAPlugin.iOS.xcarchive/Products/Library/Frameworks/MuxStatsGoogleIMAPlugin.framework" \

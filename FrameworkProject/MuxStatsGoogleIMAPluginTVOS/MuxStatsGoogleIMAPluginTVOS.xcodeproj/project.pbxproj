@@ -10,7 +10,7 @@
 		1906984E2BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */; };
 		190698542BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 190698482BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		190698622BB37BF400CE0FF7 /* MUXSDKStats in Frameworks */ = {isa = PBXBuildFile; productRef = 190698612BB37BF400CE0FF7 /* MUXSDKStats */; };
-		190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */ = {isa = PBXBuildFile; productRef = 190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */; };
+		190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAdsTvOS in Frameworks */ = {isa = PBXBuildFile; productRef = 190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAdsTvOS */; };
 		190698892BB3947F00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 190698522BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOSTests.m */; };
 		1915A2372CD186D40094AA27 /* MUXSDKIMAAdsListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 1915A2362CD186D40094AA27 /* MUXSDKIMAAdsListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1915A2392CD186ED0094AA27 /* MUXSDKIMAAdsListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 1915A2382CD186ED0094AA27 /* MUXSDKIMAAdsListener.m */; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAds in Frameworks */,
+				190698652BB37C7400CE0FF7 /* GoogleInteractiveMediaAdsTvOS in Frameworks */,
 				190698622BB37BF400CE0FF7 /* MUXSDKStats in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,7 +138,7 @@
 			name = MuxStatsGoogleIMAPluginTVOS;
 			packageProductDependencies = (
 				190698612BB37BF400CE0FF7 /* MUXSDKStats */,
-				190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */,
+				190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAdsTvOS */,
 			);
 			productName = MuxStatsGoogleIMAPluginTVOS;
 			productReference = 190698452BB37B8E00CE0FF7 /* MuxStatsGoogleIMAPluginTVOS.framework */;
@@ -380,7 +380,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -410,7 +410,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_MODULE_VERIFIER = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -497,16 +497,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/muxinc/mux-stats-sdk-avplayer";
 			requirement = {
-				kind = exactVersion;
-				version = 4.1.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.10.0;
 			};
 		};
 		190698632BB37C7400CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-tvos" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos";
 			requirement = {
-				kind = exactVersion;
-				version = 4.13.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.16.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -517,10 +517,10 @@
 			package = 190698602BB37BF400CE0FF7 /* XCRemoteSwiftPackageReference "mux-stats-sdk-avplayer" */;
 			productName = MUXSDKStats;
 		};
-		190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAds */ = {
+		190698642BB37C7400CE0FF7 /* GoogleInteractiveMediaAdsTvOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 190698632BB37C7400CE0FF7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-interactive-media-ads-tvos" */;
-			productName = GoogleInteractiveMediaAds;
+			productName = GoogleInteractiveMediaAdsTvOS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
